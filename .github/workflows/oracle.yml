@@ -1,0 +1,69 @@
+name: oracle
+
+# The differential harness needs a browser and two checkouts, so it runs here
+# rather than in either library's own CI. On a schedule it measures the tips of
+# both; a manual run can point at any ref.
+on:
+  workflow_dispatch:
+    inputs:
+      dommy_ref:
+        description: "takahashim/dommy ref to measure"
+        default: main
+      quickjs_ref:
+        description: "takahashim/dommy-js-quickjs ref to measure"
+        default: main
+  schedule:
+    - cron: "0 3 * * 1"
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  oracle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: takahashim/dommy
+          ref: ${{ github.event.inputs.dommy_ref || 'main' }}
+          path: checkouts/dommy
+
+      - uses: actions/checkout@v4
+        with:
+          repository: takahashim/dommy-js-quickjs
+          ref: ${{ github.event.inputs.quickjs_ref || 'main' }}
+          path: checkouts/dommy-js-quickjs
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install playwright
+          npx playwright install --with-deps chromium
+
+      - name: Install gems
+        env:
+          DOMMY_PATH: ${{ github.workspace }}/checkouts/dommy/gems/dommy
+          DOMMY_JS_QUICKJS_PATH: ${{ github.workspace }}/checkouts/dommy-js-quickjs
+        run: bundle install
+
+      - name: Run the differential harness
+        env:
+          DOMMY_PATH: ${{ github.workspace }}/checkouts/dommy/gems/dommy
+          DOMMY_JS_QUICKJS_PATH: ${{ github.workspace }}/checkouts/dommy-js-quickjs
+          PLAYWRIGHT_PATH: ${{ github.workspace }}/node_modules/playwright
+        run: bundle exec rake oracle
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: oracle-results
+          path: results/

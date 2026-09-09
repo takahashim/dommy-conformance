@@ -1,0 +1,29 @@
+# Divergences between Chromium and Dommy that are NOT findings.
+#
+# A browser is an oracle, not the specification. Two things land here:
+#
+#   * Chromium departs from the spec text and Dommy follows it.
+#   * The difference is a deliberate, documented limit of Dommy (it has no
+#     layout, so anything geometric cannot agree).
+#
+# Anything else is a finding and should be fixed rather than recorded. Each
+# entry pins the two values it was recorded against, so a divergence that
+# quietly changes shape is flagged instead of silently staying green.
+#
+#   - case:      the case id, e.g. "cssom/set-property-priority.js"
+#     key:       the key in that case's returned observation
+#     reason:    why this is not a bug, with the spec reference
+#     chromium:  the value recorded for Chromium (optional but recommended)
+#     dommy:     the value recorded for Dommy (optional but recommended)
+
+- case: cssom/set-property-priority.js
+  key: emptyValueWithInvalidPriority
+  reason: |
+    CSSOM setProperty step 3 ("if value is the empty string, invoke
+    removeProperty and return") precedes step 4 (the priority check), so an
+    empty value removes the declaration whatever the priority says. Chromium
+    validates the priority first and keeps the declaration. No WPT covers the
+    ordering; Dommy follows the spec text.
+    https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-setproperty
+  chromium: "color: red !important"
+  dommy: ""
