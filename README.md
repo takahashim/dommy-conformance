@@ -145,6 +145,31 @@ text split and its collapsed-range adjustment). All five are in
 separate from the spec-over-Chromium ones, because "the browser is wrong" and
 "we are wrong" must never read the same.
 
+## Landing a change that depends on a dommy fix
+
+CI measures **dommy's `main`**, not a branch (`.github/workflows/conformance.yml`
+checks out `takahashim/dommy` at `main`; a `workflow_dispatch` run can point
+`dommy_ref` elsewhere). So a change here that only holds once some dommy fix has
+landed — removing an expectation the fix closes, or adding a case the fix makes
+pass — turns `main` red the moment it is pushed ahead of that fix.
+
+Push in this order:
+
+1. open and merge the dommy PR;
+2. then push the expectation removal / new case here.
+
+Doing it the other way round is not caught by anything locally, because a local
+run resolves dommy from `DOMMY_PATH` or a sibling checkout — usually a working
+tree that already has the fix. To check what CI will see, point it at dommy's
+`main` explicitly:
+
+    git -C ../dommy worktree add /tmp/dommy-main origin/main
+    DOMMY_PATH=/tmp/dommy-main/gems/dommy rake
+
+A recorded expectation that no longer matches anything is silently ignored, so
+leaving an entry in place until its fix merges is safe — it costs nothing but a
+follow-up commit to remove it.
+
 ## Writing a case
 
 A case is one file that registers itself and returns a JSON-able observation.
