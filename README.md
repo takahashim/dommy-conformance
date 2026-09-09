@@ -82,6 +82,40 @@ Needs a sibling checkout of dommy and of dommy-js-quickjs (or `DOMMY_PATH` /
     rake oracle:diff       # re-diff what is already in results/
     rake oracle FILTER=range/
 
+### Random mutation sequences
+
+`cases/fuzz/` is the part that finds what nobody thought to write a case for.
+A live Range, a NodeIterator and a MutationObserver are pointed at one tree, and
+a seeded pseudo-random sequence of mutations is applied to it, recording
+everything observable after every step.
+
+Determinism is the whole trick: the PRNG is integer-exact and every operand is
+chosen by tree position, so both engines run the *identical* sequence and a
+difference at step 42 is a behavioural divergence rather than two different
+runs. Once they do diverge they naturally pick different operands afterwards, so
+the report shows the **first** differing step and stops.
+
+    rake fuzz SEEDS=200 STEPS=300          # a deeper hunt than CI runs
+    rake fuzz OPS_EXCLUDE=splitText        # keep going past a known divergence
+
+That last knob matters: one outstanding divergence caps how deep the fuzzer can
+see, because everything after it is incomparable. Excluding the operation that
+causes it lets the hunt continue while it is being decided.
+
+A fuzz divergence cannot be recorded by pinning values — the step log is
+thousands of lines and every seed produces a different one. What identifies it
+is its *shape*, so an expectation matches on that instead:
+
+```yaml
+- case: fuzz/tree-mutations.js
+  key: "*"
+  step_divergence: { op: splitText, keys: [records] }
+  reason: |
+    ...
+```
+
+Any other divergence in the same case still fails.
+
 ## Does it work?
 
 The seed corpus is drawn from divergences that were actually found and fixed in
@@ -100,6 +134,16 @@ long detached path where the browser reports the vacated position. That is what
 this harness is for.
 
     DOMMY_PATH=/path/to/an/older/dommy rake oracle:dommy && rake oracle:diff
+
+And it keeps finding things. The fuzzer's first 80-seed run surfaced two
+mutation-record divergences in `splitText` and `normalize`; the hand-written
+cases added alongside it surfaced three Dommy bugs (an `!important` declaration
+overridden by a later normal one in the same block, `valueMissing` ignoring a
+disabled `<fieldset>` ancestor, and `Range.insertNode` skipping its boundary
+text split and its collapsed-range adjustment). All five are in
+`expectations/known-divergences.yml` — the Dommy bugs under `dommy_bug:`, kept
+separate from the spec-over-Chromium ones, because "the browser is wrong" and
+"we are wrong" must never read the same.
 
 ## Writing a case
 

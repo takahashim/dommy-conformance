@@ -16,7 +16,9 @@ DOMMY_PATH = checkout("DOMMY_PATH", "../dommy/gems/dommy", "../dommy")
 QUICKJS_PATH = checkout("DOMMY_JS_QUICKJS_PATH", "../dommy-js-quickjs", "../takahashim/dommy-js-quickjs")
 
 def runner_env
-  {"DOMMY_PATH" => DOMMY_PATH, "DOMMY_JS_QUICKJS_PATH" => QUICKJS_PATH}.compact
+  {"DOMMY_PATH" => DOMMY_PATH, "DOMMY_JS_QUICKJS_PATH" => QUICKJS_PATH,
+   "SEEDS" => ENV["SEEDS"], "STEPS" => ENV["STEPS"],
+   "OPS_EXCLUDE" => ENV["OPS_EXCLUDE"]}.compact
 end
 
 def filter_args
@@ -41,6 +43,16 @@ namespace :oracle do
   desc "Diff the results already in results/ (no re-run)"
   task :diff do
     sh RbConfig.ruby, ROOT.join("runner/diff.rb").to_s
+  end
+
+  desc "Hunt harder with the random mutation sequences (SEEDS=200 STEPS=300, OPS_EXCLUDE=splitText)"
+  task :fuzz do
+    ENV["FILTER"] = "fuzz/"
+    ENV["SEEDS"] ||= "60"
+    ENV["STEPS"] ||= "150"
+    Rake::Task["oracle:chromium"].invoke
+    Rake::Task["oracle:dommy"].invoke
+    Rake::Task["oracle:diff"].invoke
   end
 
   desc "Show where this run resolves dommy and the engine binding from"
@@ -86,5 +98,8 @@ namespace :wpt do
        RUBY
   end
 end
+
+desc "Alias for oracle:fuzz"
+task fuzz: "oracle:fuzz"
 
 task default: %i[wpt oracle]

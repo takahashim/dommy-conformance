@@ -40,8 +40,34 @@ module OracleDiff
     Array(YAML.safe_load_file(path))
   end
 
-  def expectation_for(list, case_id, key)
-    list.find { |e| e["case"] == case_id && e["key"] == key }
+  # Every expectation that could apply, in file order. A case may carry several
+  # (a fuzz case accumulates one per known divergence shape), so the caller has
+  # to try them all rather than stopping at the first case/key match.
+  def expectations_for(list, case_id, key)
+    list.select { |e| e["case"] == case_id && (e["key"] == key || e["key"] == "*") }
+  end
+
+  # A fuzz divergence cannot be recorded by pinning its values: the step log is
+  # thousands of lines and every seed produces a different one. What identifies
+  # it is its SHAPE — which operation was being performed, and which parts of
+  # the observation disagreed. An expectation carrying `step_divergence` matches
+  # on that, so the one known divergence is tolerated wherever a seed happens to
+  # hit it while any OTHER divergence still fails the run.
+  def step_divergence_matches?(expectation, chromium, dommy)
+    matcher = expectation["step_divergence"]
+    return false unless matcher
+
+    index = (0...[chromium.size, dommy.size].max).find { |i| chromium[i] != dommy[i] }
+    return false if index.nil?
+
+    left = chromium[index].to_h
+    right = dommy[index].to_h
+    return false if matcher["op"] && left["op"] != matcher["op"]
+
+    differing = (left.keys | right.keys).select { |k| left[k] != right[k] }.sort
+    return false if matcher["keys"] && matcher["keys"].sort != differing
+
+    true
   end
 
   # Walk the two result objects together, keyed by the names the case chose.
@@ -57,9 +83,19 @@ module OracleDiff
     (left.keys | right.keys).sort.filter_map do |key|
       next if left[key] == right[key]
 
+      # A step-log expectation only applies if the divergence really has the
+      # shape it describes; otherwise this is a new finding that merely lands in
+      # a case that has recorded ones.
+      expectation = expectations_for(expectations, case_id, key).find do |candidate|
+        next true unless candidate["step_divergence"]
+
+        step_log?(left[key]) && step_log?(right[key]) &&
+          step_divergence_matches?(candidate, left[key], right[key])
+      end
+
       Divergence.new(
         case_id: case_id, key: key, chromium: left[key], dommy: right[key],
-        expectation: expectation_for(expectations, case_id, key)
+        expectation: expectation
       )
     end
   end
@@ -74,6 +110,37 @@ module OracleDiff
   def render(value)
     text = JSON.generate(value)
     text.length > 400 ? text[0, 397] + "..." : text
+  end
+
+  # A step log (what the fuzzer returns) diffs badly as two blobs: once the two
+  # engines diverge they pick different operands afterwards, so every later step
+  # differs too and the real finding is buried. Report the FIRST differing step
+  # with the couple of steps that led to it, and stop.
+  def step_log?(value)
+    value.is_a?(Array) && value.first.is_a?(Hash) && value.first.key?("step")
+  end
+
+  def render_step_divergence(chromium, dommy)
+    index = (0...[chromium.size, dommy.size].max).find { |i| chromium[i] != dommy[i] }
+    return ["    the logs differ but no step does — lengths #{chromium.size} vs #{dommy.size}"] if index.nil?
+
+    lines = []
+    lines << "    #{chromium.size} steps; first divergence at step #{index}"
+    context = [index - 2, 0].max
+    (context...index).each do |i|
+      lines << "      step #{i} (agreed) #{chromium[i]["op"]}: #{chromium[i]["did"] || chromium[i]["threw"] || "skipped"}"
+    end
+    left = chromium[index]
+    right = dommy[index]
+    lines << "      step #{index} #{left&.dig("op")}: #{left&.dig("did") || left&.dig("threw") || "skipped"}"
+    (left.to_h.keys | right.to_h.keys).sort.each do |key|
+      next if left.to_h[key] == right.to_h[key]
+
+      lines << "        #{key}"
+      lines << "          chromium: #{render(left.to_h[key])}"
+      lines << "          dommy:    #{render(right.to_h[key])}"
+    end
+    lines
   end
 
   def flag(argv, name, default)
@@ -96,7 +163,12 @@ module OracleDiff
     shared = (chromium.keys & dommy.keys).sort
 
     divergences = shared.flat_map { |id| compare(id, chromium[id], dommy[id], known) }
-    unexpected, expected = divergences.partition { |d| !d.expected? }
+    unexpected, accounted = divergences.partition { |d| !d.expected? }
+    # Two very different reasons a divergence is not a failure, and conflating
+    # them would be the worst thing this file could do: "Chromium is the one
+    # departing from the spec" is a settled answer, "Dommy has a bug we have not
+    # fixed yet" is an open debt. They are reported separately.
+    gaps, expected = accounted.partition { |d| d.expectation["dommy_bug"] }
 
     puts "#{shared.size} cases compared"
     unless only_chromium.empty? && only_dommy.empty?
@@ -108,15 +180,31 @@ module OracleDiff
       puts "recorded divergences (#{expected.size}) — Chromium and Dommy differ on purpose:"
       expected.each do |d|
         puts "  #{d.case_id} [#{d.key}]"
-        puts "    chromium: #{render(d.chromium)}"
-        puts "    dommy:    #{render(d.dommy)}"
+        unless d.expectation["step_divergence"]
+          puts "    chromium: #{render(d.chromium)}"
+          puts "    dommy:    #{render(d.dommy)}"
+        end
         puts "    reason:   #{d.expectation["reason"].to_s.strip.lines.first&.strip}"
         # A recorded divergence whose values moved is no longer the same finding.
+        if d.expectation["step_divergence"]
+          puts "    shape:    #{JSON.generate(d.expectation["step_divergence"])}"
+        end
         if d.expectation.key?("chromium") && d.expectation["chromium"] != d.chromium
           puts "    !! the recorded chromium value no longer matches — re-check this expectation"
         end
         if d.expectation.key?("dommy") && d.expectation["dommy"] != d.dommy
           puts "    !! the recorded dommy value no longer matches — re-check this expectation"
+        end
+      end
+    end
+
+    unless gaps.empty?
+      puts
+      puts "known Dommy gaps (#{gaps.size}) — real bugs, recorded so the run stays actionable:"
+      gaps.group_by(&:case_id).each do |case_id, list|
+        puts "  #{case_id}"
+        list.each do |d|
+          puts "    #{d.key}: #{d.expectation["dommy_bug"].to_s.strip.lines.first&.strip}"
         end
       end
     end
@@ -136,8 +224,12 @@ module OracleDiff
       puts "  #{name}"
       list.each do |d|
         puts "    #{d.key}"
-        puts "      chromium: #{render(d.chromium)}"
-        puts "      dommy:    #{render(d.dommy)}"
+        if step_log?(d.chromium) && step_log?(d.dommy)
+          puts render_step_divergence(d.chromium, d.dommy)
+        else
+          puts "      chromium: #{render(d.chromium)}"
+          puts "      dommy:    #{render(d.dommy)}"
+        end
       end
     end
     1

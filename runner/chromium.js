@@ -58,10 +58,24 @@ function caseFiles(filter) {
 
 const BLANK = "<!DOCTYPE html><html><head></head><body></body></html>";
 
+// Knobs both runners forward into the page identically, so a widened run stays
+// a comparison rather than two different runs.
+function config() {
+  const out = {};
+  for (const key of ["SEEDS", "STEPS"]) {
+    if (process.env[key]) out[key.toLowerCase()] = Number(process.env[key]);
+  }
+  if (process.env.OPS_EXCLUDE) out.opsExclude = process.env.OPS_EXCLUDE;
+  return out;
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   const { chromium } = loadPlaywright();
-  const harness = fs.readFileSync(path.join(ROOT, "lib/harness.js"), "utf8");
+  const harness =
+    fs.readFileSync(path.join(ROOT, "lib/harness.js"), "utf8") + "\n" +
+    fs.readFileSync(path.join(ROOT, "lib/fuzz.js"), "utf8") + "\n" +
+    "globalThis.__oracleConfig = " + JSON.stringify(config()) + ";";
   const ids = caseFiles(args.filter);
 
   const browser = await chromium.launch({ args: ["--no-sandbox"] });

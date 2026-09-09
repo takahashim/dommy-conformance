@@ -6,6 +6,12 @@
 #   * The difference is a deliberate, documented limit of Dommy (it has no
 #     layout, so anything geometric cannot agree).
 #
+# A third kind is recorded with `dommy_bug:` instead of `reason:` — a real Dommy
+# bug that has been identified but not yet fixed. It does not fail the run (so a
+# known debt does not mask new findings) but it is reported separately from the
+# spec-over-Chromium ones, because "the browser is wrong" and "we are wrong" must
+# never read the same.
+#
 # Anything else is a finding and should be fixed rather than recorded. Each
 # entry pins the two values it was recorded against, so a divergence that
 # quietly changes shape is flagged instead of silently staying green.
@@ -27,3 +33,110 @@
     https://drafts.csswg.org/cssom/#dom-cssstyledeclaration-setproperty
   chromium: "color: red !important"
   dommy: ""
+
+- case: fuzz/tree-mutations.js
+  key: "*"
+  step_divergence:
+    op: splitText
+    keys: [records]
+  reason: |
+    splitText's MutationRecord ORDER. WHATWG "split a Text node" inserts the new
+    node into the parent (step 7.1, a childList record) and only then replaces
+    the original's data (step 8, a characterData record), which is the order
+    Dommy queues them in. Blink truncates first: Text::SplitText calls
+    SetDataWithoutUpdate + DidModifyData before InsertBefore, so Chromium
+    reports characterData then childList. An explicit insert-then-replaceData
+    pair DOES come back in performed order in Chromium, so this is specific to
+    splitText rather than a general record-ordering difference.
+
+    No WPT covers the ordering. Recorded as a spec-over-Chromium call, matching
+    how the CSSOM setProperty ordering above is handled — but this one is worth
+    a second opinion, since it is Dommy's own behaviour that the browser
+    disagrees with.
+    https://dom.spec.whatwg.org/#concept-text-split
+
+- case: fuzz/tree-mutations.js
+  key: "*"
+  step_divergence:
+    op: normalize
+    keys: [records]
+  reason: |
+    normalize()'s characterData record COUNT. WHATWG normalize concatenates the
+    data of ALL of a node's contiguous exclusive Text siblings and performs ONE
+    "replace data" with the result (step 4), then removes those siblings (step
+    7) — so one characterData record per merged run, however many siblings it
+    absorbed. Dommy does that. Chromium merges pairwise and emits a
+    characterData record per sibling, interleaved with the removals.
+
+    Not covered by WPT. Recorded as a spec-over-Chromium call; like the
+    splitText ordering above, it is Dommy's own behaviour the browser disagrees
+    with, so it is worth a second opinion.
+    https://dom.spec.whatwg.org/#dom-node-normalize
+
+- case: fuzz/tree-mutations.js
+  key: "*"
+  step_divergence:
+    op: setTextContent
+    keys: [iterators]
+  reason: |
+    Where a NodeIterator's reference lands when "replace all" removes several
+    children at once. The pre-removing steps set the reference to the removed
+    node's parent when its previous sibling is null, and otherwise to the last
+    inclusive descendant of that previous sibling — read off the LIVE tree, and
+    "replace all" removes children one at a time in tree order. So by the time
+    the reference's own ancestor is removed, its earlier siblings are already
+    gone, its previous sibling is null, and the reference becomes the parent.
+    That is what Dommy does.
+
+    Chromium resolves the previous sibling against the pre-removal child list
+    and leaves the reference on a node detached by the same operation — which
+    also defeats the purpose of the steps, since the reference ends up outside
+    the iterator's collection entirely.
+    https://dom.spec.whatwg.org/#nodeiterator-pre-removing-steps
+
+# ---- known Dommy bugs, found by this harness and not yet fixed ---------------
+
+- case: cssom/declaration-serialization.js
+  key: laterWins
+  dommy_bug: |
+    Within ONE declaration block, a later normal declaration overrides an earlier
+    !important one for the same property. `color: red !important; color: blue`
+    should keep red-important (this is the same rule WPT's
+    cssstyledeclaration-csstext-important.html pins for
+    `padding: 10px !important; padding-left: 20px`); Dommy keeps blue, because
+    its block parser is last-one-wins regardless of priority.
+
+- case: forms/constraint-validation.js
+  key: infs
+  dommy_bug: |
+    validity.valueMissing on a control disabled by a FIELDSET ANCESTOR. A text
+    input suffers from being missing only if it is "mutable", and a control
+    inside a disabled fieldset is not. Dommy gets willValidate right for that
+    case (it reports false), so it knows about the fieldset, but the mutability
+    check behind valueMissing looks only at the element's own disabled
+    attribute. A directly-disabled input is handled correctly — WPT's
+    form-validation-validity-valueMissing.html passes 78/78 — which is exactly
+    why only the ancestor case was left.
+
+- case: range/insert-and-surround.js
+  key: intoTextMiddle
+  dommy_bug: |
+    Range.insertNode does not extend a COLLAPSED range past the node it
+    inserted. The algorithm's last step is "if range is collapsed, set range's
+    end to (parent, newOffset)", so the range ends up containing the new node;
+    Dommy leaves it collapsed where it was.
+
+- case: range/insert-and-surround.js
+  key: atTextStart
+  dommy_bug: |
+    Range.insertNode skips the boundary Text split when the offset is 0 or at
+    the end. The algorithm splits the start Text node unconditionally, which at
+    a boundary yields an EMPTY Text node beside the inserted one; Dommy inserts
+    without splitting, so that empty node is missing. (Same underlying step as
+    the collapsed-range entry above.)
+
+- case: range/insert-and-surround.js
+  key: atTextEnd
+  dommy_bug: |
+    The offset-at-end half of the boundary-split gap recorded just above.
+

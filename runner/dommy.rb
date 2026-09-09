@@ -74,6 +74,15 @@ module Oracle
     runtime&.dispose
   end
 
+  # Knobs both runners forward into the page identically, so a widened run stays
+  # a comparison rather than two different runs.
+  def config
+    %w[SEEDS STEPS].each_with_object({}) do |key, out|
+      out[key.downcase] = ENV[key].to_i if ENV[key]
+      out["opsExclude"] = ENV["OPS_EXCLUDE"] if ENV["OPS_EXCLUDE"]
+    end
+  end
+
   def flag(argv, name, default = nil)
     index = argv.index(name)
     index ? argv[index + 1] : default
@@ -83,7 +92,11 @@ module Oracle
     filter = flag(argv, "--filter")
     out = flag(argv, "--out", ROOT.join("results/dommy.jsonl").to_s)
 
-    harness = File.read(ROOT.join("lib/harness.js"))
+    harness = [
+      File.read(ROOT.join("lib/harness.js")),
+      File.read(ROOT.join("lib/fuzz.js")),
+      "globalThis.__oracleConfig = #{JSON.generate(config)};"
+    ].join("\n")
     lines = case_ids(filter).map do |id|
       record = run_case(id, harness)
       record = {"error" => "runner: case returned #{record.class}"} unless record.is_a?(Hash)
