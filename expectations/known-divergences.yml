@@ -37,24 +37,6 @@
 - case: fuzz/tree-mutations.js
   key: "*"
   step_divergence:
-    op: normalize
-    keys: [records]
-  reason: |
-    normalize()'s characterData record COUNT. WHATWG normalize concatenates the
-    data of ALL of a node's contiguous exclusive Text siblings and performs ONE
-    "replace data" with the result (step 4), then removes those siblings (step
-    7) — so one characterData record per merged run, however many siblings it
-    absorbed. Dommy does that. Chromium merges pairwise and emits a
-    characterData record per sibling, interleaved with the removals.
-
-    Not covered by WPT. Recorded as a spec-over-Chromium call; like the
-    splitText ordering above, it is Dommy's own behaviour the browser disagrees
-    with, so it is worth a second opinion.
-    https://dom.spec.whatwg.org/#dom-node-normalize
-
-- case: fuzz/tree-mutations.js
-  key: "*"
-  step_divergence:
     op: setTextContent
     keys: [iterators]
   reason: |
