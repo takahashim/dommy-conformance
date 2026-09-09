@@ -37,27 +37,6 @@
 - case: fuzz/tree-mutations.js
   key: "*"
   step_divergence:
-    op: splitText
-    keys: [records]
-  reason: |
-    splitText's MutationRecord ORDER. WHATWG "split a Text node" inserts the new
-    node into the parent (step 7.1, a childList record) and only then replaces
-    the original's data (step 8, a characterData record), which is the order
-    Dommy queues them in. Blink truncates first: Text::SplitText calls
-    SetDataWithoutUpdate + DidModifyData before InsertBefore, so Chromium
-    reports characterData then childList. An explicit insert-then-replaceData
-    pair DOES come back in performed order in Chromium, so this is specific to
-    splitText rather than a general record-ordering difference.
-
-    No WPT covers the ordering. Recorded as a spec-over-Chromium call, matching
-    how the CSSOM setProperty ordering above is handled — but this one is worth
-    a second opinion, since it is Dommy's own behaviour that the browser
-    disagrees with.
-    https://dom.spec.whatwg.org/#concept-text-split
-
-- case: fuzz/tree-mutations.js
-  key: "*"
-  step_divergence:
     op: normalize
     keys: [records]
   reason: |
