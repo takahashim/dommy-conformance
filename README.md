@@ -9,6 +9,47 @@ third concern with its own weight and its own update cadence — a WPT checkout,
 a browser build, third-party library suites — so it lives here, and depends on
 dommy and on whichever bindings it is asked to exercise, never the reverse.
 
+Two measurements live here.
+
+| | what it answers |
+|---|---|
+| **WPT** (`rake wpt`) | how much of the Web Platform Tests corpus dommy passes, per file |
+| **the Chromium differential harness** (`rake oracle`) | where dommy and a real browser disagree on behaviour WPT does not cover |
+
+## The WPT corpus
+
+`wpt/corpus/` is a vendored, dommy-selected slice of web-platform-tests (707
+runnable files), run the way a browser runs it: each file is loaded as the
+document and its own `<script>` tags boot through dommy's normal resource and
+script pipeline, with `testharness.js` and the wptserve endpoints served from
+`wpt/`. No regex extraction, no manual script concatenation.
+
+    rake wpt                    # run the corpus and diff it against the baseline
+    rake wpt:run FILTER=dom/    # narrow to a subtree
+    rake wpt:file FILE=dom/nodes/Node-appendChild.html   # one file, every subtest
+    rake wpt:record             # accept the current numbers as the new baseline
+
+Each file runs in a forked child with a timeout: a WPT file is arbitrary
+third-party JavaScript driving a whole browser stack, and one that wedges or
+exhausts memory must not take the run with it.
+
+`expectations/wpt.json` pins **pass/total for every file**. It is exact, not a
+floor, so `rake wpt` fails on movement in either direction and a change has to
+state its effect on the corpus in the diff:
+
+    subtests  49297/49478  ->  49301/49478
+    files     665 green of 707  ->  666 green of 707
+
+    IMPROVED (1) — re-record with `rake wpt:record` to accept:
+      css/cssom/css-style-attr-decl-block.html: 5/7 -> 7/7
+
+The runner is engine-agnostic — `Dommy::Browser` picks whichever binding
+registered itself — so `ENGINE=<name> rake wpt` measures any of them against
+the same corpus.
+
+`script/wpt-compare/` runs the same corpus under jsdom and happy-dom for a
+cross-library comparison.
+
 ## The Chromium differential harness
 
 WPT covers a lot, but a great many real divergences have no WPT test — DOM

@@ -1,4 +1,4 @@
-name: oracle
+name: conformance
 
 # The differential harness needs a browser and two checkouts, so it runs here
 # rather than in either library's own CI. On a schedule it measures the tips of
@@ -55,7 +55,14 @@ jobs:
           DOMMY_JS_QUICKJS_PATH: ${{ github.workspace }}/checkouts/dommy-js-quickjs
         run: bundle install
 
+      - name: Run the WPT corpus
+        env:
+          DOMMY_PATH: ${{ github.workspace }}/checkouts/dommy/gems/dommy
+          DOMMY_JS_QUICKJS_PATH: ${{ github.workspace }}/checkouts/dommy-js-quickjs
+        run: bundle exec rake wpt
+
       - name: Run the differential harness
+        if: always()
         env:
           DOMMY_PATH: ${{ github.workspace }}/checkouts/dommy/gems/dommy
           DOMMY_JS_QUICKJS_PATH: ${{ github.workspace }}/checkouts/dommy-js-quickjs
@@ -65,5 +72,5 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: oracle-results
+          name: conformance-results
           path: results/

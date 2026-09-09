@@ -1,0 +1,2840 @@
+{
+  "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
+  "summary": {
+    "subtests_passed": 49297,
+    "subtests_total": 49478,
+    "files": 707,
+    "files_green": 665,
+    "files_errored": 0
+  },
+  "files": {
+    "FileAPI/blob/Blob-array-buffer.any.js": {
+      "pass": 5,
+      "total": 5
+    },
+    "FileAPI/blob/Blob-bytes.any.js": {
+      "pass": 5,
+      "total": 5
+    },
+    "FileAPI/blob/Blob-constructor-endings.any.js": {
+      "pass": 11,
+      "total": 11
+    },
+    "FileAPI/blob/Blob-constructor.any.js": {
+      "pass": 70,
+      "total": 73
+    },
+    "FileAPI/blob/Blob-newobject.any.js": {
+      "pass": 3,
+      "total": 4
+    },
+    "FileAPI/blob/Blob-slice-overflow.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "FileAPI/blob/Blob-slice.any.js": {
+      "pass": 150,
+      "total": 150
+    },
+    "FileAPI/blob/Blob-text.any.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "accname/basic.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "accname/name/comp_host_language_label.html": {
+      "pass": 88,
+      "total": 88
+    },
+    "accname/name/comp_label.html": {
+      "pass": 131,
+      "total": 131
+    },
+    "accname/name/comp_labelledby.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "accname/name/comp_text_node.html": {
+      "pass": 50,
+      "total": 50
+    },
+    "accname/name/comp_tooltip.html": {
+      "pass": 22,
+      "total": 22
+    },
+    "css/css-color/parsing/color-computed-hex-color.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "css/css-color/parsing/color-computed-hsl.html": {
+      "pass": 3735,
+      "total": 3753
+    },
+    "css/css-color/parsing/color-computed.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "css/css-syntax/declarations-trim-whitespace.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "css/css-variables/var-parsing.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "css/css-variables/variable-cycles.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "css/cssom/CSSGroupingRule-cssRules.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/CSSRuleList.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/CSSStyleSheet.html": {
+      "pass": 17,
+      "total": 17
+    },
+    "css/cssom/MediaList.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/StyleSheetList.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/css-style-attr-decl-block.html": {
+      "pass": 5,
+      "total": 7
+    },
+    "css/cssom/css-style-attribute-modifications.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/css-style-declaration-modifications.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "css/cssom/cssom-cssstyledeclaration-set.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/cssom-setProperty-shorthand.html": {
+      "pass": 76,
+      "total": 76
+    },
+    "css/cssom/cssstyledeclaration-csstext-final-delimiter.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/cssom/getComputedStyle-detached-subtree.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "css/cssom/getComputedStyle-display-none-002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/getComputedStyle-display-none-003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/cssom/getComputedStyle-pseudo.html": {
+      "pass": 4,
+      "total": 28
+    },
+    "css/cssom/mediaquery-sort-dedup.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/cssom/serialize-variable-reference.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "css/cssom/style-sheet-interfaces-002.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/child-indexed-during-parse.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "css/selectors/child-indexed-pseudo-class.html": {
+      "pass": 54,
+      "total": 54
+    },
+    "css/selectors/first-child.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "css/selectors/first-of-type.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "css/selectors/has-basic.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "css/selectors/has-matches-to-uninserted-elements.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "css/selectors/has-specificity.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "css/selectors/hash-collision.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/attribute-or-elemental-selectors-in-has.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "css/selectors/invalidation/attribute.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "css/selectors/invalidation/child-indexed-pseudo-classes-in-has.html": {
+      "pass": 66,
+      "total": 66
+    },
+    "css/selectors/invalidation/empty-pseudo-in-has.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "css/selectors/invalidation/enabled-disabled.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/invalidation/first-child-last-child.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/invalidation/has-in-adjacent-position.html": {
+      "pass": 295,
+      "total": 295
+    },
+    "css/selectors/invalidation/has-in-ancestor-position.html": {
+      "pass": 337,
+      "total": 337
+    },
+    "css/selectors/invalidation/has-in-is-non-subject-compound.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/invalidation/has-in-parent-position.html": {
+      "pass": 211,
+      "total": 211
+    },
+    "css/selectors/invalidation/has-in-sibling-position.html": {
+      "pass": 295,
+      "total": 295
+    },
+    "css/selectors/invalidation/has-invalidation-after-removing-non-first-element.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/invalidation/has-invalidation-first-in-sibling-chain.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "css/selectors/invalidation/has-invalidation-for-wiping-an-element.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "css/selectors/invalidation/has-pseudo-element-subject-child-mutation.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "css/selectors/invalidation/has-pseudoclass-only.html": {
+      "pass": 36,
+      "total": 36
+    },
+    "css/selectors/invalidation/has-sibling.html": {
+      "pass": 71,
+      "total": 71
+    },
+    "css/selectors/invalidation/has-unstyled.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "css/selectors/invalidation/has-with-is-child-combinator.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "css/selectors/invalidation/has-with-not.html": {
+      "pass": 21,
+      "total": 21
+    },
+    "css/selectors/invalidation/has-with-nth-child.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "css/selectors/invalidation/host-has-shadow-tree-element-at-subject-position.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/insert-sibling-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/insert-sibling-002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/insert-sibling-003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/insert-sibling-004.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/is-pseudo-containing-complex-in-has.html": {
+      "pass": 476,
+      "total": 476
+    },
+    "css/selectors/invalidation/is-where-pseudo-containing-hard-pseudo.html": {
+      "pass": 20,
+      "total": 20
+    },
+    "css/selectors/invalidation/is.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "css/selectors/invalidation/link-pseudo-class-in-has.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/invalidation/location-pseudo-classes-in-has.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/not-001.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/invalidation/not-002.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "css/selectors/invalidation/not-pseudo-containing-complex-in-has.html": {
+      "pass": 460,
+      "total": 460
+    },
+    "css/selectors/invalidation/not-pseudo-containing-sibling-relationship-in-has.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/invalidation/nth-child-whole-subtree.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/selectorText-dynamic-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/sheet-going-away-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/sibling.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "css/selectors/invalidation/subject-has-invalidation-with-display-none-anchor-element.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/invalidation/typed-child-indexed-pseudo-classes-in-has.html": {
+      "pass": 102,
+      "total": 102
+    },
+    "css/selectors/invalidation/where.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "css/selectors/is-nested.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/is-specificity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/is-where-basic.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "css/selectors/is-where-error-recovery.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/is-where-not.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "css/selectors/is-where-pseudo-classes.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/last-child.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "css/selectors/last-of-type.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "css/selectors/not-complex.html": {
+      "pass": 20,
+      "total": 20
+    },
+    "css/selectors/not-specificity.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "css/selectors/nth-last-child-invalid.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/nth-of-type-namespace.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/only-child.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "css/selectors/only-of-type.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "css/selectors/parsing/parse-class.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "css/selectors/parsing/parse-descendant.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/parsing/parse-id.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/parsing/parse-sibling.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/parsing/parse-universal.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/pseudo-enabled-disabled.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "css/selectors/quirks-mode-import.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/scope-selector.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "css/selectors/selector-after-font-family.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/selector-placeholder-shown-emptify-placeholder.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "css/selectors/selectors-attr-many-2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "css/selectors/x-pseudo-element.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/CustomElementRegistry-getName.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/CustomElementRegistry.html": {
+      "pass": 43,
+      "total": 46
+    },
+    "dom/abort/AbortSignal.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/abort/abort-signal-any.any.js": {
+      "pass": 14,
+      "total": 14
+    },
+    "dom/abort/abort-signal-timeout.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/abort/event.any.js": {
+      "pass": 16,
+      "total": 16
+    },
+    "dom/abort/reason-constructor.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/abort/timeout.any.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/collections/HTMLCollection-as-prototype.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "dom/collections/HTMLCollection-delete.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/collections/HTMLCollection-empty-name.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/collections/HTMLCollection-iterator.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/collections/HTMLCollection-live-mutations.window.js": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/collections/HTMLCollection-own-props.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "dom/collections/HTMLCollection-supported-property-indices.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/collections/HTMLCollection-supported-property-names.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/collections/childnodes-messagechannel-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "dom/collections/domstringmap-supported-property-names.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/collections/namednodemap-supported-property-names.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/events/AddEventListenerOptions-once.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/events/CustomEvent.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/events/Event-cancelBubble.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "dom/events/Event-constants.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/events/Event-constructors.any.js": {
+      "pass": 14,
+      "total": 14
+    },
+    "dom/events/Event-defaultPrevented-after-dispatch.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/events/Event-defaultPrevented.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "dom/events/Event-dispatch-bubbles-false.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/events/Event-dispatch-bubbles-true.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/events/Event-dispatch-detached-click.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/events/Event-dispatch-multiple-cancelBubble.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-multiple-stopPropagation.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-order.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-propagation-stopped.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-target-moved.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-init-while-dispatching.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/events/Event-initEvent.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "dom/events/Event-isTrusted.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-propagation.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/events/Event-stopImmediatePropagation.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-subclasses-constructors.html": {
+      "pass": 49,
+      "total": 49
+    },
+    "dom/events/Event-type-empty.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/events/Event-type.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/events/EventListenerOptions-capture.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/events/EventTarget-add-remove-listener.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/EventTarget-constructible.any.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/lists/DOMTokenList-Iterable.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/lists/DOMTokenList-coverage-for-attributes.html": {
+      "pass": 175,
+      "total": 175
+    },
+    "dom/lists/DOMTokenList-iteration.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/lists/DOMTokenList-stringifier.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/lists/DOMTokenList-value.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/CharacterData-appendChild.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "dom/nodes/CharacterData-appendData.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "dom/nodes/CharacterData-data.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "dom/nodes/CharacterData-deleteData.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "dom/nodes/CharacterData-insertData.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "dom/nodes/CharacterData-remove.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "dom/nodes/CharacterData-replaceData.html": {
+      "pass": 34,
+      "total": 34
+    },
+    "dom/nodes/CharacterData-substringData.html": {
+      "pass": 28,
+      "total": 28
+    },
+    "dom/nodes/ChildNode-after.html": {
+      "pass": 45,
+      "total": 45
+    },
+    "dom/nodes/ChildNode-before.html": {
+      "pass": 45,
+      "total": 45
+    },
+    "dom/nodes/ChildNode-replaceWith.html": {
+      "pass": 33,
+      "total": 33
+    },
+    "dom/nodes/Comment-constructor.html": {
+      "pass": 15,
+      "total": 16
+    },
+    "dom/nodes/DOMImplementation-createDocumentType.html": {
+      "pass": 82,
+      "total": 82
+    },
+    "dom/nodes/DOMImplementation-createHTMLDocument-with-saved-implementation.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/DOMImplementation-createHTMLDocument.html": {
+      "pass": 13,
+      "total": 13
+    },
+    "dom/nodes/DOMImplementation-hasFeature.html": {
+      "pass": 137,
+      "total": 137
+    },
+    "dom/nodes/Document-adoptNode.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/Document-createCDATASection.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Document-createComment.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Document-createElement.html": {
+      "pass": 147,
+      "total": 147
+    },
+    "dom/nodes/Document-createElementNS.html": {
+      "pass": 596,
+      "total": 596
+    },
+    "dom/nodes/Document-createEvent-touchevent.window.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/Document-createProcessingInstruction.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "dom/nodes/Document-createTextNode.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Document-createTreeWalker.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/Document-getElementById.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "dom/nodes/Document-getElementsByClassName.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Document-getElementsByTagName.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "dom/nodes/Document-getElementsByTagNameNS.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "dom/nodes/Document-implementation.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Document-importNode.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/DocumentFragment-constructor.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/DocumentFragment-getElementById.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/DocumentFragment-querySelectorAll-after-modification.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/DocumentType-literal.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/DocumentType-remove.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/Element-childElement-null.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-childElementCount-dynamic-add.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-childElementCount-dynamic-remove.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-childElementCount-nochild.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-childElementCount.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-children.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Element-classlist.html": {
+      "pass": 1420,
+      "total": 1420
+    },
+    "dom/nodes/Element-closest.html": {
+      "pass": 29,
+      "total": 29
+    },
+    "dom/nodes/Element-firstElementChild-namespace.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-firstElementChild.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-getElementsByClassName.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/Element-getElementsByTagName.html": {
+      "pass": 19,
+      "total": 19
+    },
+    "dom/nodes/Element-getElementsByTagNameNS.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "dom/nodes/Element-hasAttribute.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Element-hasAttributes.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Element-insertAdjacentElement.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Element-insertAdjacentText.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Element-lastElementChild.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-matches-namespaced-elements.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Element-matches.html": {
+      "pass": 669,
+      "total": 669
+    },
+    "dom/nodes/Element-nextElementSibling.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-previousElementSibling.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-remove.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/Element-removeAttribute.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Element-removeAttributeNS.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-setAttribute-crbug-1138487.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-setAttribute.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Element-siblingElement-null.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-tagName.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Element-webkitMatchesSelector.html": {
+      "pass": 669,
+      "total": 669
+    },
+    "dom/nodes/MutationObserver-attributes.html": {
+      "pass": 42,
+      "total": 42
+    },
+    "dom/nodes/MutationObserver-callback-arguments.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/MutationObserver-characterData.html": {
+      "pass": 23,
+      "total": 23
+    },
+    "dom/nodes/MutationObserver-childList.html": {
+      "pass": 38,
+      "total": 38
+    },
+    "dom/nodes/MutationObserver-disconnect.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/MutationObserver-document.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "dom/nodes/MutationObserver-inner-outer.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/MutationObserver-sanity.html": {
+      "pass": 13,
+      "total": 13
+    },
+    "dom/nodes/MutationObserver-takeRecords.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/MutationObserver-textContent.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/Node-appendChild.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "dom/nodes/Node-baseURI.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "dom/nodes/Node-childNodes-cache.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Node-childNodes.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Node-cloneNode.html": {
+      "pass": 135,
+      "total": 135
+    },
+    "dom/nodes/Node-compareDocumentPosition.html": {
+      "pass": 1444,
+      "total": 1444
+    },
+    "dom/nodes/Node-constants.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "dom/nodes/Node-contains.html": {
+      "pass": 1482,
+      "total": 1482
+    },
+    "dom/nodes/Node-insertBefore.html": {
+      "pass": 40,
+      "total": 40
+    },
+    "dom/nodes/Node-isConnected-shadow-dom.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Node-isConnected.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Node-isEqualNode.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "dom/nodes/Node-isSameNode.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "dom/nodes/Node-lookupNamespaceURI.html": {
+      "pass": 75,
+      "total": 75
+    },
+    "dom/nodes/Node-mutation-adoptNode.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Node-nodeName.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Node-nodeValue.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/nodes/Node-normalize.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/Node-parentElement.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "dom/nodes/Node-parentNode.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "dom/nodes/Node-removeChild.html": {
+      "pass": 28,
+      "total": 28
+    },
+    "dom/nodes/Node-replaceChild.html": {
+      "pass": 29,
+      "total": 29
+    },
+    "dom/nodes/Node-textContent.html": {
+      "pass": 81,
+      "total": 81
+    },
+    "dom/nodes/NodeList-Iterable.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "dom/nodes/NodeList-live-mutations.window.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/ParentNode-append.html": {
+      "pass": 25,
+      "total": 25
+    },
+    "dom/nodes/ParentNode-children.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-prepend.html": {
+      "pass": 22,
+      "total": 22
+    },
+    "dom/nodes/ParentNode-querySelector-All-content.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "dom/nodes/ParentNode-querySelector-All.html": {
+      "pass": 1975,
+      "total": 1975
+    },
+    "dom/nodes/ParentNode-querySelector-case-insensitive.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelector-scope.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/ParentNode-querySelectorAll-removed-elements.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelectors-exclusive.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelectors-namespaces.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelectors-space-and-dash-attribute-value.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-replaceChildren.html": {
+      "pass": 31,
+      "total": 31
+    },
+    "dom/nodes/Text-constructor.html": {
+      "pass": 15,
+      "total": 16
+    },
+    "dom/nodes/Text-splitText.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/Text-wholeText.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/append-on-Document.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/attributes-namednodemap.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "dom/nodes/attributes.html": {
+      "pass": 67,
+      "total": 67
+    },
+    "dom/nodes/getElementsByClassName-01.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-02.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-32.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/getElementsByClassName-empty-set.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/getElementsByClassName-whitespace-class-names.html": {
+      "pass": 26,
+      "total": 26
+    },
+    "dom/nodes/prepend-on-Document.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/querySelector-mixed-case.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/remove-unscopable.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/rootNode.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/svg-template-querySelector.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/observable/tentative/observable-catch.any.js": {
+      "pass": 9,
+      "total": 9
+    },
+    "dom/observable/tentative/observable-constructor.any.js": {
+      "pass": 40,
+      "total": 44
+    },
+    "dom/observable/tentative/observable-constructor.window.js": {
+      "pass": 0,
+      "total": 4
+    },
+    "dom/observable/tentative/observable-drop.any.js": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/observable/tentative/observable-event-target.any.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/observable/tentative/observable-event-target.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/observable/tentative/observable-every.any.js": {
+      "pass": 10,
+      "total": 10
+    },
+    "dom/observable/tentative/observable-filter.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/observable/tentative/observable-finally.any.js": {
+      "pass": 10,
+      "total": 10
+    },
+    "dom/observable/tentative/observable-find.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/observable/tentative/observable-first.any.js": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/observable/tentative/observable-flatMap.any.js": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/observable/tentative/observable-forEach.any.js": {
+      "pass": 5,
+      "total": 6
+    },
+    "dom/observable/tentative/observable-forEach.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "dom/observable/tentative/observable-from.any.js": {
+      "pass": 25,
+      "total": 48
+    },
+    "dom/observable/tentative/observable-inspect.any.js": {
+      "pass": 10,
+      "total": 13
+    },
+    "dom/observable/tentative/observable-last.any.js": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/observable/tentative/observable-map.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/observable/tentative/observable-map.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/observable/tentative/observable-reduce.any.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "dom/observable/tentative/observable-some.any.js": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/observable/tentative/observable-switchMap.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/observable/tentative/observable-take.any.js": {
+      "pass": 5,
+      "total": 6
+    },
+    "dom/observable/tentative/observable-takeUntil.any.js": {
+      "pass": 11,
+      "total": 12
+    },
+    "dom/observable/tentative/observable-takeUntil.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "dom/observable/tentative/observable-toArray.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/ranges/Range-attributes.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/ranges/Range-cloneRange.html": {
+      "pass": 62,
+      "total": 62
+    },
+    "dom/ranges/Range-collapse.html": {
+      "pass": 186,
+      "total": 186
+    },
+    "dom/ranges/Range-commonAncestorContainer-2.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/ranges/Range-commonAncestorContainer.html": {
+      "pass": 63,
+      "total": 63
+    },
+    "dom/ranges/Range-compareBoundaryPoints.html": {
+      "pass": 9313,
+      "total": 9313
+    },
+    "dom/ranges/Range-comparePoint-2.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/ranges/Range-comparePoint.html": {
+      "pass": 5580,
+      "total": 5580
+    },
+    "dom/ranges/Range-constructor.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/ranges/Range-detach.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/ranges/Range-extractContents-dynamic-end.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/ranges/Range-intersectsNode-2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/ranges/Range-intersectsNode-shadow.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/ranges/Range-intersectsNode.html": {
+      "pass": 2356,
+      "total": 2356
+    },
+    "dom/ranges/Range-isPointInRange.html": {
+      "pass": 5733,
+      "total": 5733
+    },
+    "dom/ranges/Range-mutations-appendData.html": {
+      "pass": 384,
+      "total": 384
+    },
+    "dom/ranges/Range-stringifier.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/traversal/NodeFilter-constants.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/traversal/NodeIterator-removal.html": {
+      "pass": 22,
+      "total": 22
+    },
+    "dom/traversal/NodeIterator.html": {
+      "pass": 766,
+      "total": 766
+    },
+    "dom/traversal/TreeWalker-acceptNode-filter.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "dom/traversal/TreeWalker-basic.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/traversal/TreeWalker-currentNode.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/traversal/TreeWalker-nextNode-detached-currentNode.window.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/traversal/TreeWalker-previousNodeLastChildReject.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/traversal/TreeWalker-previousSiblingLastChildSkip.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/traversal/TreeWalker-traversal-reject.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/traversal/TreeWalker-traversal-skip-most.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/traversal/TreeWalker-traversal-skip.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/traversal/TreeWalker-walking-outside-a-tree.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/traversal/TreeWalker.html": {
+      "pass": 761,
+      "total": 761
+    },
+    "domparsing/DOMParser-parseFromString-html.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "domparsing/DOMParser-parseFromString-stylesheets.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "domparsing/XMLSerializer-serializeToString.html": {
+      "pass": 27,
+      "total": 29
+    },
+    "domparsing/createContextualFragment.html": {
+      "pass": 34,
+      "total": 35
+    },
+    "domparsing/domparser-spurious-attributes.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "domparsing/innerhtml-04.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "domparsing/innerhtml-06.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "domparsing/innerhtml-07.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "domparsing/innerhtml-li-autoclosing.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "domparsing/insert-adjacent.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "domparsing/insert_adjacent_html.html": {
+      "pass": 31,
+      "total": 31
+    },
+    "domparsing/outerhtml-01.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "domparsing/outerhtml-02.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "domparsing/style_attribute_html.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "domparsing/xmldomparser.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "encoding/api-basics.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "encoding/api-surrogates-utf8.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "encoding/encodeInto.any.js": {
+      "pass": 110,
+      "total": 111
+    },
+    "encoding/textdecoder-arguments.any.js": {
+      "pass": 3,
+      "total": 4
+    },
+    "encoding/textdecoder-byte-order-marks.any.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "encoding/textdecoder-copy.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "encoding/textdecoder-eof.any.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "encoding/textdecoder-fatal.any.js": {
+      "pass": 36,
+      "total": 36
+    },
+    "encoding/textdecoder-ignorebom.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "encoding/textdecoder-utf16-surrogates.any.js": {
+      "pass": 10,
+      "total": 10
+    },
+    "encoding/textencoder-utf16-surrogates.any.js": {
+      "pass": 7,
+      "total": 7
+    },
+    "fetch/api/basic/accept-header.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "fetch/api/basic/mode-no-cors.sub.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "fetch/api/basic/mode-same-origin.any.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "fetch/api/basic/request-headers.any.js": {
+      "pass": 25,
+      "total": 25
+    },
+    "fetch/api/basic/text-utf8.any.js": {
+      "pass": 30,
+      "total": 30
+    },
+    "fetch/api/cors/cors-basic.any.js": {
+      "pass": 15,
+      "total": 15
+    },
+    "fetch/api/cors/cors-expose-star.sub.any.js": {
+      "pass": 2,
+      "total": 3
+    },
+    "fetch/api/cors/cors-filtering.sub.any.js": {
+      "pass": 12,
+      "total": 19
+    },
+    "fetch/api/cors/cors-multiple-origins.sub.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "fetch/api/cors/cors-no-preflight.any.js": {
+      "pass": 15,
+      "total": 15
+    },
+    "fetch/api/cors/cors-origin.any.js": {
+      "pass": 17,
+      "total": 17
+    },
+    "fetch/api/cors/cors-preflight-star.any.js": {
+      "pass": 28,
+      "total": 34
+    },
+    "fetch/api/cors/cors-preflight-status.any.js": {
+      "pass": 27,
+      "total": 27
+    },
+    "fetch/api/cors/cors-preflight.any.js": {
+      "pass": 22,
+      "total": 22
+    },
+    "fetch/api/redirect/redirect-empty-location.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "fetch/api/redirect/redirect-location.any.js": {
+      "pass": 55,
+      "total": 55
+    },
+    "html/browsers/history/the-history-interface/history_pushstate.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-history-interface/history_pushstate_err.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-history-interface/history_pushstate_nooptionalparam.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-history-interface/history_replacestate.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-history-interface/history_replacestate_err.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-history-interface/history_replacestate_nooptionalparam.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-history-interface/history_state.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location-prototype-no-toString-valueOf.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/browsers/history/the-location-interface/location-tojson.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_host.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_hostname.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_href.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_origin.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_pathname.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_protocol.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/access-key-label.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/dom/aria-attribute-reflection.html": {
+      "pass": 41,
+      "total": 41
+    },
+    "html/dom/aria-attribute-reflection.tentative.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/dom/aria-element-reflection-disconnected.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/dom/aria-element-reflection.html": {
+      "pass": 27,
+      "total": 27
+    },
+    "html/dom/documents/dom-tree-accessors/Document.getElementsByClassName-null-undef.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/Element.getElementsByClassName-null-undef.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByClassName-same.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-case.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-id.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-newelements.html": {
+      "pass": 27,
+      "total": 27
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-param.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-same.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.head-01.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.head-02.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.links.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.scripts.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.title-01.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/dom/documents/dom-tree-accessors/document.title-03.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/dom/documents/dom-tree-accessors/document.title-05.html": {
+      "pass": 21,
+      "total": 21
+    },
+    "html/dom/documents/dom-tree-accessors/document.title-08.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-01.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-03.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-04.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/dom/documents/resource-metadata-management/document-compatmode-01.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/elements-in-the-dom/historical.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/dom/elements/global-attributes/data_unicode_attr.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/dom/elements/global-attributes/dataset-enumeration.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/dom/elements/global-attributes/dataset-prototype.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/dom/elements/global-attributes/id-name-specialcase.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/dom/elements/global-attributes/id-name.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/mapped-attribute-adopt-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-translate-attribute-007.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-translate-attribute-008.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-translate-attribute-009.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-translate-attribute-010.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-translate-attribute-011.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-translate-attribute-012.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/translate-enumerated-ascii-case-insensitive.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/translate-inherit-no-parent-element.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/dom/elements/global-attributes/translate-non-html-translation-mode.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/dom/historical.html": {
+      "pass": 11,
+      "total": 13
+    },
+    "html/semantics/document-metadata/the-title-element/title-multiple-elements.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/document-metadata/the-title-element/title.text-03.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/embedded-content/the-img-element/Image-constructor.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/constraints/form-validation-checkValidity.html": {
+      "pass": 130,
+      "total": 130
+    },
+    "html/semantics/forms/constraints/form-validation-reportValidity.html": {
+      "pass": 130,
+      "total": 130
+    },
+    "html/semantics/forms/constraints/form-validation-validity-badInput.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/forms/constraints/form-validation-validity-customError.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/semantics/forms/constraints/form-validation-validity-patternMismatch.html": {
+      "pass": 85,
+      "total": 85
+    },
+    "html/semantics/forms/constraints/form-validation-validity-rangeOverflow-weekmonth.html": {
+      "pass": 19,
+      "total": 19
+    },
+    "html/semantics/forms/constraints/form-validation-validity-rangeOverflow.html": {
+      "pass": 49,
+      "total": 49
+    },
+    "html/semantics/forms/constraints/form-validation-validity-rangeUnderflow-weekmonth.html": {
+      "pass": 19,
+      "total": 19
+    },
+    "html/semantics/forms/constraints/form-validation-validity-rangeUnderflow.html": {
+      "pass": 47,
+      "total": 47
+    },
+    "html/semantics/forms/constraints/form-validation-validity-stepMismatch.html": {
+      "pass": 28,
+      "total": 28
+    },
+    "html/semantics/forms/constraints/form-validation-validity-tooLong.html": {
+      "pass": 63,
+      "total": 63
+    },
+    "html/semantics/forms/constraints/form-validation-validity-tooShort.html": {
+      "pass": 63,
+      "total": 63
+    },
+    "html/semantics/forms/constraints/form-validation-validity-typeMismatch.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/forms/constraints/form-validation-validity-valid-weekmonth.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/semantics/forms/constraints/form-validation-validity-valid.html": {
+      "pass": 35,
+      "total": 35
+    },
+    "html/semantics/forms/constraints/form-validation-validity-valueMissing-weekmonth.html": {
+      "pass": 19,
+      "total": 19
+    },
+    "html/semantics/forms/constraints/form-validation-validity-valueMissing.html": {
+      "pass": 78,
+      "total": 78
+    },
+    "html/semantics/forms/constraints/form-validation-willValidate.html": {
+      "pass": 73,
+      "total": 73
+    },
+    "html/semantics/forms/constraints/inputwillvalidate.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/form-control-infrastructure/form_owner_and_table_2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/resetting-a-form/reset-form-event-realm.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/resetting-a-form/support/reset-form-event-realm.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/forms/the-button-element/button-checkvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-labels.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-menu-historical.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-button-element/button-setcustomvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-type-enumerated-ascii-case-insensitive.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-button-element/button-type.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-button-element/button-validation.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/forms/the-button-element/button-validationmessage.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-validity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-datalist-element/datalistoptions.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-fieldset-element/HTMLFieldSetElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-fieldset-element/disabled-001.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-fieldset-element/fieldset-checkvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-fieldset-element/fieldset-validity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-fieldset-element/fieldset-willvalidate.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-form-element/form-action.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-form-element/form-checkvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-form-element/form-elements-filter.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-form-element/form-elements-interfaces-01.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/the-form-element/form-elements-matches.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-form-element/form-elements-nameditem-01.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/the-form-element/form-elements-nameditem-02.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-form-element/form-elements-sameobject.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-form-element/form-length.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-form-element/form-nameditem.html": {
+      "pass": 17,
+      "total": 17
+    },
+    "html/semantics/forms/the-input-element/button.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-input-element/checkbox.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/forms/the-input-element/clone.html": {
+      "pass": 19,
+      "total": 19
+    },
+    "html/semantics/forms/the-input-element/datetime-weekmonth.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "html/semantics/forms/the-input-element/datetime.html": {
+      "pass": 21,
+      "total": 21
+    },
+    "html/semantics/forms/the-input-element/input-checkvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-labels.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-list.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/forms/the-input-element/input-seconds-leading-zeroes.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/forms/the-input-element/input-setcustomvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-stepdown-weekmonth.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-input-element/input-stepdown.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-input-element/input-stepup.html": {
+      "pass": 53,
+      "total": 53
+    },
+    "html/semantics/forms/the-input-element/input-type-change-value.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-input-element/input-type-checkbox.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/semantics/forms/the-input-element/input-validationmessage.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-validity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-value-invalidstateerr.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-valueasnumber-invalidstateerr.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-valueasnumber-stepping.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/semantics/forms/the-input-element/input-valueasnumber.html": {
+      "pass": 64,
+      "total": 64
+    },
+    "html/semantics/forms/the-input-element/input-willvalidate.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/maxlength.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-input-element/minlength.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-input-element/number-disabled.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/number-lang-change.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-input-element/radio-groupname-case.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/semantics/forms/the-input-element/radio-multiple-selected.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/radio.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/forms/the-input-element/required_attribute.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/search_input.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-input-element/selection-weekmonth.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/forms/the-input-element/selection.html": {
+      "pass": 42,
+      "total": 42
+    },
+    "html/semantics/forms/the-label-element/labelable-elements.html": {
+      "pass": 26,
+      "total": 26
+    },
+    "html/semantics/forms/the-meter-element/meter-leading-plus-sign.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/forms/the-meter-element/meter.html": {
+      "pass": 50,
+      "total": 50
+    },
+    "html/semantics/forms/the-option-element/option-element-constructor.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/forms/the-option-element/option-form.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-option-element/option-index.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-option-element/option-label.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/forms/the-option-element/option-selected.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/the-option-element/option-text-backslash.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-option-element/option-text-label.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-option-element/option-text-recurse.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/forms/the-option-element/option-text-spaces.html": {
+      "pass": 50,
+      "total": 50
+    },
+    "html/semantics/forms/the-option-element/option-text.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/forms/the-option-element/option-value.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/forms/the-output-element/output-setcustomvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-output-element/output-validity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-output-element/output.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-progress-element/progress-2.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-progress-element/progress-max-setting.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-progress-element/progress.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/forms/the-select-element/common-HTMLOptionsCollection-add.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/the-select-element/common-HTMLOptionsCollection-namedItem.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/forms/the-select-element/common-HTMLOptionsCollection.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/semantics/forms/the-select-element/inserted-or-removed.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-select-element/option-selectedness-script-mutation.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-select-element/select-add-optgroup.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-add.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-select-element/select-multiple.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/the-select-element/select-named-getter.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-select-element/select-remove.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-select-element/select-selectedOptions.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/semantics/forms/the-select-element/select-setcustomvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-value.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-select-element/select-willvalidate-readonly-attribute.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-textarea-element/cloning-steps.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-textarea-element/textarea-maxlength.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-textarea-element/textarea-minlength.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-textarea-element/textarea-setcustomvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-textarea-element/textarea-textLength.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-textarea-element/textarea-type.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-textarea-element/textarea-validity-clone.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-textarea-element/textarea-validity-valueMissing-inside-datalist.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-dl-element/grouping-dl.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-li-element/grouping-li.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "html/semantics/grouping-content/the-ol-element/grouping-ol.html": {
+      "pass": 25,
+      "total": 25
+    },
+    "html/semantics/interactive-elements/the-details-element/details.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/interactive-elements/the-details-element/name-attribute.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "html/semantics/interactive-elements/the-details-element/toggleEvent.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-close-event-async.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-close-event.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-close.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-open.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/scripting-1/the-template-element/template-element/content-attribute.html": {
+      "pass": 5,
+      "total": 7
+    },
+    "html/semantics/scripting-1/the-template-element/template-element/template-as-a-descendant.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/scripting-1/the-template-element/template-element/template-content.html": {
+      "pass": 216,
+      "total": 216
+    },
+    "html/semantics/tabular-data/attributes-common-to-td-and-th-elements/cellIndex.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/tabular-data/the-caption-element/caption_001.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/tabular-data/the-table-element/caption-methods.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "html/semantics/tabular-data/the-table-element/createTBody.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "html/semantics/tabular-data/the-table-element/delete-caption.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/tabular-data/the-table-element/insertRow-method-01.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/tabular-data/the-table-element/insertRow-method-02.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/tabular-data/the-table-element/insertRow-method-03.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/tabular-data/the-table-element/remove-row.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/tabular-data/the-table-element/tBodies.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/tabular-data/the-table-element/tFoot.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/tabular-data/the-table-element/tHead.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/tabular-data/the-table-element/table-insertRow.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/tabular-data/the-table-element/table-rows.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/tabular-data/the-tbody-element/deleteRow.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/tabular-data/the-tbody-element/insertRow.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/tabular-data/the-tbody-element/rows.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/tabular-data/the-tfoot-element/rows.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/tabular-data/the-thead-element/rows.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/tabular-data/the-tr-element/cells.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/tabular-data/the-tr-element/deleteCell.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/tabular-data/the-tr-element/insertCell.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/semantics/tabular-data/the-tr-element/rowIndex.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/tabular-data/the-tr-element/sectionRowIndex.html": {
+      "pass": 19,
+      "total": 19
+    },
+    "html/semantics/text-level-semantics/the-a-element/a-stringifier.html": {
+      "pass": 7,
+      "total": 11
+    },
+    "html/semantics/text-level-semantics/the-a-element/a.text-getter-01.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/text-level-semantics/the-a-element/a.text-setter-01.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/text-level-semantics/the-time-element/001.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_004.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_005.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_007.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_009.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-writeln/document.writeln-03.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/origin-check-in-document-open-basic.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/the-outerhtml-property/outerhtml-documentfragment.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/the-outerhtml-property/outerhtml-no-parent.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/microtask-queuing/queue-microtask.any.js": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/webappapis/microtask-queuing/queue-microtask.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/scripting/events/body-onload.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/scripting/events/event-handler-javascript.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/scripting/events/event-handler-non-content-document-idl-attributes.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/webappapis/scripting/events/event-handler-processing-algorithm.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/webappapis/scripting/events/eventhandler-cancellation.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "html/webappapis/scripting/events/uncompiled_event_handler_with_scripting_disabled.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/system-state-and-capabilities/the-navigator-object/navigator-indexed.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/webappapis/system-state-and-capabilities/the-navigator-object/navigatorcookies-cookieenabled-true.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/system-state-and-capabilities/the-navigator-object/navigatorlanguage.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/system-state-and-capabilities/the-navigator-object/secure_context.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/timers/clearinterval-from-callback.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/timers/cleartimeout-clearinterval.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/timers/missing-timeout-setinterval.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/timers/negative-setinterval.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/timers/negative-settimeout.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/Element-interface-attachShadow.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "shadow-dom/Element-interface-shadowRoot-attribute.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/ShadowRoot-interface.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "shadow-dom/Slottable-mixin.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "url/historical.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "url/url-constructor.any.js": {
+      "pass": 888,
+      "total": 888
+    },
+    "url/url-origin.any.js": {
+      "pass": 401,
+      "total": 401
+    },
+    "url/url-statics-canparse.any.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "url/url-statics-parse.any.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "url/url-tojson.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "url/urlsearchparams-append.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "url/urlsearchparams-constructor.any.js": {
+      "pass": 25,
+      "total": 27
+    },
+    "url/urlsearchparams-delete.any.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "url/urlsearchparams-foreach.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "url/urlsearchparams-get.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "url/urlsearchparams-getall.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "url/urlsearchparams-has.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "url/urlsearchparams-set.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "url/urlsearchparams-size.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "url/urlsearchparams-sort.any.js": {
+      "pass": 17,
+      "total": 17
+    },
+    "url/urlsearchparams-stringifier.any.js": {
+      "pass": 14,
+      "total": 14
+    },
+    "wai-aria/role/abstract-roles.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "wai-aria/role/basic.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "wai-aria/role/button-roles.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "wai-aria/role/contextual-roles.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "wai-aria/role/fallback-roles.html": {
+      "pass": 22,
+      "total": 22
+    },
+    "wai-aria/role/form-roles.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "wai-aria/role/generic-roles.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "wai-aria/role/grid-roles.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "wai-aria/role/invalid-roles.html": {
+      "pass": 76,
+      "total": 76
+    },
+    "wai-aria/role/list-roles.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "wai-aria/role/listbox-roles.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "wai-aria/role/menu-roles.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "wai-aria/role/region-roles.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "wai-aria/role/role_none_conflict_resolution.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "wai-aria/role/roles.html": {
+      "pass": 162,
+      "total": 162
+    },
+    "wai-aria/role/synonym-roles.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "wai-aria/role/tab-roles.html": {
+      "pass": 37,
+      "total": 37
+    },
+    "wai-aria/role/table-roles.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "wai-aria/role/tree-roles.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "webstorage/defineProperty.window.js": {
+      "pass": 12,
+      "total": 12
+    },
+    "webstorage/missing_arguments.window.js": {
+      "pass": 10,
+      "total": 10
+    },
+    "webstorage/set.window.js": {
+      "pass": 20,
+      "total": 20
+    },
+    "webstorage/storage_builtins.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "webstorage/storage_clear.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "webstorage/storage_enumerate.window.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "webstorage/storage_functions_not_overwritten.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "webstorage/storage_getitem.window.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "webstorage/storage_key.window.js": {
+      "pass": 22,
+      "total": 22
+    },
+    "webstorage/storage_length.window.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "webstorage/storage_removeitem.window.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "webstorage/storage_setitem.window.js": {
+      "pass": 1080,
+      "total": 1106
+    },
+    "xhr/content-type-unmodified.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "xhr/event-load.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "xhr/event-loadend.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "xhr/event-loadstart.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "xhr/event-readystate-sync-open.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "xhr/json.any.js": {
+      "pass": 1,
+      "total": 2
+    },
+    "xhr/responsetype.any.js": {
+      "pass": 31,
+      "total": 50
+    },
+    "xhr/send-data-arraybuffer.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "xhr/send-data-arraybufferview.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "xhr/send-data-string-invalid-unicode.any.js": {
+      "pass": 9,
+      "total": 9
+    },
+    "xhr/send-send.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "xhr/send-usp.any.js": {
+      "pass": 129,
+      "total": 129
+    }
+  }
+}
