@@ -45,7 +45,7 @@ namespace :oracle do
     sh RbConfig.ruby, ROOT.join("runner/diff.rb").to_s
   end
 
-  desc "Hunt harder with the random mutation sequences (SEEDS=200 STEPS=300, OPS_EXCLUDE=splitText)"
+  desc "Hunt harder with the random mutation sequences (SEEDS=200 STEPS=300 takes ~107s)"
   task :fuzz do
     ENV["FILTER"] = "fuzz/"
     ENV["SEEDS"] ||= "60"

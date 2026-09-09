@@ -95,12 +95,29 @@ difference at step 42 is a behavioural divergence rather than two different
 runs. Once they do diverge they naturally pick different operands afterwards, so
 the report shows the **first** differing step and stops.
 
-    rake fuzz SEEDS=200 STEPS=300          # a deeper hunt than CI runs
-    rake fuzz OPS_EXCLUDE=splitText        # keep going past a known divergence
+    rake fuzz SEEDS=200 STEPS=300          # a deeper hunt than CI runs (~107s)
+    rake fuzz OPS_EXCLUDE=normalize        # keep going past a known divergence
 
 That last knob matters: one outstanding divergence caps how deep the fuzzer can
 see, because everything after it is incomparable. Excluding the operation that
 causes it lets the hunt continue while it is being decided.
+
+Seeds are independent, so the case declares itself divisible and the runners cut
+it into slices of 25, each in a fresh engine:
+
+```js
+shard: { count: "seeds", from: "seedFrom", to: "seedTo", size: 25 },
+```
+
+Without that, a deep hunt is bounded by one engine's lifetime rather than by the
+budget asked for — what accumulates is per-node host proxies on the QuickJS
+side, and past roughly 100 seeds x 250 steps the VM crossed its 512MB ceiling
+and QuickJS surfaced it as a bare thrown `null`. It also stopped seeds from
+being independent in practice: once any seed detached `#root` itself, every
+later seed in the same document ran on a detached tree, which is not what
+"each seed starts from the same tree" was supposed to mean.
+
+A budget at or below the slice size runs whole, so what CI measures is unchanged.
 
 A fuzz divergence cannot be recorded by pinning values — the step log is
 thousands of lines and every seed produces a different one. What identifies it
@@ -109,7 +126,7 @@ is its *shape*, so an expectation matches on that instead:
 ```yaml
 - case: fuzz/tree-mutations.js
   key: "*"
-  step_divergence: { op: splitText, keys: [records] }
+  step_divergence: { op: normalize, keys: [records] }
   reason: |
     ...
 ```

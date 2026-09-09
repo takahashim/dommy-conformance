@@ -53,18 +53,68 @@ module Oracle
   def run_case(id, harness)
     source = harness + "\n" + File.read(ROOT.join("cases", id))
     html = extract_html(source)
+    slices = shard_slices(source)
+    return run_once(source, html) if slices.nil?
+
+    # A sharded case gets a FRESH runtime per slice, which is the whole point:
+    # what a long run accumulates is per-node host proxies on the QuickJS side,
+    # and at 150 seeds x 250 steps that passed the VM's 512MB ceiling and came
+    # back as a bare thrown null. Sliced, each run starts clean.
+    merged = {}
+    name = nil
+    slices.each do |slice|
+      record = run_once(source, html, slice)
+      return record if record["error"]
+
+      name ||= record["name"]
+      merged.merge!(record["result"] || {})
+    end
+    {"name" => name, "result" => merged}
+  rescue StandardError, ScriptError => e
+    {"error" => "runner: #{e.class}: #{e.message}"}
+  end
+
+  def run_once(source, html, extra_config = {})
     window = Dommy.parse("<!DOCTYPE html><html><head></head><body>#{html}</body></html>")
     runtime = Dommy::Js::Quickjs::Runtime.new
     begin
       runtime.define_host_object("document", window.document)
       runtime.install_window(window)
       runtime.install_browser_globals
-      runtime.evaluate("(async () => { #{source}\n; return __oracleRun(); })()")
+      # The config object is defined by `source` itself, so a slice's extra keys
+      # have to be merged in after it is evaluated and before the case runs.
+      overlay = extra_config.empty? ? "" : "Object.assign(globalThis.__oracleConfig, #{JSON.generate(extra_config)});"
+      runtime.evaluate("(async () => { #{source}\n; #{overlay} return __oracleRun(); })()")
     ensure
       runtime.dispose
     end
   rescue StandardError, ScriptError => e
     {"error" => "runner: #{e.class}: #{e.message}"}
+  end
+
+  # [{"seedFrom" => 1, "seedTo" => 25}, ...] for a case that declares itself
+  # divisible, or nil for one that does not (or whose budget fits in one slice).
+  def shard_slices(source)
+    spec = extract_shard(source)
+    return nil unless spec
+
+    count, from_key, to_key = spec.values_at("count", "from", "to")
+    size = spec["size"].to_i
+    total = config[count].to_i
+    return nil if [count, from_key, to_key].any?(&:nil?) || size <= 0 || total <= size
+
+    (1..total).step(size).map do |first|
+      {from_key => first, to_key => [first + size - 1, total].min, count => total}
+    end
+  end
+
+  def extract_shard(source)
+    runtime = Dommy::Js::Quickjs::Runtime.new
+    JSON.parse(runtime.evaluate("(() => { #{source}\n; return JSON.stringify(__oracleShard()); })()").to_s)
+  rescue StandardError, ScriptError
+    nil
+  ensure
+    runtime&.dispose
   end
 
   def extract_html(source)

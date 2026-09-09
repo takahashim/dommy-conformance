@@ -58,6 +58,48 @@ function caseFiles(filter) {
 
 const BLANK = "<!DOCTYPE html><html><head></head><body></body></html>";
 
+// A case that declared itself divisible (see __oracleShard in lib/harness.js)
+// is cut into slices of `size` units, each run on a fresh page. Dommy needs this
+// — a long run accumulates host proxies until the QuickJS VM passes its memory
+// ceiling — and Chromium runs it the same way so the two stay the same run
+// rather than two differently-shaped ones.
+function shardSlices(shard) {
+  if (!shard) return null;
+  const { count, from, to, size } = shard;
+  const total = Number(config()[count] || 0);
+  if (!count || !from || !to || !(size > 0) || !(total > size)) return null;
+  const slices = [];
+  for (let first = 1; first <= total; first += size) {
+    slices.push({ [from]: first, [to]: Math.min(first + size - 1, total), [count]: total });
+  }
+  return slices;
+}
+
+async function runOnce(browser, source, html, overlay) {
+  const page = await browser.newPage();
+  try {
+    await page.setContent("<!DOCTYPE html><html><head></head><body>" + html + "</body></html>");
+    // __oracleConfig is defined by `source` itself, so a slice's bounds have to
+    // be merged in after it is evaluated and before the case runs.
+    const merge = overlay ? `Object.assign(globalThis.__oracleConfig, ${JSON.stringify(overlay)});` : "";
+    return await page.evaluate(`(async () => { ${source}\n; ${merge} return __oracleRun(); })()`);
+  } finally {
+    await page.close();
+  }
+}
+
+async function runSliced(browser, source, html, slices) {
+  const merged = {};
+  let name = null;
+  for (const slice of slices) {
+    const record = await runOnce(browser, source, html, slice);
+    if (record && record.error) return record;
+    name = name || record.name;
+    Object.assign(merged, record.result || {});
+  }
+  return { name, result: merged };
+}
+
 // Knobs both runners forward into the page identically, so a widened run stays
 // a comparison rather than two different runs.
 function config() {
@@ -90,9 +132,12 @@ async function main() {
         // its own markup rather than markup injected into a blank one.
         await page.setContent(BLANK);
         const html = await page.evaluate(`(() => { ${source}\n; return __oracleHtml(); })()`);
-        await page.setContent("<!DOCTYPE html><html><head></head><body>" + html + "</body></html>");
-        record = await page.evaluate(`(async () => { ${source}\n; return __oracleRun(); })()`);
+        const shard = await page.evaluate(`(() => { ${source}\n; return __oracleShard(); })()`);
         await page.close();
+        const slices = shardSlices(shard);
+        record = slices
+          ? await runSliced(browser, source, html, slices)
+          : await runOnce(browser, source, html);
       } catch (error) {
         record = { error: "runner: " + (error && error.message ? error.message : String(error)) };
       }
