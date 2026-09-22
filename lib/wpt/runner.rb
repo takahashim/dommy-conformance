@@ -37,7 +37,7 @@ module DommyConformance
         def manifest
           ::Dir.glob("**/*.{any,window}.js", base: WPT_ROOT)
             .concat(::Dir.glob("**/*.{html,htm}", base: WPT_ROOT))
-            .reject { |p| p.start_with?("common/") || p.include?("/resources/") || p.end_with?("-ref.html") }
+            .reject { |p| p.start_with?("common/") || p.include?("/resources/") || p.include?("/support/") || p.end_with?("-ref.html") }
             .sort
         end
 
