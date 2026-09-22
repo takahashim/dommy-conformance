@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 74136,
-    "subtests_total": 87975,
+    "subtests_passed": 85438,
+    "subtests_total": 87989,
     "files": 1218,
-    "files_green": 897,
+    "files_green": 926,
     "files_errored": 1
   },
   "files": {
@@ -761,7 +761,7 @@
       "total": 1
     },
     "dom/events/EventTarget-addEventListener.any.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/events/EventTarget-constructible.any.js": {
@@ -777,7 +777,7 @@
       "total": 25
     },
     "dom/events/EventTarget-removeEventListener.any.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/events/EventTarget-this-of-listener.html": {
@@ -801,7 +801,7 @@
       "total": 1
     },
     "dom/events/event-global-event-targets.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 5
     },
     "dom/events/event-global-extra.window.js": {
@@ -1889,7 +1889,7 @@
       "total": 4
     },
     "dom/nodes/insertion-removing-steps/insertion-removing-steps-iframe.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 4
     },
     "dom/nodes/insertion-removing-steps/insertion-removing-steps-script.window.js": {
@@ -1937,7 +1937,7 @@
       "total": 5
     },
     "dom/nodes/moveBefore/focus-within.html": {
-      "pass": 1,
+      "pass": 3,
       "total": 5
     },
     "dom/nodes/moveBefore/listed-form-element-reset.html": {
@@ -2168,7 +2168,7 @@
       "total": 2
     },
     "dom/observable/tentative/observable-from.any.js": {
-      "pass": 25,
+      "pass": 33,
       "total": 48
     },
     "dom/observable/tentative/observable-inspect.any.js": {
@@ -2596,11 +2596,11 @@
       "total": 6
     },
     "encoding/api-invalid-label.any.js": {
-      "pass": 0,
+      "pass": 3421,
       "total": 3421
     },
     "encoding/api-replacement-encodings.any.js": {
-      "pass": 0,
+      "pass": 6,
       "total": 6
     },
     "encoding/api-surrogates-utf8.any.js": {
@@ -2616,7 +2616,7 @@
       "total": 111
     },
     "encoding/iso-2022-jp-decoder.any.js": {
-      "pass": 1,
+      "pass": 16,
       "total": 34
     },
     "encoding/iso-2022-jp-encoder.html": {
@@ -2624,7 +2624,7 @@
       "total": 12
     },
     "encoding/replacement-encodings.any.js": {
-      "pass": 6,
+      "pass": 12,
       "total": 12
     },
     "encoding/sharedarraybuffer.https.html": {
@@ -2632,7 +2632,7 @@
       "total": 1
     },
     "encoding/single-byte-decoder.any.js": {
-      "pass": 0,
+      "pass": 168,
       "total": 336
     },
     "encoding/sniffing.html": {
@@ -2640,43 +2640,43 @@
       "total": 1
     },
     "encoding/streams/backpressure.any.js": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "encoding/streams/decode-attributes.any.js": {
-      "pass": 4,
+      "pass": 27,
       "total": 28
     },
     "encoding/streams/decode-bad-chunks.any.js": {
-      "pass": 0,
+      "pass": 5,
       "total": 5
     },
     "encoding/streams/decode-ignore-bom.any.js": {
-      "pass": 0,
+      "pass": 12,
       "total": 12
     },
     "encoding/streams/decode-incomplete-input.any.js": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "encoding/streams/decode-non-utf8.any.js": {
-      "pass": 5,
+      "pass": 13,
       "total": 13
     },
     "encoding/streams/decode-split-character.any.js": {
-      "pass": 0,
+      "pass": 11,
       "total": 11
     },
     "encoding/streams/decode-utf8.any.js": {
-      "pass": 0,
+      "pass": 10,
       "total": 12
     },
     "encoding/streams/encode-bad-chunks.any.js": {
-      "pass": 0,
+      "pass": 5,
       "total": 6
     },
     "encoding/streams/encode-utf8.any.js": {
-      "pass": 0,
+      "pass": 10,
       "total": 19
     },
     "encoding/streams/invalid-realm.window.js": {
@@ -2684,7 +2684,7 @@
       "total": 4
     },
     "encoding/streams/readable-writable-properties.any.js": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "encoding/textdecoder-arguments.any.js": {
@@ -2704,11 +2704,11 @@
       "total": 2
     },
     "encoding/textdecoder-fatal-single-byte.any.js": {
-      "pass": 3734,
+      "pass": 7168,
       "total": 7168
     },
     "encoding/textdecoder-fatal-streaming.any.js": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "encoding/textdecoder-fatal.any.js": {
@@ -2720,15 +2720,15 @@
       "total": 4
     },
     "encoding/textdecoder-labels.any.js": {
-      "pass": 9,
+      "pass": 222,
       "total": 222
     },
     "encoding/textdecoder-mistakes.any.js": {
-      "pass": 25,
+      "pass": 66,
       "total": 87
     },
     "encoding/textdecoder-streaming.any.js": {
-      "pass": 12,
+      "pass": 32,
       "total": 32
     },
     "encoding/textdecoder-utf16-surrogates.any.js": {
@@ -2736,7 +2736,7 @@
       "total": 10
     },
     "encoding/textencoder-constructor-non-utf.any.js": {
-      "pass": 43,
+      "pass": 79,
       "total": 79
     },
     "encoding/textencoder-utf16-surrogates.any.js": {
@@ -2744,7 +2744,7 @@
       "total": 7
     },
     "encoding/unsupported-encodings.any.js": {
-      "pass": 10,
+      "pass": 14,
       "total": 14
     },
     "fetch/api/basic/accept-header.any.js": {
@@ -3648,7 +3648,7 @@
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-step-float.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-step-realignment.html": {
@@ -3780,7 +3780,7 @@
       "total": 2
     },
     "html/semantics/forms/the-input-element/number.html": {
-      "pass": 26,
+      "pass": 34,
       "total": 34
     },
     "html/semantics/forms/the-input-element/password.html": {
@@ -4504,51 +4504,51 @@
       "total": 21
     },
     "url/IdnaTestV2.any.js": {
-      "pass": 1894,
+      "pass": 2671,
       "total": 2671
     },
     "url/a-element-origin.html": {
-      "pass": 148,
-      "total": 400
+      "pass": 415,
+      "total": 415
     },
     "url/a-element.html": {
-      "pass": 2,
-      "total": 887
+      "pass": 897,
+      "total": 897
     },
     "url/failure.html": {
-      "pass": 426,
-      "total": 1211
+      "pass": 1174,
+      "total": 1175
     },
     "url/historical.any.js": {
       "pass": 1,
       "total": 1
     },
     "url/toascii.window.js": {
-      "pass": 494,
+      "pass": 784,
       "total": 784
     },
     "url/url-constructor.any.js": {
-      "pass": 888,
-      "total": 888
+      "pass": 898,
+      "total": 898
     },
     "url/url-origin.any.js": {
-      "pass": 401,
-      "total": 401
+      "pass": 416,
+      "total": 416
     },
     "url/url-searchparams.any.js": {
       "pass": 3,
       "total": 4
     },
     "url/url-setters-a-area.window.js": {
-      "pass": 11,
+      "pass": 557,
       "total": 557
     },
     "url/url-setters-stripping.any.js": {
-      "pass": 132,
+      "pass": 260,
       "total": 260
     },
     "url/url-setters.any.js": {
-      "pass": 171,
+      "pass": 279,
       "total": 279
     },
     "url/url-statics-canparse.any.js": {
@@ -4564,7 +4564,7 @@
       "total": 1
     },
     "url/urlencoded-parser.any.js": {
-      "pass": 70,
+      "pass": 105,
       "total": 105
     },
     "url/urlsearchparams-append.any.js": {
@@ -4800,11 +4800,11 @@
       "total": 1
     },
     "xhr/formdata/constructor-submitter.html": {
-      "pass": 2,
+      "pass": 4,
       "total": 9
     },
     "xhr/formdata/constructor.any.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "xhr/formdata/delete-formelement.html": {
