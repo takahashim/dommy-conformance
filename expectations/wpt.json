@@ -1,11 +1,11 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 58450,
-    "subtests_total": 71422,
-    "files": 995,
-    "files_green": 769,
-    "files_errored": 0
+    "subtests_passed": 74136,
+    "subtests_total": 87975,
+    "files": 1218,
+    "files_green": 897,
+    "files_errored": 1
   },
   "files": {
     "FileAPI/blob/Blob-array-buffer.any.js": {
@@ -496,6 +496,10 @@
       "pass": 3,
       "total": 3
     },
+    "dom/attributes-are-nodes.html": {
+      "pass": 4,
+      "total": 4
+    },
     "dom/collections/HTMLCollection-as-prototype.html": {
       "pass": 0,
       "total": 2
@@ -511,6 +515,10 @@
     "dom/collections/HTMLCollection-iterator.html": {
       "pass": 6,
       "total": 6
+    },
+    "dom/collections/HTMLCollection-live-item-removal.html": {
+      "pass": 2,
+      "total": 2
     },
     "dom/collections/HTMLCollection-live-mutations.window.js": {
       "pass": 5,
@@ -539,6 +547,10 @@
     "dom/collections/namednodemap-supported-property-names.html": {
       "pass": 3,
       "total": 3
+    },
+    "dom/eventPathRemoved.html": {
+      "pass": 1,
+      "total": 1
     },
     "dom/events/AddEventListenerOptions-once.any.js": {
       "pass": 4,
@@ -761,8 +773,8 @@
       "total": 2
     },
     "dom/events/EventTarget-dispatchEvent.html": {
-      "pass": 1,
-      "total": 1
+      "pass": 25,
+      "total": 25
     },
     "dom/events/EventTarget-removeEventListener.any.js": {
       "pass": 0,
@@ -872,6 +884,18 @@
       "pass": 1,
       "total": 1
     },
+    "dom/historical-mutation-events.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "dom/historical.html": {
+      "pass": 66,
+      "total": 80
+    },
+    "dom/interface-objects.html": {
+      "pass": 1,
+      "total": 23
+    },
     "dom/lists/DOMTokenList-Iterable.html": {
       "pass": 6,
       "total": 6
@@ -891,6 +915,10 @@
     "dom/lists/DOMTokenList-value.html": {
       "pass": 1,
       "total": 1
+    },
+    "dom/nodes/Attr-prefix.html": {
+      "pass": 6,
+      "total": 6
     },
     "dom/nodes/CharacterData-appendChild.html": {
       "pass": 9,
@@ -924,6 +952,10 @@
       "pass": 28,
       "total": 28
     },
+    "dom/nodes/CharacterData-surrogates.html": {
+      "pass": 0,
+      "total": 8
+    },
     "dom/nodes/ChildNode-after.html": {
       "pass": 45,
       "total": 45
@@ -939,6 +971,14 @@
     "dom/nodes/Comment-constructor.html": {
       "pass": 15,
       "total": 16
+    },
+    "dom/nodes/DOMImplementation-createDocument-no-browsing-context.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "dom/nodes/DOMImplementation-createDocument.html": {
+      "pass": 320,
+      "total": 434
     },
     "dom/nodes/DOMImplementation-createDocumentType.html": {
       "pass": 82,
@@ -956,9 +996,33 @@
       "pass": 137,
       "total": 137
     },
+    "dom/nodes/Document-adoptNode-DocumentFragment-with-host.window.js": {
+      "pass": 4,
+      "total": 7
+    },
     "dom/nodes/Document-adoptNode.html": {
       "pass": 4,
       "total": 4
+    },
+    "dom/nodes/Document-constructor.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "dom/nodes/Document-contentType/contentType/createDocument.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Document-contentType/contentType/createHTMLDocument.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Document-contentType/contentType/xhr_responseType_document.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/Document-createAttribute.html": {
+      "pass": 22,
+      "total": 36
     },
     "dom/nodes/Document-createCDATASection.html": {
       "pass": 1,
@@ -979,6 +1043,10 @@
     "dom/nodes/Document-createEvent-touchevent.window.js": {
       "pass": 3,
       "total": 3
+    },
+    "dom/nodes/Document-createEvent.https.html": {
+      "pass": 79,
+      "total": 279
     },
     "dom/nodes/Document-createProcessingInstruction.html": {
       "pass": 12,
@@ -1064,6 +1132,10 @@
       "pass": 1420,
       "total": 1420
     },
+    "dom/nodes/Element-closest-null-selectors.html": {
+      "pass": 2,
+      "total": 2
+    },
     "dom/nodes/Element-closest.html": {
       "pass": 29,
       "total": 29
@@ -1079,6 +1151,10 @@
     "dom/nodes/Element-getElementsByClassName.html": {
       "pass": 3,
       "total": 3
+    },
+    "dom/nodes/Element-getElementsByTagName-change-document-HTMLNess.html": {
+      "pass": 0,
+      "total": 1
     },
     "dom/nodes/Element-getElementsByTagName.html": {
       "pass": 19,
@@ -1108,6 +1184,18 @@
       "pass": 1,
       "total": 1
     },
+    "dom/nodes/Element-matches-active-pseudo-class.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/Element-matches-complex-nth-last-of-type.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-matches-disabled-pseudo-class.html": {
+      "pass": 11,
+      "total": 11
+    },
     "dom/nodes/Element-matches-namespaced-elements.html": {
       "pass": 6,
       "total": 6
@@ -1123,6 +1211,10 @@
     "dom/nodes/Element-previousElementSibling.html": {
       "pass": 1,
       "total": 1
+    },
+    "dom/nodes/Element-querySelectorAll-context-element.html": {
+      "pass": 3,
+      "total": 3
     },
     "dom/nodes/Element-remove.html": {
       "pass": 4,
@@ -1144,8 +1236,16 @@
       "pass": 2,
       "total": 2
     },
+    "dom/nodes/Element-setAttributeNodeNS.html": {
+      "pass": 0,
+      "total": 3
+    },
     "dom/nodes/Element-siblingElement-null.html": {
       "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Element-tagName-adopt.html": {
+      "pass": 0,
       "total": 1
     },
     "dom/nodes/Element-tagName.html": {
@@ -1164,6 +1264,10 @@
       "pass": 1,
       "total": 1
     },
+    "dom/nodes/MutationObserver-callback-tricky.html": {
+      "pass": 2,
+      "total": 2
+    },
     "dom/nodes/MutationObserver-characterData.html": {
       "pass": 22,
       "total": 23
@@ -1171,6 +1275,10 @@
     "dom/nodes/MutationObserver-childList.html": {
       "pass": 38,
       "total": 38
+    },
+    "dom/nodes/MutationObserver-cross-realm-callback-report-exception.html": {
+      "pass": 0,
+      "total": 1
     },
     "dom/nodes/MutationObserver-disconnect.html": {
       "pass": 2,
@@ -1181,6 +1289,10 @@
       "total": 4
     },
     "dom/nodes/MutationObserver-inner-outer.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/MutationObserver-overlapping-registrations.html": {
       "pass": 3,
       "total": 3
     },
@@ -1196,6 +1308,10 @@
       "pass": 4,
       "total": 4
     },
+    "dom/nodes/Node-appendChild-cereactions-vs-script.window.js": {
+      "pass": 0,
+      "total": 1
+    },
     "dom/nodes/Node-appendChild.html": {
       "pass": 11,
       "total": 11
@@ -1204,6 +1320,10 @@
       "pass": 9,
       "total": 9
     },
+    "dom/nodes/Node-childNodes-cache-2.html": {
+      "pass": 1,
+      "total": 1
+    },
     "dom/nodes/Node-childNodes-cache.html": {
       "pass": 1,
       "total": 1
@@ -1211,6 +1331,30 @@
     "dom/nodes/Node-childNodes.html": {
       "pass": 6,
       "total": 6
+    },
+    "dom/nodes/Node-cloneNode-XMLDocument.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/Node-cloneNode-document-allow-declarative-shadow-roots.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/Node-cloneNode-document-with-doctype.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/Node-cloneNode-external-stylesheet-no-bc.sub.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/Node-cloneNode-parser-created-names.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/Node-cloneNode-svg.html": {
+      "pass": 2,
+      "total": 4
     },
     "dom/nodes/Node-cloneNode.html": {
       "pass": 135,
@@ -1264,6 +1408,10 @@
       "pass": 7,
       "total": 7
     },
+    "dom/nodes/Node-normalize-2.html": {
+      "pass": 2,
+      "total": 2
+    },
     "dom/nodes/Node-normalize.html": {
       "pass": 4,
       "total": 4
@@ -1275,6 +1423,10 @@
     "dom/nodes/Node-parentNode.html": {
       "pass": 4,
       "total": 5
+    },
+    "dom/nodes/Node-properties.html": {
+      "pass": 710,
+      "total": 726
     },
     "dom/nodes/Node-removeChild.html": {
       "pass": 28,
@@ -1296,6 +1448,10 @@
       "pass": 4,
       "total": 4
     },
+    "dom/nodes/NonDocumentTypeChildNode-sibling-element.html": {
+      "pass": 2,
+      "total": 6
+    },
     "dom/nodes/ParentNode-append.html": {
       "pass": 25,
       "total": 25
@@ -1308,23 +1464,175 @@
       "pass": 22,
       "total": 22
     },
+    "dom/nodes/ParentNode-properties.html": {
+      "pass": 11,
+      "total": 12
+    },
+    "dom/nodes/ParentNode-querySelector-All-comma-selector.html": {
+      "pass": 2,
+      "total": 2
+    },
     "dom/nodes/ParentNode-querySelector-All-content.html": {
       "pass": 0,
       "total": 0
+    },
+    "dom/nodes/ParentNode-querySelector-All-multiple-not.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-All-scope.html": {
+      "pass": 8,
+      "total": 8
     },
     "dom/nodes/ParentNode-querySelector-All.html": {
       "pass": 1975,
       "total": 1975
     },
+    "dom/nodes/ParentNode-querySelector-argument-stringification.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "dom/nodes/ParentNode-querySelector-attribute-change.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "dom/nodes/ParentNode-querySelector-basic-has.html": {
+      "pass": 1,
+      "total": 1
+    },
     "dom/nodes/ParentNode-querySelector-case-insensitive.html": {
       "pass": 2,
       "total": 2
+    },
+    "dom/nodes/ParentNode-querySelector-class-change.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/ParentNode-querySelector-dupe-id.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelector-empty-attribute-value.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelector-escapes.html": {
+      "pass": 50,
+      "total": 68
+    },
+    "dom/nodes/ParentNode-querySelector-host-pseudo-class.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-hyphen-prefix.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/ParentNode-querySelector-innerHTML.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-invalid-comment-like.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/ParentNode-querySelector-is-nested-pseudo-class.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelector-is-not.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-last-child-combinator.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-matches.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/ParentNode-querySelector-namespace-tagname-attribute.html": {
+      "pass": 6,
+      "total": 8
+    },
+    "dom/nodes/ParentNode-querySelector-nested-nth-child.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-nested.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-nth-of-type-complex.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-orphan-scope.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelector-parent-context.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-scope-in-not.html": {
+      "pass": 1,
+      "total": 1
     },
     "dom/nodes/ParentNode-querySelector-scope.html": {
       "pass": 4,
       "total": 4
     },
+    "dom/nodes/ParentNode-querySelector-shadowroot-nth-child.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-svg-not-root.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelector-tag-case.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/nodes/ParentNode-querySelector-xml-capitalization.window.js": {
+      "pass": 0,
+      "total": 3
+    },
+    "dom/nodes/ParentNode-querySelectorAll-case-insensitive-attribute-flag.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelectorAll-namespace.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelectorAll-nested-not-has.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelectorAll-not-descendant.html": {
+      "pass": 1,
+      "total": 1
+    },
     "dom/nodes/ParentNode-querySelectorAll-removed-elements.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelectorAll-scope-change.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/ParentNode-querySelectorAll-scope-colon-id-class.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelectorAll-svg-append.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/ParentNode-querySelectorAll-svg-class.html": {
       "pass": 1,
       "total": 1
     },
@@ -1356,9 +1664,21 @@
       "pass": 1,
       "total": 1
     },
+    "dom/nodes/adoption.window.js": {
+      "pass": 0,
+      "total": 6
+    },
     "dom/nodes/append-on-Document.html": {
       "pass": 5,
       "total": 5
+    },
+    "dom/nodes/attach-shadow-realm-after-adoption.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/attributes-namednodemap-cross-document.window.js": {
+      "pass": 2,
+      "total": 2
     },
     "dom/nodes/attributes-namednodemap.html": {
       "pass": 8,
@@ -1368,11 +1688,123 @@
       "pass": 67,
       "total": 67
     },
+    "dom/nodes/case.html": {
+      "pass": 209,
+      "total": 285
+    },
+    "dom/nodes/create-element-realm-after-adoption.html": {
+      "pass": 3,
+      "total": 5
+    },
+    "dom/nodes/getElementById-namespaced-id.html": {
+      "pass": 0,
+      "total": 4
+    },
     "dom/nodes/getElementsByClassName-01.htm": {
       "pass": 1,
       "total": 1
     },
     "dom/nodes/getElementsByClassName-02.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-03.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-04.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-05.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-06.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-07.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-08.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-09.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-12.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-13.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-15.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-16.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-17.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-18.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-19.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-20.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-21.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-22.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-23.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-24.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-25.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-26.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-27.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-28.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-29.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/getElementsByClassName-30.htm": {
       "pass": 1,
       "total": 1
     },
@@ -1388,11 +1820,282 @@
       "pass": 26,
       "total": 26
     },
+    "dom/nodes/insert-adjacent.html": {
+      "pass": 13,
+      "total": 14
+    },
+    "dom/nodes/insertion-removing-steps/Node-append-form-and-script-from-fragment.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-button-from-div.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-custom-from-fragment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-default-style-meta-from-fragment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-div-from-fragment.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-iframe.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-source-from-fragment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-style.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-in-script.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-script-with-mutation-observer-takeRecords.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-text-and-script-in-style.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-text-in-script.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-three-scripts-from-fragment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/Node-appendChild-three-scripts.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/blur-event.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/insertion-removing-steps/frame-post-connection-steps.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "dom/nodes/insertion-removing-steps/insertion-removing-steps-iframe.window.js": {
+      "pass": 0,
+      "total": 4
+    },
+    "dom/nodes/insertion-removing-steps/insertion-removing-steps-script.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/insertion-removing-steps/later-script-removed-by-earlier-script.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/insertion-removing-steps/script-does-not-run-on-child-removal.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/live-collections-batched-mutations.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/moveBefore/Node-moveBefore.html": {
+      "pass": 32,
+      "total": 32
+    },
+    "dom/nodes/moveBefore/child-style-preserve.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/custom-element-move-reactions.html": {
+      "pass": 6,
+      "total": 7
+    },
+    "dom/nodes/moveBefore/fieldset-child-blur-event.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/fieldset-child-date-input-blur-event.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/fire-focusin-focusout.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "dom/nodes/moveBefore/focus-preserve.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "dom/nodes/moveBefore/focus-within.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "dom/nodes/moveBefore/listed-form-element-reset.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/live-range-updates.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "dom/nodes/moveBefore/modal-dialog.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-dir.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-from-light-to-shadow.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-id-map.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "dom/nodes/moveBefore/moveBefore-lang.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-name-map.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "dom/nodes/moveBefore/moveBefore-nodeiterator.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-option-recalc-style.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-selector-matching.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-shadow-inside.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-shadow-root.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/moveBefore-size-query.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/mutation-observer.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/moveBefore/nonce.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/object-crash-regression.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/popover-preserve.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/preserve-render-blocking-script.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/preserve-render-blocking-style.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/script-move-before.html": {
+      "error": "NoMethodError: undefined method 'type' for an instance of Dommy::SVGElement"
+    },
+    "dom/nodes/moveBefore/select-option-optgroup.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/nodes/moveBefore/slotchange-events.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "dom/nodes/moveBefore/style-applies.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/moveBefore/throws-exception.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/name-validation.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "dom/nodes/namespaced-attribute-mutations.html": {
+      "pass": 16,
+      "total": 24
+    },
+    "dom/nodes/node-creation-realm.html": {
+      "pass": 9,
+      "total": 13
+    },
+    "dom/nodes/node-realm-adoption-after-frame-removal.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/nodes/node-realm-mixed-across-adoption.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "dom/nodes/node-realm-preserved-across-adoption.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "dom/nodes/node-realm-preserved-across-frameless-adoption.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/nodes/post-connection-steps-shadow-tree.html": {
+      "pass": 1,
+      "total": 1
+    },
     "dom/nodes/prepend-on-Document.html": {
       "pass": 5,
       "total": 5
     },
+    "dom/nodes/processing-instruction-attributes.html": {
+      "pass": 0,
+      "total": 140
+    },
+    "dom/nodes/querySelector-empty-id.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/querySelector-id-nth-child.html": {
+      "pass": 2,
+      "total": 2
+    },
     "dom/nodes/querySelector-mixed-case.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/nodes/remove-and-adopt-thcrash.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/nodes/remove-next-sibling-during-replace-with.html": {
       "pass": 1,
       "total": 1
     },
@@ -1512,9 +2215,29 @@
       "pass": 6,
       "total": 6
     },
+    "dom/ranges/Range-adopt-test.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "dom/ranges/Range-attribute-nodes.html": {
+      "pass": 24,
+      "total": 26
+    },
     "dom/ranges/Range-attributes.html": {
       "pass": 1,
       "total": 1
+    },
+    "dom/ranges/Range-cloneContents-around-shadow.html": {
+      "pass": 25,
+      "total": 25
+    },
+    "dom/ranges/Range-cloneContents-around-shadow.tentative.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "dom/ranges/Range-cloneContents-in-ShadowRoot.html": {
+      "pass": 4,
+      "total": 4
     },
     "dom/ranges/Range-cloneRange.html": {
       "pass": 62,
@@ -1548,15 +2271,47 @@
       "pass": 1,
       "total": 1
     },
+    "dom/ranges/Range-deleteContents-around-shadow.html": {
+      "pass": 27,
+      "total": 27
+    },
+    "dom/ranges/Range-deleteContents-around-shadow.tentative.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/ranges/Range-deleteContents-in-ShadowRoot.html": {
+      "pass": 4,
+      "total": 4
+    },
     "dom/ranges/Range-detach.html": {
       "pass": 1,
       "total": 1
+    },
+    "dom/ranges/Range-extractContents-around-shadow.html": {
+      "pass": 44,
+      "total": 44
+    },
+    "dom/ranges/Range-extractContents-around-shadow.tentative.html": {
+      "pass": 12,
+      "total": 13
     },
     "dom/ranges/Range-extractContents-dynamic-end.html": {
       "pass": 1,
       "total": 1
     },
+    "dom/ranges/Range-extractContents-in-ShadowRoot.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/ranges/Range-in-shadow-after-the-shadow-removed.html": {
+      "pass": 0,
+      "total": 2
+    },
     "dom/ranges/Range-intersectsNode-2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/ranges/Range-intersectsNode-binding.html": {
       "pass": 1,
       "total": 1
     },
@@ -1572,9 +2327,53 @@
       "pass": 5733,
       "total": 5733
     },
+    "dom/ranges/Range-mutations-appendChild.html": {
+      "pass": 70,
+      "total": 70
+    },
     "dom/ranges/Range-mutations-appendData.html": {
       "pass": 384,
       "total": 384
+    },
+    "dom/ranges/Range-mutations-deleteData.html": {
+      "pass": 564,
+      "total": 564
+    },
+    "dom/ranges/Range-mutations-insertBefore.html": {
+      "pass": 76,
+      "total": 76
+    },
+    "dom/ranges/Range-mutations-insertData.html": {
+      "pass": 382,
+      "total": 382
+    },
+    "dom/ranges/Range-mutations-normalize.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "dom/ranges/Range-mutations-removeChild.html": {
+      "pass": 20,
+      "total": 20
+    },
+    "dom/ranges/Range-mutations-replaceChild.html": {
+      "pass": 60,
+      "total": 60
+    },
+    "dom/ranges/Range-mutations-replaceData.html": {
+      "pass": 1146,
+      "total": 1146
+    },
+    "dom/ranges/Range-mutations-splitText.html": {
+      "pass": 116,
+      "total": 116
+    },
+    "dom/ranges/Range-selectNode.html": {
+      "pass": 292,
+      "total": 292
+    },
+    "dom/ranges/Range-set.html": {
+      "pass": 10920,
+      "total": 10920
     },
     "dom/ranges/Range-stringifier.html": {
       "pass": 5,
@@ -1584,9 +2383,17 @@
       "pass": 17,
       "total": 17
     },
+    "dom/svg-insert-crash.html": {
+      "pass": 1,
+      "total": 1
+    },
     "dom/traversal/NodeFilter-constants.html": {
       "pass": 2,
       "total": 2
+    },
+    "dom/traversal/NodeIterator-removal-during-filtering.html": {
+      "pass": 2,
+      "total": 4
     },
     "dom/traversal/NodeIterator-removal.html": {
       "pass": 22,
@@ -1595,6 +2402,14 @@
     "dom/traversal/NodeIterator.html": {
       "pass": 766,
       "total": 766
+    },
+    "dom/traversal/TreeWalker-acceptNode-filter-cross-realm-null-browsing-context.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/traversal/TreeWalker-acceptNode-filter-cross-realm.html": {
+      "pass": 0,
+      "total": 5
     },
     "dom/traversal/TreeWalker-acceptNode-filter.html": {
       "pass": 12,
@@ -1620,6 +2435,10 @@
       "pass": 1,
       "total": 1
     },
+    "dom/traversal/TreeWalker-realm.html": {
+      "pass": 2,
+      "total": 2
+    },
     "dom/traversal/TreeWalker-traversal-reject.html": {
       "pass": 6,
       "total": 6
@@ -1640,6 +2459,18 @@
       "pass": 761,
       "total": 761
     },
+    "dom/window-extends-event-target.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "dom/xpath-result-single-node-value-nullable.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "domparsing/Comment-serialization-double-hyphen.html": {
+      "pass": 3,
+      "total": 3
+    },
     "domparsing/DOMParser-parseFromString-html.html": {
       "pass": 10,
       "total": 10
@@ -1647,6 +2478,38 @@
     "domparsing/DOMParser-parseFromString-stylesheets.html": {
       "pass": 6,
       "total": 6
+    },
+    "domparsing/DOMParser-parseFromString-xml-CDATA.html": {
+      "pass": 0,
+      "total": 8
+    },
+    "domparsing/DOMParser-parseFromString-xml-doctype.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "domparsing/DOMParser-parseFromString-xml-empty-nodes.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "domparsing/DOMParser-parseFromString-xml-internal-subset.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "domparsing/DOMParser-parseFromString-xml-parsererror.html": {
+      "pass": 2,
+      "total": 23
+    },
+    "domparsing/DOMParser-parseFromString-xml-scripting-support-disabled.html": {
+      "pass": 4,
+      "total": 13
+    },
+    "domparsing/DOMParser-parseFromString-xml.html": {
+      "pass": 4,
+      "total": 20
+    },
+    "domparsing/DOMParser-xml-character-entities.html": {
+      "pass": 0,
+      "total": 8
     },
     "domparsing/XMLSerializer-serializeToString.html": {
       "pass": 27,
@@ -1672,7 +2535,23 @@
       "pass": 5,
       "total": 5
     },
+    "domparsing/innerhtml-08.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "domparsing/innerhtml-empty-document-element.html": {
+      "pass": 1,
+      "total": 1
+    },
     "domparsing/innerhtml-li-autoclosing.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "domparsing/innerhtml-mxss.sub.html": {
+      "pass": 30,
+      "total": 60
+    },
+    "domparsing/insert-adjacent-parent-errors.html": {
       "pass": 7,
       "total": 7
     },
@@ -1692,9 +2571,21 @@
       "pass": 5,
       "total": 5
     },
+    "domparsing/parsed-document-origin.window.js": {
+      "pass": 1,
+      "total": 7
+    },
     "domparsing/style_attribute_html.html": {
       "pass": 4,
       "total": 4
+    },
+    "domparsing/svg-template.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "domparsing/xml-parse-serialize-roundtrip.html": {
+      "pass": 1,
+      "total": 2
     },
     "domparsing/xmldomparser.html": {
       "pass": 1,
