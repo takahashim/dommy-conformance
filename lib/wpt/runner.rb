@@ -29,6 +29,11 @@ module DommyConformance
       # is marked TIMEOUT and the rest are still harvested.
       PUMP_ROUNDS = 250
       PUMP_STEP_MS = 100
+      # `<meta name=timeout content=long>` raises the harness timeout to 60s, so
+      # a file that only completes by timing its stragglers out needs the pump
+      # to run past that too — or it is harvested before completion, as 0/0.
+      LONG_PUMP_ROUNDS = 700
+      LONG_TIMEOUT_META = /<meta\s+name=["']?timeout["']?\s+content=["']?long/i.freeze
 
       class << self
         def available? = Resources.available?
@@ -58,7 +63,8 @@ module DommyConformance
             wasm_memory_shim: true
           )
           boot_scripts(browser, url, resources)
-          harvest(browser, url, resources)
+          rounds = html.match?(LONG_TIMEOUT_META) ? LONG_PUMP_ROUNDS : PUMP_ROUNDS
+          harvest(browser, url, resources, rounds)
         ensure
           browser&.dispose
         end
@@ -114,8 +120,11 @@ module DommyConformance
 
           includes = source.scan(META_SCRIPT).flatten
             .map { |spec| %(<script src="#{resolve_include(spec, rel_path)}"></script>) }
+          # wptserve turns `// META: timeout=long` into this meta on the page it
+          # generates; testharness reads its timeout from there.
+          long = source.match?(%r{^\s*//\s*META:\s*timeout=long}) ? %(<meta name="timeout" content="long">) : ""
           <<~HTML
-            <!DOCTYPE html><html><head>
+            <!DOCTYPE html><html><head>#{long}
             <script src="/resources/testharness.js"></script>
             <script src="/resources/testharnessreport.js"></script>
             #{includes.join("\n")}
@@ -138,10 +147,10 @@ module DommyConformance
         # Script boot has already fired the load event; drain microtasks/timers
         # until the completion callback stashes results or the pump budget is
         # spent. `base_url` resolves `<iframe src>` against the vendored tree.
-        def harvest(browser, base_url, resources)
+        def harvest(browser, base_url, resources, rounds = PUMP_ROUNDS)
           wire_iframes(browser, base_url, resources)
           if browser.evaluate("globalThis.__wptResults === null")
-            PUMP_ROUNDS.times do
+            rounds.times do
               browser.advance_time(PUMP_STEP_MS)
               # Tests that build their subtests inside an `<iframe>` create the
               # frame dynamically (frame.src = "...content.html"), so re-wire

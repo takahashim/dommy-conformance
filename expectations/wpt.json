@@ -1,8 +1,8 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 58450,
-    "subtests_total": 71422,
+    "subtests_passed": 58474,
+    "subtests_total": 71446,
     "files": 995,
     "files_green": 769,
     "files_errored": 0
@@ -761,8 +761,8 @@
       "total": 2
     },
     "dom/events/EventTarget-dispatchEvent.html": {
-      "pass": 1,
-      "total": 1
+      "pass": 25,
+      "total": 25
     },
     "dom/events/EventTarget-removeEventListener.any.js": {
       "pass": 0,
