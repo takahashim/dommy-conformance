@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 58045,
+    "subtests_passed": 58450,
     "subtests_total": 71422,
     "files": 995,
-    "files_green": 762,
+    "files_green": 769,
     "files_errored": 0
   },
   "files": {
@@ -837,7 +837,7 @@
       "total": 1
     },
     "dom/events/non-cancelable-when-passive/synthetic-events-cancelable.html": {
-      "pass": 8,
+      "pass": 12,
       "total": 12
     },
     "dom/events/passive-by-default-non-node.html": {
@@ -1753,7 +1753,7 @@
       "total": 4
     },
     "encoding/streams/decode-attributes.any.js": {
-      "pass": 0,
+      "pass": 4,
       "total": 28
     },
     "encoding/streams/decode-bad-chunks.any.js": {
@@ -1769,7 +1769,7 @@
       "total": 2
     },
     "encoding/streams/decode-non-utf8.any.js": {
-      "pass": 0,
+      "pass": 5,
       "total": 13
     },
     "encoding/streams/decode-split-character.any.js": {
@@ -1789,7 +1789,7 @@
       "total": 19
     },
     "encoding/streams/invalid-realm.window.js": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "encoding/streams/readable-writable-properties.any.js": {
@@ -3725,27 +3725,27 @@
       "total": 26
     },
     "urlpattern/urlpattern-constructor.any.js": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "urlpattern/urlpattern-detached-frame-regexp.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "urlpattern/urlpattern-empty-regexp-group.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "urlpattern/urlpattern-generate.tentative.any.js": {
-      "pass": 1,
+      "pass": 11,
       "total": 20
     },
     "urlpattern/urlpattern-hasregexpgroups.any.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "urlpattern/urlpattern.any.js": {
-      "pass": 1,
+      "pass": 370,
       "total": 370
     },
     "wai-aria/role/abstract-roles.html": {
