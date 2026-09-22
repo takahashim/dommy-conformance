@@ -54,3 +54,51 @@
     also defeats the purpose of the steps, since the reference ends up outside
     the iterator's collection entirely.
     https://dom.spec.whatwg.org/#nodeiterator-pre-removing-steps
+
+- case: fuzz/tree-mutations.js
+  key: "*"
+  step_divergence:
+    op: replaceChildren
+    keys: [iterators]
+  reason: |
+    The same divergence as the setTextContent entry above, reached through
+    replaceChildren instead: both are "replace all" internally, and both remove
+    the children one at a time in tree order. The op is pinned so an iterators
+    divergence at some OTHER operation is still a finding.
+    https://dom.spec.whatwg.org/#nodeiterator-pre-removing-steps
+
+- case: fuzz/tree-mutations.js
+  key: "*"
+  step_divergence:
+    op: insertBefore
+    keys: [ranges]
+  reason: |
+    Live-range offset shift when a node is MOVED WITHIN ITS OWN PARENT with a
+    non-null reference child, and a boundary sits on that parent. insert step 5
+    (shift the boundaries past `child`'s index) runs BEFORE step 7.1's adopt,
+    which is what removes the node — so the two adjustments compose as
+    shift-then-remove, and a boundary at the child's old index nets out to the
+    value step 5 gives. Dommy runs the steps where the spec puts them and gets
+    that value.
+
+    Chromium (and Firefox and WebKit) instead behave as if the removal ran
+    first: the boundary moves to the old index and is then shifted, one more
+    than the spec text. With `p` holding [A, B, comment, C] and a boundary at
+    (p, 3), `p.insertBefore(C, comment)` moves it to 4 in Chromium and 3 in
+    Dommy.
+
+    The divergence is the exact inverse of the one lean4-dom records as
+    `range-adjust-order-on-move` / `-on-before` / `range-order-broken-by-insert`
+    (lean4-dom `test/known-divergences.yml`). The spec text and the DOM
+    Standard's editor's own jsdom (`94301581 Align node insertion with the DOM
+    Standard`, 2026-08-01) both answer the spec-text value; the npm jsdom
+    releases and every shipping engine answer Chromium's.
+
+    WPT does not settle it: `dom/ranges/Range-mutations.js` computes its
+    expectation as modifyForRemove-then-modifyForInsert (the Chromium order),
+    but none of its insertBeforeTests changes the moved node's index within its
+    own parent — the same-parent cases all move a node back to where it already
+    was, where neither order shifts anything — so the file never exercises the
+    spot where the two orders differ. The diverging spot is only reachable when
+    the same-parent move actually changes the node's index.
+    https://dom.spec.whatwg.org/#concept-node-insert

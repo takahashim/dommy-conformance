@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 49297,
+    "subtests_passed": 49298,
     "subtests_total": 49478,
     "files": 707,
-    "files_green": 665,
+    "files_green": 664,
     "files_errored": 0
   },
   "files": {
@@ -469,7 +469,7 @@
       "total": 4
     },
     "custom-elements/CustomElementRegistry.html": {
-      "pass": 43,
+      "pass": 45,
       "total": 46
     },
     "dom/abort/AbortSignal.any.js": {
@@ -937,7 +937,7 @@
       "total": 1
     },
     "dom/nodes/MutationObserver-characterData.html": {
-      "pass": 23,
+      "pass": 22,
       "total": 23
     },
     "dom/nodes/MutationObserver-childList.html": {
