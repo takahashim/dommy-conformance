@@ -64,7 +64,9 @@ module WptRun
           failing: results.reject(&:pass?).map { |r| {status: r.status_name, name: r.name, message: r.message.to_s[0, 200]} }
         )
       rescue Exception => e # rubocop:disable Lint/RescueException -- report anything, including a NoMemoryError
-        writer.puts JSON.generate(file: rel, error: "#{e.class}: #{e.message.to_s[0, 200]}")
+        # The error is pinned in the baseline, so drop what varies by Ruby
+        # version: before 3.4 NameError quoted a name as `x', since as 'x'.
+        writer.puts JSON.generate(file: rel, error: "#{e.class}: #{e.message.to_s[0, 200].tr("`", "'")}")
       end
       writer.close
       exit!(0)
