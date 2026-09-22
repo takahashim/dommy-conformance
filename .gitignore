@@ -1,3 +1,12 @@
 /results/
 /tmp/
 *.log
+
+# The harness installs its own dependencies (CI runs `bundle install` and
+# `npm install playwright` from scratch), so nothing here is tracked: the
+# Gemfile resolves dommy from a path or a sibling checkout, and Playwright is
+# installed ad hoc or globally (runner/chromium.js probes global paths too).
+Gemfile.lock
+package.json
+package-lock.json
+node_modules/
