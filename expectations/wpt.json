@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 49298,
-    "subtests_total": 49478,
-    "files": 707,
-    "files_green": 664,
+    "subtests_passed": 49319,
+    "subtests_total": 49921,
+    "files": 716,
+    "files_green": 666,
     "files_errored": 0
   },
   "files": {
@@ -1352,6 +1352,10 @@
       "pass": 5,
       "total": 5
     },
+    "dom/ranges/StaticRange-constructor.html": {
+      "pass": 17,
+      "total": 17
+    },
     "dom/traversal/NodeFilter-constants.html": {
       "pass": 2,
       "total": 2
@@ -1803,6 +1807,10 @@
     "html/dom/historical.html": {
       "pass": 11,
       "total": 13
+    },
+    "html/dom/reflection-overridden-methods.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/document-metadata/the-title-element/title-multiple-elements.html": {
       "pass": 1,
@@ -2663,6 +2671,34 @@
     "url/urlsearchparams-stringifier.any.js": {
       "pass": 14,
       "total": 14
+    },
+    "urlpattern/urlpattern-compare.tentative.any.js": {
+      "pass": 1,
+      "total": 26
+    },
+    "urlpattern/urlpattern-constructor.any.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "urlpattern/urlpattern-detached-frame-regexp.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "urlpattern/urlpattern-empty-regexp-group.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "urlpattern/urlpattern-generate.tentative.any.js": {
+      "pass": 1,
+      "total": 20
+    },
+    "urlpattern/urlpattern-hasregexpgroups.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "urlpattern/urlpattern.any.js": {
+      "pass": 1,
+      "total": 370
     },
     "wai-aria/role/abstract-roles.html": {
       "pass": 12,

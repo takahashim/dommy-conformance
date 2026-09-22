@@ -68,7 +68,9 @@ module WptDiff
   end
 
   def cell(entry)
-    return "ERROR(#{entry["error"]})" if entry.nil? || entry["error"]
+    # A file added to (or removed from) the corpus has no entry on one side.
+    return "absent" if entry.nil?
+    return "ERROR(#{entry["error"]})" if entry["error"]
 
     "#{entry["pass"]}/#{entry["total"]}"
   end
