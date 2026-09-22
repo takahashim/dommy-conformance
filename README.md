@@ -18,7 +18,7 @@ Two measurements live here.
 
 ## The WPT corpus
 
-`wpt/corpus/` is a vendored, dommy-selected slice of web-platform-tests (707
+`wpt/corpus/` is a vendored, dommy-selected slice of web-platform-tests (995
 runnable files), run the way a browser runs it: each file is loaded as the
 document and its own `<script>` tags boot through dommy's normal resource and
 script pipeline, with `testharness.js` and the wptserve endpoints served from

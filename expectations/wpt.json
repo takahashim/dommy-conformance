@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 49298,
-    "subtests_total": 49478,
-    "files": 707,
-    "files_green": 664,
+    "subtests_passed": 58450,
+    "subtests_total": 71422,
+    "files": 995,
+    "files_green": 769,
     "files_errored": 0
   },
   "files": {
@@ -544,6 +544,18 @@
       "pass": 4,
       "total": 4
     },
+    "dom/events/AddEventListenerOptions-passive.any.js": {
+      "pass": 4,
+      "total": 5
+    },
+    "dom/events/AddEventListenerOptions-signal.any.js": {
+      "pass": 9,
+      "total": 11
+    },
+    "dom/events/Body-FrameSet-Event-Handlers.html": {
+      "pass": 24,
+      "total": 48
+    },
     "dom/events/CustomEvent.html": {
       "pass": 3,
       "total": 3
@@ -568,6 +580,10 @@
       "pass": 8,
       "total": 8
     },
+    "dom/events/Event-dispatch-bubble-canceled.html": {
+      "pass": 1,
+      "total": 1
+    },
     "dom/events/Event-dispatch-bubbles-false.html": {
       "pass": 5,
       "total": 5
@@ -576,9 +592,25 @@
       "pass": 5,
       "total": 5
     },
+    "dom/events/Event-dispatch-click.tentative.html": {
+      "pass": 6,
+      "total": 6
+    },
     "dom/events/Event-dispatch-detached-click.html": {
       "pass": 2,
       "total": 2
+    },
+    "dom/events/Event-dispatch-detached-input-and-change.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "dom/events/Event-dispatch-handlers-changed.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-listener-order.window.js": {
+      "pass": 1,
+      "total": 1
     },
     "dom/events/Event-dispatch-multiple-cancelBubble.html": {
       "pass": 1,
@@ -588,7 +620,19 @@
       "pass": 1,
       "total": 1
     },
+    "dom/events/Event-dispatch-omitted-capture.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-order-at-target.html": {
+      "pass": 1,
+      "total": 1
+    },
     "dom/events/Event-dispatch-order.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-other-document.html": {
       "pass": 1,
       "total": 1
     },
@@ -596,9 +640,25 @@
       "pass": 1,
       "total": 1
     },
+    "dom/events/Event-dispatch-reenter.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-single-activation-behavior.html": {
+      "pass": 132,
+      "total": 132
+    },
     "dom/events/Event-dispatch-target-moved.html": {
       "pass": 1,
       "total": 1
+    },
+    "dom/events/Event-dispatch-target-removed.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-dispatch-throwing.html": {
+      "pass": 2,
+      "total": 2
     },
     "dom/events/Event-init-while-dispatching.html": {
       "pass": 5,
@@ -616,13 +676,37 @@
       "pass": 7,
       "total": 7
     },
+    "dom/events/Event-returnValue.html": {
+      "pass": 7,
+      "total": 7
+    },
     "dom/events/Event-stopImmediatePropagation.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/Event-stopPropagation-cancel-bubbling.html": {
       "pass": 1,
       "total": 1
     },
     "dom/events/Event-subclasses-constructors.html": {
       "pass": 49,
       "total": 49
+    },
+    "dom/events/Event-timestamp-cross-realm-getter.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/events/Event-timestamp-high-resolution.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "dom/events/Event-timestamp-high-resolution.https.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/events/Event-timestamp-safe-resolution.html": {
+      "pass": 0,
+      "total": 1
     },
     "dom/events/Event-type-empty.html": {
       "pass": 2,
@@ -632,17 +716,161 @@
       "pass": 3,
       "total": 3
     },
+    "dom/events/EventListener-addEventListener.sub.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/EventListener-handleEvent-cross-realm.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "dom/events/EventListener-handleEvent.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "dom/events/EventListener-incumbent-global-1.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/events/EventListener-incumbent-global-2.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
     "dom/events/EventListenerOptions-capture.html": {
       "pass": 4,
       "total": 4
+    },
+    "dom/events/EventTarget-add-listener-platform-object.html": {
+      "pass": 0,
+      "total": 1
     },
     "dom/events/EventTarget-add-remove-listener.any.js": {
       "pass": 1,
       "total": 1
     },
+    "dom/events/EventTarget-addEventListener.any.js": {
+      "pass": 0,
+      "total": 1
+    },
     "dom/events/EventTarget-constructible.any.js": {
       "pass": 3,
       "total": 3
+    },
+    "dom/events/EventTarget-dispatchEvent-returnvalue.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/events/EventTarget-dispatchEvent.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/EventTarget-removeEventListener.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/events/EventTarget-this-of-listener.html": {
+      "pass": 5,
+      "total": 6
+    },
+    "dom/events/EventTarget-window-constructor.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/KeyEvent-initKeyEvent.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/events/element-click.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "dom/events/event-disabled-dynamic.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/event-global-event-targets.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "dom/events/event-global-extra.window.js": {
+      "pass": 2,
+      "total": 6
+    },
+    "dom/events/event-global-is-still-set-when-reporting-exception-onerror.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/events/event-global-replaceable.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "dom/events/event-global-set-before-handleEvent-lookup.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/events/event-global.html": {
+      "pass": 7,
+      "total": 8
+    },
+    "dom/events/event-handler-attribute-replace-preserves-passive.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/events/event-src-element-nullable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/label-default-action.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/legacy-pre-activation-behavior.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/mouse-event-retarget.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "dom/events/non-cancelable-when-passive/generic-events-stay-cancelable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/non-cancelable-when-passive/synthetic-events-cancelable.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "dom/events/passive-by-default-non-node.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "dom/events/passive-by-default.html": {
+      "pass": 68,
+      "total": 100
+    },
+    "dom/events/preventDefault-during-activation-behavior.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/relatedTarget.window.js": {
+      "pass": 3,
+      "total": 6
+    },
+    "dom/events/remove-all-listeners.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/events/shadow-relatedTarget.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/events/window-composed-path.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "dom/events/window-event-restored-after-throwing-onerror.html": {
+      "pass": 1,
+      "total": 1
     },
     "dom/lists/DOMTokenList-Iterable.html": {
       "pass": 6,
@@ -1352,6 +1580,10 @@
       "pass": 5,
       "total": 5
     },
+    "dom/ranges/StaticRange-constructor.html": {
+      "pass": 17,
+      "total": 17
+    },
     "dom/traversal/NodeFilter-constants.html": {
       "pass": 2,
       "total": 2
@@ -1472,13 +1704,97 @@
       "pass": 6,
       "total": 6
     },
+    "encoding/api-invalid-label.any.js": {
+      "pass": 0,
+      "total": 3421
+    },
+    "encoding/api-replacement-encodings.any.js": {
+      "pass": 0,
+      "total": 6
+    },
     "encoding/api-surrogates-utf8.any.js": {
       "pass": 6,
       "total": 6
     },
+    "encoding/big5-encoder.html": {
+      "pass": 1,
+      "total": 13
+    },
     "encoding/encodeInto.any.js": {
       "pass": 110,
       "total": 111
+    },
+    "encoding/iso-2022-jp-decoder.any.js": {
+      "pass": 1,
+      "total": 34
+    },
+    "encoding/iso-2022-jp-encoder.html": {
+      "pass": 1,
+      "total": 12
+    },
+    "encoding/replacement-encodings.any.js": {
+      "pass": 6,
+      "total": 12
+    },
+    "encoding/sharedarraybuffer.https.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "encoding/single-byte-decoder.any.js": {
+      "pass": 0,
+      "total": 336
+    },
+    "encoding/sniffing.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "encoding/streams/backpressure.any.js": {
+      "pass": 0,
+      "total": 4
+    },
+    "encoding/streams/decode-attributes.any.js": {
+      "pass": 4,
+      "total": 28
+    },
+    "encoding/streams/decode-bad-chunks.any.js": {
+      "pass": 0,
+      "total": 5
+    },
+    "encoding/streams/decode-ignore-bom.any.js": {
+      "pass": 0,
+      "total": 12
+    },
+    "encoding/streams/decode-incomplete-input.any.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "encoding/streams/decode-non-utf8.any.js": {
+      "pass": 5,
+      "total": 13
+    },
+    "encoding/streams/decode-split-character.any.js": {
+      "pass": 0,
+      "total": 11
+    },
+    "encoding/streams/decode-utf8.any.js": {
+      "pass": 0,
+      "total": 12
+    },
+    "encoding/streams/encode-bad-chunks.any.js": {
+      "pass": 0,
+      "total": 6
+    },
+    "encoding/streams/encode-utf8.any.js": {
+      "pass": 0,
+      "total": 19
+    },
+    "encoding/streams/invalid-realm.window.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "encoding/streams/readable-writable-properties.any.js": {
+      "pass": 0,
+      "total": 2
     },
     "encoding/textdecoder-arguments.any.js": {
       "pass": 3,
@@ -1496,6 +1812,14 @@
       "pass": 0,
       "total": 2
     },
+    "encoding/textdecoder-fatal-single-byte.any.js": {
+      "pass": 3734,
+      "total": 7168
+    },
+    "encoding/textdecoder-fatal-streaming.any.js": {
+      "pass": 1,
+      "total": 2
+    },
     "encoding/textdecoder-fatal.any.js": {
       "pass": 36,
       "total": 36
@@ -1504,13 +1828,33 @@
       "pass": 4,
       "total": 4
     },
+    "encoding/textdecoder-labels.any.js": {
+      "pass": 9,
+      "total": 222
+    },
+    "encoding/textdecoder-mistakes.any.js": {
+      "pass": 25,
+      "total": 87
+    },
+    "encoding/textdecoder-streaming.any.js": {
+      "pass": 12,
+      "total": 32
+    },
     "encoding/textdecoder-utf16-surrogates.any.js": {
       "pass": 10,
       "total": 10
     },
+    "encoding/textencoder-constructor-non-utf.any.js": {
+      "pass": 43,
+      "total": 79
+    },
     "encoding/textencoder-utf16-surrogates.any.js": {
       "pass": 7,
       "total": 7
+    },
+    "encoding/unsupported-encodings.any.js": {
+      "pass": 10,
+      "total": 14
     },
     "fetch/api/basic/accept-header.any.js": {
       "pass": 4,
@@ -1804,6 +2148,10 @@
       "pass": 11,
       "total": 13
     },
+    "html/dom/reflection-overridden-methods.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/document-metadata/the-title-element/title-multiple-elements.html": {
       "pass": 1,
       "total": 1
@@ -1816,6 +2164,34 @@
       "pass": 5,
       "total": 5
     },
+    "html/semantics/forms/attributes-common-to-form-controls/dirname-ltr.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/attributes-common-to-form-controls/dirname-only-if-applies.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/forms/attributes-common-to-form-controls/dirname-rtl-auto.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/attributes-common-to-form-controls/dirname-rtl-inherited.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/attributes-common-to-form-controls/disabled-elements-01.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "html/semantics/forms/attributes-common-to-form-controls/formAction_document_address.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/semantics/forms/attributes-common-to-form-controls/formaction.html": {
+      "pass": 8,
+      "total": 8
+    },
     "html/semantics/forms/constraints/form-validation-checkValidity.html": {
       "pass": 130,
       "total": 130
@@ -1823,6 +2199,10 @@
     "html/semantics/forms/constraints/form-validation-reportValidity.html": {
       "pass": 130,
       "total": 130
+    },
+    "html/semantics/forms/constraints/form-validation-validate.html": {
+      "pass": 8,
+      "total": 8
     },
     "html/semantics/forms/constraints/form-validation-validity-badInput.html": {
       "pass": 11,
@@ -1884,15 +2264,163 @@
       "pass": 78,
       "total": 78
     },
+    "html/semantics/forms/constraints/form-validation-willValidate-datalist.html": {
+      "pass": 17,
+      "total": 17
+    },
     "html/semantics/forms/constraints/form-validation-willValidate.html": {
       "pass": 73,
       "total": 73
+    },
+    "html/semantics/forms/constraints/infinite_backtracking.tentative.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/constraints/input-maxlength-emoji.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/constraints/input-number-validity-dynamic-value-no-change.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/constraints/input-pattern-dynamic-value.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/forms/constraints/inputwillvalidate.html": {
       "pass": 2,
       "total": 2
     },
+    "html/semantics/forms/constraints/radio-group-valueMissing.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/semantics/forms/constraints/radio-valueMissing.html": {
+      "pass": 4,
+      "total": 6
+    },
+    "html/semantics/forms/constraints/using-form-attribute.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/form-control-infrastructure/association.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/form-control-infrastructure/form.html": {
+      "pass": 10,
+      "total": 17
+    },
+    "html/semantics/forms/form-control-infrastructure/form_attribute.html": {
+      "pass": 34,
+      "total": 100
+    },
+    "html/semantics/forms/form-control-infrastructure/form_owner_and_table.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/semantics/forms/form-control-infrastructure/form_owner_and_table_2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/form-control-infrastructure/form_owner_and_table_3.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/form-submission-0/FormDataEvent.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/form-submission-0/SubmitEvent.window.js": {
+      "pass": 4,
+      "total": 7
+    },
+    "html/semantics/forms/form-submission-0/form-data-set-usv.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/form-submission-0/form-double-submit-default-action.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "html/semantics/forms/form-submission-0/form-double-submit-input-type-change.html": {
+      "pass": 0,
+      "total": 20
+    },
+    "html/semantics/forms/form-submission-0/form-double-submit-preventdefault-click.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/forms/form-submission-0/form-double-submit-preventdefault.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/form-submission-0/form-double-submit-requestsubmit.html": {
+      "pass": 0,
+      "total": 36
+    },
+    "html/semantics/forms/form-submission-0/form-submission-algorithm.html": {
+      "pass": 7,
+      "total": 11
+    },
+    "html/semantics/forms/form-submission-0/form-submit-invalid.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "html/semantics/forms/form-submission-0/form-submitters.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/form-submission-0/historical.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/form-submission-0/multipart-formdata.window.js": {
+      "pass": 0,
+      "total": 62
+    },
+    "html/semantics/forms/form-submission-0/newline-normalization.html": {
+      "pass": 8,
+      "total": 12
+    },
+    "html/semantics/forms/form-submission-0/request-submit-activation.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/form-submission-0/submission-checks.window.js": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/forms/form-submission-0/submit-button-clicked-in-data-document.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/form-submission-0/submit-event-shadow-host.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/form-submission-0/submit-event.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/form-submission-0/text-plain.window.js": {
+      "pass": 0,
+      "total": 62
+    },
+    "html/semantics/forms/form-submission-0/url-encoded.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/forms/form-submission-0/urlencoded2.window.js": {
+      "pass": 0,
+      "total": 62
+    },
+    "html/semantics/forms/resetting-a-form/reset-event.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/resetting-a-form/reset-form-2.html": {
       "pass": 1,
       "total": 1
     },
@@ -1900,13 +2428,69 @@
       "pass": 1,
       "total": 1
     },
-    "html/semantics/forms/resetting-a-form/support/reset-form-event-realm.html": {
+    "html/semantics/forms/resetting-a-form/reset-form.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/forms/setCustomValidity-normalize-newlines.html": {
       "pass": 0,
-      "total": 0
+      "total": 1
+    },
+    "html/semantics/forms/textfieldselection/defaultSelection.html": {
+      "pass": 1,
+      "total": 6
+    },
+    "html/semantics/forms/textfieldselection/selection-after-content-change.html": {
+      "pass": 6,
+      "total": 18
+    },
+    "html/semantics/forms/textfieldselection/selection-not-application-textarea.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/textfieldselection/selection-not-application.html": {
+      "pass": 54,
+      "total": 71
+    },
+    "html/semantics/forms/textfieldselection/selection-start-end-extra.html": {
+      "pass": 2,
+      "total": 11
+    },
+    "html/semantics/forms/textfieldselection/selection-start-end.html": {
+      "pass": 11,
+      "total": 45
+    },
+    "html/semantics/forms/textfieldselection/selection-value-interactions.html": {
+      "pass": 2,
+      "total": 14
+    },
+    "html/semantics/forms/textfieldselection/selection.html": {
+      "pass": 13,
+      "total": 18
+    },
+    "html/semantics/forms/textfieldselection/setSelectionRange.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-activate.html": {
+      "pass": 0,
+      "total": 1
     },
     "html/semantics/forms/the-button-element/button-checkvalidity.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-click-resets-with-commandfor.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/the-button-element/button-click-submits-with-commandfor.html": {
+      "pass": 3,
+      "total": 6
+    },
+    "html/semantics/forms/the-button-element/button-click-submits.html": {
+      "pass": 12,
+      "total": 12
     },
     "html/semantics/forms/the-button-element/button-labels.html": {
       "pass": 1,
@@ -1928,6 +2512,10 @@
       "pass": 2,
       "total": 2
     },
+    "html/semantics/forms/the-button-element/button-untrusted-key-event.html": {
+      "pass": 6,
+      "total": 6
+    },
     "html/semantics/forms/the-button-element/button-validation.html": {
       "pass": 6,
       "total": 6
@@ -1940,9 +2528,21 @@
       "pass": 1,
       "total": 1
     },
+    "html/semantics/forms/the-button-element/button-willvalidate-readonly-attribute.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-willvalidate.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/forms/the-datalist-element/datalistoptions.html": {
       "pass": 2,
       "total": 2
+    },
+    "html/semantics/forms/the-datalist-element/input-list-detached.html": {
+      "pass": 0,
+      "total": 1
     },
     "html/semantics/forms/the-fieldset-element/HTMLFieldSetElement.html": {
       "pass": 4,
@@ -1952,8 +2552,28 @@
       "pass": 5,
       "total": 5
     },
+    "html/semantics/forms/the-fieldset-element/disabled-003.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/the-fieldset-element/disabled-nested-legend.html": {
+      "pass": 4,
+      "total": 4
+    },
     "html/semantics/forms/the-fieldset-element/fieldset-checkvalidity.html": {
       "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-fieldset-element/fieldset-intrinsic-size.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/semantics/forms/the-fieldset-element/fieldset-setcustomvalidity.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-fieldset-element/fieldset-validationmessage.html": {
+      "pass": 0,
       "total": 1
     },
     "html/semantics/forms/the-fieldset-element/fieldset-validity.html": {
@@ -1968,6 +2588,14 @@
       "pass": 1,
       "total": 1
     },
+    "html/semantics/forms/the-form-element/form-attribute-form-owner.html": {
+      "pass": 2,
+      "total": 4
+    },
+    "html/semantics/forms/the-form-element/form-autocomplete.html": {
+      "pass": 0,
+      "total": 67
+    },
     "html/semantics/forms/the-form-element/form-checkvalidity.html": {
       "pass": 1,
       "total": 1
@@ -1975,6 +2603,10 @@
     "html/semantics/forms/the-form-element/form-elements-filter.html": {
       "pass": 2,
       "total": 2
+    },
+    "html/semantics/forms/the-form-element/form-elements-form-owner.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/forms/the-form-element/form-elements-interfaces-01.html": {
       "pass": 3,
@@ -1996,6 +2628,18 @@
       "pass": 1,
       "total": 1
     },
+    "html/semantics/forms/the-form-element/form-indexed-element-shadow.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-form-element/form-indexed-element.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/the-form-element/form-indexed-property-names.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/semantics/forms/the-form-element/form-length.html": {
       "pass": 1,
       "total": 1
@@ -2008,6 +2652,14 @@
       "pass": 5,
       "total": 5
     },
+    "html/semantics/forms/the-input-element/checkable-active-space-key-untrusted-event.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-input-element/checkbox-click-events.html": {
+      "pass": 4,
+      "total": 4
+    },
     "html/semantics/forms/the-input-element/checkbox.html": {
       "pass": 6,
       "total": 6
@@ -2015,6 +2667,34 @@
     "html/semantics/forms/the-input-element/clone.html": {
       "pass": 19,
       "total": 19
+    },
+    "html/semantics/forms/the-input-element/cloning-steps.html": {
+      "pass": 68,
+      "total": 68
+    },
+    "html/semantics/forms/the-input-element/color-attributes.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/the-input-element/color.html": {
+      "pass": 17,
+      "total": 27
+    },
+    "html/semantics/forms/the-input-element/date.html": {
+      "pass": 4,
+      "total": 6
+    },
+    "html/semantics/forms/the-input-element/datetime-local-trailing-zeros.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/datetime-local-valueasdate.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/datetime-local.html": {
+      "pass": 2,
+      "total": 17
     },
     "html/semantics/forms/the-input-element/datetime-weekmonth.html": {
       "pass": 14,
@@ -2024,7 +2704,39 @@
       "pass": 21,
       "total": 21
     },
+    "html/semantics/forms/the-input-element/default-type.html": {
+      "pass": 48,
+      "total": 72
+    },
+    "html/semantics/forms/the-input-element/email-value-idn.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/email.html": {
+      "pass": 7,
+      "total": 8
+    },
+    "html/semantics/forms/the-input-element/files.html": {
+      "pass": 2,
+      "total": 24
+    },
+    "html/semantics/forms/the-input-element/focus-dynamic-type-change-on-blur.html": {
+      "pass": 80,
+      "total": 80
+    },
+    "html/semantics/forms/the-input-element/focus-dynamic-type-change.html": {
+      "pass": 40,
+      "total": 40
+    },
+    "html/semantics/forms/the-input-element/hidden.html": {
+      "pass": 8,
+      "total": 9
+    },
     "html/semantics/forms/the-input-element/input-checkvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-height.html": {
       "pass": 1,
       "total": 1
     },
@@ -2044,6 +2756,18 @@
       "pass": 1,
       "total": 1
     },
+    "html/semantics/forms/the-input-element/input-step-float.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-step-realignment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-stepdown-02.html": {
+      "pass": 5,
+      "total": 6
+    },
     "html/semantics/forms/the-input-element/input-stepdown-weekmonth.html": {
       "pass": 2,
       "total": 2
@@ -2056,13 +2780,29 @@
       "pass": 53,
       "total": 53
     },
+    "html/semantics/forms/the-input-element/input-type-button.html": {
+      "pass": 3,
+      "total": 5
+    },
+    "html/semantics/forms/the-input-element/input-type-change-submit.html": {
+      "pass": 0,
+      "total": 20
+    },
     "html/semantics/forms/the-input-element/input-type-change-value.html": {
       "pass": 2,
       "total": 2
     },
+    "html/semantics/forms/the-input-element/input-type-checkbox-switch.tentative.window.js": {
+      "pass": 0,
+      "total": 3
+    },
     "html/semantics/forms/the-input-element/input-type-checkbox.html": {
       "pass": 7,
       "total": 7
+    },
+    "html/semantics/forms/the-input-element/input-untrusted-key-event.html": {
+      "pass": 44,
+      "total": 44
     },
     "html/semantics/forms/the-input-element/input-validationmessage.html": {
       "pass": 1,
@@ -2072,21 +2812,57 @@
       "pass": 1,
       "total": 1
     },
+    "html/semantics/forms/the-input-element/input-value-dirty-flag.html": {
+      "pass": 5,
+      "total": 5
+    },
     "html/semantics/forms/the-input-element/input-value-invalidstateerr.html": {
       "pass": 1,
       "total": 1
     },
+    "html/semantics/forms/the-input-element/input-valueasdate-invalidstateerr.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-valueasdate-null.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/input-valueasdate-stepping.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/input-valueasdate-typeerror.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/input-valueasdate.html": {
+      "pass": 4,
+      "total": 30
+    },
     "html/semantics/forms/the-input-element/input-valueasnumber-invalidstateerr.html": {
       "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/input-valueasnumber-nan.html": {
+      "pass": 0,
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-valueasnumber-stepping.html": {
       "pass": 7,
       "total": 7
     },
+    "html/semantics/forms/the-input-element/input-valueasnumber-typeerror.html": {
+      "pass": 0,
+      "total": 4
+    },
     "html/semantics/forms/the-input-element/input-valueasnumber.html": {
       "pass": 64,
       "total": 64
+    },
+    "html/semantics/forms/the-input-element/input-width.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/forms/the-input-element/input-willvalidate.html": {
       "pass": 1,
@@ -2100,6 +2876,10 @@
       "pass": 5,
       "total": 5
     },
+    "html/semantics/forms/the-input-element/month.html": {
+      "pass": 6,
+      "total": 15
+    },
     "html/semantics/forms/the-input-element/number-disabled.html": {
       "pass": 1,
       "total": 1
@@ -2108,9 +2888,41 @@
       "pass": 2,
       "total": 2
     },
+    "html/semantics/forms/the-input-element/number.html": {
+      "pass": 26,
+      "total": 34
+    },
+    "html/semantics/forms/the-input-element/password.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/semantics/forms/the-input-element/pattern_attribute.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/pattern_attribute_v_flag.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/forms/the-input-element/radio-click-events.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/radio-disconnected-group-owner.html": {
+      "pass": 6,
+      "total": 8
+    },
     "html/semantics/forms/the-input-element/radio-groupname-case.html": {
       "pass": 7,
       "total": 7
+    },
+    "html/semantics/forms/the-input-element/radio-input-cancel.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-input-element/radio-morphed.html": {
+      "pass": 0,
+      "total": 1
     },
     "html/semantics/forms/the-input-element/radio-multiple-selected.html": {
       "pass": 1,
@@ -2120,9 +2932,21 @@
       "pass": 12,
       "total": 12
     },
+    "html/semantics/forms/the-input-element/range-2.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/semantics/forms/the-input-element/range.html": {
+      "pass": 14,
+      "total": 25
+    },
     "html/semantics/forms/the-input-element/required_attribute.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/semantics/forms/the-input-element/reset.html": {
+      "pass": 5,
+      "total": 6
     },
     "html/semantics/forms/the-input-element/search_input.html": {
       "pass": 2,
@@ -2136,9 +2960,109 @@
       "pass": 42,
       "total": 42
     },
+    "html/semantics/forms/the-input-element/show-picker-cross-origin-iframe.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/telephone.html": {
+      "pass": 13,
+      "total": 13
+    },
+    "html/semantics/forms/the-input-element/text.html": {
+      "pass": 16,
+      "total": 18
+    },
+    "html/semantics/forms/the-input-element/time-2.html": {
+      "pass": 10,
+      "total": 17
+    },
+    "html/semantics/forms/the-input-element/time-datalist-crash.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/time-focus-dynamic-value-change.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/time.html": {
+      "pass": 31,
+      "total": 32
+    },
+    "html/semantics/forms/the-input-element/type-change-file-to-text-crash.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-input-element/type-change-state-weekmonth.html": {
+      "pass": 22,
+      "total": 82
+    },
+    "html/semantics/forms/the-input-element/type-change-state.html": {
+      "pass": 149,
+      "total": 380
+    },
+    "html/semantics/forms/the-input-element/url.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/valueMode-weekmonth.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/forms/the-input-element/valueMode.html": {
+      "pass": 27,
+      "total": 40
+    },
+    "html/semantics/forms/the-input-element/week.html": {
+      "pass": 7,
+      "total": 16
+    },
+    "html/semantics/forms/the-label-element/clicking-interactive-content.html": {
+      "pass": 36,
+      "total": 36
+    },
+    "html/semantics/forms/the-label-element/clicking-noninteractive-labelable-content.html": {
+      "pass": 3,
+      "total": 9
+    },
+    "html/semantics/forms/the-label-element/clicking-noninteractive-unlabelable-content.html": {
+      "pass": 50,
+      "total": 51
+    },
+    "html/semantics/forms/the-label-element/disabled-labeled-control.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/semantics/forms/the-label-element/forward-focus-to-associated-element.html": {
+      "pass": 2,
+      "total": 6
+    },
+    "html/semantics/forms/the-label-element/label-inside-anchor.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/forms/the-label-element/labelable-elements.html": {
       "pass": 26,
       "total": 26
+    },
+    "html/semantics/forms/the-label-element/labels-live-attribute-changes.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-label-element/labels-live-label-removal.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-label-element/proxy-click-to-associated-element.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/forms/the-legend-element/HTMLLegendElement.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/semantics/forms/the-legend-element/legend-form.html": {
+      "pass": 1,
+      "total": 2
     },
     "html/semantics/forms/the-meter-element/meter-leading-plus-sign.html": {
       "pass": 12,
@@ -2147,6 +3071,10 @@
     "html/semantics/forms/the-meter-element/meter.html": {
       "pass": 50,
       "total": 50
+    },
+    "html/semantics/forms/the-optgroup-element/optgroup-removal.window.js": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/forms/the-option-element/option-element-constructor.html": {
       "pass": 11,
@@ -2180,6 +3108,10 @@
       "pass": 11,
       "total": 11
     },
+    "html/semantics/forms/the-option-element/option-text-setter.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/semantics/forms/the-option-element/option-text-spaces.html": {
       "pass": 50,
       "total": 50
@@ -2191,6 +3123,10 @@
     "html/semantics/forms/the-option-element/option-value.html": {
       "pass": 12,
       "total": 12
+    },
+    "html/semantics/forms/the-output-element/mutations.window.js": {
+      "pass": 1,
+      "total": 2
     },
     "html/semantics/forms/the-output-element/output-setcustomvalidity.html": {
       "pass": 1,
@@ -2215,6 +3151,14 @@
     "html/semantics/forms/the-progress-element/progress.html": {
       "pass": 11,
       "total": 11
+    },
+    "html/semantics/forms/the-progress-element/progress.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/forms/the-progress-element/serialization-regression-test.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/forms/the-select-element/common-HTMLOptionsCollection-add.html": {
       "pass": 3,
@@ -2244,6 +3188,22 @@
       "pass": 2,
       "total": 2
     },
+    "html/semantics/forms/the-select-element/select-ask-for-reset.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/semantics/forms/the-select-element/select-clear-reappend.tentative.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-click-does-not-open-picker.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-defineProperty.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/forms/the-select-element/select-multiple.html": {
       "pass": 3,
       "total": 3
@@ -2252,15 +3212,47 @@
       "pass": 4,
       "total": 4
     },
+    "html/semantics/forms/the-select-element/select-option-display-inherit.tentative.html": {
+      "pass": 1,
+      "total": 3
+    },
     "html/semantics/forms/the-select-element/select-remove.html": {
       "pass": 4,
       "total": 4
+    },
+    "html/semantics/forms/the-select-element/select-required-attribute.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-selectedOptions-and-selected.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-selectedOptions-and-value.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-selectedOptions-nesting.window.js": {
+      "pass": 0,
+      "total": 11
     },
     "html/semantics/forms/the-select-element/select-selectedOptions.html": {
       "pass": 8,
       "total": 8
     },
     "html/semantics/forms/the-select-element/select-setcustomvalidity.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/forms/the-select-element/select-validity.html": {
+      "pass": 2,
+      "total": 6
+    },
+    "html/semantics/forms/the-select-element/select-validity.tentative.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/forms/the-select-element/select-value-option.tentative.html": {
       "pass": 1,
       "total": 1
     },
@@ -2271,6 +3263,14 @@
     "html/semantics/forms/the-select-element/select-willvalidate-readonly-attribute.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/semantics/forms/the-select-element/selected-index.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "html/semantics/forms/the-select-element/show-picker-cross-origin-iframe.html": {
+      "pass": 0,
+      "total": 4
     },
     "html/semantics/forms/the-textarea-element/cloning-steps.html": {
       "pass": 2,
@@ -2283,6 +3283,10 @@
     "html/semantics/forms/the-textarea-element/textarea-minlength.html": {
       "pass": 5,
       "total": 5
+    },
+    "html/semantics/forms/the-textarea-element/textarea-placeholder-lineheight.html": {
+      "pass": 1,
+      "total": 2
     },
     "html/semantics/forms/the-textarea-element/textarea-setcustomvalidity.html": {
       "pass": 1,
@@ -2303,6 +3307,14 @@
     "html/semantics/forms/the-textarea-element/textarea-validity-valueMissing-inside-datalist.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/semantics/forms/the-textarea-element/value-defaultValue-textContent.html": {
+      "pass": 7,
+      "total": 12
+    },
+    "html/semantics/forms/the-textarea-element/wrapping-transformation.window.js": {
+      "pass": 5,
+      "total": 8
     },
     "html/semantics/grouping-content/the-dl-element/grouping-dl.html": {
       "pass": 1,
@@ -2596,9 +3608,33 @@
       "pass": 4,
       "total": 4
     },
+    "url/IdnaTestV2-removed.any.js": {
+      "pass": 21,
+      "total": 21
+    },
+    "url/IdnaTestV2.any.js": {
+      "pass": 1894,
+      "total": 2671
+    },
+    "url/a-element-origin.html": {
+      "pass": 148,
+      "total": 400
+    },
+    "url/a-element.html": {
+      "pass": 2,
+      "total": 887
+    },
+    "url/failure.html": {
+      "pass": 426,
+      "total": 1211
+    },
     "url/historical.any.js": {
       "pass": 1,
       "total": 1
+    },
+    "url/toascii.window.js": {
+      "pass": 494,
+      "total": 784
     },
     "url/url-constructor.any.js": {
       "pass": 888,
@@ -2607,6 +3643,22 @@
     "url/url-origin.any.js": {
       "pass": 401,
       "total": 401
+    },
+    "url/url-searchparams.any.js": {
+      "pass": 3,
+      "total": 4
+    },
+    "url/url-setters-a-area.window.js": {
+      "pass": 11,
+      "total": 557
+    },
+    "url/url-setters-stripping.any.js": {
+      "pass": 132,
+      "total": 260
+    },
+    "url/url-setters.any.js": {
+      "pass": 171,
+      "total": 279
     },
     "url/url-statics-canparse.any.js": {
       "pass": 8,
@@ -2619,6 +3671,10 @@
     "url/url-tojson.any.js": {
       "pass": 1,
       "total": 1
+    },
+    "url/urlencoded-parser.any.js": {
+      "pass": 70,
+      "total": 105
     },
     "url/urlsearchparams-append.any.js": {
       "pass": 4,
@@ -2663,6 +3719,34 @@
     "url/urlsearchparams-stringifier.any.js": {
       "pass": 14,
       "total": 14
+    },
+    "urlpattern/urlpattern-compare.tentative.any.js": {
+      "pass": 1,
+      "total": 26
+    },
+    "urlpattern/urlpattern-constructor.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "urlpattern/urlpattern-detached-frame-regexp.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "urlpattern/urlpattern-empty-regexp-group.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "urlpattern/urlpattern-generate.tentative.any.js": {
+      "pass": 11,
+      "total": 20
+    },
+    "urlpattern/urlpattern-hasregexpgroups.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "urlpattern/urlpattern.any.js": {
+      "pass": 370,
+      "total": 370
     },
     "wai-aria/role/abstract-roles.html": {
       "pass": 12,
@@ -2807,6 +3891,74 @@
     "xhr/event-readystate-sync-open.any.js": {
       "pass": 2,
       "total": 2
+    },
+    "xhr/formdata/append-formelement.html": {
+      "pass": 6,
+      "total": 8
+    },
+    "xhr/formdata/append.any.js": {
+      "pass": 6,
+      "total": 7
+    },
+    "xhr/formdata/constructor-formelement.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "xhr/formdata/constructor-submitter-coordinate.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "xhr/formdata/constructor-submitter.html": {
+      "pass": 2,
+      "total": 9
+    },
+    "xhr/formdata/constructor.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "xhr/formdata/delete-formelement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "xhr/formdata/delete.any.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "xhr/formdata/foreach.any.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "xhr/formdata/get-formelement.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "xhr/formdata/get.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "xhr/formdata/has-formelement.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "xhr/formdata/has.any.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "xhr/formdata/iteration.any.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "xhr/formdata/set-blob.any.js": {
+      "pass": 1,
+      "total": 6
+    },
+    "xhr/formdata/set-formelement.html": {
+      "pass": 5,
+      "total": 8
+    },
+    "xhr/formdata/set.any.js": {
+      "pass": 5,
+      "total": 7
     },
     "xhr/json.any.js": {
       "pass": 1,
