@@ -92,7 +92,7 @@ module DommyConformance
         when "redirect-empty-location.py" then redirect_empty_location_py(url)
         when "clean-stash.py" then clean_stash_py(uri, url)
         when "preflight.py" then preflight_py(method, uri, headers, url)
-        when "content.py" then content_py(uri, body, url)
+        when "content.py" then content_py(method, uri, headers, body, url)
         when "echo-content-type.py" then echo_content_type_py(headers, url)
         end
       end
@@ -220,13 +220,22 @@ module DommyConformance
       end
 
       # wptserve resources/content.py: echo the request body back as the response
-      # body (a `content=` query param overrides it), with a `content_type=`
-      # (default text/plain) response type.
-      def content_py(uri, body, url)
+      # body (a `content=` query param overrides it), and report what arrived in
+      # the `X-Request-*` headers the XHR and fetch suites read back.
+      # `response_charset_label=` appends a charset to the response type.
+      def content_py(method, uri, req_headers, body, url)
         q = query(uri)
+        req = (req_headers || {}).transform_keys { |k| k.to_s.downcase }
+        charset = q["response_charset_label"]
         ::Dommy::Resources::Response.new(
           status: 200, status_text: "OK",
-          headers: {"Content-Type" => (q["content_type"] || "text/plain")},
+          headers: {
+            "Content-Type" => "text/plain#{charset ? ";charset=#{charset}" : ""}",
+            "X-Request-Method" => method.to_s,
+            "X-Request-Query" => (uri.query.to_s.empty? ? "NO" : uri.query.to_s),
+            "X-Request-Content-Length" => (req["content-length"] || "NO").to_s,
+            "X-Request-Content-Type" => (req["content-type"] || "NO").to_s
+          },
           body: q["content"] || body.to_s, url: url.to_s, redirected: false
         )
       end
