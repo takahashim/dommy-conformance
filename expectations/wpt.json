@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 85503,
-    "subtests_total": 88026,
-    "files": 1217,
-    "files_green": 930,
+    "subtests_passed": 85582,
+    "subtests_total": 88106,
+    "files": 1231,
+    "files_green": 943,
     "files_errored": 0
   },
   "files": {
@@ -2840,11 +2840,55 @@
       "pass": 1,
       "total": 1
     },
+    "html/browsers/history/the-location-interface/document_location.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/browsers/history/the-location-interface/location-hash-setter-empty-string.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location-non-configurable-toString-valueOf.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/browsers/history/the-location-interface/location-prevent-extensions.html": {
+      "pass": 2,
+      "total": 2
+    },
     "html/browsers/history/the-location-interface/location-prototype-no-toString-valueOf.html": {
       "pass": 4,
       "total": 4
     },
+    "html/browsers/history/the-location-interface/location-prototype-setting-same-origin.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/browsers/history/the-location-interface/location-stringifier.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/browsers/history/the-location-interface/location-symbol-toprimitive.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/browsers/history/the-location-interface/location-tojson.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location-valueof.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_assign.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/browsers/history/the-location-interface/location_hash_set_empty_string.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_hashchange_infinite_loop.html": {
       "pass": 1,
       "total": 1
     },
@@ -2871,6 +2915,18 @@
     "html/browsers/history/the-location-interface/location_protocol.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/browsers/history/the-location-interface/location_replace.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/browsers/history/the-location-interface/no-browsing-context.window.js": {
+      "pass": 46,
+      "total": 46
+    },
+    "html/browsers/history/the-location-interface/per-global.window.js": {
+      "pass": 3,
+      "total": 3
     },
     "html/dom/access-key-label.html": {
       "pass": 2,
