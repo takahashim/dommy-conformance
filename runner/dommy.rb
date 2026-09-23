@@ -53,8 +53,9 @@ module Oracle
   def run_case(id, harness)
     source = harness + "\n" + File.read(ROOT.join("cases", id))
     html = extract_html(source)
+    url = extract_url(source)
     slices = shard_slices(source)
-    return run_once(source, html) if slices.nil?
+    return run_once(source, html, url) if slices.nil?
 
     # A sharded case gets a FRESH runtime per slice, which is the whole point:
     # what a long run accumulates is per-node host proxies on the QuickJS side,
@@ -63,7 +64,7 @@ module Oracle
     merged = {}
     name = nil
     slices.each do |slice|
-      record = run_once(source, html, slice)
+      record = run_once(source, html, url, slice)
       return record if record["error"]
 
       name ||= record["name"]
@@ -74,8 +75,12 @@ module Oracle
     {"error" => "runner: #{e.class}: #{e.message}"}
   end
 
-  def run_once(source, html, extra_config = {})
+  def run_once(source, html, url = nil, extra_config = {})
     window = Dommy.parse("<!DOCTYPE html><html><head></head><body>#{html}</body></html>")
+    # A case that declares a `url` is loaded AT it, as the browser side is: the
+    # document's URL is what location reads and what a relative href resolves
+    # against, so without this the two sides compare different documents.
+    window.location.__internal_set_url__(url) if url
     runtime = Dommy::Js::Quickjs::Runtime.new
     begin
       runtime.define_host_object("document", window.document)
@@ -120,6 +125,17 @@ module Oracle
   def extract_html(source)
     runtime = Dommy::Js::Quickjs::Runtime.new
     runtime.evaluate("(() => { #{source}\n; return __oracleHtml(); })()").to_s
+  ensure
+    runtime&.dispose
+  end
+
+  # The document URL the case asks for, or nil. Read the same throwaway-runtime
+  # way as `html`, and for the same reason: it has to be known before the real
+  # window exists.
+  def extract_url(source)
+    runtime = Dommy::Js::Quickjs::Runtime.new
+    value = runtime.evaluate("(() => { #{source}\n; return __oracleUrl(); })()")
+    value.nil? ? nil : value.to_s
   ensure
     runtime&.dispose
   end

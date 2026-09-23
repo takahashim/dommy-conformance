@@ -75,10 +75,10 @@ function shardSlices(shard) {
   return slices;
 }
 
-async function runOnce(browser, source, html, overlay) {
+async function runOnce(browser, source, html, overlay, url) {
   const page = await browser.newPage();
   try {
-    await page.setContent("<!DOCTYPE html><html><head></head><body>" + html + "</body></html>");
+    await loadDocument(page, html, url);
     // __oracleConfig is defined by `source` itself, so a slice's bounds have to
     // be merged in after it is evaluated and before the case runs.
     const merge = overlay ? `Object.assign(globalThis.__oracleConfig, ${JSON.stringify(overlay)});` : "";
@@ -88,11 +88,24 @@ async function runOnce(browser, source, html, overlay) {
   }
 }
 
-async function runSliced(browser, source, html, slices) {
+// The case's document. A case that declares a `url` is SERVED that markup at it:
+// the route answers every request, so the fictional host needs no network and no
+// server, and the document's URL is a real http URL rather than about:blank —
+// which is what makes location, the base URL and document.baseURI comparable
+// with Dommy. Everything else keeps loading through setContent.
+async function loadDocument(page, html, url) {
+  const body = "<!DOCTYPE html><html><head></head><body>" + html + "</body></html>";
+  if (!url) return page.setContent(body);
+
+  await page.route("**/*", (route) => route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body }));
+  await page.goto(url);
+}
+
+async function runSliced(browser, source, html, slices, url) {
   const merged = {};
   let name = null;
   for (const slice of slices) {
-    const record = await runOnce(browser, source, html, slice);
+    const record = await runOnce(browser, source, html, slice, url);
     if (record && record.error) return record;
     name = name || record.name;
     Object.assign(merged, record.result || {});
@@ -133,11 +146,12 @@ async function main() {
         await page.setContent(BLANK);
         const html = await page.evaluate(`(() => { ${source}\n; return __oracleHtml(); })()`);
         const shard = await page.evaluate(`(() => { ${source}\n; return __oracleShard(); })()`);
+        const url = await page.evaluate(`(() => { ${source}\n; return __oracleUrl(); })()`);
         await page.close();
         const slices = shardSlices(shard);
         record = slices
-          ? await runSliced(browser, source, html, slices)
-          : await runOnce(browser, source, html);
+          ? await runSliced(browser, source, html, slices, url)
+          : await runOnce(browser, source, html, null, url);
       } catch (error) {
         record = { error: "runner: " + (error && error.message ? error.message : String(error)) };
       }

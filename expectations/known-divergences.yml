@@ -102,3 +102,36 @@
     spot where the two orders differ. The diverging spot is only reachable when
     the same-parent move actually changes the node's index.
     https://dom.spec.whatwg.org/#concept-node-insert
+
+- case: url/location-and-base.js
+  key: formAction
+  dommy_bug: |
+    `form.action` is a URL-reflecting IDL attribute: its getter parses the
+    content attribute against the element's node document's base URL and returns
+    the serialized result (and returns the document's URL when the attribute is
+    absent). Dommy returns the content attribute verbatim, so `action="post"`
+    under `<base href="/base/sub/">` reads as "post" rather than
+    "http://oracle.test/base/sub/post".
+
+    The same getter shape applies to every URL-reflecting attribute, so the fix
+    belongs with the reflection helper rather than with `form`.
+    https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes
+  chromium: "http://oracle.test/base/sub/post"
+  dommy: "post"
+
+- case: url/location-and-base.js
+  key: fragments
+  dommy_bug: |
+    Clearing a fragment that is there must leave the "#" in href. The hash
+    setter copies the URL, sets the copy's fragment to the empty string, parses
+    the given value into it with the fragment state as override, and navigates
+    if the fragment changed — so from "…?q=1&r=2#hashed", `hash = ""` ends at
+    "…?q=1&r=2#", with `hash` itself the empty string. Dommy drops the "#" and
+    lands on "…?q=1&r=2".
+
+    WPT covers both halves of this, and they only look contradictory:
+    `location-hash-setter-empty-string.html` expects the trailing "#" after
+    clearing a fragment (this case), while `location_hash_set_empty_string.html`
+    expects no change when there was no fragment to clear. Chromium answers
+    both; Dommy fails the first.
+    https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-hash

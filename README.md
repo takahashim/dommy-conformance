@@ -213,3 +213,18 @@ defineCase({
 Keys whose values differ between the two engines are the report. Name the keys
 for what they mean, not for what you expect — the harness has no expected value
 of its own, only the two observations.
+
+A case whose subject is the document's own URL declares one, and both runners
+load its markup at that URL:
+
+```js
+url: "http://oracle.test/dir/page.html?q=1#frag",
+```
+
+`location`, `document.baseURI` and the base URL a relative `href` resolves
+against then mean the same thing on both sides. Playwright answers the request
+from the case itself, so the host is fictional and nothing reaches the network.
+Without a `url` each side gets whatever its runner gives a blank document, and
+none of that is comparable — which is why `cases/url/location-and-base.js` is
+where the Location behaviour WPT cannot reach here gets pinned: its suite mostly
+navigates for real.
