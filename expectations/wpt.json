@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 85585,
-    "subtests_total": 88106,
-    "files": 1231,
-    "files_green": 945,
+    "subtests_passed": 86049,
+    "subtests_total": 89446,
+    "files": 1376,
+    "files_green": 982,
     "files_errored": 0
   },
   "files": {
@@ -39,6 +39,14 @@
     "FileAPI/blob/Blob-text.any.js": {
       "pass": 8,
       "total": 8
+    },
+    "WebCryptoAPI/getRandomValues.any.js": {
+      "pass": 10,
+      "total": 39
+    },
+    "WebCryptoAPI/randomUUID.https.any.js": {
+      "pass": 3,
+      "total": 3
     },
     "accname/basic.html": {
       "pass": 2,
@@ -2948,6 +2956,14 @@
       "pass": 27,
       "total": 27
     },
+    "html/dom/documents/dom-tree-accessors/Document.body.html": {
+      "pass": 9,
+      "total": 26
+    },
+    "html/dom/documents/dom-tree-accessors/Document.currentScript.html": {
+      "pass": 5,
+      "total": 18
+    },
     "html/dom/documents/dom-tree-accessors/Document.getElementsByClassName-null-undef.html": {
       "pass": 1,
       "total": 1
@@ -2955,6 +2971,14 @@
     "html/dom/documents/dom-tree-accessors/Element.getElementsByClassName-null-undef.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.embeds-document.plugins-01.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "html/dom/documents/dom-tree-accessors/document.forms.html": {
+      "pass": 5,
+      "total": 6
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByClassName-same.html": {
       "pass": 1,
@@ -2968,9 +2992,25 @@
       "pass": 1,
       "total": 1
     },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-interface.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-liveness.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-namespace.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-newelements.html": {
       "pass": 27,
       "total": 27
+    },
+    "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-null-undef.html": {
+      "pass": 1,
+      "total": 2
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-param.html": {
       "pass": 1,
@@ -2987,6 +3027,10 @@
     "html/dom/documents/dom-tree-accessors/document.head-02.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.images.html": {
+      "pass": 11,
+      "total": 11
     },
     "html/dom/documents/dom-tree-accessors/document.links.html": {
       "pass": 1,
@@ -3008,13 +3052,33 @@
       "pass": 21,
       "total": 21
     },
+    "html/dom/documents/dom-tree-accessors/document.title-06.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/document.title-07.html": {
+      "pass": 9,
+      "total": 9
+    },
     "html/dom/documents/dom-tree-accessors/document.title-08.html": {
       "pass": 2,
+      "total": 2
+    },
+    "html/dom/documents/dom-tree-accessors/document.title-09.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/dom/documents/dom-tree-accessors/document.title-not-in-html-svg.html": {
+      "pass": 1,
       "total": 2
     },
     "html/dom/documents/dom-tree-accessors/nameditem-01.html": {
       "pass": 7,
       "total": 7
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-02.html": {
+      "pass": 12,
+      "total": 12
     },
     "html/dom/documents/dom-tree-accessors/nameditem-03.html": {
       "pass": 1,
@@ -3024,7 +3088,91 @@
       "pass": 12,
       "total": 12
     },
+    "html/dom/documents/dom-tree-accessors/nameditem-05.html": {
+      "pass": 4,
+      "total": 12
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-06.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-07.html": {
+      "pass": 7,
+      "total": 14
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-08.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-adoption.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-img-name-added-cached-list.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-img-name-added.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-img-name-dynamic.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-img-name-removed.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-names.html": {
+      "pass": 6,
+      "total": 21
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-no-shadowing.tentative.html": {
+      "pass": 5,
+      "total": 8
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-supported-property-names-order.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-tree-order.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/dom-tree-accessors/nameditem-tree-transitions.html": {
+      "pass": 1,
+      "total": 2
+    },
     "html/dom/documents/resource-metadata-management/document-compatmode-01.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/documents/resource-metadata-management/document-compatmode-02.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/resource-metadata-management/document-cookie.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "html/dom/documents/resource-metadata-management/document-lastModified-01.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/dom/documents/resource-metadata-management/document-lastModified.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/documents/resource-metadata-management/document-readyState.html": {
+      "pass": 6,
+      "total": 7
+    },
+    "html/dom/documents/resource-metadata-management/load-event-after-readystatechange-starts-load.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/elements-in-the-dom/click-in-progress-flag.html": {
       "pass": 1,
       "total": 1
     },
@@ -3032,17 +3180,77 @@
       "pass": 8,
       "total": 8
     },
+    "html/dom/elements/global-attributes/classlist-nonstring.html": {
+      "pass": 6,
+      "total": 7
+    },
+    "html/dom/elements/global-attributes/custom-attrs.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/dom/elements/global-attributes/data_unicode_attr.html": {
       "pass": 2,
       "total": 2
+    },
+    "html/dom/elements/global-attributes/dataset-binding.window.js": {
+      "pass": 2,
+      "total": 4
+    },
+    "html/dom/elements/global-attributes/dataset-delete.html": {
+      "pass": 8,
+      "total": 9
     },
     "html/dom/elements/global-attributes/dataset-enumeration.html": {
       "pass": 2,
       "total": 2
     },
+    "html/dom/elements/global-attributes/dataset-get.html": {
+      "pass": 9,
+      "total": 10
+    },
     "html/dom/elements/global-attributes/dataset-prototype.html": {
       "pass": 2,
       "total": 2
+    },
+    "html/dom/elements/global-attributes/dataset-set.html": {
+      "pass": 9,
+      "total": 11
+    },
+    "html/dom/elements/global-attributes/dataset.html": {
+      "pass": 7,
+      "total": 8
+    },
+    "html/dom/elements/global-attributes/dir-assorted.window.js": {
+      "pass": 27,
+      "total": 41
+    },
+    "html/dom/elements/global-attributes/dir-auto-div-append-child.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/dir-auto-dynamic-changes.window.js": {
+      "pass": 2,
+      "total": 21
+    },
+    "html/dom/elements/global-attributes/dir-auto-form-associated.window.js": {
+      "pass": 11,
+      "total": 22
+    },
+    "html/dom/elements/global-attributes/dir-bdi-script.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/dir-slots-directionality.html": {
+      "pass": 8,
+      "total": 17
+    },
+    "html/dom/elements/global-attributes/document-dir.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/dom/elements/global-attributes/id-attribute.html": {
+      "pass": 16,
+      "total": 17
     },
     "html/dom/elements/global-attributes/id-name-specialcase.html": {
       "pass": 5,
@@ -3052,8 +3260,64 @@
       "pass": 1,
       "total": 1
     },
+    "html/dom/elements/global-attributes/lang-attribute-document-element-replacement.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/lang-attribute-shadow.window.js": {
+      "pass": 4,
+      "total": 6
+    },
+    "html/dom/elements/global-attributes/lang-attribute.window.js": {
+      "pass": 0,
+      "total": 1
+    },
     "html/dom/elements/global-attributes/mapped-attribute-adopt-001.html": {
       "pass": 1,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-001.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-002.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-003.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-004.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-005.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-006.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-007.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-008.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-009.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-010.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/global-attributes/the-lang-attribute-011.html": {
+      "pass": 0,
       "total": 1
     },
     "html/dom/elements/global-attributes/the-translate-attribute-007.html": {
@@ -3092,6 +3356,42 @@
       "pass": 3,
       "total": 3
     },
+    "html/dom/elements/name-content-attribute-and-property.html": {
+      "pass": 137,
+      "total": 141
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/dynamic-getter.html": {
+      "pass": 0,
+      "total": 7
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/getter-first-letter-marker-multicol.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/getter.html": {
+      "pass": 2,
+      "total": 276
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-setter.html": {
+      "pass": 8,
+      "total": 126
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-whitespace-pre-line.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html": {
+      "pass": 0,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/multiple-text-nodes.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/outertext-setter.html": {
+      "pass": 2,
+      "total": 43
+    },
     "html/dom/historical.html": {
       "pass": 11,
       "total": 13
@@ -3099,6 +3399,18 @@
     "html/dom/reflection-overridden-methods.html": {
       "pass": 1,
       "total": 1
+    },
+    "html/dom/render-blocking/blocking-idl-attr.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/dom/self-origin.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/dom/usvstring-reflection.https.html": {
+      "pass": 5,
+      "total": 19
     },
     "html/semantics/document-metadata/the-title-element/title-multiple-elements.html": {
       "pass": 1,
@@ -4260,7 +4572,31 @@
       "pass": 5,
       "total": 8
     },
+    "html/semantics/grouping-content/the-dd-element/grouping-dd.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-div-element/grouping-div.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/grouping-content/the-dl-element/grouping-dl.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-dt-element/grouping-dt.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-figcaption-element/grouping-figcaption.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-figure-element/grouping-figure.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-hr-element/grouping-hr.html": {
       "pass": 1,
       "total": 1
     },
@@ -4272,9 +4608,49 @@
       "pass": 25,
       "total": 25
     },
+    "html/semantics/grouping-content/the-ol-element/ol.start-reflection-1.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-ol-element/ol.start-reflection-2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-p-element/grouping-p.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-pre-element/grouping-pre.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/grouping-content/the-ul-element/grouping-ul.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/contextmenu-historical.html": {
+      "pass": 9,
+      "total": 11
+    },
+    "html/semantics/interactive-elements/the-details-element/auto-expand-details-element-fragment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-details-element/closed-details-layout-apis.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-details-element/details-name-exclusivity-fragment-insertion.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/interactive-elements/the-details-element/details.html": {
       "pass": 5,
       "total": 5
+    },
+    "html/semantics/interactive-elements/the-details-element/display-table-with-rt-crash.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/interactive-elements/the-details-element/name-attribute.html": {
       "pass": 18,
@@ -4283,6 +4659,26 @@
     "html/semantics/interactive-elements/the-details-element/toggleEvent.html": {
       "pass": 11,
       "total": 11
+    },
+    "html/semantics/interactive-elements/the-dialog-element/abspos-dialog-layout.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "html/semantics/interactive-elements/the-dialog-element/child-sequential-focus.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "html/semantics/interactive-elements/the-dialog-element/default-color.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-active-document.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-autofocus-just-once.html": {
+      "pass": 0,
+      "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-close-event-async.html": {
       "pass": 1,
@@ -4296,9 +4692,145 @@
       "pass": 5,
       "total": 5
     },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-enabled.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-focus-previous-outside.html": {
+      "pass": 1,
+      "total": 6
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-focus-shadow-double-nested.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-focus-shadow.html": {
+      "pass": 0,
+      "total": 50
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-focusing-steps-disconnected.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-focusing-steps-inert.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-focusing-steps-prevent-autofocus.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-form-submission-unusual.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-inert.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-no-throw-requested-state.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-open-2.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/interactive-elements/the-dialog-element/dialog-open.html": {
       "pass": 3,
       "total": 3
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-overlay.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-requestclose-closedby.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-requestclose-recurse.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-return-value.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-showModal-remove.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/dialog-showModal.html": {
+      "pass": 4,
+      "total": 10
+    },
+    "html/semantics/interactive-elements/the-dialog-element/form-submit-dialog-shadow.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/inert-does-not-match-disabled-selector.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/inert-node-is-unselectable.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/inertness-with-modal-dialogs-and-iframes.html": {
+      "pass": 0,
+      "total": 8
+    },
+    "html/semantics/interactive-elements/the-dialog-element/modal-dialog-in-visibility-hidden.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "html/semantics/interactive-elements/the-dialog-element/modal-dialog-scroll-height.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/multiple-centered-dialogs.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/non-modal-dialog-layout.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/synthetic-click-inert.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/toggle-events.html": {
+      "pass": 1,
+      "total": 12
+    },
+    "html/semantics/interactive-elements/the-dialog-element/top-layer-position.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-dialog-element/top-layer-removal-invalidates-ua-styles.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-summary-element/activation-behavior.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "html/semantics/interactive-elements/the-summary-element/anchor-with-inline-element.html": {
+      "pass": 2,
+      "total": 4
+    },
+    "html/semantics/interactive-elements/the-summary-element/anchor-without-link.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/interactive-elements/the-summary-element/display-table-with-rt-crash.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/interactive-elements/the-summary-element/summary-untrusted-key-event.html": {
+      "pass": 2,
+      "total": 2
     },
     "html/semantics/scripting-1/the-template-element/template-element/content-attribute.html": {
       "pass": 5,
@@ -4313,6 +4845,22 @@
       "total": 216
     },
     "html/semantics/tabular-data/attributes-common-to-td-and-th-elements/cellIndex.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/tabular-data/historical.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "html/semantics/tabular-data/processing-model-1/col-span-limits.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "html/semantics/tabular-data/processing-model-1/rowspan-0.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/semantics/tabular-data/processing-model-1/span-limits.html": {
       "pass": 6,
       "total": 6
     },
@@ -4344,6 +4892,14 @@
       "pass": 3,
       "total": 3
     },
+    "html/semantics/tabular-data/the-table-element/insertRow-tfoot-before-tbody.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/tabular-data/the-table-element/parentless-props.html": {
+      "pass": 3,
+      "total": 3
+    },
     "html/semantics/tabular-data/the-table-element/remove-row.html": {
       "pass": 6,
       "total": 6
@@ -4363,6 +4919,10 @@
     "html/semantics/tabular-data/the-table-element/table-insertRow.html": {
       "pass": 3,
       "total": 3
+    },
+    "html/semantics/tabular-data/the-table-element/table-rows-live-move.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/tabular-data/the-table-element/table-rows.html": {
       "pass": 5,
@@ -4408,6 +4968,22 @@
       "pass": 19,
       "total": 19
     },
+    "html/semantics/text-level-semantics/historical.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/text-level-semantics/the-a-element/a-download-click-404.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/text-level-semantics/the-a-element/a-download-click-redirect-to-javascript.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/text-level-semantics/the-a-element/a-download-click.html": {
+      "pass": 1,
+      "total": 1
+    },
     "html/semantics/text-level-semantics/the-a-element/a-stringifier.html": {
       "pass": 7,
       "total": 11
@@ -4419,6 +4995,10 @@
     "html/semantics/text-level-semantics/the-a-element/a.text-setter-01.html": {
       "pass": 5,
       "total": 5
+    },
+    "html/semantics/text-level-semantics/the-ruby-element/rt-without-ruby-crash.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/semantics/text-level-semantics/the-time-element/001.html": {
       "pass": 8,
