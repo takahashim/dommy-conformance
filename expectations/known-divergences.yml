@@ -120,3 +120,24 @@
     https://github.com/web-platform-tests/wpt/blob/master/dom/lists/DOMTokenList-coverage-for-attributes.html
   chromium: "undefined"
   dommy: "DOMTokenList"
+
+- case: attributes/token-list-hosts.js
+  key: "*"
+  dommy_bug: |
+    The `autocomplete` getter returns the content attribute verbatim. HTML marks
+    it `[ReflectSetter]`: only the setter reflects, and the getter runs the
+    autofill processing model over the attribute's tokens, answering the
+    NORMALIZED sequence when it is a valid one and the empty string when it is
+    not. So `autocomplete="OFF"` reads as "off", `"  on  "` as "on", and
+    `"nonsense"` or `"on off"` as "" — where Dommy hands back what was written.
+
+    The gap is the autofill token table itself: roughly fifty field names, plus
+    the "shipping"/"billing" address types, the "home"/"work"/"mobile"/"fax"/
+    "pager" contact types, a "section-*" prefix and "webauthn". Half a table
+    would be worse than none, so this stays recorded, with the target pinned
+    here, until someone writes the whole of it. The SETTER is already the plain
+    string reflection the IDL asks for, so only reads are affected.
+
+    dommy's WebIDL audit records the same two attributes (HTMLInputElement and
+    HTMLTextAreaElement .autocomplete) as its last two reflect_gaps.
+    https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill

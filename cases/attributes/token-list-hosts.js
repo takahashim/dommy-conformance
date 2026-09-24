@@ -29,3 +29,24 @@ defineCase({
     return out;
   }
 });
+
+// The autocomplete IDL attribute is [ReflectSetter]: HTML writes its getter out
+// in prose, over the autofill processing model, so what it answers for a value
+// that is not a valid token sequence is the question a browser can settle.
+defineCase({
+  name: "what the autocomplete getter answers",
+  html: '<form><input id="i"><textarea id="t"></textarea></form>',
+  run() {
+    const el = document.getElementById("i");
+    const out = {};
+    for (const value of [null, "", "on", "OFF", "  on  ", "name", "shipping street-address", "nonsense", "on off"]) {
+      if (value === null) el.removeAttribute("autocomplete");
+      else el.setAttribute("autocomplete", value);
+      out[value === null ? "absent" : JSON.stringify(value)] = el.autocomplete;
+    }
+    const ta = document.getElementById("t");
+    ta.setAttribute("autocomplete", "NONSENSE");
+    out["textarea nonsense"] = ta.autocomplete;
+    return out;
+  }
+});
