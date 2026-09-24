@@ -118,20 +118,3 @@
     https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes
   chromium: "http://oracle.test/base/sub/post"
   dommy: "post"
-
-- case: url/location-and-base.js
-  key: fragments
-  dommy_bug: |
-    Clearing a fragment that is there must leave the "#" in href. The hash
-    setter copies the URL, sets the copy's fragment to the empty string, parses
-    the given value into it with the fragment state as override, and navigates
-    if the fragment changed — so from "…?q=1&r=2#hashed", `hash = ""` ends at
-    "…?q=1&r=2#", with `hash` itself the empty string. Dommy drops the "#" and
-    lands on "…?q=1&r=2".
-
-    WPT covers both halves of this, and they only look contradictory:
-    `location-hash-setter-empty-string.html` expects the trailing "#" after
-    clearing a fragment (this case), while `location_hash_set_empty_string.html`
-    expects no change when there was no fragment to clear. Chromium answers
-    both; Dommy fails the first.
-    https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-location-hash
