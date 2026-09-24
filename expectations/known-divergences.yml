@@ -102,3 +102,42 @@
     spot where the two orders differ. The diverging spot is only reachable when
     the same-parent move actually changes the node's index.
     https://dom.spec.whatwg.org/#concept-node-insert
+
+- case: attributes/token-list-hosts.js
+  key: "mathml:a.relList"
+  reason: |
+    Whether `<a>` in the MathML namespace reflects a relList. WPT asserts that it
+    does — dom/lists/DOMTokenList-coverage-for-attributes builds its matrix from
+    the namespaces an element can be created in, and names the MathML `a` among
+    the elements whose relList must be a DOMTokenList — and Dommy passes that
+    file, all 175 subtests. Chromium answers undefined, and fails the subtest.
+
+    Neither is obviously the spec: MathML Core defines no `<a>` element, so there
+    is no interface for HTML's relList to be on, which is Chromium's reading. But
+    the test is the one artifact of the standards process that says anything
+    about this case, and a browser is an oracle rather than the specification —
+    so Dommy follows the test, and the divergence is recorded rather than chased.
+    https://github.com/web-platform-tests/wpt/blob/master/dom/lists/DOMTokenList-coverage-for-attributes.html
+  chromium: "undefined"
+  dommy: "DOMTokenList"
+
+- case: attributes/token-list-hosts.js
+  key: "*"
+  dommy_bug: |
+    The `autocomplete` getter returns the content attribute verbatim. HTML marks
+    it `[ReflectSetter]`: only the setter reflects, and the getter runs the
+    autofill processing model over the attribute's tokens, answering the
+    NORMALIZED sequence when it is a valid one and the empty string when it is
+    not. So `autocomplete="OFF"` reads as "off", `"  on  "` as "on", and
+    `"nonsense"` or `"on off"` as "" — where Dommy hands back what was written.
+
+    The gap is the autofill token table itself: roughly fifty field names, plus
+    the "shipping"/"billing" address types, the "home"/"work"/"mobile"/"fax"/
+    "pager" contact types, a "section-*" prefix and "webauthn". Half a table
+    would be worse than none, so this stays recorded, with the target pinned
+    here, until someone writes the whole of it. The SETTER is already the plain
+    string reflection the IDL asks for, so only reads are affected.
+
+    dommy's WebIDL audit records the same two attributes (HTMLInputElement and
+    HTMLTextAreaElement .autocomplete) as its last two reflect_gaps.
+    https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill

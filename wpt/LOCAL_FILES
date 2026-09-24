@@ -1,0 +1,11 @@
+# Corpus files that are deliberately NOT upstream's, and which
+# script/refresh-corpus.rb therefore leaves alone. One path per line, relative
+# to wpt/corpus.
+#
+# get-host-info.sub.js: upstream's version is a wptserve template whose
+# {{ports[...]}} / {{hosts[...]}} placeholders are substituted when the FILE IS
+# SERVED. This harness substitutes only a test document's own source, and serves
+# every path from one origin, so the template would reach the page unsubstituted
+# and take the fetch CORS suites down with it. The local version reports the same
+# shape of hosts and ports, computed from the document's own location.
+common/get-host-info.sub.js
