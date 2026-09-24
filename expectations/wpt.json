@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 85582,
+    "subtests_passed": 85583,
     "subtests_total": 88106,
     "files": 1231,
-    "files_green": 943,
+    "files_green": 944,
     "files_errored": 0
   },
   "files": {
@@ -2845,7 +2845,7 @@
       "total": 4
     },
     "html/browsers/history/the-location-interface/location-hash-setter-empty-string.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/browsers/history/the-location-interface/location-non-configurable-toString-valueOf.html": {
