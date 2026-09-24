@@ -103,18 +103,33 @@
     the same-parent move actually changes the node's index.
     https://dom.spec.whatwg.org/#concept-node-insert
 
-- case: url/location-and-base.js
-  key: formAction
+- case: attributes/numeric-reflection.js
+  key: "*"
   dommy_bug: |
-    `form.action` is a URL-reflecting IDL attribute: its getter parses the
-    content attribute against the element's node document's base URL and returns
-    the serialized result (and returns the document's URL when the attribute is
-    absent). Dommy returns the content attribute verbatim, so `action="post"`
-    under `<base href="/base/sub/">` reads as "post" rather than
-    "http://oracle.test/base/sub/post".
+    Reflected `long` and `unsigned long` attributes are read with String#to_i at
+    each element class that has one, rather than by HTML §2.6.1's getter, so
+    every part of that algorithm which is not "collect the digits" is missing:
 
-    The same getter shape applies to every URL-reflecting attribute, so the fix
-    belongs with the reflection helper rather than with `form`.
+      * the default when the attribute cannot be parsed — `colspan="abc"` is 1,
+        `ol.start` absent is 1, `li.value` absent is 0;
+      * the range. `unsigned long` is 0..2147483647 unless [ReflectRange] gives
+        another, so `colspan="3000000000"` clamps to 1000 and `rowspan` to
+        65534, while `ol.start` (no range, but a default) falls back to 1;
+      * the minimum. colSpan's is 1, so `colspan="0"` reads as 1;
+      * non-negative parsing. `colspan="-5"` is an error and reads as the
+        default, where `li.value="-5"` is a signed long and really is -5;
+      * the setter, which converts out-of-range to the default BEFORE writing:
+        `cell.colSpan = 3000000000` stores "1".
+
+    What Dommy does get right is the parse itself — "12abc" is 12 and "1e3" is 1,
+    because HTML's rules for parsing integers collect a run of digits and return
+    without requiring it to reach the end of the string, which is also what
+    String#to_i does. That is the one part of this worth confirming against a
+    browser rather than reading off the spec, and this case is where it is
+    confirmed.
+
+    The fix is a reflect_ulong / reflect_long in the reflection DSL, alongside
+    reflect_url and reflect_string: the parameters (default, range, signedness)
+    are in the specs' own IDL, and dommy's WebIDL audit already reads them —
+    it records these nine attributes as reflect_gaps.
     https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#reflecting-content-attributes-in-idl-attributes
-  chromium: "http://oracle.test/base/sub/post"
-  dommy: "post"
