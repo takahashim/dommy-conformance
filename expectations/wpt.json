@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86835,
+    "subtests_passed": 86839,
     "subtests_total": 89400,
     "files": 1374,
-    "files_green": 1009,
+    "files_green": 1012,
     "files_errored": 0
   },
   "files": {
@@ -4317,11 +4317,11 @@
       "total": 3
     },
     "html/semantics/forms/the-legend-element/HTMLLegendElement.html": {
-      "pass": 1,
+      "pass": 3,
       "total": 3
     },
     "html/semantics/forms/the-legend-element/legend-form.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/the-meter-element/meter-leading-plus-sign.html": {
@@ -5169,7 +5169,7 @@
       "total": 416
     },
     "url/url-searchparams.any.js": {
-      "pass": 3,
+      "pass": 4,
       "total": 4
     },
     "url/url-setters-a-area.window.js": {
