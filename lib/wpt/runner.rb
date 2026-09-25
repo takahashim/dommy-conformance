@@ -60,7 +60,7 @@ module DommyConformance
           browser = ::Dommy::Browser.new(
             html, url: url, resources: resources,
             execute_scripts: false, strict: false, settle: false,
-            wasm_memory_shim: true
+            wasm_memory_shim: true, navigable: true
           )
           boot_scripts(browser, url, resources)
           rounds = html.match?(LONG_TIMEOUT_META) ? LONG_PUMP_ROUNDS : PUMP_ROUNDS

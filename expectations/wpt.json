@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86850,
+    "subtests_passed": 86866,
     "subtests_total": 89400,
     "files": 1377,
-    "files_green": 1017,
+    "files_green": 1022,
     "files_errored": 0
   },
   "files": {
@@ -3429,19 +3429,19 @@
       "total": 5
     },
     "html/semantics/forms/attributes-common-to-form-controls/dirname-ltr.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/attributes-common-to-form-controls/dirname-only-if-applies.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 4
     },
     "html/semantics/forms/attributes-common-to-form-controls/dirname-rtl-auto.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/attributes-common-to-form-controls/dirname-rtl-inherited.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/attributes-common-to-form-controls/disabled-elements-01.html": {
@@ -3629,7 +3629,7 @@
       "total": 36
     },
     "html/semantics/forms/form-submission-0/form-submission-algorithm.html": {
-      "pass": 3,
+      "pass": 9,
       "total": 11
     },
     "html/semantics/forms/form-submission-0/form-submit-invalid.html": {
@@ -3653,7 +3653,7 @@
       "total": 12
     },
     "html/semantics/forms/form-submission-0/request-submit-activation.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/form-submission-0/submission-checks.window.js": {
@@ -3661,7 +3661,7 @@
       "total": 3
     },
     "html/semantics/forms/form-submission-0/submit-button-clicked-in-data-document.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/form-submission-0/submit-event-shadow-host.html": {
