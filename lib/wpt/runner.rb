@@ -69,16 +69,22 @@ module DommyConformance
           browser&.dispose
         end
 
-        # Replicate Dommy::Browser's script-boot step, but only after the initial
-        # (static) iframes have been navigated — so the window load event that
-        # boot dispatches sees their contentDocument populated.
+        # Replicate Dommy::Browser's script-boot step. Static `<iframe src>`
+        # frames are populated with their content document BEFORE the document's
+        # scripts run — so a script (or the window load event that boot fires)
+        # that reads `contentDocument` finds it — but each frame's own `load`
+        # event fires AFTER the scripts, which is when a browser fires it. An
+        # `onload="testIframe(this)"` handler calls a function the document's own
+        # script defines; dispatching the frame's load before that script ran
+        # left the async_test it starts uncompleted ("Removed iframe").
         def boot_scripts(browser, base_url, resources)
-          wire_iframes(browser, base_url, resources)
+          frames = populate_iframes(browser, base_url, resources)
           doc = browser.window.document
           doc.external_script_runner = lambda do |element, src|
             ::Dommy::Js::ScriptBoot.run_external_script(browser.runtime, doc, element, src, resources: resources)
           end
           ::Dommy::Js::ScriptBoot.run_document_scripts(browser.runtime, doc, resources: resources)
+          frames.each { |iframe| dispatch_iframe_load(iframe) }
           browser.settle
         end
 
@@ -176,14 +182,23 @@ module DommyConformance
           parsed.map { |r| Result.new(r["name"], r["status"], r["message"]) }
         end
 
-        # Populate any `<iframe src=...>` whose src resolves against the vendored
-        # tree with a parsed content document, then fire the frame's `load` event
-        # — the browser doesn't navigate iframes itself, but WPT tests routinely
-        # run their body inside a framed document (Selectors-API suites, the
-        # createElementNS XML/XHTML-document cases via /common/dummy.{xml,xhtml}).
-        # Idempotent: an already-wired frame is skipped, so it is safe to call
-        # every pump round for dynamically created frames.
+        # Populate a frame and fire its `load` — for frames created DURING the
+        # harvest (frame.src = "..." in a test body), whose onload handler is
+        # already installed before the src is set.
         def wire_iframes(browser, base_url, resources)
+          populate_iframes(browser, base_url, resources).each { |iframe| dispatch_iframe_load(iframe) }
+        end
+
+        # Populate any `<iframe src=...>` whose src resolves against the vendored
+        # tree with a parsed content document, and return the frames that were
+        # newly populated (their `load` is the caller's to fire) — the browser
+        # doesn't navigate iframes itself, but WPT tests routinely run their body
+        # inside a framed document (Selectors-API suites, the createElementNS
+        # XML/XHTML-document cases via /common/dummy.{xml,xhtml}). Idempotent: an
+        # already-populated frame is skipped, so it is safe to call every pump
+        # round for dynamically created frames.
+        def populate_iframes(browser, base_url, resources)
+          populated = []
           browser.window.document.query_selector_all("iframe").each do |iframe|
             next if iframe.content_document
 
@@ -212,10 +227,18 @@ module DommyConformance
             # a binding that lacks it simply runs without cross-realm
             # `instanceof` rather than failing the whole file.
             browser.runtime.expose_constructors_on(sub) if browser.runtime.respond_to?(:expose_constructors_on)
-            iframe.dispatch_event(::Dommy::Event.new("load"))
+            populated << iframe
           end
+          populated
         rescue StandardError
           # Wiring is best-effort; a malformed frame must not abort the harvest.
+          populated
+        end
+
+        def dispatch_iframe_load(iframe)
+          iframe.dispatch_event(::Dommy::Event.new("load"))
+        rescue StandardError
+          # A handler that throws must not take the harvest with it.
           nil
         end
 
