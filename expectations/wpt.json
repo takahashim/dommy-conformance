@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86056,
+    "subtests_passed": 86623,
     "subtests_total": 89446,
     "files": 1376,
-    "files_green": 986,
+    "files_green": 1007,
     "files_errored": 0
   },
   "files": {
@@ -41,7 +41,7 @@
       "total": 8
     },
     "WebCryptoAPI/getRandomValues.any.js": {
-      "pass": 10,
+      "pass": 30,
       "total": 39
     },
     "WebCryptoAPI/randomUUID.https.any.js": {
@@ -1901,7 +1901,7 @@
       "total": 4
     },
     "dom/nodes/insertion-removing-steps/insertion-removing-steps-script.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/later-script-removed-by-earlier-script.html": {
@@ -3097,19 +3097,19 @@
       "total": 9
     },
     "html/dom/documents/dom-tree-accessors/nameditem-07.html": {
-      "pass": 7,
+      "pass": 14,
       "total": 14
     },
     "html/dom/documents/dom-tree-accessors/nameditem-08.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/dom/documents/dom-tree-accessors/nameditem-adoption.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/nameditem-img-name-added-cached-list.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/nameditem-img-name-added.html": {
@@ -3121,11 +3121,11 @@
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/nameditem-img-name-removed.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/nameditem-names.html": {
-      "pass": 6,
+      "pass": 8,
       "total": 21
     },
     "html/dom/documents/dom-tree-accessors/nameditem-no-shadowing.tentative.html": {
@@ -3197,7 +3197,7 @@
       "total": 4
     },
     "html/dom/elements/global-attributes/dataset-delete.html": {
-      "pass": 8,
+      "pass": 9,
       "total": 9
     },
     "html/dom/elements/global-attributes/dataset-enumeration.html": {
@@ -3213,39 +3213,39 @@
       "total": 2
     },
     "html/dom/elements/global-attributes/dataset-set.html": {
-      "pass": 9,
+      "pass": 11,
       "total": 11
     },
     "html/dom/elements/global-attributes/dataset.html": {
-      "pass": 7,
+      "pass": 8,
       "total": 8
     },
     "html/dom/elements/global-attributes/dir-assorted.window.js": {
-      "pass": 27,
+      "pass": 41,
       "total": 41
     },
     "html/dom/elements/global-attributes/dir-auto-div-append-child.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/elements/global-attributes/dir-auto-dynamic-changes.window.js": {
-      "pass": 2,
+      "pass": 20,
       "total": 21
     },
     "html/dom/elements/global-attributes/dir-auto-form-associated.window.js": {
-      "pass": 11,
+      "pass": 22,
       "total": 22
     },
     "html/dom/elements/global-attributes/dir-bdi-script.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/elements/global-attributes/dir-slots-directionality.html": {
-      "pass": 8,
+      "pass": 14,
       "total": 17
     },
     "html/dom/elements/global-attributes/document-dir.html": {
-      "pass": 1,
+      "pass": 3,
       "total": 3
     },
     "html/dom/elements/global-attributes/id-attribute.html": {
@@ -3361,23 +3361,23 @@
       "total": 141
     },
     "html/dom/elements/the-innertext-and-outertext-properties/dynamic-getter.html": {
-      "pass": 0,
+      "pass": 7,
       "total": 7
     },
     "html/dom/elements/the-innertext-and-outertext-properties/getter-first-letter-marker-multicol.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/elements/the-innertext-and-outertext-properties/getter.html": {
-      "pass": 2,
+      "pass": 259,
       "total": 276
     },
     "html/dom/elements/the-innertext-and-outertext-properties/innertext-setter.html": {
-      "pass": 8,
+      "pass": 126,
       "total": 126
     },
     "html/dom/elements/the-innertext-and-outertext-properties/innertext-whitespace-pre-line.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html": {
@@ -3385,11 +3385,11 @@
       "total": 79
     },
     "html/dom/elements/the-innertext-and-outertext-properties/multiple-text-nodes.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/elements/the-innertext-and-outertext-properties/outertext-setter.html": {
-      "pass": 2,
+      "pass": 39,
       "total": 43
     },
     "html/dom/historical.html": {
@@ -3709,7 +3709,7 @@
       "total": 1
     },
     "html/semantics/forms/textfieldselection/selection-not-application.html": {
-      "pass": 54,
+      "pass": 63,
       "total": 71
     },
     "html/semantics/forms/textfieldselection/selection-start-end-extra.html": {
@@ -3853,7 +3853,7 @@
       "total": 4
     },
     "html/semantics/forms/the-form-element/form-autocomplete.html": {
-      "pass": 0,
+      "pass": 12,
       "total": 67
     },
     "html/semantics/forms/the-form-element/form-checkvalidity.html": {
@@ -3965,7 +3965,7 @@
       "total": 21
     },
     "html/semantics/forms/the-input-element/default-type.html": {
-      "pass": 48,
+      "pass": 72,
       "total": 72
     },
     "html/semantics/forms/the-input-element/email-value-idn.html": {
@@ -4729,7 +4729,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-no-throw-requested-state.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-open-2.html": {
@@ -4801,7 +4801,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/toggle-events.html": {
-      "pass": 1,
+      "pass": 9,
       "total": 12
     },
     "html/semantics/interactive-elements/the-dialog-element/top-layer-position.html": {
