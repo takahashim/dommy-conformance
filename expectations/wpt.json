@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86623,
+    "subtests_passed": 86847,
     "subtests_total": 89446,
     "files": 1376,
-    "files_green": 1007,
+    "files_green": 1009,
     "files_errored": 0
   },
   "files": {
@@ -901,7 +901,7 @@
       "total": 80
     },
     "dom/interface-objects.html": {
-      "pass": 1,
+      "pass": 23,
       "total": 23
     },
     "dom/lists/DOMTokenList-Iterable.html": {
@@ -981,7 +981,7 @@
       "total": 16
     },
     "dom/nodes/DOMImplementation-createDocument-no-browsing-context.html": {
-      "pass": 2,
+      "pass": 3,
       "total": 5
     },
     "dom/nodes/DOMImplementation-createDocument.html": {
@@ -1053,7 +1053,7 @@
       "total": 3
     },
     "dom/nodes/Document-createEvent.https.html": {
-      "pass": 79,
+      "pass": 279,
       "total": 279
     },
     "dom/nodes/Document-createProcessingInstruction.html": {
@@ -3409,7 +3409,7 @@
       "total": 1
     },
     "html/dom/usvstring-reflection.https.html": {
-      "pass": 5,
+      "pass": 6,
       "total": 19
     },
     "html/semantics/document-metadata/the-title-element/title-multiple-elements.html": {
