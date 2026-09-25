@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86840,
+    "subtests_passed": 86841,
     "subtests_total": 89400,
-    "files": 1375,
-    "files_green": 1013,
+    "files": 1377,
+    "files_green": 1014,
     "files_errored": 0
   },
   "files": {
@@ -3600,6 +3600,10 @@
       "pass": 4,
       "total": 7
     },
+    "html/semantics/forms/form-submission-0/form-data-set-usv-form.html": {
+      "pass": 0,
+      "total": 0
+    },
     "html/semantics/forms/form-submission-0/form-data-set-usv.html": {
       "pass": 0,
       "total": 2
@@ -3735,6 +3739,10 @@
     "html/semantics/forms/textfieldselection/setSelectionRange.html": {
       "pass": 0,
       "total": 1
+    },
+    "html/semantics/forms/the-button-element/button-activate-frame.html": {
+      "pass": 0,
+      "total": 0
     },
     "html/semantics/forms/the-button-element/button-activate.html": {
       "pass": 0,
@@ -4721,7 +4729,7 @@
       "total": 2
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-focusing-steps-prevent-autofocus.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-form-submission-unusual.html": {
