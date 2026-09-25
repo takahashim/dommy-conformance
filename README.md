@@ -50,6 +50,12 @@ the same corpus.
 `script/wpt-compare/` runs the same corpus under jsdom and happy-dom for a
 cross-library comparison.
 
+`wpt/NON_SPEC_FILES` names tests whose API the specs do not define — currently
+the two `urlpattern/*.tentative` compare/generate files, which test Chromium
+prototypes that never entered the URL Pattern Standard. They are not vendored: a
+pass or a fail there would measure Dommy against a prototype rather than a
+standard, and `script/refresh-corpus.rb` refuses to run while one is present.
+
 ## The Chromium differential harness
 
 WPT covers a lot, but a great many real divergences have no WPT test — DOM

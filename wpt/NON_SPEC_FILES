@@ -1,0 +1,17 @@
+# Corpus files that test an API the specifications do not define, and which are
+# therefore NOT conformance: a pass or a fail would measure Dommy against a
+# prototype rather than a standard. They are not vendored, and
+# script/refresh-corpus.rb refuses to run while one is present. One path per
+# line, relative to wpt/corpus.
+#
+# urlpattern/urlpattern-compare.tentative.any.js: tests
+#   URLPattern.compareComponent, which is not part of the URL Pattern Standard
+#   (it was a Chromium prototype; workerd skips it with the same reason). Its
+#   helper resources/urlpattern-compare-tests.tentative.js and its
+#   resources/urlpattern-compare-test-data.json came with it and are gone too.
+#
+# urlpattern/urlpattern-generate.tentative.any.js: tests URLPattern.generate,
+#   likewise absent from the URL Pattern Standard. Its
+#   resources/urlpattern-generate-test-data.json came with it and is gone too.
+urlpattern/urlpattern-compare.tentative.any.js
+urlpattern/urlpattern-generate.tentative.any.js

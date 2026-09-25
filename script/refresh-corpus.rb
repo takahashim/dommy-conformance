@@ -20,6 +20,8 @@
 #
 # wpt/LOCAL_FILES lists the few files that are deliberately not upstream's (a
 # wptserve template this harness has to answer for itself); those are skipped.
+# wpt/NON_SPEC_FILES lists tests of APIs the specs do not define; none of those
+# may be in the corpus at all, so this refuses to run while one is.
 
 require "fileutils"
 require "shellwords"
@@ -28,8 +30,11 @@ ROOT = File.expand_path("..", __dir__)
 CORPUS = File.join(ROOT, "wpt/corpus")
 HARNESS = File.join(ROOT, "wpt/testharness.js")
 REVISION = File.join(ROOT, "wpt/UPSTREAM_REVISION")
-LOCAL = File.readlines(File.join(ROOT, "wpt/LOCAL_FILES"), chomp: true)
-  .reject { _1.strip.empty? || _1.start_with?("#") }
+def listed(path)
+  File.readlines(path, chomp: true).reject { _1.strip.empty? || _1.start_with?("#") }
+end
+LOCAL = listed(File.join(ROOT, "wpt/LOCAL_FILES"))
+NON_SPEC = listed(File.join(ROOT, "wpt/NON_SPEC_FILES"))
 
 upstream = ARGV.find { |a| !a.start_with?("--") }
 dry_run = ARGV.include?("--dry-run")
@@ -47,6 +52,11 @@ pairs = `git -C #{ROOT.shellescape} ls-files wpt/corpus`.lines(chomp: true).map 
 end
 pairs << [HARNESS, File.join(upstream, "resources/testharness.js"), "resources/testharness.js"]
 pairs.reject! { |_local, _up, rel| LOCAL.include?(rel) }
+
+vendored_non_spec = pairs.map { |_local, _up, rel| rel } & NON_SPEC
+unless vendored_non_spec.empty?
+  abort "non-spec files are in the corpus — remove them (wpt/NON_SPEC_FILES):\n  #{vendored_non_spec.join("\n  ")}"
+end
 
 updated, gone = [], []
 pairs.each do |local, up, rel|

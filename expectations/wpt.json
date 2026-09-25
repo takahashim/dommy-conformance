@@ -1,9 +1,9 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86847,
-    "subtests_total": 89446,
-    "files": 1376,
+    "subtests_passed": 86835,
+    "subtests_total": 89400,
+    "files": 1374,
     "files_green": 1009,
     "files_errored": 0
   },
@@ -5244,10 +5244,6 @@
       "pass": 14,
       "total": 14
     },
-    "urlpattern/urlpattern-compare.tentative.any.js": {
-      "pass": 1,
-      "total": 26
-    },
     "urlpattern/urlpattern-constructor.any.js": {
       "pass": 2,
       "total": 2
@@ -5259,10 +5255,6 @@
     "urlpattern/urlpattern-empty-regexp-group.html": {
       "pass": 2,
       "total": 2
-    },
-    "urlpattern/urlpattern-generate.tentative.any.js": {
-      "pass": 11,
-      "total": 20
     },
     "urlpattern/urlpattern-hasregexpgroups.any.js": {
       "pass": 1,
