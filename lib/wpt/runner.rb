@@ -222,6 +222,11 @@ module DommyConformance
             next unless sub
 
             iframe.__internal_set_content_document__(sub.document)
+            # A navigation from inside the frame (a form submit, a link) loads
+            # into the frame itself.
+            if sub.respond_to?(:navigation_delegate=) && browser.respond_to?(:frame_navigation_delegate)
+              sub.navigation_delegate = browser.frame_navigation_delegate(iframe)
+            end
             # Exposing the seeded constructors on a nested realm is an
             # engine-binding affordance, not part of the runtime contract, so
             # a binding that lacks it simply runs without cross-realm
