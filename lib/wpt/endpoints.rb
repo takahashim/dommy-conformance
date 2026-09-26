@@ -95,6 +95,7 @@ module DommyConformance
         when "content.py" then content_py(method, uri, headers, body, url)
         when "echo-content-type.py" then echo_content_type_py(headers, url)
         when "echo-content-escaped.py" then echo_content_escaped_py(method, headers, body, url)
+        when "form-echo.py" then form_echo_py(body, url)
         end
       end
 
@@ -277,6 +278,16 @@ module DommyConformance
             "X-Request-Content-Type" => (req["content-type"] || "NO").to_s
           },
           body: content, url: url.to_s, redirected: false
+        )
+      end
+
+      # form-submission-0/form-echo.py: echo the request body as space-separated
+      # lowercase hex bytes, so a test can assert the exact submitted bytes.
+      def form_echo_py(body, url)
+        hex = body.to_s.b.bytes.map { |byte| format("%02x", byte) }.join(" ")
+        ::Dommy::Resources::Response.new(
+          status: 200, status_text: "OK", headers: {"Content-Type" => "text/plain"},
+          body: hex, url: url.to_s, redirected: false
         )
       end
 
