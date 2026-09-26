@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 87075,
+    "subtests_passed": 87116,
     "subtests_total": 89400,
     "files": 1377,
-    "files_green": 1025,
+    "files_green": 1028,
     "files_errored": 0
   },
   "files": {
@@ -3609,7 +3609,7 @@
       "total": 2
     },
     "html/semantics/forms/form-submission-0/form-double-submit-default-action.html": {
-      "pass": 0,
+      "pass": 5,
       "total": 5
     },
     "html/semantics/forms/form-submission-0/form-double-submit-input-type-change.html": {
@@ -3617,15 +3617,15 @@
       "total": 20
     },
     "html/semantics/forms/form-submission-0/form-double-submit-preventdefault-click.html": {
-      "pass": 0,
+      "pass": 3,
       "total": 3
     },
     "html/semantics/forms/form-submission-0/form-double-submit-preventdefault.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/form-submission-0/form-double-submit-requestsubmit.html": {
-      "pass": 0,
+      "pass": 31,
       "total": 36
     },
     "html/semantics/forms/form-submission-0/form-submission-algorithm.html": {
