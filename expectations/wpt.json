@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86990,
+    "subtests_passed": 87075,
     "subtests_total": 89400,
     "files": 1377,
-    "files_green": 1022,
+    "files_green": 1025,
     "files_errored": 0
   },
   "files": {
@@ -3645,11 +3645,11 @@
       "total": 1
     },
     "html/semantics/forms/form-submission-0/multipart-formdata.window.js": {
-      "pass": 34,
+      "pass": 60,
       "total": 62
     },
     "html/semantics/forms/form-submission-0/newline-normalization.html": {
-      "pass": 8,
+      "pass": 12,
       "total": 12
     },
     "html/semantics/forms/form-submission-0/request-submit-activation.html": {
@@ -3673,7 +3673,7 @@
       "total": 3
     },
     "html/semantics/forms/form-submission-0/text-plain.window.js": {
-      "pass": 45,
+      "pass": 62,
       "total": 62
     },
     "html/semantics/forms/form-submission-0/url-encoded.html": {
@@ -3681,7 +3681,7 @@
       "total": 3
     },
     "html/semantics/forms/form-submission-0/urlencoded2.window.js": {
-      "pass": 45,
+      "pass": 62,
       "total": 62
     },
     "html/semantics/forms/resetting-a-form/reset-event.html": {
@@ -3989,7 +3989,7 @@
       "total": 8
     },
     "html/semantics/forms/the-input-element/files.html": {
-      "pass": 2,
+      "pass": 23,
       "total": 24
     },
     "html/semantics/forms/the-input-element/focus-dynamic-type-change-on-blur.html": {
