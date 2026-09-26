@@ -1,7 +1,7 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 86866,
+    "subtests_passed": 86990,
     "subtests_total": 89400,
     "files": 1377,
     "files_green": 1022,
@@ -3645,7 +3645,7 @@
       "total": 1
     },
     "html/semantics/forms/form-submission-0/multipart-formdata.window.js": {
-      "pass": 0,
+      "pass": 34,
       "total": 62
     },
     "html/semantics/forms/form-submission-0/newline-normalization.html": {
@@ -3673,7 +3673,7 @@
       "total": 3
     },
     "html/semantics/forms/form-submission-0/text-plain.window.js": {
-      "pass": 0,
+      "pass": 45,
       "total": 62
     },
     "html/semantics/forms/form-submission-0/url-encoded.html": {
@@ -3681,7 +3681,7 @@
       "total": 3
     },
     "html/semantics/forms/form-submission-0/urlencoded2.window.js": {
-      "pass": 0,
+      "pass": 45,
       "total": 62
     },
     "html/semantics/forms/resetting-a-form/reset-event.html": {

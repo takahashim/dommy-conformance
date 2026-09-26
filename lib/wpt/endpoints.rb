@@ -94,6 +94,7 @@ module DommyConformance
         when "preflight.py" then preflight_py(method, uri, headers, url)
         when "content.py" then content_py(method, uri, headers, body, url)
         when "echo-content-type.py" then echo_content_type_py(headers, url)
+        when "echo-content-escaped.py" then echo_content_escaped_py(method, headers, body, url)
         end
       end
 
@@ -247,6 +248,35 @@ module DommyConformance
         ::Dommy::Resources::Response.new(
           status: 200, status_text: "OK", headers: {"Content-Type" => "text/plain"},
           body: req["content-type"].to_s, url: url.to_s, redirected: false
+        )
+      end
+
+      # FileAPI/file/resources/echo-content-escaped.py: echo the request body
+      # with control / non-ASCII bytes escaped as `\xNN` and backslashes doubled
+      # (CRLF pairs left intact). The enctype form-submission tests read this
+      # back from the target iframe, so it must match wptserve byte for byte.
+      def echo_content_escaped_py(method, req_headers, body, url)
+        req = (req_headers || {}).transform_keys { |k| k.to_s.downcase }
+        escaped = +"".b
+        body.to_s.b.each_byte do |byte|
+          if byte <= 0x1f || byte >= 0x7f
+            escaped << format("\\x%02x", byte)
+          elsif byte == 0x5c
+            escaped << "\\\\"
+          else
+            escaped << byte
+          end
+        end
+        content = escaped.gsub("\\x0d\\x0a".b, "\r\n".b)
+        ::Dommy::Resources::Response.new(
+          status: 200, status_text: "OK",
+          headers: {
+            "Content-Type" => "text/plain; charset=UTF-8",
+            "X-Request-Method" => method.to_s,
+            "X-Request-Content-Length" => (req["content-length"] || "NO").to_s,
+            "X-Request-Content-Type" => (req["content-type"] || "NO").to_s
+          },
+          body: content, url: url.to_s, redirected: false
         )
       end
 
