@@ -22,9 +22,12 @@ end
 # than at the end of the microtask checkpoint as HTML requires, and hands the
 # host no promise/reason to report. The binding is written against the fork that
 # fixes both, so measuring it on the released gem measures a different engine.
-# Drop this once the fork is released.
-# https://github.com/hmsk/quickjs.rb/pull/141
-gem "quickjs", github: "takahashim/quickjs.rb", ref: "ef60ed5",
+# The checkpoint timing is merged upstream but not yet released
+# (https://github.com/hmsk/quickjs.rb/pull/141); the fork's
+# `feat/rejection-js-hook` is upstream's main plus the rejection hook. Drop
+# this once both are released. Keep the ref on a branch or tag of the fork: a
+# commit a rewritten branch left behind cannot be fetched.
+gem "quickjs", github: "takahashim/quickjs.rb", ref: "1415c0f",
   submodules: true # the QuickJS C sources are a submodule
 
 if (quickjs = ENV["DOMMY_JS_QUICKJS_PATH"] || sibling("../dommy-js-quickjs"))
