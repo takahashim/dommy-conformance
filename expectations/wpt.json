@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 87168,
-    "subtests_total": 89400,
+    "subtests_passed": 87291,
+    "subtests_total": 89405,
     "files": 1377,
-    "files_green": 1034,
+    "files_green": 1045,
     "files_errored": 0
   },
   "files": {
@@ -1029,7 +1029,7 @@
       "total": 1
     },
     "dom/nodes/Document-createAttribute.html": {
-      "pass": 22,
+      "pass": 36,
       "total": 36
     },
     "dom/nodes/Document-createCDATASection.html": {
@@ -1361,7 +1361,7 @@
       "total": 2
     },
     "dom/nodes/Node-cloneNode-svg.html": {
-      "pass": 2,
+      "pass": 4,
       "total": 4
     },
     "dom/nodes/Node-cloneNode.html": {
@@ -1437,7 +1437,7 @@
       "total": 5
     },
     "dom/nodes/Node-properties.html": {
-      "pass": 710,
+      "pass": 726,
       "total": 726
     },
     "dom/nodes/Node-removeChild.html": {
@@ -1565,7 +1565,7 @@
       "total": 4
     },
     "dom/nodes/ParentNode-querySelector-namespace-tagname-attribute.html": {
-      "pass": 6,
+      "pass": 8,
       "total": 8
     },
     "dom/nodes/ParentNode-querySelector-nested-nth-child.html": {
@@ -1609,7 +1609,7 @@
       "total": 6
     },
     "dom/nodes/ParentNode-querySelector-xml-capitalization.window.js": {
-      "pass": 0,
+      "pass": 3,
       "total": 3
     },
     "dom/nodes/ParentNode-querySelectorAll-case-insensitive-attribute-flag.html": {
@@ -1617,7 +1617,7 @@
       "total": 2
     },
     "dom/nodes/ParentNode-querySelectorAll-namespace.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/ParentNode-querySelectorAll-nested-not-has.html": {
@@ -1633,7 +1633,7 @@
       "total": 1
     },
     "dom/nodes/ParentNode-querySelectorAll-scope-change.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/ParentNode-querySelectorAll-scope-colon-id-class.html": {
@@ -1677,7 +1677,7 @@
       "total": 1
     },
     "dom/nodes/adoption.window.js": {
-      "pass": 0,
+      "pass": 2,
       "total": 6
     },
     "dom/nodes/append-on-Document.html": {
@@ -1701,7 +1701,7 @@
       "total": 67
     },
     "dom/nodes/case.html": {
-      "pass": 209,
+      "pass": 259,
       "total": 285
     },
     "dom/nodes/create-element-realm-after-adoption.html": {
@@ -1709,7 +1709,7 @@
       "total": 5
     },
     "dom/nodes/getElementById-namespaced-id.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "dom/nodes/getElementsByClassName-01.htm": {
@@ -2053,7 +2053,7 @@
       "total": 1
     },
     "dom/nodes/name-validation.html": {
-      "pass": 0,
+      "pass": 5,
       "total": 5
     },
     "dom/nodes/namespaced-attribute-mutations.html": {
@@ -2381,8 +2381,8 @@
       "total": 116
     },
     "dom/ranges/Range-selectNode.html": {
-      "pass": 292,
-      "total": 292
+      "pass": 296,
+      "total": 296
     },
     "dom/ranges/Range-set.html": {
       "pass": 10920,
@@ -2409,8 +2409,8 @@
       "total": 4
     },
     "dom/traversal/NodeIterator-removal.html": {
-      "pass": 24,
-      "total": 24
+      "pass": 25,
+      "total": 25
     },
     "dom/traversal/NodeIterator.html": {
       "pass": 766,
@@ -2493,7 +2493,7 @@
       "total": 6
     },
     "domparsing/DOMParser-parseFromString-xml-CDATA.html": {
-      "pass": 0,
+      "pass": 8,
       "total": 8
     },
     "domparsing/DOMParser-parseFromString-xml-doctype.html": {
@@ -2513,7 +2513,7 @@
       "total": 23
     },
     "domparsing/DOMParser-parseFromString-xml-scripting-support-disabled.html": {
-      "pass": 4,
+      "pass": 8,
       "total": 13
     },
     "domparsing/DOMParser-parseFromString-xml.html": {
@@ -2521,7 +2521,7 @@
       "total": 20
     },
     "domparsing/DOMParser-xml-character-entities.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 8
     },
     "domparsing/XMLSerializer-serializeToString.html": {
@@ -3073,7 +3073,7 @@
       "total": 5
     },
     "html/dom/documents/dom-tree-accessors/document.title-not-in-html-svg.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/dom/documents/dom-tree-accessors/nameditem-01.html": {
@@ -3861,7 +3861,7 @@
       "total": 1
     },
     "html/semantics/forms/the-form-element/form-attribute-form-owner.html": {
-      "pass": 2,
+      "pass": 3,
       "total": 4
     },
     "html/semantics/forms/the-form-element/form-autocomplete.html": {
