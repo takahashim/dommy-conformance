@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 87291,
+    "subtests_passed": 87374,
     "subtests_total": 89405,
     "files": 1377,
-    "files_green": 1045,
+    "files_green": 1057,
     "files_errored": 0
   },
   "files": {
@@ -1529,7 +1529,7 @@
       "total": 2
     },
     "dom/nodes/ParentNode-querySelector-escapes.html": {
-      "pass": 50,
+      "pass": 64,
       "total": 68
     },
     "dom/nodes/ParentNode-querySelector-host-pseudo-class.html": {
@@ -1597,7 +1597,7 @@
       "total": 4
     },
     "dom/nodes/ParentNode-querySelector-shadowroot-nth-child.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/ParentNode-querySelector-svg-not-root.html": {
@@ -1701,7 +1701,7 @@
       "total": 67
     },
     "dom/nodes/case.html": {
-      "pass": 259,
+      "pass": 284,
       "total": 285
     },
     "dom/nodes/create-element-realm-after-adoption.html": {
@@ -2057,7 +2057,7 @@
       "total": 5
     },
     "dom/nodes/namespaced-attribute-mutations.html": {
-      "pass": 16,
+      "pass": 24,
       "total": 24
     },
     "dom/nodes/node-creation-realm.html": {
@@ -2529,7 +2529,7 @@
       "total": 33
     },
     "domparsing/createContextualFragment.html": {
-      "pass": 34,
+      "pass": 35,
       "total": 35
     },
     "domparsing/domparser-spurious-attributes.html": {
@@ -2593,7 +2593,7 @@
       "total": 4
     },
     "domparsing/svg-template.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 2
     },
     "domparsing/xml-parse-serialize-roundtrip.html": {
@@ -2961,7 +2961,7 @@
       "total": 27
     },
     "html/dom/documents/dom-tree-accessors/Document.body.html": {
-      "pass": 9,
+      "pass": 26,
       "total": 26
     },
     "html/dom/documents/dom-tree-accessors/Document.currentScript.html": {
@@ -2997,15 +2997,15 @@
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-interface.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-liveness.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-namespace.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-newelements.html": {
@@ -3057,7 +3057,7 @@
       "total": 21
     },
     "html/dom/documents/dom-tree-accessors/document.title-06.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/document.title-07.html": {
@@ -3069,7 +3069,7 @@
       "total": 2
     },
     "html/dom/documents/dom-tree-accessors/document.title-09.html": {
-      "pass": 1,
+      "pass": 4,
       "total": 5
     },
     "html/dom/documents/dom-tree-accessors/document.title-not-in-html-svg.html": {
@@ -3153,7 +3153,7 @@
       "total": 1
     },
     "html/dom/documents/resource-metadata-management/document-compatmode-02.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/resource-metadata-management/document-cookie.html": {
@@ -3189,7 +3189,7 @@
       "total": 7
     },
     "html/dom/elements/global-attributes/custom-attrs.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/elements/global-attributes/data_unicode_attr.html": {
@@ -3273,7 +3273,7 @@
       "total": 6
     },
     "html/dom/elements/global-attributes/lang-attribute.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/elements/global-attributes/mapped-attribute-adopt-001.html": {
@@ -5425,7 +5425,7 @@
       "total": 8
     },
     "xhr/formdata/append.any.js": {
-      "pass": 6,
+      "pass": 7,
       "total": 7
     },
     "xhr/formdata/constructor-formelement.html": {
@@ -5477,7 +5477,7 @@
       "total": 3
     },
     "xhr/formdata/set-blob.any.js": {
-      "pass": 1,
+      "pass": 5,
       "total": 6
     },
     "xhr/formdata/set-formelement.html": {
@@ -5485,7 +5485,7 @@
       "total": 8
     },
     "xhr/formdata/set.any.js": {
-      "pass": 5,
+      "pass": 6,
       "total": 7
     },
     "xhr/json.any.js": {
