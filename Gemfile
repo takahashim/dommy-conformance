@@ -17,14 +17,13 @@ else
   gem "dommy"
 end
 
-# TEMPORARY, mirroring dommy-js-quickjs's own Gemfile: the released quickjs
-# (0.21.0) reports an unhandled rejection the moment a promise rejects rather
-# than at the end of the microtask checkpoint as HTML requires, and hands the
-# host no promise/reason to report. The binding is written against the fork that
-# fixes both, so measuring it on the released gem measures a different engine.
-# Drop this once the fork is released.
-# https://github.com/hmsk/quickjs.rb/pull/141
-gem "quickjs", github: "takahashim/quickjs.rb", ref: "ef60ed5",
+# TEMPORARY, mirroring dommy-js-quickjs's own Gemfile: the fork's release tag,
+# quickjs 0.22.0 plus the JS rejection hook that hands the host the promise and
+# reason the page rejected with. The binding is measured against it, since the
+# released gem without the hook is a different engine to the page. Drop this
+# once the hook is released. Pin a tag of the fork, not a commit a rewritten
+# branch could leave unreachable.
+gem "quickjs", github: "takahashim/quickjs.rb", tag: "v0.22.0-rejection-hook.1",
   submodules: true # the QuickJS C sources are a submodule
 
 if (quickjs = ENV["DOMMY_JS_QUICKJS_PATH"] || sibling("../dommy-js-quickjs"))
