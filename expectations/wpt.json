@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 87374,
+    "subtests_passed": 87377,
     "subtests_total": 89405,
     "files": 1377,
-    "files_green": 1057,
+    "files_green": 1059,
     "files_errored": 0
   },
   "files": {
@@ -5161,7 +5161,7 @@
       "total": 897
     },
     "url/failure.html": {
-      "pass": 1174,
+      "pass": 1175,
       "total": 1175
     },
     "url/historical.any.js": {
@@ -5217,7 +5217,7 @@
       "total": 4
     },
     "url/urlsearchparams-constructor.any.js": {
-      "pass": 25,
+      "pass": 27,
       "total": 27
     },
     "url/urlsearchparams-delete.any.js": {
