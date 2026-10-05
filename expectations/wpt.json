@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 87384,
+    "subtests_passed": 87387,
     "subtests_total": 89405,
     "files": 1377,
-    "files_green": 1066,
+    "files_green": 1067,
     "files_errored": 0
   },
   "files": {
@@ -1833,7 +1833,7 @@
       "total": 26
     },
     "dom/nodes/insert-adjacent.html": {
-      "pass": 13,
+      "pass": 14,
       "total": 14
     },
     "dom/nodes/insertion-removing-steps/Node-append-form-and-script-from-fragment.html": {
@@ -1901,7 +1901,7 @@
       "total": 4
     },
     "dom/nodes/insertion-removing-steps/insertion-removing-steps-iframe.window.js": {
-      "pass": 1,
+      "pass": 3,
       "total": 4
     },
     "dom/nodes/insertion-removing-steps/insertion-removing-steps-script.window.js": {
