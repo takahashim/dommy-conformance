@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 87377,
+    "subtests_passed": 87384,
     "subtests_total": 89405,
     "files": 1377,
-    "files_green": 1059,
+    "files_green": 1066,
     "files_errored": 0
   },
   "files": {
@@ -1757,19 +1757,19 @@
       "total": 1
     },
     "dom/nodes/getElementsByClassName-15.htm": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/getElementsByClassName-16.htm": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/getElementsByClassName-17.htm": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/getElementsByClassName-18.htm": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/getElementsByClassName-19.htm": {
@@ -2657,7 +2657,7 @@
       "total": 4
     },
     "encoding/streams/decode-attributes.any.js": {
-      "pass": 27,
+      "pass": 28,
       "total": 28
     },
     "encoding/streams/decode-bad-chunks.any.js": {
@@ -3013,7 +3013,7 @@
       "total": 27
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-null-undef.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByName/document.getElementsByName-param.html": {
@@ -3185,7 +3185,7 @@
       "total": 8
     },
     "html/dom/elements/global-attributes/classlist-nonstring.html": {
-      "pass": 6,
+      "pass": 7,
       "total": 7
     },
     "html/dom/elements/global-attributes/custom-attrs.html": {
