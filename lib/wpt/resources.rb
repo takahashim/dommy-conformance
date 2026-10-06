@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "endpoints"
+require_relative "test_driver"
 module DommyConformance
   module Wpt
     # The resource layer a real WPT test page resolves its `<script src>`
@@ -45,10 +46,73 @@ module DommyConformance
       # tests use, backed by Dommy's computed role/label on the element proxy.
       # testdriver-vendor.js / testdriver-actions.js exist only so their
       # `<script src>` resolves; they need no behavior here.
-      TESTDRIVER_SHIM = <<~JS
+      #
+      # click / send_keys / bless / Actions are performed as trusted user input
+      # by Dommy's Interaction layer, through the `__dommyTestDriver` host
+      # object the runner installs (TestDriver).
+      TESTDRIVER_SHIM = <<~'JS'
         globalThis.test_driver = globalThis.test_driver || {};
         test_driver.get_computed_role = (el) => Promise.resolve(el.__internal_computed_role__());
         test_driver.get_computed_label = (el) => Promise.resolve(el.__internal_computed_label__());
+        (() => {
+          const host = () => globalThis.__dommyTestDriver;
+          // Like a WebDriver round trip, the input arrives after the caller's
+          // synchronous code — deferred to a microtask, not a task: the engine
+          // evaluates a module's top-level await by draining microtasks only.
+          const run = (f) => Promise.resolve().then(() => { f(); });
+          // Plain functions, as testdriver.js has them: some tests call them
+          // with `new`.
+          test_driver.click = function (el) { return run(() => host().click(el)); };
+          test_driver.send_keys = function (el, keys) { return run(() => host().sendKeys(el, String(keys))); };
+          test_driver.bless = function (intent, action, win) {
+            win = win || window;
+            const button = win.document.createElement("button");
+            button.textContent = intent || "Bless";
+            win.document.body.appendChild(button);
+            let result;
+            button.addEventListener("click", () => { if (action) result = action(); }, { once: true });
+            return test_driver.click(button).then(() => { button.remove(); return result; });
+          };
+          class Actions {
+            constructor(defaultTickDuration = 16) {
+              this.sources = []; this.current = {}; this.elements = [];
+              this.ButtonType = { LEFT: 0, MIDDLE: 1, RIGHT: 2, BACK: 3, FORWARD: 4 };
+            }
+            _source(type, name, params) {
+              name = name || (type === "key" ? "keyboard" : type === "pointer" ? "mouse" : type);
+              let s = this.sources.find(x => x.type === type && x.id === name);
+              if (!s) { s = { type, id: name, parameters: params, actions: [] }; this.sources.push(s); }
+              this.current[type] = s;
+              return s;
+            }
+            _cur(type) { return this.current[type] || this._source(type); }
+            _push(type, action, sourceName) {
+              const s = sourceName ? this._source(type, sourceName) : this._cur(type);
+              const tick = Math.max(0, ...this.sources.map(x => x.actions.length));
+              while (s.actions.length < tick) s.actions.push({ type: "pause" });
+              s.actions.push(action);
+              return this;
+            }
+            addPointer(name, pointerType = "mouse", setAsDefault = true) { this._source("pointer", name, { pointerType }); return this; }
+            addKeyboard(name, setAsDefault = true) { this._source("key", name); return this; }
+            setPointer(name) { this.current.pointer = this._source("pointer", name); return this; }
+            setKeyboard(name) { this.current.key = this._source("key", name); return this; }
+            keyDown(key, sourceName) { return this._push("key", { type: "keyDown", value: key }, sourceName); }
+            keyUp(key, sourceName) { return this._push("key", { type: "keyUp", value: key }, sourceName); }
+            pointerDown({ button = 0, sourceName } = {}) { return this._push("pointer", { type: "pointerDown", button }, sourceName); }
+            pointerUp({ button = 0, sourceName } = {}) { return this._push("pointer", { type: "pointerUp", button }, sourceName); }
+            pointerMove(x, y, { origin = "viewport", duration, sourceName } = {}) {
+              let o = origin;
+              if (origin && typeof origin === "object") { this.elements.push(origin); o = this.elements.length - 1; }
+              return this._push("pointer", { type: "pointerMove", x, y, origin: o }, sourceName);
+            }
+            scroll() { return this; }
+            pause(duration = 0, type = "none", { sourceName } = {}) { return this; }
+            send() { return run(() => host().actions(JSON.stringify(this.sources), this.elements)); }
+          }
+          test_driver.Actions = Actions;
+          test_driver.action_sequence = (sources) => run(() => host().actions(JSON.stringify(sources), []));
+        })();
       JS
 
       module_function
