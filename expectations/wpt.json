@@ -1,9 +1,9 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 88816,
-    "subtests_total": 97532,
-    "files": 1603,
+    "subtests_passed": 88814,
+    "subtests_total": 97480,
+    "files": 1566,
     "files_green": 1203,
     "files_errored": 0
   },
@@ -5895,154 +5895,6 @@
     "shadow-dom/declarative/script-access.html": {
       "pass": 1,
       "total": 2
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-disconnect-iframe.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-disconnect.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-duplicate-bare-specifier.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-duplicate-importmap.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-duplicate.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-failure.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-clear.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-insertrule.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-reinsert-same.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-reinsert-swap.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-remove-middle.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-replacesync.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-ordering.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-shared.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-basic.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-clonenode-async-fetch.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-clonenode.html": {
-      "pass": 1,
-      "total": 11
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-document-parse-crash.html": {
-      "pass": 0,
-      "total": 0
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-fetched-module.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-idl-absent-and-empty.html": {
-      "pass": 0,
-      "total": 2
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-idl-feature-detection.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-idl-reflection.html": {
-      "pass": 0,
-      "total": 2
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-invalid-specifier.html": {
-      "pass": 0,
-      "total": 2
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-async.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-basic.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-failure.html": {
-      "pass": 0,
-      "total": 2
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-identity.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-nested.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-ordering.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-shared.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-multiple.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-nested-async.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-nested-sync.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-placeholder-identity.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-same-document.html": {
-      "pass": 0,
-      "total": 0
-    },
-    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-serialization.html": {
-      "pass": 1,
-      "total": 4
     },
     "shadow-dom/shadow-root-clonable.html": {
       "pass": 0,
