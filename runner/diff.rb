@@ -77,8 +77,14 @@ module OracleDiff
 
     left = chromium["result"] || {}
     right = dommy["result"] || {}
-    return [Divergence.new(case_id: case_id, key: "(result)", chromium: left, dommy: right)] unless
-      left.is_a?(Hash) && right.is_a?(Hash)
+    unless left.is_a?(Hash) && right.is_a?(Hash)
+      # A case may return a plain value (an ordered log, say) rather than an
+      # object of keys; equal values agree like equal keys do.
+      return [] if left == right
+
+      return [Divergence.new(case_id: case_id, key: "(result)", chromium: left, dommy: right,
+                             expectation: expectations_for(expectations, case_id, "(result)").first)]
+    end
 
     (left.keys | right.keys).sort.filter_map do |key|
       next if left[key] == right[key]

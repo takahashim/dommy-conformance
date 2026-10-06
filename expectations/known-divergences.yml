@@ -141,3 +141,27 @@
     dommy's WebIDL audit records the same two attributes (HTMLInputElement and
     HTMLTextAreaElement .autocomplete) as its last two reflect_gaps.
     https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill
+
+- case: forms/stepdown.js
+  key: a
+  reason: |
+    stepDown() on an empty value with min=7: the stepUp/stepDown steps start
+    from 0 (the value does not parse), step to -1, clamp to the minimum 7,
+    and then "if the method invoked was stepDown() and value is greater than
+    valueBeforeStepping, return" — so the value stays empty. Chromium (and
+    WPT html/semantics/forms/the-input-element/input-stepdown-02.html) set
+    "7". Dommy follows the spec text.
+    https://html.spec.whatwg.org/multipage/input.html#dom-input-stepdown
+  chromium: "7"
+  dommy: ""
+
+- case: forms/stepdown.js
+  key: b
+  reason: |
+    The stepUp() mirror of the entry above: an empty value with max=-7 steps
+    from 0 to 1, clamps to -7, and stepUp() must not leave a value less than
+    valueBeforeStepping, so it returns and the value stays empty. Chromium
+    sets "-7". Dommy follows the spec text.
+    https://html.spec.whatwg.org/multipage/input.html#dom-input-stepup
+  chromium: "-7"
+  dommy: ""
