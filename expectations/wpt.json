@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 88814,
-    "subtests_total": 97480,
+    "subtests_passed": 96306,
+    "subtests_total": 97516,
     "files": 1566,
-    "files_green": 1203,
+    "files_green": 1227,
     "files_errored": 0
   },
   "files": {
@@ -286,7 +286,7 @@
     },
     "css/selectors/invalidation/host-has-shadow-tree-element-at-subject-position.html": {
       "pass": 1,
-      "total": 1
+      "total": 26
     },
     "css/selectors/invalidation/insert-sibling-001.html": {
       "pass": 1,
@@ -1345,7 +1345,7 @@
       "total": 1
     },
     "dom/nodes/Node-cloneNode-document-allow-declarative-shadow-roots.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/Node-cloneNode-document-with-doctype.html": {
@@ -1929,7 +1929,7 @@
       "total": 1
     },
     "dom/nodes/moveBefore/custom-element-move-reactions.html": {
-      "pass": 6,
+      "pass": 7,
       "total": 7
     },
     "dom/nodes/moveBefore/fieldset-child-blur-event.html": {
@@ -2245,7 +2245,7 @@
       "total": 25
     },
     "dom/ranges/Range-cloneContents-around-shadow.tentative.html": {
-      "pass": 4,
+      "pass": 5,
       "total": 5
     },
     "dom/ranges/Range-cloneContents-in-ShadowRoot.html": {
@@ -2305,7 +2305,7 @@
       "total": 44
     },
     "dom/ranges/Range-extractContents-around-shadow.tentative.html": {
-      "pass": 12,
+      "pass": 13,
       "total": 13
     },
     "dom/ranges/Range-extractContents-dynamic-end.html": {
@@ -2585,7 +2585,7 @@
       "total": 5
     },
     "domparsing/parsed-document-origin.window.js": {
-      "pass": 5,
+      "pass": 6,
       "total": 7
     },
     "domparsing/style_attribute_html.html": {
@@ -3665,7 +3665,7 @@
       "total": 1
     },
     "html/semantics/forms/form-submission-0/submit-event-shadow-host.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/form-submission-0/submit-event.html": {
@@ -3901,7 +3901,7 @@
       "total": 1
     },
     "html/semantics/forms/the-form-element/form-indexed-element-shadow.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-form-element/form-indexed-element.html": {
@@ -4709,7 +4709,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-focus-previous-outside.html": {
-      "pass": 3,
+      "pass": 5,
       "total": 6
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-focus-shadow-double-nested.html": {
@@ -4777,7 +4777,7 @@
       "total": 10
     },
     "html/semantics/interactive-elements/the-dialog-element/form-submit-dialog-shadow.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/inert-does-not-match-disabled-selector.html": {
@@ -5437,51 +5437,51 @@
       "total": 0
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-style-attribute.html": {
-      "pass": 0,
-      "total": 0
+      "pass": 4,
+      "total": 4
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-base-pushstate.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 6
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-base.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 6
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-moretests.html": {
-      "pass": 1,
+      "pass": 5,
       "total": 5
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-pushstate.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 6
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 6
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe.html": {
-      "pass": 0,
-      "total": 0
+      "pass": 9,
+      "total": 9
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Element-setHTMLUnsafe-04.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe-CEReactions.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe-runScripts.html": {
-      "pass": 0,
+      "pass": 22,
       "total": 28
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe-xml.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe.html": {
-      "pass": 0,
+      "pass": 5,
       "total": 5
     },
     "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/002.html": {
@@ -5825,31 +5825,31 @@
       "total": 1
     },
     "shadow-dom/declarative/declarative-shadow-dom-attachment.html": {
-      "pass": 0,
+      "pass": 654,
       "total": 654
     },
     "shadow-dom/declarative/declarative-shadow-dom-available-to-element-internals.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "shadow-dom/declarative/declarative-shadow-dom-basic.html": {
-      "pass": 9,
+      "pass": 22,
       "total": 22
     },
     "shadow-dom/declarative/declarative-shadow-dom-opt-in.html": {
-      "pass": 110,
+      "pass": 115,
       "total": 120
     },
     "shadow-dom/declarative/declarative-shadow-dom-repeats-2.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "shadow-dom/declarative/declarative-shadow-dom-repeats-slot-assignment.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "shadow-dom/declarative/declarative-shadow-dom-repeats.html": {
-      "pass": 0,
+      "pass": 3,
       "total": 3
     },
     "shadow-dom/declarative/declarative-shadow-dom-serialization.html": {
@@ -5857,27 +5857,27 @@
       "total": 2
     },
     "shadow-dom/declarative/declarative-shadow-dom-slot-assignment-serialization.html": {
-      "pass": 0,
+      "pass": 3,
       "total": 3
     },
     "shadow-dom/declarative/declarative-shadow-dom-slot-assignment.html": {
-      "pass": 2,
+      "pass": 8,
       "total": 8
     },
     "shadow-dom/declarative/declarative-shadow-dom-write-to-iframe.html": {
-      "pass": 0,
-      "total": 1
-    },
-    "shadow-dom/declarative/declarative-with-disabled-shadow.html": {
       "pass": 1,
       "total": 1
     },
-    "shadow-dom/declarative/gethtml-ordering.html": {
+    "shadow-dom/declarative/declarative-with-disabled-shadow.html": {
       "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/declarative/gethtml-ordering.html": {
+      "pass": 3,
       "total": 3
     },
     "shadow-dom/declarative/gethtml.html": {
-      "pass": 190,
+      "pass": 6908,
       "total": 6908
     },
     "shadow-dom/declarative/innerhtml-before-closing-tag.html": {
@@ -5886,10 +5886,10 @@
     },
     "shadow-dom/declarative/innerhtml-on-ordinary-template.html": {
       "pass": 0,
-      "total": 1
+      "total": 0
     },
     "shadow-dom/declarative/move-template-before-closing-tag.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 3
     },
     "shadow-dom/declarative/script-access.html": {
@@ -5897,7 +5897,7 @@
       "total": 2
     },
     "shadow-dom/shadow-root-clonable.html": {
-      "pass": 0,
+      "pass": 6,
       "total": 6
     },
     "url/IdnaTestV2-removed.any.js": {
