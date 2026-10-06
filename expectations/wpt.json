@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 87387,
+    "subtests_passed": 88400,
     "subtests_total": 89405,
     "files": 1377,
-    "files_green": 1067,
+    "files_green": 1168,
     "files_errored": 0
   },
   "files": {
@@ -573,7 +573,7 @@
       "total": 11
     },
     "dom/events/Body-FrameSet-Event-Handlers.html": {
-      "pass": 24,
+      "pass": 48,
       "total": 48
     },
     "dom/events/CustomEvent.html": {
@@ -981,11 +981,11 @@
       "total": 16
     },
     "dom/nodes/DOMImplementation-createDocument-no-browsing-context.html": {
-      "pass": 3,
+      "pass": 4,
       "total": 5
     },
     "dom/nodes/DOMImplementation-createDocument.html": {
-      "pass": 320,
+      "pass": 434,
       "total": 434
     },
     "dom/nodes/DOMImplementation-createDocumentType.html": {
@@ -1013,7 +1013,7 @@
       "total": 7
     },
     "dom/nodes/Document-constructor.html": {
-      "pass": 4,
+      "pass": 5,
       "total": 5
     },
     "dom/nodes/Document-contentType/contentType/createDocument.html": {
@@ -1341,7 +1341,7 @@
       "total": 6
     },
     "dom/nodes/Node-cloneNode-XMLDocument.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/Node-cloneNode-document-allow-declarative-shadow-roots.window.js": {
@@ -1501,7 +1501,7 @@
       "total": 1975
     },
     "dom/nodes/ParentNode-querySelector-argument-stringification.html": {
-      "pass": 0,
+      "pass": 3,
       "total": 3
     },
     "dom/nodes/ParentNode-querySelector-attribute-change.html": {
@@ -1705,7 +1705,7 @@
       "total": 285
     },
     "dom/nodes/create-element-realm-after-adoption.html": {
-      "pass": 3,
+      "pass": 5,
       "total": 5
     },
     "dom/nodes/getElementById-namespaced-id.html": {
@@ -1869,7 +1869,7 @@
       "total": 5
     },
     "dom/nodes/insertion-removing-steps/Node-appendChild-script-in-script.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/Node-appendChild-script-with-mutation-observer-takeRecords.html": {
@@ -1881,15 +1881,15 @@
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/Node-appendChild-text-in-script.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/Node-appendChild-three-scripts-from-fragment.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/Node-appendChild-three-scripts.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/blur-event.window.js": {
@@ -1941,15 +1941,15 @@
       "total": 1
     },
     "dom/nodes/moveBefore/fire-focusin-focusout.html": {
-      "pass": 1,
+      "pass": 5,
       "total": 5
     },
     "dom/nodes/moveBefore/focus-preserve.html": {
-      "pass": 2,
+      "pass": 5,
       "total": 5
     },
     "dom/nodes/moveBefore/focus-within.html": {
-      "pass": 3,
+      "pass": 5,
       "total": 5
     },
     "dom/nodes/moveBefore/listed-form-element-reset.html": {
@@ -1961,7 +1961,7 @@
       "total": 3
     },
     "dom/nodes/moveBefore/modal-dialog.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/moveBefore/moveBefore-dir.html": {
@@ -1981,7 +1981,7 @@
       "total": 1
     },
     "dom/nodes/moveBefore/moveBefore-name-map.html": {
-      "pass": 2,
+      "pass": 3,
       "total": 3
     },
     "dom/nodes/moveBefore/moveBefore-nodeiterator.html": {
@@ -2021,7 +2021,7 @@
       "total": 1
     },
     "dom/nodes/moveBefore/popover-preserve.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/moveBefore/preserve-render-blocking-script.html": {
@@ -2061,7 +2061,7 @@
       "total": 24
     },
     "dom/nodes/node-creation-realm.html": {
-      "pass": 9,
+      "pass": 12,
       "total": 13
     },
     "dom/nodes/node-realm-adoption-after-frame-removal.html": {
@@ -2089,7 +2089,7 @@
       "total": 5
     },
     "dom/nodes/processing-instruction-attributes.html": {
-      "pass": 0,
+      "pass": 10,
       "total": 140
     },
     "dom/nodes/querySelector-empty-id.html": {
@@ -2497,7 +2497,7 @@
       "total": 8
     },
     "domparsing/DOMParser-parseFromString-xml-doctype.html": {
-      "pass": 2,
+      "pass": 3,
       "total": 3
     },
     "domparsing/DOMParser-parseFromString-xml-empty-nodes.html": {
@@ -2509,7 +2509,7 @@
       "total": 1
     },
     "domparsing/DOMParser-parseFromString-xml-parsererror.html": {
-      "pass": 2,
+      "pass": 23,
       "total": 23
     },
     "domparsing/DOMParser-parseFromString-xml-scripting-support-disabled.html": {
@@ -2517,11 +2517,11 @@
       "total": 13
     },
     "domparsing/DOMParser-parseFromString-xml.html": {
-      "pass": 4,
+      "pass": 20,
       "total": 20
     },
     "domparsing/DOMParser-xml-character-entities.html": {
-      "pass": 4,
+      "pass": 8,
       "total": 8
     },
     "domparsing/XMLSerializer-serializeToString.html": {
@@ -2585,7 +2585,7 @@
       "total": 5
     },
     "domparsing/parsed-document-origin.window.js": {
-      "pass": 1,
+      "pass": 5,
       "total": 7
     },
     "domparsing/style_attribute_html.html": {
@@ -2593,7 +2593,7 @@
       "total": 4
     },
     "domparsing/svg-template.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "domparsing/xml-parse-serialize-roundtrip.html": {
@@ -2965,7 +2965,7 @@
       "total": 26
     },
     "html/dom/documents/dom-tree-accessors/Document.currentScript.html": {
-      "pass": 5,
+      "pass": 15,
       "total": 18
     },
     "html/dom/documents/dom-tree-accessors/Document.getElementsByClassName-null-undef.html": {
@@ -2981,7 +2981,7 @@
       "total": 5
     },
     "html/dom/documents/dom-tree-accessors/document.forms.html": {
-      "pass": 5,
+      "pass": 6,
       "total": 6
     },
     "html/dom/documents/dom-tree-accessors/document.getElementsByClassName-same.html": {
@@ -3069,7 +3069,7 @@
       "total": 2
     },
     "html/dom/documents/dom-tree-accessors/document.title-09.html": {
-      "pass": 4,
+      "pass": 5,
       "total": 5
     },
     "html/dom/documents/dom-tree-accessors/document.title-not-in-html-svg.html": {
@@ -3093,7 +3093,7 @@
       "total": 12
     },
     "html/dom/documents/dom-tree-accessors/nameditem-05.html": {
-      "pass": 4,
+      "pass": 12,
       "total": 12
     },
     "html/dom/documents/dom-tree-accessors/nameditem-06.html": {
@@ -3129,15 +3129,15 @@
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/nameditem-names.html": {
-      "pass": 8,
+      "pass": 18,
       "total": 21
     },
     "html/dom/documents/dom-tree-accessors/nameditem-no-shadowing.tentative.html": {
-      "pass": 6,
+      "pass": 1,
       "total": 8
     },
     "html/dom/documents/dom-tree-accessors/nameditem-supported-property-names-order.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/documents/dom-tree-accessors/nameditem-tree-order.html": {
@@ -3161,7 +3161,7 @@
       "total": 5
     },
     "html/dom/documents/resource-metadata-management/document-lastModified-01.html": {
-      "pass": 1,
+      "pass": 3,
       "total": 3
     },
     "html/dom/documents/resource-metadata-management/document-lastModified.html": {
@@ -3269,7 +3269,7 @@
       "total": 1
     },
     "html/dom/elements/global-attributes/lang-attribute-shadow.window.js": {
-      "pass": 4,
+      "pass": 6,
       "total": 6
     },
     "html/dom/elements/global-attributes/lang-attribute.window.js": {
@@ -3361,7 +3361,7 @@
       "total": 3
     },
     "html/dom/elements/name-content-attribute-and-property.html": {
-      "pass": 137,
+      "pass": 141,
       "total": 141
     },
     "html/dom/elements/the-innertext-and-outertext-properties/dynamic-getter.html": {
@@ -3393,7 +3393,7 @@
       "total": 1
     },
     "html/dom/elements/the-innertext-and-outertext-properties/outertext-setter.html": {
-      "pass": 39,
+      "pass": 43,
       "total": 43
     },
     "html/dom/historical.html": {
@@ -3405,7 +3405,7 @@
       "total": 1
     },
     "html/dom/render-blocking/blocking-idl-attr.html": {
-      "pass": 0,
+      "pass": 6,
       "total": 6
     },
     "html/dom/self-origin.any.js": {
@@ -3413,7 +3413,7 @@
       "total": 1
     },
     "html/dom/usvstring-reflection.https.html": {
-      "pass": 6,
+      "pass": 10,
       "total": 19
     },
     "html/semantics/document-metadata/the-title-element/title-multiple-elements.html": {
@@ -3433,7 +3433,7 @@
       "total": 2
     },
     "html/semantics/forms/attributes-common-to-form-controls/dirname-only-if-applies.html": {
-      "pass": 2,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/attributes-common-to-form-controls/dirname-rtl-auto.html": {
@@ -3545,7 +3545,7 @@
       "total": 1
     },
     "html/semantics/forms/constraints/input-number-validity-dynamic-value-no-change.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/constraints/input-pattern-dynamic-value.html": {
@@ -3557,11 +3557,11 @@
       "total": 2
     },
     "html/semantics/forms/constraints/radio-group-valueMissing.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/constraints/radio-valueMissing.html": {
-      "pass": 4,
+      "pass": 6,
       "total": 6
     },
     "html/semantics/forms/constraints/using-form-attribute.html": {
@@ -3573,11 +3573,11 @@
       "total": 1
     },
     "html/semantics/forms/form-control-infrastructure/form.html": {
-      "pass": 10,
+      "pass": 15,
       "total": 17
     },
     "html/semantics/forms/form-control-infrastructure/form_attribute.html": {
-      "pass": 34,
+      "pass": 100,
       "total": 100
     },
     "html/semantics/forms/form-control-infrastructure/form_owner_and_table.html": {
@@ -3597,7 +3597,7 @@
       "total": 2
     },
     "html/semantics/forms/form-submission-0/SubmitEvent.window.js": {
-      "pass": 7,
+      "pass": 6,
       "total": 7
     },
     "html/semantics/forms/form-submission-0/form-data-set-usv-form.html": {
@@ -3701,15 +3701,15 @@
       "total": 12
     },
     "html/semantics/forms/setCustomValidity-normalize-newlines.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/textfieldselection/defaultSelection.html": {
-      "pass": 2,
+      "pass": 6,
       "total": 6
     },
     "html/semantics/forms/textfieldselection/selection-after-content-change.html": {
-      "pass": 12,
+      "pass": 18,
       "total": 18
     },
     "html/semantics/forms/textfieldselection/selection-not-application-textarea.html": {
@@ -3721,23 +3721,23 @@
       "total": 71
     },
     "html/semantics/forms/textfieldselection/selection-start-end-extra.html": {
-      "pass": 4,
+      "pass": 11,
       "total": 11
     },
     "html/semantics/forms/textfieldselection/selection-start-end.html": {
-      "pass": 23,
+      "pass": 45,
       "total": 45
     },
     "html/semantics/forms/textfieldselection/selection-value-interactions.html": {
-      "pass": 2,
+      "pass": 14,
       "total": 14
     },
     "html/semantics/forms/textfieldselection/selection.html": {
-      "pass": 18,
+      "pass": 17,
       "total": 18
     },
     "html/semantics/forms/textfieldselection/setSelectionRange.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-button-element/button-activate-frame.html": {
@@ -3757,7 +3757,7 @@
       "total": 3
     },
     "html/semantics/forms/the-button-element/button-click-submits-with-commandfor.html": {
-      "pass": 3,
+      "pass": 6,
       "total": 6
     },
     "html/semantics/forms/the-button-element/button-click-submits.html": {
@@ -3813,7 +3813,7 @@
       "total": 2
     },
     "html/semantics/forms/the-datalist-element/input-list-detached.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-fieldset-element/HTMLFieldSetElement.html": {
@@ -3841,11 +3841,11 @@
       "total": 6
     },
     "html/semantics/forms/the-fieldset-element/fieldset-setcustomvalidity.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-fieldset-element/fieldset-validationmessage.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-fieldset-element/fieldset-validity.html": {
@@ -3861,11 +3861,11 @@
       "total": 1
     },
     "html/semantics/forms/the-form-element/form-attribute-form-owner.html": {
-      "pass": 3,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/the-form-element/form-autocomplete.html": {
-      "pass": 12,
+      "pass": 67,
       "total": 67
     },
     "html/semantics/forms/the-form-element/form-checkvalidity.html": {
@@ -3905,11 +3905,11 @@
       "total": 1
     },
     "html/semantics/forms/the-form-element/form-indexed-element.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/the-form-element/form-indexed-property-names.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-form-element/form-length.html": {
@@ -3945,27 +3945,27 @@
       "total": 68
     },
     "html/semantics/forms/the-input-element/color-attributes.window.js": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/the-input-element/color.html": {
-      "pass": 17,
+      "pass": 23,
       "total": 27
     },
     "html/semantics/forms/the-input-element/date.html": {
-      "pass": 4,
+      "pass": 6,
       "total": 6
     },
     "html/semantics/forms/the-input-element/datetime-local-trailing-zeros.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-input-element/datetime-local-valueasdate.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-input-element/datetime-local.html": {
-      "pass": 2,
+      "pass": 17,
       "total": 17
     },
     "html/semantics/forms/the-input-element/datetime-weekmonth.html": {
@@ -3985,11 +3985,11 @@
       "total": 4
     },
     "html/semantics/forms/the-input-element/email.html": {
-      "pass": 7,
+      "pass": 8,
       "total": 8
     },
     "html/semantics/forms/the-input-element/files.html": {
-      "pass": 23,
+      "pass": 24,
       "total": 24
     },
     "html/semantics/forms/the-input-element/focus-dynamic-type-change-on-blur.html": {
@@ -4001,7 +4001,7 @@
       "total": 40
     },
     "html/semantics/forms/the-input-element/hidden.html": {
-      "pass": 8,
+      "pass": 9,
       "total": 9
     },
     "html/semantics/forms/the-input-element/input-checkvalidity.html": {
@@ -4033,7 +4033,7 @@
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-step-realignment.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-stepdown-02.html": {
@@ -4065,7 +4065,7 @@
       "total": 2
     },
     "html/semantics/forms/the-input-element/input-type-checkbox-switch.tentative.window.js": {
-      "pass": 0,
+      "pass": 3,
       "total": 3
     },
     "html/semantics/forms/the-input-element/input-type-checkbox.html": {
@@ -4093,23 +4093,23 @@
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-valueasdate-invalidstateerr.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-valueasdate-null.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/the-input-element/input-valueasdate-stepping.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/the-input-element/input-valueasdate-typeerror.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/the-input-element/input-valueasdate.html": {
-      "pass": 4,
+      "pass": 30,
       "total": 30
     },
     "html/semantics/forms/the-input-element/input-valueasnumber-invalidstateerr.html": {
@@ -4117,7 +4117,7 @@
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-valueasnumber-nan.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-input-element/input-valueasnumber-stepping.html": {
@@ -4125,7 +4125,7 @@
       "total": 7
     },
     "html/semantics/forms/the-input-element/input-valueasnumber-typeerror.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/the-input-element/input-valueasnumber.html": {
@@ -4149,7 +4149,7 @@
       "total": 5
     },
     "html/semantics/forms/the-input-element/month.html": {
-      "pass": 6,
+      "pass": 15,
       "total": 15
     },
     "html/semantics/forms/the-input-element/number-disabled.html": {
@@ -4181,7 +4181,7 @@
       "total": 4
     },
     "html/semantics/forms/the-input-element/radio-disconnected-group-owner.html": {
-      "pass": 6,
+      "pass": 8,
       "total": 8
     },
     "html/semantics/forms/the-input-element/radio-groupname-case.html": {
@@ -4193,7 +4193,7 @@
       "total": 2
     },
     "html/semantics/forms/the-input-element/radio-morphed.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-input-element/radio-multiple-selected.html": {
@@ -4205,11 +4205,11 @@
       "total": 12
     },
     "html/semantics/forms/the-input-element/range-2.html": {
-      "pass": 1,
+      "pass": 5,
       "total": 5
     },
     "html/semantics/forms/the-input-element/range.html": {
-      "pass": 14,
+      "pass": 24,
       "total": 25
     },
     "html/semantics/forms/the-input-element/required_attribute.html": {
@@ -4241,11 +4241,11 @@
       "total": 13
     },
     "html/semantics/forms/the-input-element/text.html": {
-      "pass": 16,
+      "pass": 18,
       "total": 18
     },
     "html/semantics/forms/the-input-element/time-2.html": {
-      "pass": 10,
+      "pass": 17,
       "total": 17
     },
     "html/semantics/forms/the-input-element/time-datalist-crash.html": {
@@ -4257,7 +4257,7 @@
       "total": 1
     },
     "html/semantics/forms/the-input-element/time.html": {
-      "pass": 31,
+      "pass": 32,
       "total": 32
     },
     "html/semantics/forms/the-input-element/type-change-file-to-text-crash.html": {
@@ -4265,11 +4265,11 @@
       "total": 1
     },
     "html/semantics/forms/the-input-element/type-change-state-weekmonth.html": {
-      "pass": 22,
+      "pass": 82,
       "total": 82
     },
     "html/semantics/forms/the-input-element/type-change-state.html": {
-      "pass": 149,
+      "pass": 380,
       "total": 380
     },
     "html/semantics/forms/the-input-element/url.html": {
@@ -4277,15 +4277,15 @@
       "total": 4
     },
     "html/semantics/forms/the-input-element/valueMode-weekmonth.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/the-input-element/valueMode.html": {
-      "pass": 27,
+      "pass": 40,
       "total": 40
     },
     "html/semantics/forms/the-input-element/week.html": {
-      "pass": 7,
+      "pass": 16,
       "total": 16
     },
     "html/semantics/forms/the-label-element/clicking-interactive-content.html": {
@@ -4393,7 +4393,7 @@
       "total": 12
     },
     "html/semantics/forms/the-output-element/mutations.window.js": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/the-output-element/output-setcustomvalidity.html": {
@@ -4465,7 +4465,7 @@
       "total": 1
     },
     "html/semantics/forms/the-select-element/select-click-does-not-open-picker.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-select-element/select-defineProperty.html": {
@@ -4501,7 +4501,7 @@
       "total": 1
     },
     "html/semantics/forms/the-select-element/select-selectedOptions-nesting.window.js": {
-      "pass": 0,
+      "pass": 11,
       "total": 11
     },
     "html/semantics/forms/the-select-element/select-selectedOptions.html": {
@@ -4513,11 +4513,11 @@
       "total": 1
     },
     "html/semantics/forms/the-select-element/select-validity.html": {
-      "pass": 2,
+      "pass": 6,
       "total": 6
     },
     "html/semantics/forms/the-select-element/select-validity.tentative.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/forms/the-select-element/select-value-option.tentative.html": {
@@ -4577,15 +4577,15 @@
       "total": 1
     },
     "html/semantics/forms/the-textarea-element/value-defaultValue-textContent.html": {
-      "pass": 7,
+      "pass": 12,
       "total": 12
     },
     "html/semantics/forms/the-textarea-element/wrapping-transformation.window.js": {
-      "pass": 5,
+      "pass": 8,
       "total": 8
     },
     "html/semantics/grouping-content/the-dd-element/grouping-dd.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/grouping-content/the-div-element/grouping-div.html": {
@@ -4597,15 +4597,15 @@
       "total": 1
     },
     "html/semantics/grouping-content/the-dt-element/grouping-dt.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/grouping-content/the-figcaption-element/grouping-figcaption.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/grouping-content/the-figure-element/grouping-figure.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/grouping-content/the-hr-element/grouping-hr.html": {
@@ -4641,7 +4641,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/contextmenu-historical.html": {
-      "pass": 9,
+      "pass": 10,
       "total": 11
     },
     "html/semantics/interactive-elements/the-details-element/auto-expand-details-element-fragment.html": {
@@ -4677,7 +4677,7 @@
       "total": 10
     },
     "html/semantics/interactive-elements/the-dialog-element/child-sequential-focus.html": {
-      "pass": 0,
+      "pass": 5,
       "total": 5
     },
     "html/semantics/interactive-elements/the-dialog-element/default-color.html": {
@@ -4689,7 +4689,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-autofocus-just-once.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-close-event-async.html": {
@@ -4709,15 +4709,15 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-focus-previous-outside.html": {
-      "pass": 1,
+      "pass": 3,
       "total": 6
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-focus-shadow-double-nested.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-focus-shadow.html": {
-      "pass": 0,
+      "pass": 50,
       "total": 50
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-focusing-steps-disconnected.html": {
@@ -4733,7 +4733,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-form-submission-unusual.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-inert.html": {
@@ -4757,15 +4757,15 @@
       "total": 2
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-requestclose-closedby.tentative.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-requestclose-recurse.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-return-value.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-showModal-remove.html": {
@@ -4773,7 +4773,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-showModal.html": {
-      "pass": 4,
+      "pass": 8,
       "total": 10
     },
     "html/semantics/interactive-elements/the-dialog-element/form-submit-dialog-shadow.html": {
@@ -4789,7 +4789,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/inertness-with-modal-dialogs-and-iframes.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 8
     },
     "html/semantics/interactive-elements/the-dialog-element/modal-dialog-in-visibility-hidden.html": {
@@ -4813,7 +4813,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/toggle-events.html": {
-      "pass": 9,
+      "pass": 12,
       "total": 12
     },
     "html/semantics/interactive-elements/the-dialog-element/top-layer-position.html": {
@@ -4861,11 +4861,11 @@
       "total": 6
     },
     "html/semantics/tabular-data/historical.html": {
-      "pass": 4,
+      "pass": 5,
       "total": 5
     },
     "html/semantics/tabular-data/processing-model-1/col-span-limits.html": {
-      "pass": 2,
+      "pass": 3,
       "total": 5
     },
     "html/semantics/tabular-data/processing-model-1/rowspan-0.html": {
@@ -4997,7 +4997,7 @@
       "total": 1
     },
     "html/semantics/text-level-semantics/the-a-element/a-stringifier.html": {
-      "pass": 7,
+      "pass": 11,
       "total": 11
     },
     "html/semantics/text-level-semantics/the-a-element/a.text-getter-01.html": {
@@ -5365,7 +5365,7 @@
       "total": 20
     },
     "webstorage/storage_builtins.window.js": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "webstorage/storage_clear.window.js": {
@@ -5397,7 +5397,7 @@
       "total": 8
     },
     "webstorage/storage_setitem.window.js": {
-      "pass": 1080,
+      "pass": 1082,
       "total": 1106
     },
     "xhr/content-type-unmodified.any.js": {
@@ -5437,7 +5437,7 @@
       "total": 1
     },
     "xhr/formdata/constructor-submitter.html": {
-      "pass": 4,
+      "pass": 9,
       "total": 9
     },
     "xhr/formdata/constructor.any.js": {
