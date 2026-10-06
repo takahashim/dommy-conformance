@@ -18,7 +18,7 @@ Two measurements live here.
 
 ## The WPT corpus
 
-`wpt/corpus/` is a vendored, dommy-selected slice of web-platform-tests (1376
+`wpt/corpus/` is a vendored, dommy-selected slice of web-platform-tests (1603
 runnable files), run the way a browser runs it: each file is loaded as the
 document and its own `<script>` tags boot through dommy's normal resource and
 script pipeline, with `testharness.js` and the wptserve endpoints served from
@@ -55,6 +55,15 @@ the two `urlpattern/*.tentative` compare/generate files, which test Chromium
 prototypes that never entered the URL Pattern Standard. They are not vendored: a
 pass or a fail there would measure Dommy against a prototype rather than a
 standard, and `script/refresh-corpus.rb` refuses to run while one is present.
+
+Which files are in the corpus is decided by adding them, never by a refresh:
+
+    ruby script/add-to-corpus.rb /path/to/web-platform-tests shadow-dom/declarative
+
+copies a directory (or file) from an upstream checkout at
+`wpt/UPSTREAM_REVISION`, with its `support/` files and the root-absolute
+includes its tests name, and refuses a checkout at any other revision. Run the
+corpus and `rake wpt:record` afterwards.
 
 ## The Chromium differential harness
 
