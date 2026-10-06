@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 88415,
-    "subtests_total": 89405,
-    "files": 1377,
-    "files_green": 1178,
+    "subtests_passed": 88816,
+    "subtests_total": 97532,
+    "files": 1603,
+    "files_green": 1203,
     "files_errored": 0
   },
   "files": {
@@ -5016,6 +5016,358 @@
       "pass": 8,
       "total": 8
     },
+    "html/webappapis/dynamic-markup-insertion/closing-the-input-stream/document-close-with-pending-script.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/closing-the-input-stream/load-event-after-location-set-during-write.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/001.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/002.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/003.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/004.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/005.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/006.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/007.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/008.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/009.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/010.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/011.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/012.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/013.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/014.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/015.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/016.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/017.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/018.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/019.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/020.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/021.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/022.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/023.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/024.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/025.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/026.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/027.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/028.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/029.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/030.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/031.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/032.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/033.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/034.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/035.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/036.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/037.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/038.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/039.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/040.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/041.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/042.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/043.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/044.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/045.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/046.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/047-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/047.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/049.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/050.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/051.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/contentType.window.js": {
+      "pass": 1,
+      "total": 4
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/document.write-02.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/during-readystatechange.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/empty.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_003.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_004.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_005.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_006.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_007.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_008.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_009.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/iframe_010.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-delayed-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-delayed.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-dynamic-import-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-dynamic-import.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-static-import-delayed-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-static-import-delayed.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-static-import-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-static-import.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-delayed-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-delayed.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-immediate-promise-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-immediate-promise.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-import-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-import.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-promise-iframe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module-tla-promise.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/module.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/mutation-observer.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/nested-document-write-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/nested-document-write-2.html": {
+      "pass": 0,
+      "total": 0
+    },
     "html/webappapis/dynamic-markup-insertion/document-write/script_001.html": {
       "pass": 1,
       "total": 1
@@ -5036,7 +5388,15 @@
       "pass": 1,
       "total": 1
     },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_006.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/webappapis/dynamic-markup-insertion/document-write/script_007.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_008.html": {
       "pass": 1,
       "total": 1
     },
@@ -5044,12 +5404,324 @@
       "pass": 1,
       "total": 1
     },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_010.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_011.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_012.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/script_013.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-write/write-active-document.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/document-writeln/document.writeln-02.html": {
+      "pass": 3,
+      "total": 3
+    },
     "html/webappapis/dynamic-markup-insertion/document-writeln/document.writeln-03.html": {
       "pass": 1,
       "total": 1
     },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-encoding.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-style-attribute.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-base-pushstate.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-base.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-moretests.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url-pushstate.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-url.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Element-setHTMLUnsafe-04.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe-CEReactions.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe-runScripts.html": {
+      "pass": 0,
+      "total": 28
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe-xml.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/setHTMLUnsafe.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/004.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/006.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/011-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/011.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/012-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/012.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/013-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/013.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/014-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/014.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/015-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/015.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/016-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/016.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/abort-refresh-immediate.window.js": {
+      "pass": 2,
+      "total": 6
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/abort-refresh-multisecond-header.window.js": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/abort-refresh-multisecond-meta.window.js": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/abort-while-navigating.window.js": {
+      "pass": 3,
+      "total": 9
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/abort.sub.window.js": {
+      "pass": 3,
+      "total": 5
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/aborted-parser.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/active.window.js": {
+      "pass": 0,
+      "total": 7
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/bailout-exception-vs-return-origin.sub.window.js": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/bailout-exception-vs-return-xml.window.js": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/bailout-side-effects-ignore-opens-during-unload.window.js": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/bailout-side-effects-same-origin-domain.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/bailout-side-effects-synchronous-script.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/bailout-side-effects-xml.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/beforeunload.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/crbug-583445-regression.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/custom-element.window.js": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/document-open-cancels-javascript-url-navigation.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/document.open-02.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/document.open-03-frame.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/document.open-03.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/encoding.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/event-listeners.window.js": {
+      "pass": 15,
+      "total": 18
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/form-control-state.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/history-state.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/history.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/ignore-opens-during-unload.window.js": {
+      "pass": 0,
+      "total": 12
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/location-set-and-document-open.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/mutation-observer.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/no-new-global.window.js": {
+      "pass": 16,
+      "total": 17
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/open-with-defer-script-during-initial-about-blank-load.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/origin-check-in-document-open-basic.html": {
       "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/origin-check-in-document-open-same-origin-domain.sub.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/quirks.window.js": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/readiness.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/reload.window.js": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/remove-initial-about-blankness.window.js": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/tasks.window.js": {
+      "pass": 0,
+      "total": 10
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/type-argument-plaintext.window.js": {
+      "pass": 0,
+      "total": 8
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/type-argument.window.js": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/unload.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/url-entry-document-sync-call.window.js": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/url-entry-document.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/url-fragment.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/url.window.js": {
+      "pass": 2,
+      "total": 5
+    },
+    "html/webappapis/dynamic-markup-insertion/the-innerhtml-property/annotation-xml-fragment-parsing.html": {
+      "pass": 1,
       "total": 2
     },
     "html/webappapis/dynamic-markup-insertion/the-outerhtml-property/outerhtml-documentfragment.html": {
@@ -5143,6 +5815,238 @@
     "shadow-dom/Slottable-mixin.html": {
       "pass": 4,
       "total": 4
+    },
+    "shadow-dom/declarative/declarative-after-attachshadow.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/declarative-parser-interaction.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-attachment.html": {
+      "pass": 0,
+      "total": 654
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-available-to-element-internals.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-basic.html": {
+      "pass": 9,
+      "total": 22
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-opt-in.html": {
+      "pass": 110,
+      "total": 120
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-repeats-2.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-repeats-slot-assignment.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-repeats.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-serialization.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-slot-assignment-serialization.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-slot-assignment.html": {
+      "pass": 2,
+      "total": 8
+    },
+    "shadow-dom/declarative/declarative-shadow-dom-write-to-iframe.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/declarative-with-disabled-shadow.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/declarative/gethtml-ordering.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/declarative/gethtml.html": {
+      "pass": 190,
+      "total": 6908
+    },
+    "shadow-dom/declarative/innerhtml-before-closing-tag.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/innerhtml-on-ordinary-template.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/move-template-before-closing-tag.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/declarative/script-access.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-disconnect-iframe.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-disconnect.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-duplicate-bare-specifier.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-duplicate-importmap.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-duplicate.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-failure.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-clear.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-insertrule.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-reinsert-same.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-reinsert-swap.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-remove-middle.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-mutation-replacesync.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-ordering.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-shared.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-basic.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-clonenode-async-fetch.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-clonenode.html": {
+      "pass": 1,
+      "total": 11
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-document-parse-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-fetched-module.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-idl-absent-and-empty.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-idl-feature-detection.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-idl-reflection.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-invalid-specifier.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-async.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-basic.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-failure.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-identity.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-nested.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-ordering.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-modulepreload-shared.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-multiple.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-nested-async.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-nested-sync.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-placeholder-identity.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-same-document.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-serialization.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "shadow-dom/shadow-root-clonable.html": {
+      "pass": 0,
+      "total": 6
     },
     "url/IdnaTestV2-removed.any.js": {
       "pass": 21,
