@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 88400,
+    "subtests_passed": 88415,
     "subtests_total": 89405,
     "files": 1377,
-    "files_green": 1168,
+    "files_green": 1178,
     "files_errored": 0
   },
   "files": {
@@ -21,7 +21,7 @@
       "total": 11
     },
     "FileAPI/blob/Blob-constructor.any.js": {
-      "pass": 70,
+      "pass": 71,
       "total": 73
     },
     "FileAPI/blob/Blob-newobject.any.js": {
@@ -477,7 +477,7 @@
       "total": 4
     },
     "custom-elements/CustomElementRegistry.html": {
-      "pass": 45,
+      "pass": 46,
       "total": 46
     },
     "dom/abort/AbortSignal.any.js": {
@@ -981,7 +981,7 @@
       "total": 16
     },
     "dom/nodes/DOMImplementation-createDocument-no-browsing-context.html": {
-      "pass": 4,
+      "pass": 5,
       "total": 5
     },
     "dom/nodes/DOMImplementation-createDocument.html": {
@@ -1317,7 +1317,7 @@
       "total": 4
     },
     "dom/nodes/Node-appendChild-cereactions-vs-script.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/Node-appendChild.html": {
@@ -1845,7 +1845,7 @@
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-custom-from-fragment.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/insertion-removing-steps/Node-appendChild-script-and-default-style-meta-from-fragment.html": {
@@ -2069,7 +2069,7 @@
       "total": 3
     },
     "dom/nodes/node-realm-mixed-across-adoption.html": {
-      "pass": 3,
+      "pass": 4,
       "total": 4
     },
     "dom/nodes/node-realm-preserved-across-adoption.html": {
@@ -2105,7 +2105,7 @@
       "total": 1
     },
     "dom/nodes/remove-and-adopt-thcrash.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/nodes/remove-next-sibling-during-replace-with.html": {
@@ -2229,7 +2229,7 @@
       "total": 6
     },
     "dom/ranges/Range-adopt-test.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 4
     },
     "dom/ranges/Range-attribute-nodes.html": {
@@ -2625,7 +2625,7 @@
       "total": 13
     },
     "encoding/encodeInto.any.js": {
-      "pass": 110,
+      "pass": 111,
       "total": 111
     },
     "encoding/iso-2022-jp-decoder.any.js": {
@@ -3157,7 +3157,7 @@
       "total": 1
     },
     "html/dom/documents/resource-metadata-management/document-cookie.html": {
-      "pass": 2,
+      "pass": 5,
       "total": 5
     },
     "html/dom/documents/resource-metadata-management/document-lastModified-01.html": {
@@ -3629,7 +3629,7 @@
       "total": 36
     },
     "html/semantics/forms/form-submission-0/form-submission-algorithm.html": {
-      "pass": 9,
+      "pass": 11,
       "total": 11
     },
     "html/semantics/forms/form-submission-0/form-submit-invalid.html": {
@@ -3745,7 +3745,7 @@
       "total": 0
     },
     "html/semantics/forms/the-button-element/button-activate.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-button-element/button-checkvalidity.html": {

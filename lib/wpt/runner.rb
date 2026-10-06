@@ -62,6 +62,7 @@ module DommyConformance
             execute_scripts: false, strict: false, settle: false,
             wasm_memory_shim: true, navigable: true
           )
+          browser.runtime.define_host_object("__dommyTestDriver", TestDriver.new(browser.window.document))
           boot_scripts(browser, url, resources)
           rounds = html.match?(LONG_TIMEOUT_META) ? LONG_PUMP_ROUNDS : PUMP_ROUNDS
           harvest(browser, url, resources, rounds)
