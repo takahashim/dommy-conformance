@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 96331,
-    "subtests_total": 97516,
-    "files": 1566,
-    "files_green": 1228,
+    "subtests_passed": 111686,
+    "subtests_total": 114663,
+    "files": 2798,
+    "files_green": 1772,
     "files_errored": 0
   },
   "files": {
@@ -71,6 +71,202 @@
     "accname/name/comp_tooltip.html": {
       "pass": 22,
       "total": 22
+    },
+    "close-watcher/abortsignal.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "close-watcher/basic.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "close-watcher/esc-key/keydown.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/esc-key/keypress.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/esc-key/keyup.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/esc-key/not-user-activation.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/esc-key/synthetic-keyboard-event.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/event-properties.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/frame-removal.html": {
+      "pass": 5,
+      "total": 6
+    },
+    "close-watcher/iframes/dialog-same-origin-nn.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "close-watcher/iframes/dialog-same-origin-ynn.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "close-watcher/iframes/dialog-same-origin-ynyn.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "close-watcher/inside-event-listeners.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "close-watcher/user-activation/n-activate-preventDefault.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n-activate.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n-closerequest-n.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n-destroy-n.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nn-CloseWatcher.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nn-activate-CloseWatcher.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nn-activate-dialog.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nn-dialog.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nnn-CloseWatcher-dialog-popover.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nnn-CloseWatcher.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nnn-dialog.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nnn-popovers.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/ny-activate-preventDefault.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/ny.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nyn-popovers.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nyn.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nynn-destroy.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nynn.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nyyn-CloseWatcher.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nyyn-dialog.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nyyyn-CloseWatcher.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nyyyn-dialog.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/y-dialog-disconnected.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/y-popover-disconnected.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/y.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yn-activate.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yn.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/ynn-CloseWatcher.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/ynn-dialog.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yy.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyn.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyy-CloseWatcher-dialog-popover.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyy-activate-CloseWatcher-dialog-popover.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyy-popovers.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyy.html": {
+      "pass": 1,
+      "total": 1
     },
     "css/css-color/parsing/color-computed-hex-color.html": {
       "pass": 6,
@@ -472,6 +668,10 @@
       "pass": 1,
       "total": 1
     },
+    "custom-elements/CustomElementRegistry-constructor-and-callbacks-are-held-strongly.html": {
+      "pass": 5,
+      "total": 5
+    },
     "custom-elements/CustomElementRegistry-getName.html": {
       "pass": 4,
       "total": 4
@@ -479,6 +679,762 @@
     "custom-elements/CustomElementRegistry.html": {
       "pass": 46,
       "total": 46
+    },
+    "custom-elements/Document-createElement-customized-builtins.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/Document-createElement.html": {
+      "pass": 32,
+      "total": 36
+    },
+    "custom-elements/Document-createElementNS-customized-builtins.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/Document-createElementNS-prefix-timing.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "custom-elements/Document-createElementNS.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "custom-elements/ElementInternals-accessibility-values.html": {
+      "pass": 42,
+      "total": 49
+    },
+    "custom-elements/ElementInternals-accessibility.html": {
+      "pass": 50,
+      "total": 50
+    },
+    "custom-elements/ElementInternals-accessibility.tentative.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/ElementInternals-role.html": {
+      "pass": 0,
+      "total": 68
+    },
+    "custom-elements/HTMLElement-attachInternals.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/HTMLElement-constructor-customized-builtins.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/HTMLElement-constructor.html": {
+      "pass": 11,
+      "total": 12
+    },
+    "custom-elements/adopted-callback.html": {
+      "pass": 37,
+      "total": 71
+    },
+    "custom-elements/append-children-to-new-parent-cycle.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/attribute-changed-callback.html": {
+      "pass": 13,
+      "total": 13
+    },
+    "custom-elements/builtin-coverage.html": {
+      "pass": 444,
+      "total": 444
+    },
+    "custom-elements/connected-callbacks-html-fragment-parsing.html": {
+      "pass": 7,
+      "total": 8
+    },
+    "custom-elements/connected-callbacks-template.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/connected-callbacks.html": {
+      "pass": 35,
+      "total": 40
+    },
+    "custom-elements/createElement-reentrant-construction.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/cross-realm-callback-report-exception.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "custom-elements/custom-element-reaction-queue.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "custom-elements/customized-built-in-constructor-exceptions.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "custom-elements/disconnected-callbacks.html": {
+      "pass": 35,
+      "total": 40
+    },
+    "custom-elements/element-internals-aria-element-reflection.html": {
+      "pass": 5,
+      "total": 9
+    },
+    "custom-elements/element-internals-behaviors.tentative.html": {
+      "pass": 1,
+      "total": 15
+    },
+    "custom-elements/element-internals-shadowroot.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "custom-elements/enqueue-custom-element-callback-reactions-inside-another-callback.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "custom-elements/form-associated/ElementInternals-NotSupportedError.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/form-associated/ElementInternals-behavior-accessibility.tentative.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/form-associated/ElementInternals-form.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/form-associated/ElementInternals-labels.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/form-associated/ElementInternals-reportValidity-bubble-notref.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/form-associated/ElementInternals-reportValidity-bubble.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/form-associated/ElementInternals-reportValidity-delegatesFocus-notref.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/form-associated/ElementInternals-reportValidity-delegatesFocus.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/form-associated/ElementInternals-setFormValue-nullish-value.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/form-associated/ElementInternals-setFormValue.html": {
+      "pass": 55,
+      "total": 55
+    },
+    "custom-elements/form-associated/ElementInternals-setValidity-normalize-newlines.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/form-associated/ElementInternals-submit-behavior-dialog.tentative.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/form-associated/ElementInternals-submit-behavior.tentative.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/form-associated/ElementInternals-target-element-is-held-strongly.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "custom-elements/form-associated/ElementInternals-validation.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "custom-elements/form-associated/disabled-delegatesFocus.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/form-associated/fieldset-elements-after-upgrade.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/form-associated/fieldset-elements-during-construction.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/form-associated/fieldset-elements.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/form-associated/focusability.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/form-associated/form-associated-callback.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "custom-elements/form-associated/form-disabled-callback.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/form-associated/form-disabled-legend.html": {
+      "pass": 5,
+      "total": 6
+    },
+    "custom-elements/form-associated/form-elements-namedItem.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/form-associated/form-reset-callback.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/form-associated/label-delegatesFocus.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/historical.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "custom-elements/htmlconstructor/newtarget-customized-builtins.html": {
+      "pass": 2,
+      "total": 10
+    },
+    "custom-elements/htmlconstructor/newtarget.html": {
+      "pass": 2,
+      "total": 10
+    },
+    "custom-elements/microtasks-and-constructors.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "custom-elements/overwritten-customElements-global.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "custom-elements/parser/parser-constructs-custom-element-in-document-write.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "custom-elements/parser/parser-constructs-custom-element-synchronously.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "custom-elements/parser/parser-constructs-custom-elements-with-is.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/parser/parser-constructs-custom-elements.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/parser/parser-custom-element-in-foreign-content.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/parser/parser-fallsback-to-unknown-element.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "custom-elements/parser/parser-sets-attributes-and-children.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "custom-elements/parser/parser-uses-constructed-element.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/parser/parser-uses-registry-of-owner-document.html": {
+      "pass": 9,
+      "total": 10
+    },
+    "custom-elements/parser/serializing-html-fragments-customized-builtins.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/perform-microtask-checkpoint-before-construction.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "custom-elements/prevent-extensions-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/pseudo-class-defined-customized-builtins.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "custom-elements/pseudo-class-defined-print.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/pseudo-class-defined.html": {
+      "pass": 24,
+      "total": 24
+    },
+    "custom-elements/range-and-constructors.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reaction-timing.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/reactions/Animation.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "custom-elements/reactions/AriaMixin-element-attributes.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "custom-elements/reactions/AriaMixin-string-attributes.html": {
+      "pass": 80,
+      "total": 80
+    },
+    "custom-elements/reactions/AriaMixin-string-attributes.tentative.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "custom-elements/reactions/Attr.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/CSSStyleDeclaration.html": {
+      "pass": 20,
+      "total": 30
+    },
+    "custom-elements/reactions/ChildNode.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "custom-elements/reactions/DOMStringMap.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "custom-elements/reactions/DOMTokenList.html": {
+      "pass": 19,
+      "total": 19
+    },
+    "custom-elements/reactions/Document.html": {
+      "pass": 11,
+      "total": 12
+    },
+    "custom-elements/reactions/Element.html": {
+      "pass": 47,
+      "total": 47
+    },
+    "custom-elements/reactions/ElementContentEditable.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/HTMLAnchorElement.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/reactions/HTMLElement.html": {
+      "pass": 22,
+      "total": 22
+    },
+    "custom-elements/reactions/HTMLOptionElement.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/reactions/HTMLOptionsCollection.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "custom-elements/reactions/HTMLOutputElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/HTMLSelectElement.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "custom-elements/reactions/HTMLTableElement.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/reactions/HTMLTableRowElement.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/reactions/HTMLTableSectionElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/HTMLTitleElement.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/reactions/NamedNodeMap.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "custom-elements/reactions/Node.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "custom-elements/reactions/ParentNode.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/Range.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/reactions/Selection.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/reactions/ShadowRoot.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/reactions/customized-builtins/HTMLAreaElement.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "custom-elements/reactions/customized-builtins/HTMLBaseElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/customized-builtins/HTMLButtonElement.html": {
+      "pass": 20,
+      "total": 20
+    },
+    "custom-elements/reactions/customized-builtins/HTMLCanvasElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/customized-builtins/HTMLDataElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/customized-builtins/HTMLDetailsElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/customized-builtins/HTMLEmbedElement.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "custom-elements/reactions/customized-builtins/HTMLFieldSetElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/customized-builtins/HTMLImageElement.html": {
+      "pass": 22,
+      "total": 22
+    },
+    "custom-elements/reactions/customized-builtins/HTMLInputElement.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/reactions/customized-builtins/HTMLLIElement.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "custom-elements/reactions/customized-builtins/HTMLLabelElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/customized-builtins/HTMLMapElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/customized-builtins/HTMLMediaElement.html": {
+      "pass": 28,
+      "total": 28
+    },
+    "custom-elements/reactions/customized-builtins/HTMLMetaElement.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "custom-elements/reactions/customized-builtins/HTMLMeterElement.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "custom-elements/reactions/customized-builtins/HTMLModElement.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "custom-elements/reactions/customized-builtins/HTMLOListElement.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "custom-elements/reactions/customized-builtins/HTMLOptGroupElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/customized-builtins/HTMLParamElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/customized-builtins/HTMLProgressElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/customized-builtins/HTMLQuoteElement.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/reactions/customized-builtins/HTMLSlotElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/customized-builtins/HTMLSourceElement.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/reactions/customized-builtins/HTMLStyleElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/customized-builtins/HTMLTableCellElement.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "custom-elements/reactions/customized-builtins/HTMLTableColElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/customized-builtins/HTMLTimeElement.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/reactions/with-exceptions.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "custom-elements/registries/Construct.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/registries/CustomElementRegistry-define.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/registries/CustomElementRegistry-initialize.html": {
+      "pass": 6,
+      "total": 13
+    },
+    "custom-elements/registries/CustomElementRegistry-multi-register.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/registries/CustomElementRegistry-upgrade.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "custom-elements/registries/Document-createElement.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/registries/Document-createElementNS.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/registries/Document-customElementRegistry.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/registries/Document-importNode-cross-document.window.js": {
+      "pass": 14,
+      "total": 15
+    },
+    "custom-elements/registries/Document-importNode.html": {
+      "pass": 17,
+      "total": 20
+    },
+    "custom-elements/registries/Element-customElementRegistry-exceptions.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "custom-elements/registries/Element-customElementRegistry.html": {
+      "pass": 7,
+      "total": 11
+    },
+    "custom-elements/registries/Element-innerHTML.html": {
+      "pass": 9,
+      "total": 12
+    },
+    "custom-elements/registries/ShadowRoot-init-customElementRegistry.html": {
+      "pass": 11,
+      "total": 12
+    },
+    "custom-elements/registries/ShadowRoot-init-declarative.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "custom-elements/registries/ShadowRoot-innerHTML.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "custom-elements/registries/adoption.window.js": {
+      "pass": 36,
+      "total": 36
+    },
+    "custom-elements/registries/constructor-direct-call-fallback-registry.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/registries/constructor-reentry-createElement.window.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/registries/constructor-reentry-with-different-definition.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/registries/define-customized-builtins.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "custom-elements/registries/define.html": {
+      "pass": 70,
+      "total": 70
+    },
+    "custom-elements/registries/element-mutation-null-registry-removal.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "custom-elements/registries/element-mutation.html": {
+      "pass": 9,
+      "total": 15
+    },
+    "custom-elements/registries/global.window.js": {
+      "pass": 5,
+      "total": 5
+    },
+    "custom-elements/registries/initial-about-blank.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "custom-elements/registries/per-document.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "custom-elements/registries/pseudo-class-defined.window.js": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/registries/scoped-custom-element-registry-customelementregistry-attribute.html": {
+      "pass": 7,
+      "total": 23
+    },
+    "custom-elements/registries/scoped-registry-append.html": {
+      "pass": 7,
+      "total": 16
+    },
+    "custom-elements/registries/scoped-registry-define-upgrade-criteria.html": {
+      "pass": 10,
+      "total": 14
+    },
+    "custom-elements/registries/scoped-registry-define-upgrade-order.html": {
+      "pass": 4,
+      "total": 7
+    },
+    "custom-elements/registries/scoped-registry-effective-global-registry.html": {
+      "pass": 44,
+      "total": 66
+    },
+    "custom-elements/registries/scoped-registry-initialize-upgrades.html": {
+      "pass": 11,
+      "total": 12
+    },
+    "custom-elements/registries/scoped-registry-initialize.html": {
+      "pass": 27,
+      "total": 27
+    },
+    "custom-elements/registries/scoped-registry-registry-define-get-etc.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "custom-elements/registries/template.window.js": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/registries/upgrade.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "custom-elements/registries/valid-custom-element-names.html": {
+      "pass": 1975,
+      "total": 1975
+    },
+    "custom-elements/shadow-descendant-lifecycle-order.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "custom-elements/state/ElementInternals-states.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "custom-elements/state/state-css-selector-nth-of.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "custom-elements/state/state-css-selector-shadow-dom.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "custom-elements/state/state-css-selector.html": {
+      "pass": 10,
+      "total": 10
+    },
+    "custom-elements/state/state-pseudo-class.html": {
+      "pass": 5,
+      "total": 8
+    },
+    "custom-elements/throw-on-dynamic-markup-insertion-counter-construct.html": {
+      "pass": 2,
+      "total": 11
+    },
+    "custom-elements/throw-on-dynamic-markup-insertion-counter-reactions.html": {
+      "pass": 0,
+      "total": 11
+    },
+    "custom-elements/upgrading.html": {
+      "pass": 23,
+      "total": 28
+    },
+    "custom-elements/upgrading/Document-importNode-customized-builtins.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "custom-elements/upgrading/Document-importNode.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "custom-elements/upgrading/Node-cloneNode-customized-builtins.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "custom-elements/upgrading/Node-cloneNode.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "custom-elements/upgrading/upgrade-custom-element-error-event.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "custom-elements/upgrading/upgrading-enqueue-reactions.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "custom-elements/upgrading/upgrading-parser-created-element.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "custom-elements/when-defined-reentry-crash.html": {
+      "pass": 0,
+      "total": 0
     },
     "dom/abort/AbortSignal.any.js": {
       "pass": 2,
@@ -3416,6 +4372,806 @@
       "pass": 10,
       "total": 19
     },
+    "html/interaction/focus/anchor-element-focus-ring.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/interaction/focus/chrome-object-tab-focus-bug.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/composed.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/document-level-focus-apis/document-has-system-focus.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/document-level-focus-apis/document-level-apis.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "html/interaction/focus/focus-01.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/interaction/focus/focus-02.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/interaction/focus/focus-after-attach-shadow-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/interaction/focus/focus-file-input.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focus-input-type-switch.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focus-keyboard-js.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focus-management/focus-event-targets-simple.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focus-management/focus-event-view.html": {
+      "pass": 3,
+      "total": 5
+    },
+    "html/interaction/focus/focus-management/focus-events.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focus-selection.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/focused-element-move-documents-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/interaction/focus/focusgroup/tentative/ax-role-inference-children.html": {
+      "pass": 5,
+      "total": 20
+    },
+    "html/interaction/focus/focusgroup/tentative/ax-role-inference-item-elementinternals-nested.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/ax-role-inference-item-elementinternals-owner-implied.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/ax-role-inference-item-elementinternals.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/ax-role-inference-owner-elementinternals.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/ax-role-inference-owner.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/ax-role-inference-top-layer.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/does-not-move-when-on-focusgroup-root.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/does-not-move-when-on-non-focusgroup-item.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/does-not-move-when-only-one-item-and-wraps.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/does-not-move-when-only-one-item.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/does-not-move-when-outside-focusgroup.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/does-not-wrap-when-not-supported.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/horizontal/does-not-ascend-out-of-focusgroup.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/horizontal/does-not-move-when-axis-not-supported.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/horizontal/does-not-wrap-in-orthogonal-axis.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/horizontal/moves-when-only-current-axis-supported.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/horizontal/wraps-in-axis.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/moves-to-previous-item-and-skips-focusable-item.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/moves-to-previous-item.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/skips-non-focusgroup-subtree.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/skips-root-focusgroup-complex-case.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/skips-root-focusgroup.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/vertical/does-not-ascend-out-of-focusgroup.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/vertical/does-not-move-when-axis-not-supported.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/vertical/does-not-wrap-in-orthogonal-axis.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/vertical/moves-when-only-current-axis-supported.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/vertical/wraps-in-axis.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/wraps-successfully-complex-case.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/backward-navigation/wraps-successfully.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-first-requirement.html": {
+      "pass": 3,
+      "total": 6
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-token-anywhere.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/grid.html": {
+      "pass": 4,
+      "total": 8
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/listbox.html": {
+      "pass": 5,
+      "total": 10
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/menu.html": {
+      "pass": 6,
+      "total": 15
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/menubar.html": {
+      "pass": 2,
+      "total": 6
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/none.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/radiogroup.html": {
+      "pass": 3,
+      "total": 14
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/tablist.html": {
+      "pass": 6,
+      "total": 16
+    },
+    "html/interaction/focus/focusgroup/tentative/behavior-tokens/toolbar.html": {
+      "pass": 5,
+      "total": 10
+    },
+    "html/interaction/focus/focusgroup/tentative/descendant-navigation/deeply-nested-items.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/descendant-navigation/mixed-content-navigation.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/descendant-navigation/simple-descendant-test.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/descendant-navigation/various-element-types.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/descendant-navigation/wrapping-with-descendants.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/feed-navigation.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/interaction/focus/focusgroup/tentative/feed-role-inference-item.html": {
+      "pass": 3,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/feed-role-inference-owner.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/focusgroupstart-basic.html": {
+      "pass": 0,
+      "total": 7
+    },
+    "html/interaction/focus/focusgroup/tentative/focusgroupstart-scope-owners.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/focusgroupstart-tree-pattern.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/does-not-move-when-on-focusgroup-root.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/does-not-move-when-on-non-item.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/does-not-move-when-only-one-item-and-wraps.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/does-not-move-when-only-one-item.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/does-not-move-when-outside-focusgroup.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/does-not-wrap-when-not-supported.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/horizontal/does-not-move-when-axis-not-supported.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/horizontal/moves-when-only-current-axis-supported.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/horizontal/rtl-inline-only.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/mixed-ltr-rtl-visual-order.html": {
+      "pass": 0,
+      "total": 11
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/moves-to-next-item-and-skips-non-focusable.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/moves-to-next-item.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/nested-focusgroup-is-item-of-parent.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/rtl-direction-reverses-inline.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/rtl-wraps-correctly.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/vertical-writing-mode.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/vertical/does-not-move-when-axis-not-supported.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/vertical/moves-when-only-current-axis-supported.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/forward-navigation/wraps-successfully.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/col-flow-only.html": {
+      "pass": 2,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/col-wrap-and-row-flow.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/col-wrap-only.html": {
+      "pass": 2,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/colspan.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/css-table-not-focusgroup.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/css-table.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/does-not-wrap-or-flow.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/empty-spaces.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/flows-in-both-axes.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/moves-across-table-sections.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/non-table.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/relayout-before-navigation.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/row-flow-only.html": {
+      "pass": 2,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/row-wrap-and-col-flow.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/row-wrap-only.html": {
+      "pass": 2,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/rowspan.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/simple-case-with-non-focusable-cell-in-the-center.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/simple-case.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/grid-navigation/wraps-in-both-axes.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/home-end-keys.optional.html": {
+      "pass": 8,
+      "total": 22
+    },
+    "html/interaction/focus/focusgroup/tentative/idl-reflection.html": {
+      "pass": 1,
+      "total": 21
+    },
+    "html/interaction/focus/focusgroup/tentative/none-anywhere-opts-out.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/opt-out-barriers/complex-nested-opt-out.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/opt-out-barriers/none-creates-barriers.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/opt-out-barriers/none-opt-out-direct-child.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/reading-flow-navigation/explicit-visual-reordering.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/reading-flow-navigation/fallback-to-dom-order.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/reading-flow-navigation/flex-visual-order-basic.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/reading-flow-navigation/nested-containers.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/reading-flow-navigation/partial-reordering.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/reading-flow-navigation/simple-mixed.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/basic-tab-behavior.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-contenteditable.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-multi-tab-stop.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-multiple-in-segment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-nested-focusgroup.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-number.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-only-item.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-radio.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-range.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-scrollable-container.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-select.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-tab-escape-adjacency.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-tab-escape.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-text.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-textarea.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-with-explicit-optout.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/directional-input-handler-with-priority.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/dynamic-changes.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/empty-and-non-focusable.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/focusgroup-segments.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/focusgroupstart-shadow-tabindex.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/guaranteed-tab-stop-priority.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/memory-behavior.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/nested-focusgroups.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/segment-barrier-tabindex-minus1.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/tabindex-minus-one-home-end.optional.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/focusgroup/tentative/sequential-navigation/tabindex-minus-one-tab-escape.html": {
+      "pass": 2,
+      "total": 8
+    },
+    "html/interaction/focus/focusgroup/tentative/shadow/shadow-items-basic.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/shadow/shadow-nested-scope.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/shadow/shadow-reattach.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/top-layer-dialog-excluded.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/focusgroup/tentative/top-layer-dynamic-exclusion.html": {
+      "pass": 1,
+      "total": 6
+    },
+    "html/interaction/focus/focusgroup/tentative/top-layer-inner-focusgroup.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/interaction/focus/focusgroup/tentative/top-layer-popover-excluded.html": {
+      "pass": 1,
+      "total": 6
+    },
+    "html/interaction/focus/focusgroup/tentative/top-layer-popover-invoker.html": {
+      "pass": 5,
+      "total": 7
+    },
+    "html/interaction/focus/focusgroup/tentative/untraversable-tabindex-minus-one.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/interaction/focus/processing-model/focus-fixup-rule-one-no-dialogs.html": {
+      "pass": 1,
+      "total": 8
+    },
+    "html/interaction/focus/processing-model/focusVisible.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "html/interaction/focus/processing-model/legend-focusable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/processing-model/legend.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/processing-model/preventScroll-nested-scroll-elements.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/processing-model/preventScroll-textarea.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/processing-model/preventScroll.html": {
+      "pass": 6,
+      "total": 7
+    },
+    "html/interaction/focus/processing-model/textarea-scroll-selection.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/sequential-focus-navigation-after-disabled.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-default-value.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/interaction/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-negative.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-order.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-positive.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/sequential-focus-navigation-and-the-tabindex-attribute/focus-tabindex-zero.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/sequential-focus-navigation-and-the-tabindex-attribute/tabindex-getter-frame.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/interaction/focus/sequential-focus-navigation-and-the-tabindex-attribute/tabindex-getter.html": {
+      "pass": 120,
+      "total": 120
+    },
+    "html/interaction/focus/sequential-focus-navigation-starting-point.tentative.html": {
+      "pass": 6,
+      "total": 20
+    },
+    "html/interaction/focus/setSequentialFocusStartingPoint.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/tab-table-caption.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/interaction/focus/tabindex-focus-flag.html": {
+      "pass": 35,
+      "total": 35
+    },
+    "html/interaction/focus/the-autofocus-attribute/autofocus-area.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/autofocus-dialog.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/interaction/focus/the-autofocus-attribute/autofocus-in-not-fully-active-document.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/autofocus-not-processed-when-top-document-has-focused-element.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/autofocus-on-stable-document.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/document-with-fragment-empty.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/the-autofocus-attribute/document-with-fragment-nonexistent.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/the-autofocus-attribute/document-with-fragment-removed-target.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/document-with-fragment-top.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/interaction/focus/the-autofocus-attribute/document-with-fragment-valid.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/interaction/focus/the-autofocus-attribute/first-reconnected.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/first-when-later-but-before.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/first-when-later.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/first.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/focusable-area-in-top-document.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/no-autofocus-on-changing-input-type.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/no-cross-origin-autofocus.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/no-sandboxed-automatic-features.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/not-on-first-task.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/queue-non-focusable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/same-origin-autofocus.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/skip-another-top-level-browsing-context.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/skip-non-focusable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/skip-not-fully-active.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/spin-by-blocking-style-sheet.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/interaction/focus/the-autofocus-attribute/supported-elements.html": {
+      "pass": 5,
+      "total": 6
+    },
+    "html/interaction/focus/the-autofocus-attribute/update-the-rendering.html": {
+      "pass": 0,
+      "total": 1
+    },
     "html/semantics/document-metadata/the-title-element/title-multiple-elements.html": {
       "pass": 1,
       "total": 1
@@ -3423,6 +5179,734 @@
     "html/semantics/document-metadata/the-title-element/title.text-03.html": {
       "pass": 11,
       "total": 11
+    },
+    "html/semantics/embedded-content/the-iframe-element/bad-src-means-about-blank.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/embedded-content/the-iframe-element/change_child.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/change_grandchild.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/change_parentage.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/content_document_changes_only_after_load_matures.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-origin-to-whom-part-2.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-origin-to-whom.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-site/iframe-loading-lazy-cross-site.sub.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-site/iframe-loading-lazy-in-scroller-cross-site.sub.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-site/iframe-loading-lazy-in-scroller-far-cross-site.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-site/iframe-loading-lazy-multiple-queued-navigations-cross-site.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-site/iframe-loading-lazy-nested-cross-site.sub.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross-site/iframe-loading-lazy-siblings-cross-site.sub.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross_origin_child.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross_origin_grandchild.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/cross_origin_parentage.sub.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/embedded-content/the-iframe-element/document-getters-return-null-for-cross-origin.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/historical.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/hittest-detached-iframe-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-allow.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-allowfullscreen.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-append-to-child-document.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-display-none-with-object.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-document-move-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-document-move-to-active-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-error-status-fires-load.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-first-load-canceled-second-load-blank.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-hit-test-during-load-event-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-initially-empty-is-updated.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-load-event.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-eager.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-adopt-lazy-iframe-from-script-disabled-document.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-base-url-2.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-base-url-3.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-base-url.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-history-pushState.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-history-replaceState.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-script-disabled-iframe.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-far.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-horizontal-far.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-horizontal.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-nested-2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-nested-3.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-nested-4.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-nested-5.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller-nested.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-scroller.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-in-viewport-001.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-load-event.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-multiple-queued-navigations.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-multiple-times.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-form-submit.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-link-click-fragment.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-link-click.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-location-assign.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-location-replace-cross-origin.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-location-replace-set-src.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-location-replace.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-meta-refresh.optional.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-navigation-navigate.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-nav-window-open.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-referrerpolicy-change.sub.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-reload-location-reload.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-reload-navigation-reload.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-simple-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-to-eager-srcdoc.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-to-eager.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy.html": {
+      "pass": 4,
+      "total": 5
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-modify-scrolling-attr-to-yes.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-network-error.sub.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-nosrc.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-src-encoding.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-synchronously-discard.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe-with-base.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_01.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_form_submission.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_in_src.htm": {
+      "pass": 0,
+      "total": 15
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_initial_insertion.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_loading_lazy.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_not_about_blank.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_remove_srcdoc.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_javascript_url_xhr.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_navigate_ancestor-1.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_navigate_javascript_url.htm": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_remove_src.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_allow_script.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_allow_top_navigation-1.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_allow_top_navigation-2.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_allow_top_navigation-3.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_allow_top_navigation_by_user_activation_with_user_gesture.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_allow_top_navigation_by_user_activation_without_user_gesture.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_anchor_download_allow_downloads.tentative.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_anchor_download_block_downloads.tentative.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_block_modals-1.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_block_modals-2.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_block_modals-3.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_block_modals-4.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_iframe_pdf_viewer.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_ancestor-1.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_ancestor-2.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_descendants.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_history_go_back-2.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_history_go_back.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_history_go_forward.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_itself.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigate_other_frame_popup.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigation_download_allow_downloads.sub.tentative.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_navigation_download_block_downloads.sub.tentative.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_escaping-1.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_escaping-2.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_escaping-3.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_helper-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_helper-2.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_helper-3.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_nonescaping-1.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_nonescaping-2.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_popups_nonescaping-3.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_window_open_download_allow_downloads.tentative.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/embedded-content/the-iframe-element/iframe_sandbox_window_open_download_block_downloads.tentative.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/embedded-content/the-iframe-element/move-node-local-root-events-still-fire.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/move-node-local-root.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/move_iframe_in_dom_01.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/move_iframe_in_dom_02.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/move_iframe_in_dom_03.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/move_iframe_in_dom_04.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/multiple-iframes-with-allow-scripts-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/same-origin-contextual-fragment.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/same_origin_child.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/same_origin_grandchild.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/same_origin_parentage.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-ascii-case-insensitive.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-inherit-to-blank-document-unsandboxed-frame.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-inherit-to-blank-document-unsandboxed.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-toggle-in-inactive-document-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-child-cross-origin-frame.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-child-delivered-both.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-child-delivered.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-child-unsandboxed.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-grandchild-allow-same-origin.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-grandchild-frame-allow-top.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-grandchild-sandboxed-cross-origin-parent.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-grandchild-sandboxed.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-grandchild-unsandboxed-cross-origin-parent.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox-top-navigation-grandchild-unsandboxed-inherit.tentative.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_001.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_002.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_003-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_004.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_005.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_006-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_007-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_008-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_010-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_011.htm": {
+      "pass": 8,
+      "total": 8
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_012.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_013.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_014.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_015.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_016.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_017.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_018.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_019.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_020-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_021-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_022-manual.htm": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_023.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_024.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_025.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_026.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_027.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_028.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_029.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_030.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_031.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/sandbox_032.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/embedded-content/the-iframe-element/src-repeated-in-ancestor.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/embedded-content/the-iframe-element/srcdoc-anchor.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/srcdoc-attribute-reset.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/srcdoc-lifecycle-crash-crbug-1472607.https.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/embedded-content/the-iframe-element/srcdoc-removed-iframe-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/srcdoc_change_hash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/embedded-content/the-iframe-element/srcdoc_process_attributes.html": {
+      "pass": 3,
+      "total": 3
     },
     "html/semantics/embedded-content/the-img-element/Image-constructor.html": {
       "pass": 5,
@@ -4844,6 +7328,470 @@
       "pass": 2,
       "total": 2
     },
+    "html/semantics/popovers/button-type-popovertarget.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "html/semantics/popovers/chrome-392042073-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/hide-other-popover-side-effects.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/imperative-invokers.html": {
+      "pass": 7,
+      "total": 10
+    },
+    "html/semantics/popovers/input-type-popovertarget.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "html/semantics/popovers/invoker-show-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/label-in-invoker.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/light-dismiss-event-ordering.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "html/semantics/popovers/light-dismiss-event-ordering.tentative.html": {
+      "pass": 10,
+      "total": 11
+    },
+    "html/semantics/popovers/light-dismiss-remove-target.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-active-document.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-alignment-001.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-alignment-002.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-anchor-display-none.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-anchor-multicol-display.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/popovers/popover-anchor-nested-display.tentative.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-anchor-nesting.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-anchor-transition.tentative.tentative.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-and-svg.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-appearance.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-attribute-all-elements.html": {
+      "pass": 921,
+      "total": 1101
+    },
+    "html/semantics/popovers/popover-attribute-basic.html": {
+      "pass": 231,
+      "total": 249
+    },
+    "html/semantics/popovers/popover-auto-reentrant-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-backdrop-appearance.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-beforetoggle-change-type-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-beforetoggle-opening-event.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-change-type.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-checkbox-backdrop.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-close-request.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-dialog-appearance.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-document-open.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-events.html": {
+      "pass": 1,
+      "total": 6
+    },
+    "html/semantics/popovers/popover-focus-2.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-focus-3.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "html/semantics/popovers/popover-focus-4.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/popovers/popover-focus-5.html": {
+      "pass": 5,
+      "total": 6
+    },
+    "html/semantics/popovers/popover-focus-across-slot.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-blur-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-focus-form-control.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-harness.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-inert-invoker.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-inside-shadow-dom.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-inside-slot.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-invoker-inside-popover.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-invoker-with-children.tentative.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "html/semantics/popovers/popover-focus-overflow-visible.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus-previous-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-focus-slotted.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/popovers/popover-focus-tabindex.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-focus.html": {
+      "pass": 20,
+      "total": 30
+    },
+    "html/semantics/popovers/popover-hidden-appearance.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-hidden-display.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-hint-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-hint-hierarchy.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/semantics/popovers/popover-hint-loseinterest-show-child.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-hint-reentrant-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-iframe-backdrop.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-img-backdrop.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-inside-display-none.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-invoker-reset.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-invoking-attribute-hint.html": {
+      "pass": 700,
+      "total": 700
+    },
+    "html/semantics/popovers/popover-invoking-attribute.html": {
+      "pass": 1402,
+      "total": 1402
+    },
+    "html/semantics/popovers/popover-light-dismiss-command-edge-cases.html": {
+      "pass": 9,
+      "total": 11
+    },
+    "html/semantics/popovers/popover-light-dismiss-command.html": {
+      "pass": 8,
+      "total": 14
+    },
+    "html/semantics/popovers/popover-light-dismiss-contextmenu.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-light-dismiss-disabled-button.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/popovers/popover-light-dismiss-flat-tree-nested.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-light-dismiss-flat-tree.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-light-dismiss-hint.html": {
+      "pass": 3,
+      "total": 10
+    },
+    "html/semantics/popovers/popover-light-dismiss-input-button.html": {
+      "pass": 8,
+      "total": 14
+    },
+    "html/semantics/popovers/popover-light-dismiss-input-text.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-light-dismiss-on-scroll.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-light-dismiss-scroll-within.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-light-dismiss-touch-scroll.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-light-dismiss.html": {
+      "pass": 3,
+      "total": 33
+    },
+    "html/semantics/popovers/popover-manual-hide-does-not-close-auto.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/semantics/popovers/popover-manual-reentrant-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-minimum-role.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/semantics/popovers/popover-move-documents.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/popovers/popover-nested-in-button.html": {
+      "pass": 3,
+      "total": 4
+    },
+    "html/semantics/popovers/popover-not-keyboard-focusable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-open-display.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-open-in-beforetoggle.html": {
+      "pass": 1,
+      "total": 5
+    },
+    "html/semantics/popovers/popover-open-overflow-display-2.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/popovers/popover-open-overflow-display.tentative.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-overlay.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "html/semantics/popovers/popover-progress-backdrop.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-removal-2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-removal.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-remove-attribute-during-focusing-steps.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-remove-reentrant-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-root-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-self-invoke.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "html/semantics/popovers/popover-shadow-dom.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/semantics/popovers/popover-shadowhost-focus-navigation.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-shadowhost-focus.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/semantics/popovers/popover-show-after-show-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-source-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-stacking-context.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-stacking.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/semantics/popovers/popover-synthetic-keydown.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-target-element-disabled.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/semantics/popovers/popover-textarea-backdrop.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popover-toggle-source.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/semantics/popovers/popover-top-layer-combinations.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "html/semantics/popovers/popover-top-layer-interactions.html": {
+      "pass": 7,
+      "total": 9
+    },
+    "html/semantics/popovers/popover-top-layer-nesting-anchor.tentative.html": {
+      "pass": 14,
+      "total": 20
+    },
+    "html/semantics/popovers/popover-top-layer-nesting-hints.html": {
+      "pass": 12,
+      "total": 20
+    },
+    "html/semantics/popovers/popover-top-layer-nesting.html": {
+      "pass": 14,
+      "total": 20
+    },
+    "html/semantics/popovers/popover-types-with-hints.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/semantics/popovers/popover-types.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popover-undefined-remove-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/semantics/popovers/popovertarget-disabled-fieldset.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/popovertarget-reflection.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/semantics/popovers/togglePopover.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "html/semantics/popovers/toggleevent-interface.html": {
+      "pass": 40,
+      "total": 40
+    },
     "html/semantics/scripting-1/the-template-element/template-element/content-attribute.html": {
       "pass": 5,
       "total": 7
@@ -5015,6 +7963,82 @@
     "html/semantics/text-level-semantics/the-time-element/001.html": {
       "pass": 8,
       "total": 8
+    },
+    "html/user-activation/activation-trigger-keyboard-enter.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/user-activation/activation-trigger-keyboard-escape.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/user-activation/activation-trigger-mouse-left.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/user-activation/activation-trigger-mouse-right.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/user-activation/activation-trigger-pointerevent.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/activation-trigger-touch.tentative.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/user-activation/chained-setTimeout.html": {
+      "pass": 7,
+      "total": 7
+    },
+    "html/user-activation/detached-iframe.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/user-activation/message-event-activation-api-iframe-cross-origin.sub.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/message-event-init.tentative.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "html/user-activation/navigate-to-crossorigin-redirect.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/navigate-to-sameorigin.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/navigation-state-reset-crossorigin.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/navigation-state-reset-sameorigin.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/no-activation-thru-escape-key.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/user-activation/propagation-crossorigin.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/propagation-same-and-cross-origin.sub.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "html/user-activation/propagation-sameorigin.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/user-activation-interface.html": {
+      "pass": 1,
+      "total": 1
     },
     "html/webappapis/dynamic-markup-insertion/closing-the-input-stream/document-close-with-pending-script.html": {
       "pass": 0,
@@ -5764,6 +8788,18 @@
       "pass": 1,
       "total": 1
     },
+    "html/webappapis/structured-clone/structured-clone-cross-realm-method.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/webappapis/structured-clone/structured-clone-detached-window-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "html/webappapis/structured-clone/structured-clone.any.js": {
+      "pass": 136,
+      "total": 152
+    },
     "html/webappapis/system-state-and-capabilities/the-navigator-object/navigator-indexed.html": {
       "pass": 4,
       "total": 4
@@ -5780,6 +8816,10 @@
       "pass": 2,
       "total": 2
     },
+    "html/webappapis/timers/arguments.html": {
+      "pass": 2,
+      "total": 2
+    },
     "html/webappapis/timers/clearinterval-from-callback.any.js": {
       "pass": 1,
       "total": 1
@@ -5787,6 +8827,14 @@
     "html/webappapis/timers/cleartimeout-clearinterval.any.js": {
       "pass": 2,
       "total": 2
+    },
+    "html/webappapis/timers/errors.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "html/webappapis/timers/evil-spec-example.any.js": {
+      "pass": 0,
+      "total": 1
     },
     "html/webappapis/timers/missing-timeout-setinterval.any.js": {
       "pass": 2,
@@ -5800,6 +8848,62 @@
       "pass": 1,
       "total": 1
     },
+    "html/webappapis/timers/setinterval-cross-realm-callback-report-exception.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/timers/setinterval-settimeout-clamping.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/timers/settimeout-cross-realm-callback-report-exception.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/timers/settimeout-detached-iframe.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/webappapis/timers/settimeout-setinterval-handles.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/timers/timer-nesting-not-inherited-in-microtask.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "html/webappapis/timers/type-long-setinterval.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/webappapis/timers/type-long-settimeout.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/Document-caretPositionFromPoint.tentative.html": {
+      "pass": 1,
+      "total": 14
+    },
+    "shadow-dom/Document-prototype-adoptNode.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/Document-prototype-currentScript.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "shadow-dom/Document-prototype-importNode.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/DocumentOrShadowRoot-prototype-elementFromPoint.html": {
+      "pass": 0,
+      "total": 41
+    },
+    "shadow-dom/Element-interface-attachShadow-custom-element.html": {
+      "pass": 6,
+      "total": 6
+    },
     "shadow-dom/Element-interface-attachShadow.html": {
       "pass": 6,
       "total": 6
@@ -5808,6 +8912,30 @@
       "pass": 3,
       "total": 3
     },
+    "shadow-dom/Extensions-to-Event-Interface.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "shadow-dom/HTMLSlotElement-interface.html": {
+      "pass": 14,
+      "total": 18
+    },
+    "shadow-dom/HighlightRegistry-highlightsFromPoint.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "shadow-dom/MouseEvent-prototype-offsetX-offsetY.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/Node-prototype-cloneNode.html": {
+      "pass": 2,
+      "total": 4
+    },
+    "shadow-dom/Range-prototype-insertNode.html": {
+      "pass": 0,
+      "total": 1
+    },
     "shadow-dom/ShadowRoot-interface.html": {
       "pass": 12,
       "total": 12
@@ -5815,6 +8943,138 @@
     "shadow-dom/Slottable-mixin.html": {
       "pass": 4,
       "total": 4
+    },
+    "shadow-dom/accesskey.tentative.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/assign-slottables-after-removing-shadow-tree-from-document.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/attach-shadow-non-html-namespace.html": {
+      "pass": 304,
+      "total": 304
+    },
+    "shadow-dom/attachShadow-with-ShadowRoot.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/build-deep-detached-shadow-then-append-text.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/capturing-and-bubbling-event-listeners-across-shadow-trees.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "shadow-dom/crashtests/add-host-child-element-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/add-host-child-text-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/character-data-set-data-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/cross-shadow-slot-assign.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/css-focus-recalc.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/cyclic-detach-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/cyclic-detach-crash2.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/detach-node-call-recalc-assignment-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/editing-shadow-overflow-scroll-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/highlight-api-orphan-node-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/highlight-api-remove-node-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/imperative-slot-api-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/li-layout-after-attachshadow-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/list-item-delete-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/manual-assignment-beforeattrmodified.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/modify-sibling-of-shadowroot-after-attach.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/modify-style-element-in-disconnected-shadow-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/move-to-new-tree-1343016.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/scrollbar-pseudo-attach-shadow-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/slot-dir-attribute-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/slot-dir-auto-unbound.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/slot-nested-reattach-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/slots-in-document-tree-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/slots-in-v0-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/crashtests/slots-nested-in-document-tree-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/cross-shadow-boundary-selection-remove-splittext-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/cross-shadow-boundary-selection-splittext-crash.html": {
+      "pass": 0,
+      "total": 0
     },
     "shadow-dom/declarative/declarative-after-attachshadow.html": {
       "pass": 0,
@@ -5896,9 +9156,961 @@
       "pass": 1,
       "total": 2
     },
+    "shadow-dom/directionality-001.tentative.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/directionality-002.tentative.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/directionality-003-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/dragenter-related-target.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/dragleave-related-target.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/event-composed-path-after-dom-mutation.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/event-composed-path-with-related-target.html": {
+      "pass": 13,
+      "total": 13
+    },
+    "shadow-dom/event-composed-path.html": {
+      "pass": 11,
+      "total": 11
+    },
+    "shadow-dom/event-composed.html": {
+      "pass": 9,
+      "total": 9
+    },
+    "shadow-dom/event-dispatch-order.tentative.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/event-inside-shadow-tree.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "shadow-dom/event-inside-slotted-node.html": {
+      "pass": 20,
+      "total": 20
+    },
+    "shadow-dom/event-on-pseudo-element-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/event-post-dispatch-listenerless.html": {
+      "pass": 2,
+      "total": 3
+    },
+    "shadow-dom/event-post-dispatch-no-listeners.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "shadow-dom/event-post-dispatch.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "shadow-dom/event-with-related-target.html": {
+      "pass": 18,
+      "total": 18
+    },
+    "shadow-dom/execcommand-insertList-in-shadow.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/delegatesFocus-highlight-sibling.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-fallback-default-tabindex.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-fallback.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-nested-2levels.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-nested-delegatesFocus.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-nested-fallback.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-nested.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-shadow-in-fallback.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-shadow-in-slot.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slot-with-tabindex.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slots-in-slot.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-slots.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-web-component-radio.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-navigation-with-delegatesFocus.html": {
+      "pass": 16,
+      "total": 16
+    },
+    "shadow-dom/focus-navigation/focus-navigation.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-nested-slots.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-reverse-unassignable-slot.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-reverse-unassigned-slot.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-unassignable-slot.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/focus-with-negative-index.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "shadow-dom/focus-navigation/menu/tentative/focus-menu-elements.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/carousel-grid-order.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/flex-flow.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/flex-visual-order.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-auto-flow-reading-order.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-columns.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-across-scopes.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-on-shadow-host.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-pseudo-elements.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-with-display-contents.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-with-iframe.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-with-nested-grids.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-with-popover.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-with-position-absolute.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-with-position-fixed.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order-with-slots.html": {
+      "pass": 0,
+      "total": 7
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-order.html": {
+      "pass": 1,
+      "total": 4
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/grid-rows.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/normal.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/source-order-invalid.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/reading-flow/tentative/source-order-valid.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "shadow-dom/focus-navigation/tentative/focus-navigation-scroller-delegatesFocus.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/tentative/focus-navigation-scroller-interactive-child.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/tentative/focus-navigation-scroller-tabindex.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus-navigation/tentative/focus-scroller-layout-update.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus-within-shadow.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/DocumentOrShadowRoot-activeElement.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "shadow-dom/focus/ShadowRoot-delegatesFocus.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/focus/blur-on-shadow-host-delegatesFocus.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/focus/click-focus-delegatesFocus-click.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "shadow-dom/focus/click-focus-delegatesFocus-tabindex-varies.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/click-focus-delegatesFocus-tabindex-zero.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/click-focus-slot-ancestor.html": {
+      "pass": 1,
+      "total": 3
+    },
+    "shadow-dom/focus/delegatesFocus-tabindex-change.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-autofocus.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "shadow-dom/focus/focus-click-on-shadow-host.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-method-delegatesFocus-nested-browsing-context.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-method-delegatesFocus.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "shadow-dom/focus/focus-method-with-delegatesFocus.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "shadow-dom/focus/focus-preserved-on-slot-reorder.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-pseudo-matches-on-shadow-host.html": {
+      "pass": 20,
+      "total": 20
+    },
+    "shadow-dom/focus/focus-pseudo-on-shadow-host-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/focus/focus-pseudo-on-shadow-host-2.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/focus/focus-pseudo-on-shadow-host-3.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/focus/focus-scroll-under-delegatesFocus.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-selector-delegatesFocus.html": {
+      "pass": 12,
+      "total": 12
+    },
+    "shadow-dom/focus/focus-shadowhost-display-none.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/focus/focus-slot-box-generated-tabindex-0.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tab-on-shadow-host.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-negative-delegatesFocus.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-negative.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-slot-one.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-varying-delegatesFocus.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-varying-tabindex-2.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-varying-tabindex-3.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-varying-tabindex.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-zero-delegatesFocus.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-zero-host-negative.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-zero-host-not-set-scrollable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-zero-host-not-set.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-zero-host-one.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-zero-host-scrollable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/focus-tabindex-order-shadow-zero.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/focus/text-selection-with-delegatesFocus-on-slotted-content.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus/text-selection-with-delegatesFocus-text-control.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/focus/text-selection-with-delegatesFocus.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/form-control-form-attribute.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/getElementById-dynamic-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/getElementById-dynamic-002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/historical.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "shadow-dom/imperative-slot-api-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/imperative-slot-api-cross-shadow-root.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "shadow-dom/imperative-slot-api-disconnected.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/imperative-slot-api-slotchange.html": {
+      "pass": 5,
+      "total": 13
+    },
+    "shadow-dom/imperative-slot-api.html": {
+      "pass": 2,
+      "total": 16
+    },
+    "shadow-dom/imperative-slot-assign-not-slotable-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/imperative-slot-fallback-clear.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/imperative-slot-initial-fallback.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/imperative-slot-layout-invalidation-001.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/input-element-list.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/input-type-radio.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/inserting-fragment-under-shadow-host.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/invalidate-shadow-dom-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/invalidate-sibling-different-slots.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/layout-slot-no-longer-assigned.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/layout-slot-no-longer-fallback.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/leaktests/get-elements.html": {
+      "pass": 5,
+      "total": 5
+    },
+    "shadow-dom/leaktests/html-collection.html": {
+      "pass": 8,
+      "total": 9
+    },
+    "shadow-dom/leaktests/selection.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/leaktests/window-frames.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/manual-slot-assignment-no-wrong-unassign.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/nested-hover-pseudo-class-removal.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/nested-slot-remove-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/offsetParent-across-shadow-boundaries.html": {
+      "pass": 4,
+      "total": 22
+    },
+    "shadow-dom/offsetTop-offsetLeft-across-shadow-boundaries.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/reference-target/tentative/aria-labelledby.html": {
+      "pass": 2,
+      "total": 5
+    },
+    "shadow-dom/reference-target/tentative/commandfor.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/reference-target/tentative/dom-mutation.html": {
+      "pass": 0,
+      "total": 15
+    },
+    "shadow-dom/reference-target/tentative/event-path.html": {
+      "pass": 2,
+      "total": 12
+    },
+    "shadow-dom/reference-target/tentative/form.html": {
+      "pass": 0,
+      "total": 8
+    },
+    "shadow-dom/reference-target/tentative/gethtml-serialization.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/reference-target/tentative/interestfor.tentative.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/reference-target/tentative/label-descendant.html": {
+      "pass": 0,
+      "total": 22
+    },
+    "shadow-dom/reference-target/tentative/label-for.html": {
+      "pass": 0,
+      "total": 12
+    },
+    "shadow-dom/reference-target/tentative/popovertarget.html": {
+      "pass": 0,
+      "total": 3
+    },
+    "shadow-dom/reference-target/tentative/property-reflection-idl-setters.html": {
+      "pass": 2040,
+      "total": 2055
+    },
+    "shadow-dom/reference-target/tentative/property-reflection-imperative-setup.html": {
+      "pass": 2040,
+      "total": 2055
+    },
+    "shadow-dom/reference-target/tentative/property-reflection.html": {
+      "pass": 2040,
+      "total": 2056
+    },
+    "shadow-dom/reference-target/tentative/reference-target-basics.html": {
+      "pass": 0,
+      "total": 6
+    },
+    "shadow-dom/reference-target/tentative/shadowrootreferencetarget-idl-reflection.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "shadow-dom/reference/empty.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/restyle-on-disconnected-child-after-attach-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/scroll-restore-shadow.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/scroll-to-the-fragment-in-shadow-tree.html": {
+      "pass": 4,
+      "total": 10
+    },
+    "shadow-dom/shadow-host-child-restyle-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
     "shadow-dom/shadow-root-clonable.html": {
       "pass": 6,
       "total": 6
+    },
+    "shadow-dom/shadow-style-invalidation-vw-units.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-dir-attach-child-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-dir-attach-child-details-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-dir-attach-child-meter-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-dir-attach-child-progress-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-dir-attach-child-textarea-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-001.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-002.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-003.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-004.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-005.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-006.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-007.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-fallback-content-008.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slot-reconciliation-at-node-removal.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/slot-with-slottable-slot-in-display-none-subtree-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/slotchange-customelements.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/slotchange-event.html": {
+      "pass": 0,
+      "total": 32
+    },
+    "shadow-dom/slotchange.html": {
+      "pass": 0,
+      "total": 17
+    },
+    "shadow-dom/slots-fallback-in-document.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "shadow-dom/slots-fallback.html": {
+      "pass": 3,
+      "total": 13
+    },
+    "shadow-dom/slots-outside-shadow-dom.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/slots.html": {
+      "pass": 11,
+      "total": 26
+    },
+    "shadow-dom/touch-event-retargeting-leak.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/extensions-to-element-interface/attributes/test-006.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/extensions-to-element-interface/methods/test-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/extensions-to-element-interface/methods/test-002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/activeElement-confirm-return-null.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/test-007.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/test-009.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/test-010.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/test-011.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/test-012.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-attributes/test-013.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-001.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-004.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-006.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-007.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-010.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/event-dispatch/test-002.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/event-dispatch/test-003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/event-retargeting/test-001.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/events/event-retargeting/test-003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/retargeting-focus-events/test-001.html": {
+      "pass": 6,
+      "total": 6
+    },
+    "shadow-dom/untriaged/events/retargeting-focus-events/test-002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/retargeting-focus-events/test-003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/retargeting-relatedtarget/test-001.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/retargeting-relatedtarget/test-002.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/retargeting-relatedtarget/test-003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/events/test-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/html-elements-in-shadow-trees/html-forms/test-001.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/html-elements-in-shadow-trees/html-forms/test-002.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/untriaged/html-elements-in-shadow-trees/html-forms/test-003.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/html-elements-in-shadow-trees/inert-html-elements/test-001.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/html-elements-in-shadow-trees/inert-html-elements/test-002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/shadow-trees/nested-shadow-trees/nested_tree_reftest.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/untriaged/shadow-trees/reprojection/reprojection-001.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/untriaged/shadow-trees/shadow-root-001.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/untriaged/shadow-trees/shadow-root-002.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/dom-tree-accessors-001.html": {
+      "pass": 1,
+      "total": 14
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/dom-tree-accessors-002.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/ownerdocument-001.html": {
+      "pass": 4,
+      "total": 6
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/ownerdocument-002.html": {
+      "pass": 0,
+      "total": 18
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/selectors-api-001.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/selectors-api-002.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/shadow-root-001.html": {
+      "pass": 4,
+      "total": 4
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/test-005.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/test-007.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/test-009.html": {
+      "pass": 14,
+      "total": 14
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/test-011.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/window-named-properties-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/window-named-properties-002.html": {
+      "pass": 8,
+      "total": 8
+    },
+    "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/window-named-properties-003.html": {
+      "pass": 111,
+      "total": 111
+    },
+    "shadow-dom/untriaged/styles/not-apply-in-shadow-root-001.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/untriaged/styles/test-001.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/untriaged/styles/test-003.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/untriaged/styles/test-005.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/styles/test-008.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "shadow-dom/untriaged/user-interaction/active-element/test-001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/user-interaction/active-element/test-002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "shadow-dom/untriaged/user-interaction/editing/inheritance-of-content-editable-001.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "shadow-dom/untriaged/user-interaction/ranges-and-selections/test-001.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "shadow-dom/untriaged/user-interaction/ranges-and-selections/test-002.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "shadow-dom/user-agent-shadow-root-crash.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "shadow-dom/wheel-event-related-target.html": {
+      "pass": 0,
+      "total": 1
     },
     "url/IdnaTestV2-removed.any.js": {
       "pass": 21,
@@ -6108,13 +10320,677 @@
       "pass": 7,
       "total": 7
     },
+    "webmessaging/Channel_postMessage_Blob.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_DataCloneErr.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_clone_port.any.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "webmessaging/Channel_postMessage_clone_port_error.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_event_properties.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_ports_readonly_array.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_target_source.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_transfer_xsite_incoming_messages.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_with_transfer_entangled.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_with_transfer_incoming_messages.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Channel_postMessage_with_transfer_outgoing_messages.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/MessageEvent-trusted.any.js": {
+      "pass": 1,
+      "total": 2
+    },
+    "webmessaging/MessageEvent-trusted.window.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/MessageEvent.any.js": {
+      "pass": 9,
+      "total": 9
+    },
+    "webmessaging/MessageEvent_onmessage_postMessage_infinite_loop.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/MessageEvent_properties.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/MessagePort_initial_disabled.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/MessagePort_onmessage_start.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/Transferred_objects_unusable.sub.htm": {
+      "pass": 1,
+      "total": 2
+    },
+    "webmessaging/broadcastchannel/basics.any.js": {
+      "pass": 7,
+      "total": 7
+    },
+    "webmessaging/broadcastchannel/blobs.html": {
+      "pass": 1,
+      "total": 2
+    },
+    "webmessaging/broadcastchannel/cross-origin.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/broadcastchannel/cross-partition.https.tentative.html": {
+      "pass": 0,
+      "total": 5
+    },
+    "webmessaging/broadcastchannel/detached-iframe.html": {
+      "pass": 2,
+      "total": 6
+    },
+    "webmessaging/broadcastchannel/interface.any.js": {
+      "pass": 13,
+      "total": 13
+    },
+    "webmessaging/broadcastchannel/opaque-origin.html": {
+      "pass": 0,
+      "total": 4
+    },
+    "webmessaging/broadcastchannel/ordering.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/broadcastchannel/origin.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/broadcastchannel/sandbox.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/broadcastchannel/service-worker.https.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/broadcastchannel/workers.html": {
+      "pass": 0,
+      "total": 10
+    },
+    "webmessaging/event.data.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/event.origin.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/event.ports.sub.htm": {
+      "pass": 1,
+      "total": 2
+    },
+    "webmessaging/event.source.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/event.source.xorigin.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/global-postMessage.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/message-channels/basics.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/message-channels/close-event/document-destroyed.tentative.window.js": {
+      "pass": 0,
+      "total": 3
+    },
+    "webmessaging/message-channels/close-event/entangled-after-back-forward-cache-restore.https.tentative.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/message-channels/close-event/explicitly-closed.tentative.window.js": {
+      "pass": 1,
+      "total": 4
+    },
+    "webmessaging/message-channels/close-event/garbage-collected.tentative.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/message-channels/close.any.js": {
+      "pass": 6,
+      "total": 6
+    },
+    "webmessaging/message-channels/cross-document.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/message-channels/detached-iframe.window.js": {
+      "pass": 0,
+      "total": 2
+    },
+    "webmessaging/message-channels/dictionary-transferrable.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/message-channels/implied-start.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/message-channels/no-start.any.js": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/message-channels/user-activation.tentative.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/message-channels/worker-post-after-close.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/message-channels/worker.any.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/messageerror.html": {
+      "pass": 3,
+      "total": 3
+    },
+    "webmessaging/multi-globals/broadcastchannel-current.sub.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "webmessaging/multi-globals/broadcastchannel-incumbent.sub.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "webmessaging/multi-globals/messageport-current.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/multi-globals/messageport-incumbent.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage-to-target-not-fully-active-on-reload.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_ArrayBuffer.sub.htm": {
+      "pass": 1,
+      "total": 2
+    },
+    "webmessaging/postMessage_CryptoKey_insecure.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_Date.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_Document.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/postMessage_Function.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/postMessage_MessagePorts_sorigin.htm": {
+      "pass": 1,
+      "total": 2
+    },
+    "webmessaging/postMessage_MessagePorts_xorigin.sub.htm": {
+      "pass": 1,
+      "total": 2
+    },
+    "webmessaging/postMessage_MessagePorts_xsite.sub.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_arrays.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_asterisk_xorigin.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_cross_domain_image_transfer_2d.sub.htm": {
+      "pass": 0,
+      "total": 3
+    },
+    "webmessaging/postMessage_crosssite.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_dup_transfer_objects.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/postMessage_invalid_targetOrigin.htm": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/postMessage_objects.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_origin_mismatch.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_origin_mismatch_xorigin.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_solidus_sorigin.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/postMessage_solidus_xorigin.sub.htm": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/with-options/broken-origin.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/host-specific-origin.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/message-channel-transferable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/no-target-origin.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/null-transfer.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/one-arg.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/slash-origin.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/undefined-transferable.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-options/unknown-parameter.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/004.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/005.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/006.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/007.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/010.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "webmessaging/with-ports/011.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/012.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/013.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/014.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/015.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/016.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/with-ports/017.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/with-ports/018.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/with-ports/019.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/with-ports/020.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/with-ports/021.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/with-ports/023.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/024.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/025.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/026.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/with-ports/027.html": {
+      "pass": 2,
+      "total": 2
+    },
+    "webmessaging/without-ports/001.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/002.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/003.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/004.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/005.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/006.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/007.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/009.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/010.html": {
+      "pass": 15,
+      "total": 15
+    },
+    "webmessaging/without-ports/011.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/012.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/013.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/014.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/015.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/016.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/without-ports/017.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/without-ports/018.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/without-ports/019-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "webmessaging/without-ports/019.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/without-ports/020-1.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "webmessaging/without-ports/020.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/without-ports/021.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webmessaging/without-ports/023.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/024.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/025.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/026.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/027.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/028.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/without-ports/029.html": {
+      "pass": 1,
+      "total": 1
+    },
+    "webmessaging/worker_postMessage_user_activation.tentative.html": {
+      "pass": 0,
+      "total": 1
+    },
     "webstorage/defineProperty.window.js": {
       "pass": 12,
       "total": 12
     },
+    "webstorage/document-domain.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_basic.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "webstorage/event_body_attribute.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "webstorage/event_case_sensitive.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "webstorage/event_constructor.window.js": {
+      "pass": 5,
+      "total": 6
+    },
+    "webstorage/event_initstorageevent.window.js": {
+      "pass": 4,
+      "total": 5
+    },
+    "webstorage/event_local_key.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_local_newvalue.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_local_oldvalue.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_local_removeitem.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_local_storagearea.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_local_url.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_local_window_open_oldvalue.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_no_duplicates.html": {
+      "pass": 2,
+      "total": 8
+    },
+    "webstorage/event_session_key.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_session_newvalue.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_session_oldvalue.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_session_removeitem.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_session_storagearea.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_session_url.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_session_window_open_scope.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/event_setattribute.html": {
+      "pass": 0,
+      "total": 2
+    },
+    "webstorage/localstorage-about-blank-3P-iframe-opens-3P-window.partitioned.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/localstorage-basic-partitioned.sub.html": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/localstorage-cross-origin-iframe.https.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/localstorage-share-data-unrelated-origins.html": {
+      "pass": 0,
+      "total": 1
+    },
     "webstorage/missing_arguments.window.js": {
       "pass": 10,
       "total": 10
+    },
+    "webstorage/sessionStorage-basic-partitioned.sub.html": {
+      "pass": 0,
+      "total": 1
     },
     "webstorage/set.window.js": {
       "pass": 20,
@@ -6140,21 +11016,73 @@
       "pass": 8,
       "total": 8
     },
+    "webstorage/storage_in.window.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "webstorage/storage_indexing.window.js": {
+      "pass": 8,
+      "total": 8
+    },
     "webstorage/storage_key.window.js": {
       "pass": 22,
       "total": 22
+    },
+    "webstorage/storage_key_empty_string.window.js": {
+      "pass": 2,
+      "total": 2
     },
     "webstorage/storage_length.window.js": {
       "pass": 4,
       "total": 4
     },
+    "webstorage/storage_local-manual.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "webstorage/storage_local_window_open.window.js": {
+      "pass": 0,
+      "total": 1
+    },
     "webstorage/storage_removeitem.window.js": {
       "pass": 8,
       "total": 8
     },
+    "webstorage/storage_session-manual.html": {
+      "pass": 0,
+      "total": 0
+    },
+    "webstorage/storage_session_window_noopener.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/storage_session_window_open.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/storage_session_window_reopen.window.js": {
+      "pass": 0,
+      "total": 1
+    },
+    "webstorage/storage_set_value_enumerate.window.js": {
+      "pass": 2,
+      "total": 2
+    },
     "webstorage/storage_setitem.window.js": {
       "pass": 1082,
       "total": 1106
+    },
+    "webstorage/storage_string_conversion.window.js": {
+      "pass": 2,
+      "total": 2
+    },
+    "webstorage/storage_supported_property_names.window.js": {
+      "pass": 4,
+      "total": 4
+    },
+    "webstorage/symbol-props.window.js": {
+      "pass": 14,
+      "total": 14
     },
     "xhr/content-type-unmodified.any.js": {
       "pass": 1,
