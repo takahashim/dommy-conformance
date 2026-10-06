@@ -165,3 +165,15 @@
     https://html.spec.whatwg.org/multipage/input.html#dom-input-stepup
   chromium: "-7"
   dommy: ""
+
+- case: forms/submit-event.js
+  key: composed
+  reason: |
+    The form submission algorithm fires `submit` "using SubmitEvent, with the
+    submitter attribute initialized to submitterButton, the bubbles attribute
+    initialized to true, and the cancelable attribute initialized to true" —
+    composed is left false. Current Chromium (the one CI installs) reports
+    composed true; older builds report false. Dommy follows the spec text.
+    https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#form-submission-algorithm
+  chromium: true
+  dommy: false
