@@ -96,6 +96,7 @@ module DommyConformance
         when "echo-content-type.py" then echo_content_type_py(headers, url)
         when "echo-content-escaped.py" then echo_content_escaped_py(method, headers, body, url)
         when "form-echo.py" then form_echo_py(body, url)
+        when "single-byte-raw.py" then single_byte_raw_py(uri, url)
         end
       end
 
@@ -105,6 +106,18 @@ module DommyConformance
         URI.parse(url.to_s)
       rescue URI::InvalidURIError
         nil
+      end
+
+      # encoding/resources/single-byte-raw.py: the bytes 0x00..0xFE, labelled
+      # `text/plain;charset=<label>` from `?label=`, so a decoder's output for
+      # every byte can be checked.
+      def single_byte_raw_py(uri, url)
+        label = query(uri)["label"].to_s
+        ::Dommy::Resources::Response.new(
+          status: 200, status_text: "OK",
+          headers: { "Content-Type" => "text/plain;charset=#{label}" },
+          body: (0..254).map(&:chr).join.b, url: url.to_s, redirected: false
+        )
       end
 
       # wptserve resources/status.py: echo an arbitrary status line, content type,
