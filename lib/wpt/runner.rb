@@ -130,8 +130,11 @@ module DommyConformance
           # wptserve turns `// META: timeout=long` into this meta on the page it
           # generates; testharness reads its timeout from there.
           long = source.match?(%r{^\s*//\s*META:\s*timeout=long}) ? %(<meta name="timeout" content="long">) : ""
+          # wptserve's window wrapper for a `.any.js` also defines GLOBAL, the
+          # scope probe `GLOBAL.isWindow()` & co. that shared tests branch on.
           <<~HTML
             <!DOCTYPE html><html><head>#{long}
+            <script>self.GLOBAL = { isWindow() { return true; }, isWorker() { return false; }, isShadowRealm() { return false; } };</script>
             <script src="/resources/testharness.js"></script>
             <script src="/resources/testharnessreport.js"></script>
             #{includes.join("\n")}
