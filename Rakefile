@@ -103,3 +103,16 @@ desc "Alias for oracle:fuzz"
 task fuzz: "oracle:fuzz"
 
 task default: %i[wpt oracle]
+
+# A Capybara-level comparison: the same feature-spec scenarios against a small
+# Hotwire app, driven by rack_test, capybara-dommy (with and without
+# JavaScript) and cuprite (headless Chrome). Informational, never part of CI.
+# Needs `(cd script/capybara-bench && npm install)` first; it has its own
+# Gemfile for cuprite and puma.
+desc "Compare Capybara drivers on the same scenarios (DRIVERS=dommy,cuprite ROUNDS=5 FILTER=turbo)"
+task "bench:capybara" do
+  args = []
+  args += ["--drivers", ENV["DRIVERS"]] if ENV["DRIVERS"]
+  args += ["--rounds", ENV["ROUNDS"]] if ENV["ROUNDS"]
+  sh runner_env, RbConfig.ruby, "-rbundler", ROOT.join("script/capybara-bench/run.rb").to_s, *args, *filter_args
+end
