@@ -7,6 +7,16 @@
 module BenchScenarios
   Scenario = Struct.new(:name, :js, :body)
 
+  def self.table(s, **visibility)
+    s.visit "/table"
+    s.assert_selector "tbody tr", count: 500, **visibility
+    (1..20).each do |i|
+      n = i * 25
+      s.within("#row-#{n}") { s.assert_selector "td.price", text: (n * 3).to_s }
+    end
+    raise "expected 500 cells" unless s.all("td.name", **visibility).size == 500
+  end
+
   ALL = [
     Scenario.new("browse", false, lambda do |s|
       s.visit "/"
@@ -31,15 +41,12 @@ module BenchScenarios
       s.assert_text "in Tools"
     end),
 
-    Scenario.new("table", false, lambda do |s|
-      s.visit "/table"
-      s.assert_selector "tbody tr", count: 500
-      (1..20).each do |i|
-        n = i * 25
-        s.within("#row-#{n}") { s.assert_selector "td.price", text: (n * 3).to_s }
-      end
-      raise "expected 500 cells" unless s.all("td.name").size == 500
-    end),
+    # The 500-row table, twice. Capybara checks every node it counts for
+    # visibility by default; `table-all` counts with `visible: :all`. A browser
+    # driver pays one round trip per check, so the gap between the two rows is
+    # what that check costs each driver.
+    Scenario.new("table", false, ->(s) { table(s) }),
+    Scenario.new("table-all", false, ->(s) { table(s, visible: :all) }),
 
     Scenario.new("stimulus", true, lambda do |s|
       s.visit "/hw/counter"

@@ -14,7 +14,7 @@ require "fileutils"
 
 HERE = __dir__
 ROOT = File.expand_path("../..", HERE)
-DRIVERS = %w[rack_test dommy dommy_js cuprite].freeze
+DRIVERS = %w[rack_test dommy dommy_js cuprite cuprite_tuned].freeze
 
 argv = ARGV.dup
 opt = ->(name, default) { (i = argv.index(name)) ? argv[i + 1] : default }
@@ -56,12 +56,15 @@ lines << "| startup (first visit) | #{drivers.map { fmt_ms(results[_1]["startup_
 lines << "| peak memory, MB (incl. child processes) | #{drivers.map { format("%.0f", results[_1]["peak_mb"]) }.join(" | ")} |"
 lines << ""
 lines << "Median ms per scenario (lower is better); —: the driver runs no JavaScript."
+if drivers.include?("cuprite_tuned")
+  lines << "cuprite_tuned: cuprite with FERRUM_INTERMITTENT_SLEEP=0.01 (Ferrum's stale-node retry, 0.1s by default)."
+end
 errors = results.flat_map { |d, r| r["scenarios"].filter_map { |n, s| "- #{d} / #{n}: #{s["error"]}" if s["error"] } }
 lines.concat(["", "Errors:", *errors]) unless errors.empty?
 any = results.values.first
 lines << ""
 lines << "Ruby #{any["ruby"]}; " + any["versions"].map { "#{_1} #{_2}" }.join(", ") +
-         (results.dig("cuprite", "browser") ? "; #{results["cuprite"]["browser"]} (headless)" : "")
+         ((browser = results.values.filter_map { _1["browser"] }.first) ? "; #{browser} (headless)" : "")
 report = lines.join("\n")
 
 FileUtils.mkdir_p(File.join(ROOT, "results"))

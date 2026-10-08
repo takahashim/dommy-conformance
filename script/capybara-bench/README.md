@@ -6,12 +6,14 @@ Capybara driver a Ruby project would choose between:
 - **rack_test**: Capybara's default. No JavaScript.
 - **dommy**: capybara-dommy. No JavaScript.
 - **dommy_js**: capybara-dommy with `javascript: true`. Page scripts run in QuickJS.
-- **cuprite**: headless Chrome over CDP.
+- **cuprite**: headless Chrome over CDP, with Ferrum's defaults.
+- **cuprite_tuned**: cuprite with `FERRUM_INTERMITTENT_SLEEP=0.01`. See
+  "Reading the numbers".
 
 ```
 (cd script/capybara-bench && npm install)    # the Turbo and Stimulus bundles the app serves
 rake bench:capybara                          # or: ruby -rbundler script/capybara-bench/run.rb
-rake bench:capybara DRIVERS=dommy_js,cuprite ROUNDS=9 FILTER=turbo
+rake bench:capybara DRIVERS=dommy_js,cuprite,cuprite_tuned ROUNDS=9 FILTER=turbo
 ```
 
 The directory has its own `Gemfile` for cuprite and puma. dommy, dommy-rack and
@@ -29,7 +31,7 @@ repo. The report is printed as Markdown and written to
 - `/hw` pages, the Hotwire flavour a new Rails app ships with: the real Turbo 8
   and Stimulus 3 bundles from npm, plus `controllers.js`.
 
-`scenarios.rb` holds eight scenarios written in the plain Capybara DSL. Each
+`scenarios.rb` holds nine scenarios written in the plain Capybara DSL. Each
 one asserts as it goes, so a driver that renders a page wrong fails the
 scenario instead of finishing it early.
 
@@ -38,6 +40,7 @@ scenario instead of finishing it early.
 | browse | 10 round trips list → item → list via links | |
 | form | submit empty (errors), fill, select, check, submit (redirect) | |
 | table | 500 rows: count them, 20 `within` lookups, collect a column | |
+| table-all | the same, counting with `visible: :all` | |
 | stimulus | click a counter 10×, toggle a hidden panel, filter a list while typing | ✓ |
 | turbo-drive | the browse scenario under Turbo Drive | ✓ |
 | turbo-frame | 10 links that navigate a `<turbo-frame>` only | ✓ |
@@ -64,10 +67,19 @@ scenario instead of finishing it early.
 - **dommy_js versus dommy.** dommy_js also pays for JavaScript on pages that
   have none: each page boots a QuickJS runtime and installs the window.
   Compare `browse` under `dommy` and under `dommy_js`.
-- **cuprite and Turbo Drive.** On `turbo-drive`, cuprite's `assert_selector`
-  can spend about a second after Turbo has already rendered the page, while
-  Turbo replaces its cached preview with the fresh response. The page is
-  correct after about 70 ms. The wait is a real cost a cuprite suite on a Turbo
-  app pays, so it is kept, but it is a property of that pairing.
+- **cuprite and Turbo Drive.** Turbo renders a page it has cached twice: first
+  the cached preview, then the fresh response. A node cuprite already holds is
+  gone after the swap. Ferrum treats that as an intermittent error and retries
+  up to `FERRUM_INTERMITTENT_ATTEMPTS` (6) times, `FERRUM_INTERMITTENT_SLEEP`
+  (0.1 s) apart, before Capybara looks the node up again. That is about 0.5 s
+  per stale node, while the page itself is right after about 70 ms.
+  - A cuprite suite on a Turbo app with default settings pays this cost, so the
+    `cuprite` column keeps it.
+  - `cuprite_tuned` shortens the sleep, so the two columns show what that
+    setting is worth (on `turbo-drive`, roughly 7.1 s against 2.8 s).
+- **table against table-all.** Capybara checks each node it counts for
+  visibility. A browser driver pays one round trip per check, so `table`
+  against `table-all` shows what that costs each driver. Counting hundreds of
+  visible nodes is heavier than most suites do.
 - **Machine dependence.** Everything is wall time on the machine running it.
   Compare drivers within one run, not runs across machines.
