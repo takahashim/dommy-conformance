@@ -1,0 +1,36 @@
+# frozen_string_literal: true
+
+# capybara-bench has its own bundle: the drivers it compares against (cuprite,
+# puma) are not dependencies of anything else in this repo.
+source "https://rubygems.org"
+
+def sibling(*candidates)
+  candidates.map { |c| File.expand_path(c, __dir__) }.find { |c| File.directory?(File.join(c, "lib")) }
+end
+
+# DOMMY_PATH names gems/dommy, as for the rest of the repo; its siblings in
+# gems/ are dommy-rack and capybara-dommy.
+dommy = ENV["DOMMY_PATH"] || sibling("../../../dommy/gems/dommy")
+gems_dir = dommy && File.dirname(dommy)
+
+if gems_dir
+  gem "dommy", path: File.join(gems_dir, "dommy")
+  gem "dommy-rack", path: File.join(gems_dir, "dommy-rack")
+  gem "capybara-dommy", path: File.join(gems_dir, "capybara-dommy")
+else
+  gem "capybara-dommy"
+end
+
+# The same quickjs fork the rest of the repo measures against (see ../../Gemfile).
+gem "quickjs", github: "takahashim/quickjs.rb", tag: "v0.22.0-rejection-hook.1", submodules: true
+if (quickjs = ENV["DOMMY_JS_QUICKJS_PATH"] || sibling("../../../dommy-js-quickjs"))
+  gem "dommy-js-quickjs", path: quickjs
+else
+  gem "dommy-js-quickjs"
+end
+
+gem "capybara", "~> 3.40"
+gem "cuprite"
+gem "puma"
+gem "rack"
+gem "rackup"

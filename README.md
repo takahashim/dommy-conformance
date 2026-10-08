@@ -50,6 +50,9 @@ the same corpus.
 `script/wpt-compare/` runs the same corpus under jsdom and happy-dom for a
 cross-library comparison.
 
+`script/capybara-bench/` (`rake bench:capybara`) times the same feature-spec
+scenarios, on a small Hotwire app, under rack_test, capybara-dommy and cuprite.
+
 `wpt/NON_SPEC_FILES` names tests whose API the specs do not define — currently
 the two `urlpattern/*.tentative` compare/generate files, which test Chromium
 prototypes that never entered the URL Pattern Standard. They are not vendored: a
