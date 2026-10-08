@@ -103,3 +103,16 @@ desc "Alias for oracle:fuzz"
 task fuzz: "oracle:fuzz"
 
 task default: %i[wpt oracle]
+
+# Speed and memory against other JS-capable DOM libraries (jsdom, happy-dom,
+# linkedom): the same cases, each library in its own process. Informational —
+# nothing is pinned, so it never fails a build. Needs
+# `(cd script/bench-compare && npm install)` first.
+desc "Compare speed and memory with jsdom, happy-dom and linkedom (ENGINES=dommy,jsdom SAMPLES=7)"
+task :bench do
+  abort "no dommy checkout found — set DOMMY_PATH" unless DOMMY_PATH
+  args = []
+  args += ["--engines", ENV["ENGINES"]] if ENV["ENGINES"]
+  args += ["--samples", ENV["SAMPLES"]] if ENV["SAMPLES"]
+  sh runner_env, RbConfig.ruby, ROOT.join("script/bench-compare/run.rb").to_s, *args, *filter_args
+end
