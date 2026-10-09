@@ -56,9 +56,12 @@ module WptRun
       $stdout.reopen(File::NULL)
       $stderr.reopen(File::NULL)
       begin
+        started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
         results = DommyConformance::Wpt::Runner.run(rel)
         writer.puts JSON.generate(
           file: rel,
+          # Wall time of the file, for `rake wpt:perf`. Not part of the baseline.
+          ms: ((Process.clock_gettime(Process::CLOCK_MONOTONIC) - started) * 1000).round(1),
           pass: results.count(&:pass?),
           total: results.size,
           failing: results.reject(&:pass?).map { |r| {status: r.status_name, name: r.name, message: r.message.to_s[0, 200]} }
@@ -105,6 +108,7 @@ module WptRun
 
     FileUtils.mkdir_p(File.dirname(out))
     total_pass = total = green = 0
+    run_started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
     File.open(out, "w") do |io|
       files.each_with_index do |rel, index|
         record = run_isolated(rel, timeout)
@@ -125,6 +129,7 @@ module WptRun
     percent = total.zero? ? 0 : (100.0 * total_pass / total).round(1)
     warn("")
     warn("WPT conformance: #{total_pass}/#{total} subtests (#{percent}%) across #{files.size} files; #{green} files fully green")
+    warn("wall time #{(Process.clock_gettime(Process::CLOCK_MONOTONIC) - run_started).round(1)}s")
     warn("wrote #{out}")
   end
 end

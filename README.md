@@ -9,12 +9,13 @@ third concern with its own weight and its own update cadence — a WPT checkout,
 a browser build, third-party library suites — so it lives here, and depends on
 dommy and on whichever bindings it is asked to exercise, never the reverse.
 
-Two measurements live here.
+Three measurements live here: two of conformance, and one of speed.
 
 | | what it answers |
 |---|---|
 | **WPT** (`rake wpt`) | how much of the Web Platform Tests corpus dommy passes, per file |
 | **the Chromium differential harness** (`rake oracle`) | where dommy and a real browser disagree on behaviour WPT does not cover |
+| **performance** (`rake bench:dom`, `rake wpt:perf`) | how long dommy's makiri-backed DOM operations, and the WPT corpus, take |
 
 ## The WPT corpus
 
@@ -67,6 +68,32 @@ copies a directory (or file) from an upstream checkout at
 `wpt/UPSTREAM_REVISION`, with its `support/` files and the root-absolute
 includes its tests name, and refuses a checkout at any other revision. Run the
 corpus and `rake wpt:record` afterwards.
+
+## Performance
+
+Informational, never part of CI: wall-clock numbers depend on the machine, so
+they are compared between two runs on the same one, not pinned.
+
+    rake bench:dom                          # dommy's DOM operations, no JS engine
+    rake bench:dom ITEMS=5000 FILTER=query JSON=results/dom-bench-new.json
+    rake bench:dom:compare OLD=results/a.json NEW=results/b.json
+
+`script/dom-bench/bench.rb` parses a generated list page and times what dommy
+runs on makiri: parse, `querySelectorAll` (cached, and uncached after a
+mutation, since dommy memoises per document generation), `matches?`/`closest`,
+serialization, `textContent`, and the mutators. Each row is the median of
+`ROUNDS` timed rounds after a warm-up. The JSON it writes records the makiri
+and dommy versions, so a makiri bump is measured by running it once on each
+side and comparing the files.
+
+    rake wpt:run && rake wpt:perf           # where the corpus run spent its time
+
+Every file the WPT runner executes also records its wall time (`ms` in
+`results/wpt.jsonl`, outside the baseline in `expectations/wpt.json`). `wpt:perf`
+reports the total, the median/p90/p99 file, time per top-level directory and the
+slowest files. It includes booting the page and `testharness.js` in QuickJS, so
+it tracks dommy and the engine as much as makiri; the bench above is the one
+that isolates makiri.
 
 ## The Chromium differential harness
 

@@ -86,6 +86,11 @@ namespace :wpt do
     sh RbConfig.ruby, ROOT.join("runner/wpt_diff.rb").to_s, "--record"
   end
 
+  desc "Report where the last run's time went (TOP=15), from the ms each file recorded"
+  task :perf do
+    sh RbConfig.ruby, ROOT.join("runner/wpt_perf.rb").to_s, *(ENV["TOP"] ? ["--top", ENV["TOP"]] : [])
+  end
+
   desc "Run one file and print every subtest (FILE=dom/nodes/Node-appendChild.html)"
   task :file do
     file = ENV["FILE"] or abort "usage: rake wpt:file FILE=dom/nodes/Node-appendChild.html"
@@ -97,6 +102,25 @@ namespace :wpt do
          puts "#{"%s"}: #{"%d"}/#{"%d"}" % [#{file.inspect}, results.count(&:pass?), results.size]
        RUBY
   end
+end
+
+# Times the DOM operations dommy runs on makiri (parse, queries, serialization,
+# mutation), without a JS engine. Informational, never part of CI. JSON=path
+# keeps the numbers for comparing two makiri/dommy versions with bench:dom:compare.
+desc "Time dommy's makiri-backed DOM operations (ITEMS=2000 ROUNDS=9 FILTER=parse JSON=results/dom-bench.json)"
+task "bench:dom" do
+  args = []
+  args += ["--items", ENV["ITEMS"]] if ENV["ITEMS"]
+  args += ["--rounds", ENV["ROUNDS"]] if ENV["ROUNDS"]
+  args += ["--json", ENV["JSON"]] if ENV["JSON"]
+  sh runner_env, RbConfig.ruby, ROOT.join("script/dom-bench/bench.rb").to_s, *args, *filter_args
+end
+
+desc "Compare two bench:dom JSON files (OLD=results/a.json NEW=results/b.json)"
+task "bench:dom:compare" do
+  old, new = ENV["OLD"], ENV["NEW"]
+  abort "usage: rake bench:dom:compare OLD=a.json NEW=b.json" unless old && new
+  sh RbConfig.ruby, ROOT.join("script/dom-bench/compare.rb").to_s, old, new
 end
 
 desc "Alias for oracle:fuzz"
