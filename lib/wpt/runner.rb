@@ -38,18 +38,36 @@ module DommyConformance
       class << self
         def available? = Resources.available?
 
-        # Runnable test files under the vendored tree, relative to WPT_ROOT.
+        # The tests under the vendored tree, relative to WPT_ROOT: one per file,
+        # or, for a file that declares variants, one per variant — the path
+        # with the variant's query or fragment appended, as WPT names them
+        # (`dom/x.html?a=1`). A variant is how the file is meant to be loaded;
+        # loading it bare runs it in a configuration none of them is.
         def manifest
           ::Dir.glob("**/*.{any,window}.js", base: WPT_ROOT)
             .concat(::Dir.glob("**/*.{html,htm}", base: WPT_ROOT))
             .reject { |p| p.start_with?("common/", "resources/") || p.include?("/resources/") || p.include?("/support/") || p.end_with?("-ref.html") }
+            .flat_map { |p| variants(p).map { |variant| "#{p}#{variant}" } }
             .sort
         end
 
+        VARIANT_META_HTML = /<meta\s+name=["']?variant["']?\s+content=["']([^"']*)["']/i.freeze
+        VARIANT_META_JS = %r{^\s*//\s*META:\s*variant=(\S*)}.freeze
+
+        # A file's variants (`?query` / `#fragment`, "" for the bare file);
+        # [""] when it declares none.
+        def variants(rel_path)
+          source = ::File.read(::File.join(WPT_ROOT, rel_path), encoding: "UTF-8").scrub
+          found = source.scan(rel_path.end_with?(".js") ? VARIANT_META_JS : VARIANT_META_HTML).flatten
+          found.empty? ? [""] : found.uniq
+        end
+
+        # `rel_path` is a test id: a file, with its variant if it has one.
         def run(rel_path)
+          rel_path, variant = split_variant(rel_path)
           path = absolute(rel_path)
           html = page_for(path, rel_path)
-          url = "http://localhost/#{rel_path.delete_prefix('/')}"
+          url = "http://localhost/#{rel_path.delete_prefix('/')}#{variant}"
           resources = Resources.build
 
           # Boot with execute_scripts: false so the window `load` event has NOT
@@ -91,6 +109,12 @@ module DommyConformance
 
         private
 
+        # "dir/x.html?a=1" -> ["dir/x.html", "?a=1"]; a plain path has "".
+        def split_variant(test_id)
+          index = test_id.index(/[?#]/)
+          index ? [test_id[0...index], test_id[index..]] : [test_id, ""]
+        end
+
         def absolute(rel_path)
           return rel_path if ::File.absolute_path?(rel_path) && ::File.exist?(rel_path)
 
@@ -107,6 +131,11 @@ module DommyConformance
         # origin) URLs the path-based resource layer still serves. Enough for the
         # CORS `.sub` tests that hard-code `http://{{host}}:{{ports[http][1]}}/…`.
         WPT_SUBS = {
+          # The document's own origin is http://localhost (port 80, which a URL
+          # serializes without), so "host:port" written out is just the host;
+          # `localhost:80` would match no URL the page produces.
+          "{{host}}:{{ports[http][0]}}" => "localhost",
+          "{{domains[]}}:{{ports[http][0]}}" => "localhost",
           "{{host}}" => "localhost",
           "{{ports[http][0]}}" => "80", "{{ports[http][1]}}" => "8001",
           "{{ports[https][0]}}" => "443", "{{ports[https][1]}}" => "8444",

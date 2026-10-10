@@ -18,8 +18,8 @@ Two measurements live here.
 
 ## The WPT corpus
 
-`wpt/corpus/` is a vendored, dommy-selected slice of web-platform-tests (2661
-runnable files), run the way a browser runs it: each file is loaded as the
+`wpt/corpus/` is a vendored, dommy-selected slice of web-platform-tests (2660
+runnable files, 2718 tests), run the way a browser runs it: each file is loaded as the
 document and its own `<script>` tags boot through dommy's normal resource and
 script pipeline, with `testharness.js` and the wptserve endpoints served from
 `wpt/`. No regex extraction, no manual script concatenation.
@@ -28,6 +28,12 @@ script pipeline, with `testharness.js` and the wptserve endpoints served from
     rake wpt:run FILTER=dom/    # narrow to a subtree
     rake wpt:file FILE=dom/nodes/Node-appendChild.html   # one file, every subtest
     rake wpt:record             # accept the current numbers as the new baseline
+
+A file that declares variants (`<meta name="variant" content="?x=1">`, or
+`// META: variant=?x=1` in a `.js` test) runs once per variant, loaded with
+that query or fragment, as WPT runs it; the baseline names each one
+`path?x=1`. Loaded bare, such a file runs in a configuration none of its
+variants is. `rake wpt:file FILE='path?x=1'` runs one.
 
 Each file runs in a forked child with a timeout: a WPT file is arbitrary
 third-party JavaScript driving a whole browser stack, and one that wedges or
