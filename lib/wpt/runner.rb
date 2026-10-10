@@ -240,7 +240,9 @@ module DommyConformance
             srcdoc = iframe.get_attribute("srcdoc")
             sub =
               if !src.empty?
-                resolved = resolve_url(base_url, src)
+                # The element's own resolution, which encodes the query in the
+                # document's encoding as HTML's "encoding-parse" does.
+                resolved = iframe.respond_to?(:src) && !iframe.src.to_s.empty? ? iframe.src.to_s : resolve_url(base_url, src)
                 response = resources.get(resolved.sub(/#.*\z/, ""))
                 next unless response&.success? && response.body
 
