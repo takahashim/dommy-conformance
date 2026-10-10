@@ -25,6 +25,11 @@ module DommyConformance
       # programmatically), mirrors id'd elements onto the global for WPT's
       # "named access on the Window" (`<div id=log>` -> bare `log`), and stashes
       # each subtest's result for the Ruby side to read after completion.
+      #
+      # Each mirrored id is looked up when read, not copied: an element moved
+      # into a shadow tree or removed is no longer the global's, and a copy
+      # would also shadow `window.<id>` (the window falls back to globalThis's
+      # own properties). An assignment replaces the accessor, as on a window.
       REPORT_SHIM = <<~JS
         setup({ output: false });
         globalThis.__wptResults = null;
@@ -32,7 +37,13 @@ module DommyConformance
           const __id = __el.id;
           if (__id && !(__id in globalThis)) {
             try {
-              Object.defineProperty(globalThis, __id, { value: __el, configurable: true, writable: true });
+              Object.defineProperty(globalThis, __id, {
+                get() { return document.getElementById(__id) ?? undefined; },
+                set(value) {
+                  Object.defineProperty(globalThis, __id, { value, configurable: true, writable: true });
+                },
+                configurable: true,
+              });
             } catch (__e) {}
           }
         }
