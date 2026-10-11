@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 111787,
-    "subtests_total": 114198,
-    "files": 2661,
-    "files_green": 1746,
+    "subtests_passed": 113673,
+    "subtests_total": 115188,
+    "files": 2718,
+    "files_green": 1860,
     "files_errored": 0
   },
   "files": {
@@ -41,7 +41,7 @@
       "total": 8
     },
     "WebCryptoAPI/getRandomValues.any.js": {
-      "pass": 30,
+      "pass": 39,
       "total": 39
     },
     "WebCryptoAPI/randomUUID.https.any.js": {
@@ -124,23 +124,43 @@
       "pass": 12,
       "total": 12
     },
-    "close-watcher/user-activation/n-activate-preventDefault.html": {
+    "close-watcher/user-activation/n-activate-preventDefault.html?CloseWatcher": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/n-activate.html": {
+    "close-watcher/user-activation/n-activate-preventDefault.html?dialog": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/n-closerequest-n.html": {
+    "close-watcher/user-activation/n-activate.html?CloseWatcher": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/n-destroy-n.html": {
+    "close-watcher/user-activation/n-activate.html?dialog": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/n.html": {
+    "close-watcher/user-activation/n-closerequest-n.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n-closerequest-n.html?dialog": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n-destroy-n.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n-destroy-n.html?dialog": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/n.html?dialog": {
       "pass": 1,
       "total": 1
     },
@@ -176,11 +196,19 @@
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/ny-activate-preventDefault.html": {
+    "close-watcher/user-activation/ny-activate-preventDefault.html?CloseWatcher": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/ny.html": {
+    "close-watcher/user-activation/ny-activate-preventDefault.html?dialog": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/ny.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/ny.html?dialog": {
       "pass": 1,
       "total": 1
     },
@@ -188,15 +216,27 @@
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/nyn.html": {
+    "close-watcher/user-activation/nyn.html?CloseWatcher": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/nynn-destroy.html": {
+    "close-watcher/user-activation/nyn.html?dialog": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/nynn.html": {
+    "close-watcher/user-activation/nynn-destroy.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nynn-destroy.html?dialog": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nynn.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/nynn.html?dialog": {
       "pass": 1,
       "total": 1
     },
@@ -224,15 +264,27 @@
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/y.html": {
+    "close-watcher/user-activation/y.html?CloseWatcher": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/yn-activate.html": {
+    "close-watcher/user-activation/y.html?dialog": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/yn.html": {
+    "close-watcher/user-activation/yn-activate.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yn-activate.html?dialog": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yn.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yn.html?dialog": {
       "pass": 1,
       "total": 1
     },
@@ -244,11 +296,19 @@
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/yy.html": {
+    "close-watcher/user-activation/yy.html?CloseWatcher": {
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/yyn.html": {
+    "close-watcher/user-activation/yy.html?dialog": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyn.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyn.html?dialog": {
       "pass": 1,
       "total": 1
     },
@@ -264,7 +324,11 @@
       "pass": 1,
       "total": 1
     },
-    "close-watcher/user-activation/yyy.html": {
+    "close-watcher/user-activation/yyy.html?CloseWatcher": {
+      "pass": 1,
+      "total": 1
+    },
+    "close-watcher/user-activation/yyy.html?dialog": {
       "pass": 1,
       "total": 1
     },
@@ -273,7 +337,7 @@
       "total": 6
     },
     "css/css-color/parsing/color-computed-hsl.html": {
-      "pass": 3735,
+      "pass": 3751,
       "total": 3753
     },
     "css/css-color/parsing/color-computed.html": {
@@ -349,7 +413,7 @@
       "total": 1
     },
     "css/cssom/getComputedStyle-pseudo.html": {
-      "pass": 4,
+      "pass": 21,
       "total": 28
     },
     "css/cssom/mediaquery-sort-dedup.html": {
@@ -713,7 +777,7 @@
       "total": 3
     },
     "custom-elements/ElementInternals-role.html": {
-      "pass": 0,
+      "pass": 68,
       "total": 68
     },
     "custom-elements/HTMLElement-attachInternals.html": {
@@ -729,7 +793,7 @@
       "total": 12
     },
     "custom-elements/adopted-callback.html": {
-      "pass": 37,
+      "pass": 47,
       "total": 71
     },
     "custom-elements/append-children-to-new-parent-cycle.html": {
@@ -881,7 +945,7 @@
       "total": 10
     },
     "custom-elements/form-associated/form-disabled-legend.html": {
-      "pass": 5,
+      "pass": 6,
       "total": 6
     },
     "custom-elements/form-associated/form-elements-namedItem.html": {
@@ -1005,7 +1069,7 @@
       "total": 2
     },
     "custom-elements/reactions/CSSStyleDeclaration.html": {
-      "pass": 20,
+      "pass": 30,
       "total": 30
     },
     "custom-elements/reactions/ChildNode.html": {
@@ -1329,7 +1393,7 @@
       "total": 23
     },
     "custom-elements/registries/scoped-registry-append.html": {
-      "pass": 7,
+      "pass": 8,
       "total": 16
     },
     "custom-elements/registries/scoped-registry-define-upgrade-criteria.html": {
@@ -1337,11 +1401,11 @@
       "total": 14
     },
     "custom-elements/registries/scoped-registry-define-upgrade-order.html": {
-      "pass": 4,
+      "pass": 7,
       "total": 7
     },
     "custom-elements/registries/scoped-registry-effective-global-registry.html": {
-      "pass": 44,
+      "pass": 66,
       "total": 66
     },
     "custom-elements/registries/scoped-registry-initialize-upgrades.html": {
@@ -1369,7 +1433,7 @@
       "total": 1975
     },
     "custom-elements/shadow-descendant-lifecycle-order.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "custom-elements/state/ElementInternals-states.html": {
@@ -1521,7 +1585,7 @@
       "total": 4
     },
     "dom/events/AddEventListenerOptions-passive.any.js": {
-      "pass": 4,
+      "pass": 5,
       "total": 5
     },
     "dom/events/AddEventListenerOptions-signal.any.js": {
@@ -1745,7 +1809,7 @@
       "total": 1
     },
     "dom/events/EventTarget-this-of-listener.html": {
-      "pass": 5,
+      "pass": 6,
       "total": 6
     },
     "dom/events/EventTarget-window-constructor.html": {
@@ -1765,11 +1829,11 @@
       "total": 1
     },
     "dom/events/event-global-event-targets.html": {
-      "pass": 1,
+      "pass": 4,
       "total": 5
     },
     "dom/events/event-global-extra.window.js": {
-      "pass": 2,
+      "pass": 5,
       "total": 6
     },
     "dom/events/event-global-is-still-set-when-reporting-exception-onerror.html": {
@@ -1781,11 +1845,11 @@
       "total": 2
     },
     "dom/events/event-global-set-before-handleEvent-lookup.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "dom/events/event-global.html": {
-      "pass": 7,
+      "pass": 8,
       "total": 8
     },
     "dom/events/event-handler-attribute-replace-preserves-passive.html": {
@@ -2657,7 +2721,7 @@
       "total": 67
     },
     "dom/nodes/case.html": {
-      "pass": 284,
+      "pass": 285,
       "total": 285
     },
     "dom/nodes/create-element-realm-after-adoption.html": {
@@ -2929,7 +2993,7 @@
       "total": 1
     },
     "dom/nodes/moveBefore/moveBefore-id-map.html": {
-      "pass": 3,
+      "pass": 4,
       "total": 4
     },
     "dom/nodes/moveBefore/moveBefore-lang.html": {
@@ -2997,7 +3061,7 @@
       "total": 2
     },
     "dom/nodes/moveBefore/slotchange-events.html": {
-      "pass": 0,
+      "pass": 4,
       "total": 4
     },
     "dom/nodes/moveBefore/style-applies.html": {
@@ -3044,10 +3108,6 @@
       "pass": 5,
       "total": 5
     },
-    "dom/nodes/processing-instruction-attributes.html": {
-      "pass": 10,
-      "total": 140
-    },
     "dom/nodes/querySelector-empty-id.html": {
       "pass": 1,
       "total": 1
@@ -3085,7 +3145,7 @@
       "total": 9
     },
     "dom/observable/tentative/observable-constructor.any.js": {
-      "pass": 40,
+      "pass": 44,
       "total": 44
     },
     "dom/observable/tentative/observable-constructor.window.js": {
@@ -3137,11 +3197,11 @@
       "total": 2
     },
     "dom/observable/tentative/observable-from.any.js": {
-      "pass": 33,
+      "pass": 48,
       "total": 48
     },
     "dom/observable/tentative/observable-inspect.any.js": {
-      "pass": 10,
+      "pass": 13,
       "total": 13
     },
     "dom/observable/tentative/observable-last.any.js": {
@@ -3169,7 +3229,7 @@
       "total": 6
     },
     "dom/observable/tentative/observable-take.any.js": {
-      "pass": 5,
+      "pass": 6,
       "total": 6
     },
     "dom/observable/tentative/observable-takeUntil.any.js": {
@@ -3185,11 +3245,11 @@
       "total": 6
     },
     "dom/ranges/Range-adopt-test.html": {
-      "pass": 2,
+      "pass": 4,
       "total": 4
     },
     "dom/ranges/Range-attribute-nodes.html": {
-      "pass": 24,
+      "pass": 26,
       "total": 26
     },
     "dom/ranges/Range-attributes.html": {
@@ -3272,8 +3332,12 @@
       "pass": 4,
       "total": 4
     },
-    "dom/ranges/Range-in-shadow-after-the-shadow-removed.html": {
-      "pass": 0,
+    "dom/ranges/Range-in-shadow-after-the-shadow-removed.html?mode=closed": {
+      "pass": 2,
+      "total": 2
+    },
+    "dom/ranges/Range-in-shadow-after-the-shadow-removed.html?mode=open": {
+      "pass": 2,
       "total": 2
     },
     "dom/ranges/Range-intersectsNode-2.html": {
@@ -3361,7 +3425,7 @@
       "total": 2
     },
     "dom/traversal/NodeIterator-removal-during-filtering.html": {
-      "pass": 2,
+      "pass": 4,
       "total": 4
     },
     "dom/traversal/NodeIterator-removal.html": {
@@ -3517,7 +3581,7 @@
       "total": 7
     },
     "domparsing/innerhtml-mxss.sub.html": {
-      "pass": 30,
+      "pass": 60,
       "total": 60
     },
     "domparsing/insert-adjacent-parent-errors.html": {
@@ -3564,9 +3628,21 @@
       "pass": 6,
       "total": 6
     },
-    "encoding/api-invalid-label.any.js": {
-      "pass": 3421,
-      "total": 3421
+    "encoding/api-invalid-label.any.js?1-1000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/api-invalid-label.any.js?1001-2000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/api-invalid-label.any.js?2001-3000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/api-invalid-label.any.js?3001-last": {
+      "pass": 421,
+      "total": 421
     },
     "encoding/api-replacement-encodings.any.js": {
       "pass": 6,
@@ -3577,7 +3653,7 @@
       "total": 6
     },
     "encoding/big5-encoder.html": {
-      "pass": 1,
+      "pass": 13,
       "total": 13
     },
     "encoding/encodeInto.any.js": {
@@ -3585,11 +3661,11 @@
       "total": 111
     },
     "encoding/iso-2022-jp-decoder.any.js": {
-      "pass": 16,
+      "pass": 34,
       "total": 34
     },
     "encoding/iso-2022-jp-encoder.html": {
-      "pass": 1,
+      "pass": 12,
       "total": 12
     },
     "encoding/replacement-encodings.any.js": {
@@ -3600,9 +3676,13 @@
       "pass": 1,
       "total": 1
     },
-    "encoding/single-byte-decoder.any.js": {
-      "pass": 336,
-      "total": 336
+    "encoding/single-byte-decoder.any.js?TextDecoder": {
+      "pass": 168,
+      "total": 168
+    },
+    "encoding/single-byte-decoder.any.js?XMLHttpRequest": {
+      "pass": 168,
+      "total": 168
     },
     "encoding/sniffing.html": {
       "pass": 0,
@@ -3669,12 +3749,40 @@
       "total": 2
     },
     "encoding/textdecoder-eof.any.js": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
-    "encoding/textdecoder-fatal-single-byte.any.js": {
-      "pass": 7168,
-      "total": 7168
+    "encoding/textdecoder-fatal-single-byte.any.js?1-1000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/textdecoder-fatal-single-byte.any.js?1001-2000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/textdecoder-fatal-single-byte.any.js?2001-3000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/textdecoder-fatal-single-byte.any.js?3001-4000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/textdecoder-fatal-single-byte.any.js?4001-5000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/textdecoder-fatal-single-byte.any.js?5001-6000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/textdecoder-fatal-single-byte.any.js?6001-7000": {
+      "pass": 1000,
+      "total": 1000
+    },
+    "encoding/textdecoder-fatal-single-byte.any.js?7001-last": {
+      "pass": 168,
+      "total": 168
     },
     "encoding/textdecoder-fatal-streaming.any.js": {
       "pass": 2,
@@ -3693,7 +3801,7 @@
       "total": 222
     },
     "encoding/textdecoder-mistakes.any.js": {
-      "pass": 66,
+      "pass": 87,
       "total": 87
     },
     "encoding/textdecoder-streaming.any.js": {
@@ -4329,7 +4437,7 @@
       "total": 1
     },
     "html/dom/elements/the-innertext-and-outertext-properties/getter.html": {
-      "pass": 259,
+      "pass": 266,
       "total": 276
     },
     "html/dom/elements/the-innertext-and-outertext-properties/innertext-setter.html": {
@@ -4340,8 +4448,52 @@
       "pass": 2,
       "total": 2
     },
-    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html": {
-      "pass": 0,
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=normal": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=normal&contenteditable=plaintext-only": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=normal&contenteditable=true": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre&contenteditable=plaintext-only": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre&contenteditable=true": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre-line": {
+      "pass": 75,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre-line&contenteditable=plaintext-only": {
+      "pass": 75,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre-line&contenteditable=true": {
+      "pass": 75,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre-wrap": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre-wrap&contenteditable=plaintext-only": {
+      "pass": 79,
+      "total": 79
+    },
+    "html/dom/elements/the-innertext-and-outertext-properties/innertext-with-white-spaces.html?white-space=pre-wrap&contenteditable=true": {
+      "pass": 79,
       "total": 79
     },
     "html/dom/elements/the-innertext-and-outertext-properties/multiple-text-nodes.window.js": {
@@ -4508,7 +4660,11 @@
       "pass": 0,
       "total": 1
     },
-    "html/interaction/focus/tab-table-caption.html": {
+    "html/interaction/focus/tab-table-caption.html?caption-side=bottom": {
+      "pass": 6,
+      "total": 6
+    },
+    "html/interaction/focus/tab-table-caption.html?caption-side=top": {
       "pass": 6,
       "total": 6
     },
@@ -4762,7 +4918,7 @@
     },
     "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-base-url-2.html": {
       "pass": 0,
-      "total": 0
+      "total": 1
     },
     "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-base-url-3.html": {
       "pass": 0,
@@ -4878,7 +5034,7 @@
     },
     "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-referrerpolicy-change.sub.html": {
       "pass": 0,
-      "total": 0
+      "total": 1
     },
     "html/semantics/embedded-content/the-iframe-element/iframe-loading-lazy-reload-location-reload.html": {
       "pass": 0,
@@ -5652,9 +5808,13 @@
       "pass": 1,
       "total": 1
     },
-    "html/semantics/forms/textfieldselection/selection-not-application.html": {
-      "pass": 63,
-      "total": 71
+    "html/semantics/forms/textfieldselection/selection-not-application.html?default": {
+      "pass": 183,
+      "total": 183
+    },
+    "html/semantics/forms/textfieldselection/selection-not-application.html?week,month": {
+      "pass": 79,
+      "total": 79
     },
     "html/semantics/forms/textfieldselection/selection-start-end-extra.html": {
       "pass": 11,
@@ -5885,7 +6045,7 @@
       "total": 2
     },
     "html/semantics/forms/the-input-element/color.html": {
-      "pass": 23,
+      "pass": 24,
       "total": 27
     },
     "html/semantics/forms/the-input-element/date.html": {
@@ -5989,7 +6149,7 @@
       "total": 53
     },
     "html/semantics/forms/the-input-element/input-type-button.html": {
-      "pass": 3,
+      "pass": 4,
       "total": 5
     },
     "html/semantics/forms/the-input-element/input-type-change-submit.html": {
@@ -6113,7 +6273,7 @@
       "total": 3
     },
     "html/semantics/forms/the-input-element/radio-click-events.html": {
-      "pass": 3,
+      "pass": 4,
       "total": 4
     },
     "html/semantics/forms/the-input-element/radio-disconnected-group-owner.html": {
@@ -6621,7 +6781,7 @@
       "total": 2
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-active-document.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-autofocus-just-once.html": {
@@ -6709,7 +6869,7 @@
       "total": 1
     },
     "html/semantics/interactive-elements/the-dialog-element/dialog-showModal.html": {
-      "pass": 8,
+      "pass": 9,
       "total": 10
     },
     "html/semantics/interactive-elements/the-dialog-element/form-submit-dialog-shadow.html": {
@@ -6861,11 +7021,11 @@
       "total": 0
     },
     "html/semantics/popovers/popover-attribute-all-elements.html": {
-      "pass": 921,
+      "pass": 1101,
       "total": 1101
     },
     "html/semantics/popovers/popover-attribute-basic.html": {
-      "pass": 231,
+      "pass": 249,
       "total": 249
     },
     "html/semantics/popovers/popover-auto-reentrant-crash.html": {
@@ -6905,7 +7065,7 @@
       "total": 1
     },
     "html/semantics/popovers/popover-events.html": {
-      "pass": 1,
+      "pass": 5,
       "total": 6
     },
     "html/semantics/popovers/popover-focus-2.html": {
@@ -6920,7 +7080,19 @@
       "pass": 3,
       "total": 3
     },
-    "html/semantics/popovers/popover-focus-5.html": {
+    "html/semantics/popovers/popover-focus-5.html?commandfor": {
+      "pass": 5,
+      "total": 6
+    },
+    "html/semantics/popovers/popover-focus-5.html?commandforelement": {
+      "pass": 5,
+      "total": 6
+    },
+    "html/semantics/popovers/popover-focus-5.html?imperative": {
+      "pass": 5,
+      "total": 6
+    },
+    "html/semantics/popovers/popover-focus-5.html?popovertargetelement": {
       "pass": 5,
       "total": 6
     },
@@ -7077,7 +7249,7 @@
       "total": 1
     },
     "html/semantics/popovers/popover-light-dismiss.html": {
-      "pass": 3,
+      "pass": 20,
       "total": 33
     },
     "html/semantics/popovers/popover-manual-hide-does-not-close-auto.html": {
@@ -7109,7 +7281,7 @@
       "total": 0
     },
     "html/semantics/popovers/popover-open-in-beforetoggle.html": {
-      "pass": 1,
+      "pass": 5,
       "total": 5
     },
     "html/semantics/popovers/popover-open-overflow-display-2.html": {
@@ -7153,7 +7325,7 @@
       "total": 3
     },
     "html/semantics/popovers/popover-shadow-dom.html": {
-      "pass": 0,
+      "pass": 3,
       "total": 3
     },
     "html/semantics/popovers/popover-shadowhost-focus-navigation.html": {
@@ -7245,7 +7417,7 @@
       "total": 40
     },
     "html/semantics/scripting-1/the-template-element/template-element/content-attribute.html": {
-      "pass": 5,
+      "pass": 7,
       "total": 7
     },
     "html/semantics/scripting-1/the-template-element/template-element/template-as-a-descendant.html": {
@@ -7432,7 +7604,15 @@
       "pass": 1,
       "total": 1
     },
-    "html/user-activation/activation-trigger-pointerevent.html": {
+    "html/user-activation/activation-trigger-pointerevent.html?mouse": {
+      "pass": 1,
+      "total": 1
+    },
+    "html/user-activation/activation-trigger-pointerevent.html?pen": {
+      "pass": 0,
+      "total": 1
+    },
+    "html/user-activation/activation-trigger-pointerevent.html?touch": {
       "pass": 0,
       "total": 1
     },
@@ -7909,8 +8089,8 @@
       "total": 1
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-encoding.html": {
-      "pass": 0,
-      "total": 0
+      "pass": 3,
+      "total": 3
     },
     "html/webappapis/dynamic-markup-insertion/html-unsafe-methods/Document-parseHTMLUnsafe-style-attribute.html": {
       "pass": 4,
@@ -8101,7 +8281,7 @@
       "total": 1
     },
     "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/encoding.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/event-listeners.window.js": {
@@ -8249,7 +8429,7 @@
       "total": 0
     },
     "html/webappapis/structured-clone/structured-clone.any.js": {
-      "pass": 136,
+      "pass": 142,
       "total": 152
     },
     "html/webappapis/system-state-and-capabilities/the-navigator-object/navigator-indexed.html": {
@@ -8369,7 +8549,7 @@
       "total": 16
     },
     "shadow-dom/HTMLSlotElement-interface.html": {
-      "pass": 14,
+      "pass": 18,
       "total": 18
     },
     "shadow-dom/HighlightRegistry-highlightsFromPoint.html": {
@@ -8381,7 +8561,7 @@
       "total": 3
     },
     "shadow-dom/Node-prototype-cloneNode.html": {
-      "pass": 2,
+      "pass": 4,
       "total": 4
     },
     "shadow-dom/Range-prototype-insertNode.html": {
@@ -8661,7 +8841,7 @@
       "total": 0
     },
     "shadow-dom/event-post-dispatch-listenerless.html": {
-      "pass": 2,
+      "pass": 3,
       "total": 3
     },
     "shadow-dom/event-post-dispatch-no-listeners.html": {
@@ -9049,15 +9229,15 @@
       "total": 2
     },
     "shadow-dom/imperative-slot-api-disconnected.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "shadow-dom/imperative-slot-api-slotchange.html": {
-      "pass": 5,
+      "pass": 12,
       "total": 13
     },
     "shadow-dom/imperative-slot-api.html": {
-      "pass": 2,
+      "pass": 14,
       "total": 16
     },
     "shadow-dom/imperative-slot-assign-not-slotable-crash.html": {
@@ -9085,7 +9265,7 @@
       "total": 1
     },
     "shadow-dom/inserting-fragment-under-shadow-host.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "shadow-dom/invalidate-shadow-dom-crash.html": {
@@ -9289,23 +9469,23 @@
       "total": 0
     },
     "shadow-dom/slotchange-customelements.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "shadow-dom/slotchange-event.html": {
-      "pass": 0,
+      "pass": 32,
       "total": 32
     },
     "shadow-dom/slotchange.html": {
-      "pass": 0,
+      "pass": 17,
       "total": 17
     },
     "shadow-dom/slots-fallback-in-document.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "shadow-dom/slots-fallback.html": {
-      "pass": 3,
+      "pass": 13,
       "total": 13
     },
     "shadow-dom/slots-outside-shadow-dom.html": {
@@ -9313,7 +9493,7 @@
       "total": 1
     },
     "shadow-dom/slots.html": {
-      "pass": 11,
+      "pass": 26,
       "total": 26
     },
     "shadow-dom/touch-event-retargeting-leak.html": {
@@ -9369,15 +9549,15 @@
       "total": 1
     },
     "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-006.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-007.html": {
-      "pass": 0,
+      "pass": 2,
       "total": 2
     },
     "shadow-dom/untriaged/elements-and-dom-objects/shadowroot-object/shadowroot-methods/test-010.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "shadow-dom/untriaged/events/event-dispatch/test-002.html": {
@@ -9461,7 +9641,7 @@
       "total": 0
     },
     "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/dom-tree-accessors-001.html": {
-      "pass": 1,
+      "pass": 13,
       "total": 14
     },
     "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/dom-tree-accessors-002.html": {
@@ -9469,11 +9649,11 @@
       "total": 3
     },
     "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/ownerdocument-001.html": {
-      "pass": 4,
+      "pass": 6,
       "total": 6
     },
     "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/ownerdocument-002.html": {
-      "pass": 0,
+      "pass": 18,
       "total": 18
     },
     "shadow-dom/untriaged/shadow-trees/upper-boundary-encapsulation/selectors-api-001.html": {
@@ -9576,9 +9756,21 @@
       "pass": 415,
       "total": 415
     },
-    "url/a-element.html": {
-      "pass": 897,
-      "total": 897
+    "url/a-element.html?exclude=(file|javascript|mailto)": {
+      "pass": 739,
+      "total": 739
+    },
+    "url/a-element.html?include=file": {
+      "pass": 138,
+      "total": 138
+    },
+    "url/a-element.html?include=javascript": {
+      "pass": 14,
+      "total": 14
+    },
+    "url/a-element.html?include=mailto": {
+      "pass": 15,
+      "total": 15
     },
     "url/failure.html": {
       "pass": 1175,
@@ -9592,9 +9784,21 @@
       "pass": 784,
       "total": 784
     },
-    "url/url-constructor.any.js": {
-      "pass": 898,
-      "total": 898
+    "url/url-constructor.any.js?exclude=(file|javascript|mailto)": {
+      "pass": 740,
+      "total": 740
+    },
+    "url/url-constructor.any.js?include=file": {
+      "pass": 137,
+      "total": 137
+    },
+    "url/url-constructor.any.js?include=javascript": {
+      "pass": 13,
+      "total": 13
+    },
+    "url/url-constructor.any.js?include=mailto": {
+      "pass": 14,
+      "total": 14
     },
     "url/url-origin.any.js": {
       "pass": 416,
@@ -9604,17 +9808,41 @@
       "pass": 4,
       "total": 4
     },
-    "url/url-setters-a-area.window.js": {
-      "pass": 557,
-      "total": 557
+    "url/url-setters-a-area.window.js?exclude=(file|javascript|mailto)": {
+      "pass": 491,
+      "total": 491
+    },
+    "url/url-setters-a-area.window.js?include=file": {
+      "pass": 43,
+      "total": 43
+    },
+    "url/url-setters-a-area.window.js?include=javascript": {
+      "pass": 13,
+      "total": 13
+    },
+    "url/url-setters-a-area.window.js?include=mailto": {
+      "pass": 13,
+      "total": 13
     },
     "url/url-setters-stripping.any.js": {
       "pass": 260,
       "total": 260
     },
-    "url/url-setters.any.js": {
-      "pass": 279,
-      "total": 279
+    "url/url-setters.any.js?exclude=(file|javascript|mailto)": {
+      "pass": 246,
+      "total": 246
+    },
+    "url/url-setters.any.js?include=file": {
+      "pass": 22,
+      "total": 22
+    },
+    "url/url-setters.any.js?include=javascript": {
+      "pass": 7,
+      "total": 7
+    },
+    "url/url-setters.any.js?include=mailto": {
+      "pass": 7,
+      "total": 7
     },
     "url/url-statics-canparse.any.js": {
       "pass": 8,
@@ -10349,11 +10577,11 @@
       "total": 2
     },
     "webstorage/event_constructor.window.js": {
-      "pass": 5,
+      "pass": 6,
       "total": 6
     },
     "webstorage/event_initstorageevent.window.js": {
-      "pass": 4,
+      "pass": 5,
       "total": 5
     },
     "webstorage/event_local_key.html": {
@@ -10513,7 +10741,7 @@
       "total": 1
     },
     "webstorage/storage_session_window_reopen.window.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "webstorage/storage_set_value_enumerate.window.js": {
@@ -10557,7 +10785,7 @@
       "total": 2
     },
     "xhr/formdata/append-formelement.html": {
-      "pass": 6,
+      "pass": 8,
       "total": 8
     },
     "xhr/formdata/append.any.js": {
@@ -10613,19 +10841,19 @@
       "total": 3
     },
     "xhr/formdata/set-blob.any.js": {
-      "pass": 5,
+      "pass": 6,
       "total": 6
     },
     "xhr/formdata/set-formelement.html": {
-      "pass": 5,
+      "pass": 8,
       "total": 8
     },
     "xhr/formdata/set.any.js": {
-      "pass": 6,
+      "pass": 7,
       "total": 7
     },
     "xhr/json.any.js": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "xhr/responsetype.any.js": {
