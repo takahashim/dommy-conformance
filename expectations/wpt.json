@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 111761,
+    "subtests_passed": 111787,
     "subtests_total": 114198,
     "files": 2661,
-    "files_green": 1741,
+    "files_green": 1746,
     "files_errored": 0
   },
   "files": {
@@ -1209,7 +1209,7 @@
       "total": 2
     },
     "custom-elements/reactions/with-exceptions.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "custom-elements/registries/Construct.html": {
@@ -1525,7 +1525,7 @@
       "total": 5
     },
     "dom/events/AddEventListenerOptions-signal.any.js": {
-      "pass": 9,
+      "pass": 11,
       "total": 11
     },
     "dom/events/Body-FrameSet-Event-Handlers.html": {
@@ -1853,7 +1853,7 @@
       "total": 10
     },
     "dom/historical.html": {
-      "pass": 66,
+      "pass": 79,
       "total": 80
     },
     "dom/interface-objects.html": {
@@ -4209,7 +4209,7 @@
       "total": 3
     },
     "html/dom/elements/global-attributes/id-attribute.html": {
-      "pass": 16,
+      "pass": 17,
       "total": 17
     },
     "html/dom/elements/global-attributes/id-name-specialcase.html": {
@@ -6317,7 +6317,7 @@
       "total": 11
     },
     "html/semantics/forms/the-option-element/option-text-setter.html": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/semantics/forms/the-option-element/option-text-spaces.html": {
@@ -8169,7 +8169,7 @@
       "total": 10
     },
     "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/type-argument-plaintext.window.js": {
-      "pass": 0,
+      "pass": 8,
       "total": 8
     },
     "html/webappapis/dynamic-markup-insertion/opening-the-input-stream/type-argument.window.js": {
