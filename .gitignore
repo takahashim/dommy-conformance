@@ -10,3 +10,5 @@ Gemfile.lock
 package.json
 package-lock.json
 node_modules/
+# capybara-bench serves the Turbo and Stimulus bundles, pinned here.
+!/script/capybara-bench/package.json

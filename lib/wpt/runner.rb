@@ -38,18 +38,36 @@ module DommyConformance
       class << self
         def available? = Resources.available?
 
-        # Runnable test files under the vendored tree, relative to WPT_ROOT.
+        # The tests under the vendored tree, relative to WPT_ROOT: one per file,
+        # or, for a file that declares variants, one per variant — the path
+        # with the variant's query or fragment appended, as WPT names them
+        # (`dom/x.html?a=1`). A variant is how the file is meant to be loaded;
+        # loading it bare runs it in a configuration none of them is.
         def manifest
           ::Dir.glob("**/*.{any,window}.js", base: WPT_ROOT)
             .concat(::Dir.glob("**/*.{html,htm}", base: WPT_ROOT))
             .reject { |p| p.start_with?("common/", "resources/") || p.include?("/resources/") || p.include?("/support/") || p.end_with?("-ref.html") }
+            .flat_map { |p| variants(p).map { |variant| "#{p}#{variant}" } }
             .sort
         end
 
+        VARIANT_META_HTML = /<meta\s+name=["']?variant["']?\s+content=["']([^"']*)["']/i.freeze
+        VARIANT_META_JS = %r{^\s*//\s*META:\s*variant=(\S*)}.freeze
+
+        # A file's variants (`?query` / `#fragment`, "" for the bare file);
+        # [""] when it declares none.
+        def variants(rel_path)
+          source = ::File.read(::File.join(WPT_ROOT, rel_path), encoding: "UTF-8").scrub
+          found = source.scan(rel_path.end_with?(".js") ? VARIANT_META_JS : VARIANT_META_HTML).flatten
+          found.empty? ? [""] : found.uniq
+        end
+
+        # `rel_path` is a test id: a file, with its variant if it has one.
         def run(rel_path)
+          rel_path, variant = split_variant(rel_path)
           path = absolute(rel_path)
-          html = page_for(path, rel_path)
-          url = "http://localhost/#{rel_path.delete_prefix('/')}"
+          html, encoding = page_for(path, rel_path)
+          url = "http://localhost/#{rel_path.delete_prefix('/')}#{variant}"
           resources = Resources.build
 
           # Boot with execute_scripts: false so the window `load` event has NOT
@@ -60,7 +78,7 @@ module DommyConformance
           browser = ::Dommy::Browser.new(
             html, url: url, resources: resources,
             execute_scripts: false, strict: false, settle: false,
-            wasm_memory_shim: true, navigable: true
+            wasm_memory_shim: true, navigable: true, encoding: encoding
           )
           browser.runtime.define_host_object("__dommyTestDriver", TestDriver.new(browser.window.document))
           boot_scripts(browser, url, resources)
@@ -91,6 +109,12 @@ module DommyConformance
 
         private
 
+        # "dir/x.html?a=1" -> ["dir/x.html", "?a=1"]; a plain path has "".
+        def split_variant(test_id)
+          index = test_id.index(/[?#]/)
+          index ? [test_id[0...index], test_id[index..]] : [test_id, ""]
+        end
+
         def absolute(rel_path)
           return rel_path if ::File.absolute_path?(rel_path) && ::File.exist?(rel_path)
 
@@ -107,6 +131,11 @@ module DommyConformance
         # origin) URLs the path-based resource layer still serves. Enough for the
         # CORS `.sub` tests that hard-code `http://{{host}}:{{ports[http][1]}}/…`.
         WPT_SUBS = {
+          # The document's own origin is http://localhost (port 80, which a URL
+          # serializes without), so "host:port" written out is just the host;
+          # `localhost:80` would match no URL the page produces.
+          "{{host}}:{{ports[http][0]}}" => "localhost",
+          "{{domains[]}}:{{ports[http][0]}}" => "localhost",
           "{{host}}" => "localhost",
           "{{ports[http][0]}}" => "80", "{{ports[http][1]}}" => "8001",
           "{{ports[https][0]}}" => "443", "{{ports[https][1]}}" => "8444",
@@ -116,14 +145,19 @@ module DommyConformance
           "{{hosts[alt][www2]}}" => "www2.not-localhost.test",
         }.freeze
 
+        # The page to load and the encoding its document has. An HTML file is
+        # decoded from its bytes as a browser decodes a response with no
+        # charset — a BOM (dropped), else its <meta charset>, else UTF-8; the
+        # page wrapped around a .js test is UTF-8.
         def page_for(path, rel_path)
-          source = ::File.read(path)
-          # Many WPT files are saved with a leading UTF-8 BOM; strip it so the
-          # HTML parser sees `<!DOCTYPE …>` at the top (a BOM before the doctype
-          # otherwise derails document parsing and the harness yields 0 subtests).
-          source = source.delete_prefix("﻿")
+          if rel_path.end_with?(".html", ".htm")
+            source, encoding = ::Dommy::Encodings.decode_document(::File.binread(path), "text/html")
+            source = WPT_SUBS.reduce(source) { |s, (k, v)| s.gsub(k, v) } if rel_path.include?(".sub.")
+            return [source, encoding]
+          end
+
+          source = ::File.read(path).delete_prefix("\ufeff")
           source = WPT_SUBS.reduce(source) { |s, (k, v)| s.gsub(k, v) } if rel_path.include?(".sub.")
-          return source if rel_path.end_with?(".html", ".htm")
 
           includes = source.scan(META_SCRIPT).flatten
             .map { |spec| %(<script src="#{resolve_include(spec, rel_path)}"></script>) }
@@ -132,7 +166,7 @@ module DommyConformance
           long = source.match?(%r{^\s*//\s*META:\s*timeout=long}) ? %(<meta name="timeout" content="long">) : ""
           # wptserve's window wrapper for a `.any.js` also defines GLOBAL, the
           # scope probe `GLOBAL.isWindow()` & co. that shared tests branch on.
-          <<~HTML
+          page = <<~HTML
             <!DOCTYPE html><html><head>#{long}
             <script>self.GLOBAL = { isWindow() { return true; }, isWorker() { return false; }, isShadowRealm() { return false; } };</script>
             <script src="/resources/testharness.js"></script>
@@ -141,6 +175,7 @@ module DommyConformance
             <script>#{source}</script>
             </head><body></body></html>
           HTML
+          [page, "UTF-8"]
         end
 
         # A META `script=` spec is "/"-rooted at the WPT tree or relative to the
@@ -211,11 +246,13 @@ module DommyConformance
             srcdoc = iframe.get_attribute("srcdoc")
             sub =
               if !src.empty?
-                resolved = resolve_url(base_url, src)
+                # The element's own resolution, which encodes the query in the
+                # document's encoding as HTML's "encoding-parse" does.
+                resolved = iframe.respond_to?(:src) && !iframe.src.to_s.empty? ? iframe.src.to_s : resolve_url(base_url, src)
                 response = resources.get(resolved.sub(/#.*\z/, ""))
                 next unless response&.success? && response.body
 
-                parse_framed_document(response.body, resolved)
+                parse_framed_document(response, resolved)
               else
                 # A srcless (blank/about:blank) or `srcdoc` iframe gets its own
                 # empty/srcdoc document, so `contentWindow` resolves and its
@@ -254,7 +291,8 @@ module DommyConformance
         # Parse framed markup according to the resource extension: XML/XHTML get
         # the XML parser (case-preserving, real namespaces) so createElement /
         # namespaceURI match the spec; everything else parses as HTML.
-        def parse_framed_document(body, resolved)
+        def parse_framed_document(response, resolved)
+          body = response.body
           path = resolved.sub(/[#?].*\z/, "")
           win =
             if path.end_with?(".xml", ".xhtml")
@@ -262,7 +300,10 @@ module DommyConformance
               w.document.content_type = path.end_with?(".xhtml") ? "application/xhtml+xml" : "text/xml"
               w
             else
-              ::Dommy.parse(body)
+              # Decoded as a browser decodes the response: its charset, a BOM,
+              # its <meta charset>, else UTF-8.
+              text, encoding = ::Dommy::Encodings.decode_document(body.to_s.b, content_type_of(response) || "text/html")
+              ::Dommy.parse(text, encoding: encoding)
             end
           # Carry the URL (incl. fragment) onto the framed window so `:target` /
           # location.hash resolve in the framed document.
@@ -270,6 +311,12 @@ module DommyConformance
           win
         rescue StandardError
           nil
+        end
+
+        def content_type_of(response)
+          headers = response.respond_to?(:headers) ? response.headers || {} : {}
+          key = headers.keys.find { |k| k.to_s.casecmp?("content-type") }
+          key && headers[key]
         end
 
         # Resolve a possibly-relative iframe src against the test's URL.

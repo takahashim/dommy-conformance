@@ -23,6 +23,14 @@
 #   (https://open-ui.org/components/focusgroup.explainer/) that is not in the
 #   HTML Standard; every test of it is tentative. The directory, resources/
 #   included, is not vendored.
+#
+# dom/nodes/processing-instruction-attributes.html: attributes on a
+#   ProcessingInstruction (getAttribute, hasAttributes, parsing `a="b"` out of
+#   its data, and an HTML parser that keeps `<?t ...?>` as one), from WICG's
+#   declarative-partial-updates proposal. The DOM Standard gives a
+#   ProcessingInstruction no attributes, and the HTML parser makes `<?...>` a
+#   bogus comment.
+dom/nodes/processing-instruction-attributes.html
 urlpattern/urlpattern-compare.tentative.any.js
 urlpattern/urlpattern-generate.tentative.any.js
 shadow-dom/declarative/tentative/shadowrootadoptedstylesheets/shadowrootadoptedstylesheets-async-fetch-disconnect-iframe.html

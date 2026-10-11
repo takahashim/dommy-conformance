@@ -42,7 +42,7 @@ Capybara.register_driver(:dommy) { |app| Capybara::Dommy::Driver.new(app) }
 Capybara.register_driver(:dommy_js) { |app| Capybara::Dommy::Driver.new(app, javascript: true) }
 %i[cuprite cuprite_tuned].each do |name|
   Capybara.register_driver(name) do |app|
-    Capybara::Cuprite::Driver.new(app, browser_path: ENV.fetch("BROWSER_PATH", "/opt/pw-browsers/chromium"),
+    Capybara::Cuprite::Driver.new(app, browser_path: ENV.fetch("BROWSER_PATH") { "/opt/pw-browsers/chromium" if File.exist?("/opt/pw-browsers/chromium") },
                                        headless: true, js_errors: true, process_timeout: 30,
                                        browser_options: {"no-sandbox" => nil})
   end
@@ -72,28 +72,43 @@ class PeakMemory
   private
 
   def sample
-    tree = descendants(Process.pid)
-    mb = tree.sum { |pid| rss_kb(pid) } / 1024.0
+    rss, parents = File.directory?("/proc") ? proc_table : ps_table
+    children = Hash.new { |h, k| h[k] = [] }
+    parents.each { |pid, ppid| children[ppid] << pid }
+    queue = [Process.pid]
+    queue.each { |pid| queue.concat(children[pid]) }
+    mb = queue.sum { |pid| rss[pid] } / 1024.0
     @peak_mb = mb if mb > @peak_mb
   end
 
-  def descendants(root)
-    children = Hash.new { |h, k| h[k] = [] }
+  # Linux: [rss KB by pid, ppid by pid] from /proc; rss is read only for the
+  # pids asked about.
+  def proc_table
+    rss = Hash.new do |h, pid|
+      h[pid] = File.read("/proc/#{pid}/status")[/VmRSS:\s+(\d+)/, 1].to_i
+    rescue SystemCallError
+      h[pid] = 0
+    end
+    parents = {}
     Dir.glob("/proc/[0-9]*/stat").each do |stat|
-      fields = File.read(stat).sub(/\A.*\) /, "").split
-      children[Integer(fields[1])] << Integer(stat[%r{/proc/(\d+)/}, 1])
+      pid = Integer(stat[%r{/proc/(\d+)/}, 1])
+      parents[pid] = Integer(File.read(stat).sub(/\A.*\) /, "").split[1])
     rescue SystemCallError, ArgumentError
       next
     end
-    queue = [root]
-    queue.each { |pid| queue.concat(children[pid]) }
-    queue
+    [rss, parents]
   end
 
-  def rss_kb(pid)
-    File.read("/proc/#{pid}/status")[/VmRSS:\s+(\d+)/, 1].to_i
-  rescue SystemCallError
-    0
+  # Elsewhere (macOS): the same table from ps.
+  def ps_table
+    rss = Hash.new(0)
+    parents = {}
+    IO.popen(%w[ps -A -o pid= -o ppid= -o rss=], &:read).each_line do |line|
+      pid, ppid, kb = line.split.map { Integer(_1) }
+      parents[pid] = ppid
+      rss[pid] = kb
+    end
+    [rss, parents]
   end
 end
 
