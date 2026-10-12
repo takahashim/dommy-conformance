@@ -1,11 +1,11 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 113673,
-    "subtests_total": 115188,
+    "subtests_passed": 113676,
+    "subtests_total": 115187,
     "files": 2718,
-    "files_green": 1860,
-    "files_errored": 0
+    "files_green": 1862,
+    "files_errored": 1
   },
   "files": {
     "FileAPI/blob/Blob-array-buffer.any.js": {
@@ -909,8 +909,7 @@
       "total": 0
     },
     "custom-elements/form-associated/ElementInternals-target-element-is-held-strongly.html": {
-      "pass": 0,
-      "total": 1
+      "error": "the child produced no output (crash?)"
     },
     "custom-elements/form-associated/ElementInternals-validation.html": {
       "pass": 14,
@@ -977,7 +976,7 @@
       "total": 5
     },
     "custom-elements/overwritten-customElements-global.html": {
-      "pass": 3,
+      "pass": 4,
       "total": 4
     },
     "custom-elements/parser/parser-constructs-custom-element-in-document-write.html": {
@@ -4517,7 +4516,7 @@
       "total": 6
     },
     "html/dom/self-origin.any.js": {
-      "pass": 0,
+      "pass": 1,
       "total": 1
     },
     "html/dom/usvstring-reflection.https.html": {
@@ -8429,7 +8428,7 @@
       "total": 0
     },
     "html/webappapis/structured-clone/structured-clone.any.js": {
-      "pass": 142,
+      "pass": 143,
       "total": 152
     },
     "html/webappapis/system-state-and-capabilities/the-navigator-object/navigator-indexed.html": {
