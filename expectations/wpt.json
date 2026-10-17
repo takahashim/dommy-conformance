@@ -1,11 +1,11 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 113676,
-    "subtests_total": 115187,
+    "subtests_passed": 113688,
+    "subtests_total": 115188,
     "files": 2718,
     "files_green": 1862,
-    "files_errored": 1
+    "files_errored": 0
   },
   "files": {
     "FileAPI/blob/Blob-array-buffer.any.js": {
@@ -909,7 +909,8 @@
       "total": 0
     },
     "custom-elements/form-associated/ElementInternals-target-element-is-held-strongly.html": {
-      "error": "the child produced no output (crash?)"
+      "pass": 0,
+      "total": 1
     },
     "custom-elements/form-associated/ElementInternals-validation.html": {
       "pass": 14,
@@ -10748,7 +10749,7 @@
       "total": 2
     },
     "webstorage/storage_setitem.window.js": {
-      "pass": 1082,
+      "pass": 1094,
       "total": 1106
     },
     "webstorage/storage_string_conversion.window.js": {
