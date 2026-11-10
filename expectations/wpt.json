@@ -1,10 +1,10 @@
 {
   "README": "Per-file WPT baseline. Exact, not a floor: `rake wpt` fails on any movement in either direction, so a change states its effect on the corpus in the diff. Re-record with `rake wpt:record`.",
   "summary": {
-    "subtests_passed": 113688,
+    "subtests_passed": 113704,
     "subtests_total": 115188,
     "files": 2718,
-    "files_green": 1862,
+    "files_green": 1864,
     "files_errored": 0
   },
   "files": {
@@ -8377,7 +8377,7 @@
       "total": 5
     },
     "html/webappapis/dynamic-markup-insertion/the-innerhtml-property/annotation-xml-fragment-parsing.html": {
-      "pass": 1,
+      "pass": 2,
       "total": 2
     },
     "html/webappapis/dynamic-markup-insertion/the-outerhtml-property/outerhtml-documentfragment.html": {
@@ -9361,7 +9361,7 @@
       "total": 3
     },
     "shadow-dom/reference-target/tentative/property-reflection-idl-setters.html": {
-      "pass": 2040,
+      "pass": 2055,
       "total": 2055
     },
     "shadow-dom/reference-target/tentative/property-reflection-imperative-setup.html": {
